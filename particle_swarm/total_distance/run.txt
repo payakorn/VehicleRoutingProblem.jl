@@ -1,0 +1,2778 @@
+name: r201-6, Alg: 5, number particle: 15
+07-20 at 01:39:19, name: r101-5, Alg: 5, #particle: 5
+07-20 at 03:07:18, name: r101-5, Alg: 5, #particle: 5
+name: r201-6, Alg: 8, number particle: 15
+07-20 at 03:29:15, name: r101-8, Alg: 8, #particle: 10
+07-20 at 03:43:36, name: r101-5, Alg: 5, #particle: 20
+name: r201-5, Alg: 10, number particle: 15
+07-20 at 04:38:53, name: r101-5, Alg: 5, #particle: 35
+07-20 at 05:08:53, name: r101-5, Alg: 5, #particle: 25
+07-20 at 05:25:06, name: r101-5, Alg: 5, #particle: 30
+name: r201-6, Alg: 11, number particle: 15
+name: r201-6, Alg: 13, number particle: 15
+name: r201-6, Alg: 14, number particle: 15
+07-20 at 12:20:22, name: r201-10, Alg: 16, #particle: 15
+name: r201-16, Alg: 15, number particle: 15
+07-20 at 14:24:29, name: r101-5, Alg: 5, #particle: 5
+name: r201-11, Alg: 16, number particle: 15
+07-20 at 14:56:48, name: r101-8, Alg: 8, #particle: 5
+07-20 at 15:14:43, name: r101-5, Alg: 10, #particle: 10
+07-20 at 15:41:10, name: r101-5, Alg: 10, #particle: 5
+07-20 at 15:50:38, name: r101-5, Alg: 5, #particle: 20
+07-20 at 16:17:06, name: r101-5, Alg: 11, #particle: 5
+07-20 at 16:27:25, name: r101-5, Alg: 5, #particle: 25
+07-20 at 17:02:59, name: r101-5, Alg: 11, #particle: 10
+07-20 at 17:17:10, name: r101-5, Alg: 13, #particle: 5
+07-20 at 18:08:28, name: r101-5, Alg: 14, #particle: 5
+07-20 at 18:09:08, name: r101-5, Alg: 13, #particle: 10
+07-20 at 19:05:31, name: r101-20, Alg: 15, #particle: 5
+07-20 at 19:14:17, name: r101-5, Alg: 14, #particle: 10
+07-20 at 19:43:11, name: r101-5, Alg: 16, #particle: 5
+07-20 at 19:57:12, name: r101-8, Alg: 8, #particle: 20
+07-20 at 20:41:56, name: r101-8, Alg: 8, #particle: 35
+07-20 at 20:49:46, name: r101-20, Alg: 15, #particle: 10
+07-20 at 21:19:21, name: r101-8, Alg: 8, #particle: 30
+07-20 at 22:18:44, name: r101-5, Alg: 16, #particle: 10
+07-20 at 22:39:43, name: r101-8, Alg: 8, #particle: 25
+07-20 at 23:36:10, name: r101-5, Alg: 10, #particle: 20
+07-21 at 00:19:00, name: r101-5, Alg: 10, #particle: 30
+07-21 at 00:46:47, name: r201-6, Alg: 5, #particle: 5
+07-21 at 01:14:35, name: r201-6, Alg: 8, #particle: 5
+07-21 at 01:24:30, name: r201-5, Alg: 10, #particle: 10
+07-21 at 01:41:58, name: r101-5, Alg: 10, #particle: 25
+07-21 at 01:54:28, name: r201-5, Alg: 10, #particle: 5
+07-21 at 02:03:09, name: r101-5, Alg: 10, #particle: 35
+07-21 at 02:43:12, name: rc102-6, Alg: 5, #particle: 15
+07-21 at 02:54:29, name: r201-6, Alg: 11, #particle: 10
+07-21 at 02:58:35, name: r101-5, Alg: 5, #particle: 20
+07-21 at 03:30:19, name: r201-6, Alg: 11, #particle: 5
+07-21 at 03:59:59, name: r201-6, Alg: 13, #particle: 10
+07-21 at 04:00:15, name: r101-5, Alg: 11, #particle: 30
+07-21 at 04:38:40, name: r201-6, Alg: 13, #particle: 5
+07-21 at 05:08:32, name: r201-6, Alg: 14, #particle: 10
+07-21 at 05:24:32, name: r101-5, Alg: 11, #particle: 25
+07-21 at 05:29:20, name: r201-6, Alg: 14, #particle: 5
+07-21 at 05:32:22, name: r101-8, Alg: 8, #particle: 20
+07-21 at 06:22:58, name: r201-16, Alg: 15, #particle: 5
+07-21 at 06:28:01, name: r201-16, Alg: 15, #particle: 10
+07-21 at 07:09:05, name: r201-18, Alg: 16, #particle: 5
+07-21 at 07:57:14, name: r201-18, Alg: 16, #particle: 10
+07-21 at 08:02:52, name: r101-5, Alg: 13, #particle: 30
+07-21 at 08:14:56, name: r101-5, Alg: 10, #particle: 20
+07-21 at 08:48:02, name: r101-5, Alg: 11, #particle: 35
+07-21 at 10:06:07, name: r101-5, Alg: 13, #particle: 25
+07-21 at 10:25:07, name: r202-10, Alg: 16, #particle: 15
+07-21 at 11:16:14, name: r201-20, Alg: 16, #particle: 15
+07-21 at 11:37:04, name: r101-5, Alg: 11, #particle: 20
+07-21 at 12:05:08, name: r101-5, Alg: 14, #particle: 30
+07-21 at 12:50:16, name: r101-5, Alg: 13, #particle: 35
+07-21 at 13:46:40, name: r101-5, Alg: 14, #particle: 25
+07-21 at 16:20:07, name: r101-5, Alg: 13, #particle: 20
+07-21 at 17:49:00, name: r101-5, Alg: 14, #particle: 35
+07-21 at 18:07:55, name: r101-20, Alg: 15, #particle: 25
+07-21 at 18:48:01, name: r101-20, Alg: 15, #particle: 30
+07-21 at 20:55:21, name: r101-5, Alg: 14, #particle: 20
+07-21 at 23:42:23, name: r101-5, Alg: 16, #particle: 25
+07-22 at 00:56:59, name: r101-20, Alg: 15, #particle: 20
+07-22 at 01:32:40, name: rc102-5, Alg: 8, #particle: 15
+07-22 at 02:12:00, name: rc102-5, Alg: 14, #particle: 15
+07-22 at 02:32:20, name: r101-20, Alg: 15, #particle: 35
+07-22 at 04:58:20, name: r103-5, Alg: 15, #particle: 15
+07-22 at 07:49:46, name: r203-5, Alg: 14, #particle: 15
+07-22 at 15:26:23, name: r201-6, Alg: 5, #particle: 10
+07-22 at 15:28:29, name: rc102-5, Alg: 15, #particle: 15
+07-22 at 15:31:10, name: r101-5, Alg: 5, #particle: 10
+07-22 at 16:08:39, name: r201-6, Alg: 8, #particle: 10
+07-22 at 17:12:24, name: r101-8, Alg: 8, #particle: 10
+07-22 at 17:32:30, name: r201-5, Alg: 10, #particle: 10
+07-22 at 18:05:52, name: r201-6, Alg: 8, #particle: 30
+07-22 at 18:57:53, name: r201-6, Alg: 11, #particle: 10
+07-22 at 19:15:33, name: r201-6, Alg: 5, #particle: 25
+07-22 at 19:21:08, name: c105-5, Alg: 2, #particle: 15
+07-22 at 19:43:15, name: r201-6, Alg: 13, #particle: 10
+07-22 at 19:54:30, name: r101-5, Alg: 10, #particle: 10
+07-22 at 20:06:57, name: r201-6, Alg: 5, #particle: 35
+07-22 at 21:57:51, name: r201-6, Alg: 14, #particle: 10
+07-22 at 22:09:03, name: r101-5, Alg: 11, #particle: 10
+07-22 at 22:20:06, name: c105-2, Alg: 3, #particle: 15
+07-22 at 22:45:48, name: r201-6, Alg: 8, #particle: 25
+07-22 at 23:24:51, name: c105-1, Alg: 4, #particle: 15
+07-22 at 23:51:02, name: r101-5, Alg: 13, #particle: 10
+07-22 at 23:58:14, name: r201-16, Alg: 15, #particle: 10
+07-23 at 00:35:08, name: r201-5, Alg: 10, #particle: 25
+07-23 at 00:43:29, name: r201-6, Alg: 8, #particle: 35
+07-23 at 00:50:39, name: r201-20, Alg: 16, #particle: 10
+07-23 at 01:40:51, name: r201-5, Alg: 10, #particle: 30
+07-23 at 01:43:38, name: r101-5, Alg: 14, #particle: 10
+07-23 at 02:11:06, name: r203-5, Alg: 15, #particle: 15
+07-23 at 03:34:18, name: r201-6, Alg: 11, #particle: 25
+07-23 at 03:53:55, name: r101-20, Alg: 15, #particle: 10
+07-23 at 05:19:58, name: r101-5, Alg: 16, #particle: 10
+07-23 at 05:23:08, name: r201-5, Alg: 10, #particle: 35
+07-23 at 05:43:15, name: r201-6, Alg: 11, #particle: 30
+07-23 at 07:32:51, name: c105-5, Alg: 5, #particle: 15
+07-23 at 07:44:38, name: r201-6, Alg: 13, #particle: 30
+07-23 at 08:16:29, name: r201-6, Alg: 13, #particle: 25
+07-23 at 08:25:16, name: c105-1, Alg: 6, #particle: 15
+07-23 at 10:18:12, name: c105-2, Alg: 7, #particle: 15
+07-23 at 10:37:14, name: r201-6, Alg: 14, #particle: 25
+07-23 at 11:26:49, name: r201-6, Alg: 14, #particle: 30
+07-23 at 11:50:40, name: r201-6, Alg: 11, #particle: 35
+07-23 at 12:28:37, name: r202-5, Alg: 5, #particle: 10
+07-23 at 12:51:02, name: r102-5, Alg: 5, #particle: 10
+07-23 at 13:25:43, name: c105-2, Alg: 8, #particle: 15
+07-23 at 13:52:07, name: r202-5, Alg: 8, #particle: 10
+07-23 at 14:22:45, name: r102-5, Alg: 8, #particle: 10
+07-23 at 14:57:41, name: r202-3, Alg: 10, #particle: 10
+07-23 at 14:57:55, name: r201-16, Alg: 15, #particle: 25
+07-23 at 16:06:17, name: r102-5, Alg: 10, #particle: 10
+07-23 at 16:08:08, name: r202-3, Alg: 11, #particle: 10
+07-23 at 16:57:49, name: r201-6, Alg: 5, #particle: 20
+07-23 at 17:02:57, name: r201-16, Alg: 15, #particle: 30
+07-23 at 17:11:47, name: r102-5, Alg: 11, #particle: 10
+07-23 at 17:38:41, name: r202-5, Alg: 13, #particle: 10
+07-23 at 18:20:27, name: r202-5, Alg: 14, #particle: 10
+07-23 at 19:06:29, name: r201-6, Alg: 13, #particle: 35
+07-23 at 19:10:31, name: r102-5, Alg: 13, #particle: 10
+07-23 at 20:08:07, name: rc102-5, Alg: 16, #particle: 15
+07-23 at 20:12:17, name: r201-20, Alg: 16, #particle: 25
+07-23 at 20:16:49, name: r202-2, Alg: 15, #particle: 10
+07-23 at 20:26:15, name: r102-5, Alg: 14, #particle: 10
+07-23 at 21:21:55, name: r202-9, Alg: 16, #particle: 10
+07-23 at 21:49:33, name: r102-5, Alg: 15, #particle: 10
+07-23 at 22:09:31, name: r101-5, Alg: 5, #particle: 50
+07-23 at 22:22:52, name: r201-20, Alg: 16, #particle: 30
+07-23 at 22:56:02, name: r102-5, Alg: 16, #particle: 10
+07-23 at 23:27:11, name: r101-8, Alg: 8, #particle: 50
+07-23 at 23:47:50, name: c204-5, Alg: 5, #particle: 15
+07-24 at 02:39:29, name: r201-6, Alg: 14, #particle: 35
+07-24 at 04:18:30, name: r101-5, Alg: 5, #particle: 70
+07-24 at 07:19:01, name: r203-5, Alg: 16, #particle: 15
+07-24 at 07:46:07, name: r101-8, Alg: 8, #particle: 70
+07-24 at 08:21:04, name: r201-16, Alg: 15, #particle: 35
+07-24 at 09:43:00, name: r104-5, Alg: 5, #particle: 15
+07-24 at 10:28:26, name: rc201-10, Alg: 5, #particle: 15
+07-24 at 11:07:38, name: rc101-10, Alg: 5, #particle: 15
+07-24 at 11:22:03, name: r203-5, Alg: 5, #particle: 15
+07-24 at 11:46:52, name: r201-20, Alg: 16, #particle: 35
+07-24 at 12:40:19, name: c205-5, Alg: 5, #particle: 15
+07-24 at 16:34:08, name: r101-8, Alg: 8, #particle: 100
+07-24 at 18:18:42, name: r101-5, Alg: 5, #particle: 100
+07-24 at 18:59:51, name: r104-5, Alg: 8, #particle: 15
+07-24 at 19:22:35, name: r204-5, Alg: 5, #particle: 15
+07-24 at 20:02:31, name: c206-9, Alg: 5, #particle: 15
+07-24 at 21:12:35, name: rc202-10, Alg: 5, #particle: 15
+07-24 at 23:43:42, name: rc102-11, Alg: 5, #particle: 15
+07-25 at 04:30:11, name: r102-5, Alg: 5, #particle: 35
+07-25 at 05:50:18, name: r101-5, Alg: 11, #particle: 50
+07-25 at 06:41:29, name: r101-5, Alg: 10, #particle: 50
+07-25 at 07:19:35, name: c204-5, Alg: 8, #particle: 15
+07-25 at 07:32:35, name: r101-5, Alg: 11, #particle: 50
+07-25 at 08:15:10, name: r205-5, Alg: 5, #particle: 15
+07-25 at 08:19:10, name: r202-5, Alg: 5, #particle: 30
+07-25 at 10:21:00, name: r104-5, Alg: 10, #particle: 15
+07-25 at 10:49:00, name: r102-5, Alg: 8, #particle: 35
+07-25 at 10:56:58, name: r202-5, Alg: 8, #particle: 30
+07-25 at 11:51:40, name: c205-5, Alg: 8, #particle: 15
+07-25 at 14:34:11, name: rc103-10, Alg: 5, #particle: 15
+07-25 at 16:58:39, name: c206-5, Alg: 8, #particle: 15
+07-25 at 17:06:44, name: r112-1, Alg: 5, #particle: 15
+07-25 at 18:01:07, name: rc208-1, Alg: 5, #particle: 15
+07-25 at 18:14:39, name: r206-5, Alg: 5, #particle: 15
+07-25 at 18:18:36, name: r101-5, Alg: 10, #particle: 70
+07-25 at 18:51:45, name: r202-3, Alg: 10, #particle: 30
+07-25 at 19:22:58, name: r111-1, Alg: 5, #particle: 15
+07-25 at 20:22:35, name: rc207-1, Alg: 5, #particle: 15
+07-25 at 21:07:16, name: r101-1, Alg: random16, #particle: 15
+07-25 at 21:45:59, name: r110-1, Alg: 5, #particle: 15
+07-25 at 22:02:56, name: r101-5, Alg: 11, #particle: 70
+07-25 at 23:07:40, name: r102-5, Alg: 10, #particle: 35
+07-25 at 23:26:37, name: r101-5, Alg: 11, #particle: 70
+07-25 at 23:37:52, name: rc206-1, Alg: 5, #particle: 15
+07-26 at 00:13:50, name: r101-2, Alg: random16, #particle: 15
+07-26 at 00:35:37, name: r109-1, Alg: 5, #particle: 15
+07-26 at 02:17:05, name: rc205-1, Alg: 5, #particle: 15
+07-26 at 03:15:27, name: r104-5, Alg: 11, #particle: 15
+07-26 at 03:33:40, name: r108-1, Alg: 5, #particle: 15
+07-26 at 03:45:01, name: rc204-1, Alg: 5, #particle: 15
+07-26 at 04:19:39, name: r202-3, Alg: 11, #particle: 30
+07-26 at 05:32:28, name: r107-1, Alg: 5, #particle: 15
+07-26 at 05:45:02, name: rc208-1, Alg: 8, #particle: 15
+07-26 at 06:30:45, name: r102-5, Alg: 11, #particle: 35
+07-26 at 07:07:41, name: r207-5, Alg: 5, #particle: 15
+07-26 at 07:22:53, name: r202-5, Alg: 13, #particle: 30
+07-26 at 07:29:51, name: c204-5, Alg: 10, #particle: 15
+07-26 at 07:32:49, name: r106-1, Alg: 5, #particle: 15
+07-26 at 07:43:31, name: rc207-1, Alg: 8, #particle: 15
+07-26 at 08:42:37, name: rc206-1, Alg: 8, #particle: 15
+07-26 at 10:00:55, name: r105-1, Alg: 5, #particle: 15
+07-26 at 11:32:11, name: r112-1, Alg: 8, #particle: 15
+07-26 at 11:40:07, name: r102-5, Alg: 13, #particle: 35
+07-26 at 12:09:56, name: r202-5, Alg: 14, #particle: 30
+07-26 at 12:38:18, name: rc205-1, Alg: 8, #particle: 15
+07-26 at 13:53:25, name: rc104-5, Alg: 5, #particle: 15
+07-26 at 14:14:56, name: r101-5, Alg: 10, #particle: 100
+07-26 at 14:19:42, name: r111-1, Alg: 8, #particle: 15
+07-26 at 16:15:57, name: r110-1, Alg: 8, #particle: 15
+07-26 at 16:23:51, name: rc204-1, Alg: 8, #particle: 15
+07-26 at 17:02:36, name: r208-5, Alg: 5, #particle: 15
+07-26 at 17:09:40, name: r101-5, Alg: random16, #particle: 15
+07-26 at 17:12:04, name: c205-5, Alg: 10, #particle: 15
+07-26 at 17:36:20, name: r202-2, Alg: 15, #particle: 30
+07-26 at 18:00:41, name: r101-5, Alg: 11, #particle: 100
+07-26 at 18:42:52, name: r101-5, Alg: 11, #particle: 100
+07-26 at 18:52:41, name: rc208-1, Alg: 10, #particle: 15
+07-26 at 19:46:40, name: r104-5, Alg: 13, #particle: 15
+07-26 at 19:47:03, name: r109-1, Alg: 8, #particle: 15
+07-26 at 20:49:03, name: rc207-1, Alg: 10, #particle: 15
+07-26 at 21:52:19, name: r108-1, Alg: 8, #particle: 15
+07-26 at 21:56:02, name: r102-5, Alg: 14, #particle: 35
+07-26 at 23:03:26, name: r103-7, Alg: 5, #particle: 15
+07-26 at 23:07:18, name: rc206-1, Alg: 10, #particle: 15
+07-26 at 23:19:57, name: r107-1, Alg: 8, #particle: 15
+07-26 at 23:55:30, name: r202-9, Alg: 16, #particle: 30
+07-27 at 01:14:27, name: r102-5, Alg: 15, #particle: 35
+07-27 at 01:17:41, name: r206-5, Alg: 8, #particle: 15
+07-27 at 01:41:46, name: rc205-1, Alg: 10, #particle: 15
+07-27 at 03:14:54, name: rc105-5, Alg: 5, #particle: 15
+07-27 at 03:23:42, name: r106-1, Alg: 8, #particle: 15
+07-27 at 03:57:01, name: rc204-1, Alg: 10, #particle: 15
+07-27 at 04:16:22, name: c206-10, Alg: 10, #particle: 15
+07-27 at 05:29:06, name: rc208-1, Alg: 11, #particle: 15
+07-27 at 05:39:32, name: r105-1, Alg: 8, #particle: 15
+07-27 at 05:46:56, name: r209-5, Alg: 5, #particle: 15
+07-27 at 05:57:02, name: r102-5, Alg: 16, #particle: 35
+07-27 at 07:41:45, name: r103-5, Alg: 8, #particle: 15
+07-27 at 07:46:09, name: rc207-1, Alg: 11, #particle: 15
+07-27 at 08:01:22, name: r112-1, Alg: 10, #particle: 15
+07-27 at 09:40:49, name: r207-5, Alg: 8, #particle: 15
+07-27 at 10:18:41, name: rc206-1, Alg: 11, #particle: 15
+07-27 at 10:48:30, name: r111-1, Alg: 10, #particle: 15
+07-27 at 11:20:20, name: r104-5, Alg: 14, #particle: 15
+07-27 at 13:08:59, name: rc205-1, Alg: 11, #particle: 15
+07-27 at 13:20:40, name: r110-1, Alg: 10, #particle: 15
+07-27 at 15:09:28, name: r210-5, Alg: 5, #particle: 15
+07-27 at 15:24:34, name: r109-1, Alg: 10, #particle: 15
+07-27 at 15:42:38, name: rc204-1, Alg: 11, #particle: 15
+07-27 at 16:17:45, name: r208-5, Alg: 8, #particle: 15
+07-27 at 17:29:35, name: r103-7, Alg: 5, #particle: 50
+07-27 at 17:53:11, name: r103-7, Alg: 5, #particle: 35
+07-27 at 18:03:17, name: r108-1, Alg: 10, #particle: 15
+07-27 at 18:20:43, name: rc106-5, Alg: 5, #particle: 15
+07-27 at 19:55:42, name: rc208-1, Alg: 13, #particle: 15
+07-27 at 20:01:53, name: c204-5, Alg: 11, #particle: 15
+07-27 at 20:37:35, name: r103-5, Alg: 10, #particle: 15
+07-27 at 21:32:04, name: rc207-1, Alg: 13, #particle: 15
+07-27 at 21:37:32, name: r107-1, Alg: 10, #particle: 15
+07-27 at 23:58:39, name: c205-1, Alg: 11, #particle: 15
+07-28 at 00:55:27, name: rc206-1, Alg: 13, #particle: 15
+07-28 at 01:08:59, name: r106-1, Alg: 10, #particle: 15
+07-28 at 01:32:22, name: r211-5, Alg: 5, #particle: 15
+07-28 at 03:06:43, name: rc205-1, Alg: 13, #particle: 15
+07-28 at 03:20:07, name: r103-10, Alg: random5, #particle: 15 seed: 5
+07-28 at 04:32:31, name: rc204-1, Alg: 13, #particle: 15
+07-28 at 04:58:07, name: r105-1, Alg: 10, #particle: 15
+07-28 at 05:50:03, name: r103-7, Alg: 5, #particle: 35
+07-28 at 06:26:31, name: r112-1, Alg: 11, #particle: 15
+07-28 at 06:34:04, name: r103-5, Alg: 8, #particle: 50
+07-28 at 06:37:39, name: r206-5, Alg: 10, #particle: 15
+07-28 at 06:51:50, name: rc208-1, Alg: 14, #particle: 15
+07-28 at 07:17:32, name: r103-5, Alg: 11, #particle: 15
+07-28 at 08:45:12, name: rc107-5, Alg: 5, #particle: 15
+07-28 at 08:45:16, name: r111-1, Alg: 11, #particle: 15
+07-28 at 09:12:20, name: rc207-1, Alg: 14, #particle: 15
+07-28 at 09:26:23, name: r104-5, Alg: 15, #particle: 15
+07-28 at 11:17:29, name: r203-5, Alg: 8, #particle: 15
+07-28 at 11:50:46, name: r110-1, Alg: 11, #particle: 15
+07-28 at 12:00:46, name: rc206-1, Alg: 14, #particle: 15
+07-28 at 12:13:56, name: r103-7, Alg: 5, #particle: 35
+07-28 at 12:53:39, name: c206-10, Alg: 11, #particle: 15
+07-28 at 06:55:09, name: r103-5, Alg: random5, #particle: 15 seed: 1
+07-28 at 14:05:53, name: r109-1, Alg: 11, #particle: 15
+07-28 at 16:02:19, name: r103-6, Alg: 13, #particle: 15
+07-28 at 16:11:34, name: r103-5, Alg: 10, #particle: 50
+07-28 at 16:18:52, name: r108-1, Alg: 11, #particle: 15
+07-28 at 17:01:42, name: rc205-1, Alg: 14, #particle: 15
+07-28 at 17:27:35, name: r207-5, Alg: 10, #particle: 15
+07-28 at 18:06:09, name: rc204-1, Alg: 14, #particle: 15
+07-28 at 19:16:10, name: r107-1, Alg: 11, #particle: 15
+07-28 at 19:51:44, name: r204-5, Alg: 8, #particle: 15
+07-28 at 20:25:35, name: r103-7, Alg: 5, #particle: 35
+07-28 at 20:26:29, name: rc108-5, Alg: 5, #particle: 15
+07-28 at 21:16:54, name: rc208-1, Alg: 15, #particle: 15
+07-28 at 21:31:33, name: r106-1, Alg: 11, #particle: 15
+07-28 at 22:00:35, name: r104-5, Alg: 16, #particle: 15
+07-28 at 22:40:50, name: r103-5, Alg: 11, #particle: 50
+07-28 at 23:05:03, name: c204-5, Alg: 13, #particle: 15
+07-28 at 23:34:04, name: rc207-1, Alg: 15, #particle: 15
+07-29 at 00:23:22, name: r103-7, Alg: 5, #particle: 35
+07-29 at 00:23:53, name: r105-1, Alg: 11, #particle: 15
+07-29 at 00:33:43, name: c205-1, Alg: 13, #particle: 15
+07-29 at 02:01:03, name: r103-6, Alg: 14, #particle: 15
+07-29 at 03:01:05, name: r112-1, Alg: 13, #particle: 15
+07-29 at 03:21:51, name: rc206-1, Alg: 15, #particle: 15
+07-29 at 03:52:02, name: r208-5, Alg: 10, #particle: 15
+07-29 at 05:16:50, name: r103-7, Alg: 5, #particle: 35
+07-29 at 05:33:39, name: rc205-1, Alg: 15, #particle: 15
+07-29 at 05:46:37, name: r111-1, Alg: 13, #particle: 15
+07-29 at 06:02:48, name: c206-10, Alg: 13, #particle: 15
+07-29 at 06:23:25, name: r205-5, Alg: 8, #particle: 15
+07-29 at 06:38:59, name: r103-6, Alg: 13, #particle: 50
+07-29 at 07:04:34, name: rc101-10, Alg: 8, #particle: 15
+07-29 at 07:29:40, name: r110-1, Alg: 13, #particle: 15
+07-29 at 07:35:03, name: rc204-1, Alg: 15, #particle: 15
+07-29 at 09:25:38, name: r109-1, Alg: 13, #particle: 15
+07-29 at 09:43:37, name: rc208-1, Alg: 16, #particle: 15
+07-29 at 10:13:26, name: R1_2_1-0, Alg: random5, #particle: 15 seed: 1
+07-29 at 11:17:53, name: rc207-1, Alg: 16, #particle: 15
+07-29 at 11:47:05, name: r103-10, Alg: 15, #particle: 15
+07-29 at 13:25:07, name: rc206-1, Alg: 16, #particle: 15
+07-29 at 13:29:13, name: r103-6, Alg: 14, #particle: 50
+07-29 at 14:00:52, name: r108-1, Alg: 13, #particle: 15
+07-29 at 14:55:05, name: r103-5, Alg: 8, #particle: 35
+07-29 at 15:55:12, name: r107-1, Alg: 13, #particle: 15
+07-29 at 16:54:56, name: rc205-1, Alg: 16, #particle: 15
+07-29 at 17:41:07, name: r206-10, Alg: 8, #particle: 15
+07-29 at 17:49:17, name: r106-1, Alg: 13, #particle: 15
+07-29 at 18:22:56, name: c204-5, Alg: 14, #particle: 15
+07-29 at 18:28:52, name: rc204-1, Alg: 16, #particle: 15
+07-29 at 18:51:10, name: rc102-10, Alg: 8, #particle: 15
+07-30 at 04:49:02, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+07-30 at 04:56:39, name: r103-0, Alg: random14, #particle: 15 seed: 5
+07-30 at 05:27:54, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+07-30 at 05:43:24, name: r103-0, Alg: random16, #particle: 15 seed: 5
+07-30 at 05:46:01, name: r103-0, Alg: random11, #particle: 15 seed: 5
+07-30 at 05:51:48, name: r103-0, Alg: random15, #particle: 15 seed: 5
+07-30 at 06:11:44, name: r103-2, Alg: random10, #particle: 15 seed: 5
+07-30 at 06:37:11, name: r103-0, Alg: random13, #particle: 15 seed: 5
+07-30 at 20:16:38, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+07-30 at 20:22:29, name: r103-0, Alg: random16, #particle: 15 seed: 5
+07-30 at 20:30:17, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+07-30 at 20:48:44, name: r103-0, Alg: random11, #particle: 15 seed: 5
+07-30 at 21:06:12, name: r103-0, Alg: random14, #particle: 15 seed: 5
+07-30 at 21:35:44, name: r103-0, Alg: random13, #particle: 15 seed: 5
+07-30 at 21:55:04, name: r103-0, Alg: random15, #particle: 15 seed: 5
+07-30 at 23:19:46, name: r103-2, Alg: random10, #particle: 15 seed: 5
+08-01 at 04:20:57, name: r208-0, Alg: random10, #particle: 15 seed: 1
+08-01 at 04:50:32, name: r208-0, Alg: random8, #particle: 15 seed: 2
+08-01 at 06:03:22, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+08-01 at 06:27:25, name: r208-0, Alg: random5, #particle: 15 seed: 2
+08-01 at 07:17:44, name: R1_2_1-0, Alg: random16, #particle: 15 seed: 1
+08-01 at 07:18:07, name: r208-0, Alg: random5, #particle: 15 seed: 1
+08-01 at 08:11:03, name: r103-2, Alg: random10, #particle: 15 seed: 5
+08-01 at 08:48:11, name: r208-0, Alg: random8, #particle: 15 seed: 1
+08-01 at 09:27:15, name: r208-0, Alg: random5, #particle: 15 seed: 3
+08-01 at 13:18:45, name: r208-0, Alg: random15, #particle: 15 seed: 1
+08-01 at 16:45:35, name: r208-0, Alg: random14, #particle: 15 seed: 1
+08-01 at 17:14:25, name: r208-0, Alg: random8, #particle: 15 seed: 3
+08-01 at 17:55:19, name: r208-0, Alg: random13, #particle: 15 seed: 2
+08-01 at 17:56:24, name: r208-0, Alg: random14, #particle: 15 seed: 1
+08-01 at 19:32:38, name: r208-0, Alg: random13, #particle: 15 seed: 1
+08-01 at 19:51:38, name: r103-0, Alg: random13, #particle: 15 seed: 5
+08-01 at 20:12:52, name: r208-0, Alg: random16, #particle: 15 seed: 1
+08-01 at 20:43:37, name: R1_2_1-0, Alg: random15, #particle: 15 seed: 1
+08-01 at 21:33:03, name: R1_2_1-0, Alg: random15, #particle: 15 seed: 1
+08-01 at 21:47:21, name: r208-5, Alg: 5, #particle: 15, seed: 1
+08-01 at 22:54:31, name: r204-0, Alg: random11, #particle: 15 seed: 1
+08-01 at 23:45:45, name: r204-0, Alg: random8, #particle: 15 seed: 1
+08-02 at 00:24:14, name: r208-0, Alg: random14, #particle: 15 seed: 2
+08-02 at 00:44:48, name: r208-0, Alg: random16, #particle: 15 seed: 2
+08-02 at 01:53:33, name: r208-0, Alg: random11, #particle: 15 seed: 1
+08-02 at 02:41:41, name: r204-0, Alg: random5, #particle: 15 seed: 1
+08-02 at 05:13:57, name: R1_2_1-0, Alg: random14, #particle: 15 seed: 1
+08-02 at 05:47:11, name: r208-0, Alg: random10, #particle: 15 seed: 1
+08-03 at 11:16:57, name: r110-0, Alg: case16, #particle: 20 seed: 1
+08-03 at 11:21:41, name: r110-0, Alg: case16, #particle: 20 seed: 1
+08-03 at 12:23:20, name: r209-0, Alg: 16, #particle: 20, seed: 1
+08-03 at 13:51:00, name: r204-0, Alg: 16, #particle: 20, seed: 1
+08-03 at 14:06:20, name: rc107-0, Alg: 16, #particle: 20, seed: 1
+08-03 at 14:11:27, name: r110-0, Alg: 16, #particle: 20, seed: 1
+08-03 at 15:40:19, name: r204-0, Alg: 16, #particle: 25, seed: 1
+08-03 at 16:28:36, name: rc107-0, Alg: 16, #particle: 25, seed: 1
+08-03 at 16:33:39, name: r110-0, Alg: 16, #particle: 25, seed: 1
+08-03 at 17:34:08, name: r209-0, Alg: 16, #particle: 25, seed: 1
+08-04 at 12:10:19, name: r211-1, Alg: random16, #particle: 20 seed: 1
+08-04 at 12:22:51, name: r211-1, Alg: 16, #particle: 20, seed: 1
+08-04 at 14:39:55, name: r211-1, Alg: random16, #particle: 25 seed: 1
+08-04 at 15:20:22, name: r211-1, Alg: 16, #particle: 25, seed: 1
+08-04 at 16:18:43, name: r211-1, Alg: random16, #particle: 30 seed: 1
+08-04 at 16:51:15, name: r211-1, Alg: 16, #particle: 30, seed: 1
+08-04 at 18:14:47, name: r211-1, Alg: random16, #particle: 35 seed: 1
+08-04 at 19:29:45, name: r211-1, Alg: 16, #particle: 35, seed: 1
+08-04 at 21:36:59, name: r208-1, Alg: random14, #particle: 20 seed: 1
+08-04 at 21:41:09, name: r207-1, Alg: 16, #particle: 20, seed: 1
+08-04 at 21:52:21, name: r207-1, Alg: random16, #particle: 20 seed: 1
+08-04 at 22:16:02, name: r208-1, Alg: random15, #particle: 20 seed: 1
+08-04 at 23:26:28, name: r207-1, Alg: 16, #particle: 25, seed: 1
+08-04 at 23:30:22, name: r207-1, Alg: random16, #particle: 25 seed: 1
+08-05 at 00:59:44, name: r207-1, Alg: random16, #particle: 30 seed: 1
+08-05 at 01:03:45, name: r208-1, Alg: random14, #particle: 25 seed: 1
+08-05 at 01:36:22, name: r208-1, Alg: random15, #particle: 25 seed: 1
+08-05 at 02:32:26, name: r207-1, Alg: random16, #particle: 35 seed: 1
+08-05 at 02:40:45, name: r207-1, Alg: 16, #particle: 30, seed: 1
+08-05 at 02:49:27, name: r208-1, Alg: random14, #particle: 30 seed: 1
+08-05 at 03:12:32, name: r204-5, Alg: 13, #particle: 15, seed: 1
+08-05 at 03:17:10, name: r105-6, Alg: 5, #particle: 15, seed: 1
+08-05 at 05:38:10, name: r207-1, Alg: 16, #particle: 35, seed: 1
+08-05 at 05:59:57, name: r208-1, Alg: random14, #particle: 35 seed: 1
+08-05 at 06:43:40, name: r208-1, Alg: random15, #particle: 30 seed: 1
+08-05 at 08:30:22, name: r205-5, Alg: 13, #particle: 15, seed: 1
+08-05 at 10:07:30, name: r210-10, Alg: 5, #particle: 15, seed: 1
+08-05 at 11:44:48, name: r208-1, Alg: random15, #particle: 35 seed: 1
+08-05 at 13:05:58, name: rc206-1, Alg: random14, #particle: 20 seed: 1
+08-05 at 13:27:27, name: rc206-1, Alg: random16, #particle: 20 seed: 1
+08-05 at 13:55:48, name: rc206-1, Alg: 16, #particle: 20, seed: 1
+08-05 at 14:46:42, name: rc206-1, Alg: random16, #particle: 25 seed: 1
+08-05 at 15:08:09, name: rc206-1, Alg: random14, #particle: 25 seed: 1
+08-05 at 16:11:48, name: r206-5, Alg: 13, #particle: 15, seed: 1
+08-05 at 16:16:05, name: rc206-1, Alg: 16, #particle: 25, seed: 1
+08-05 at 16:17:31, name: r208-0, Alg: random1ุ, #particle: 20 seed: 1
+08-05 at 16:17:33, name: r208-0, Alg: random1ุ, #particle: 25 seed: 1
+08-05 at 16:17:36, name: r208-0, Alg: random1ุ, #particle: 30 seed: 1
+08-05 at 16:17:38, name: r208-0, Alg: random1ุ, #particle: 35 seed: 1
+08-05 at 16:48:21, name: r211-10, Alg: 5, #particle: 15, seed: 1
+08-05 at 17:21:48, name: rc206-1, Alg: random14, #particle: 30 seed: 1
+08-05 at 17:56:47, name: rc206-1, Alg: 16, #particle: 30, seed: 1
+08-05 at 19:04:48, name: rc206-1, Alg: random16, #particle: 30 seed: 1
+08-05 at 19:20:54, name: r208-1, Alg: random16, #particle: 20 seed: 1
+08-05 at 21:32:21, name: rc206-1, Alg: random14, #particle: 35 seed: 1
+08-05 at 21:40:32, name: rc206-1, Alg: 16, #particle: 35, seed: 1
+08-05 at 22:02:16, name: rc206-1, Alg: random16, #particle: 35 seed: 1
+08-05 at 22:47:40, name: r208-1, Alg: random16, #particle: 25 seed: 1
+08-06 at 00:05:09, name: r208-5, Alg: random16, #particle: 30 seed: 1
+08-06 at 01:08:30, name: rc104-10, Alg: 5, #particle: 15, seed: 1
+08-06 at 01:54:52, name: r204-5, Alg: 14, #particle: 15, seed: 1
+08-06 at 03:23:23, name: r208-1, Alg: random16, #particle: 35 seed: 1
+08-06 at 07:34:46, name: r205-5, Alg: 14, #particle: 15, seed: 1
+08-06 at 09:37:08, name: rc105-10, Alg: 5, #particle: 15, seed: 1
+08-06 at 11:57:57, name: r206-5, Alg: 14, #particle: 15, seed: 1
+08-06 at 13:12:38, name: rc208-1, Alg: random14, #particle: 20 seed: 1
+08-06 at 13:46:47, name: r106-1, Alg: random16, #particle: 20 seed: 1
+08-06 at 13:56:57, name: rc106-1, Alg: 16, #particle: 20, seed: 1
+08-06 at 14:31:50, name: rc208-1, Alg: random16, #particle: 20 seed: 1
+08-06 at 15:11:58, name: rc208-1, Alg: random14, #particle: 25 seed: 1
+08-06 at 15:55:25, name: rc106-1, Alg: 16, #particle: 25, seed: 1
+08-06 at 16:34:36, name: r106-1, Alg: random16, #particle: 25 seed: 1
+08-06 at 18:11:07, name: rc208-1, Alg: random16, #particle: 25 seed: 1
+08-06 at 18:30:08, name: rc106-10, Alg: 5, #particle: 15, seed: 1
+08-06 at 18:40:24, name: rc208-1, Alg: random14, #particle: 30 seed: 1
+08-06 at 18:51:39, name: r106-1, Alg: random16, #particle: 30 seed: 1
+08-06 at 20:41:56, name: rc106-1, Alg: 16, #particle: 30, seed: 1
+08-06 at 20:42:13, name: rc208-1, Alg: random16, #particle: 30 seed: 1
+08-06 at 21:17:22, name: rc208-1, Alg: random14, #particle: 35 seed: 1
+08-06 at 21:38:18, name: r204-5, Alg: 15, #particle: 15, seed: 1
+08-06 at 22:14:32, name: r106-1, Alg: random16, #particle: 35 seed: 1
+08-06 at 23:12:06, name: rc208-1, Alg: random16, #particle: 35 seed: 1
+08-07 at 00:25:59, name: rc106-1, Alg: 16, #particle: 35, seed: 1
+08-07 at 00:50:59, name: rc106-1, Alg: random14, #particle: 20 seed: 1
+08-07 at 00:58:18, name: rc106-1, Alg: random16, #particle: 20 seed: 1
+08-07 at 01:06:35, name: r205-1, Alg: random16, #particle: 20 seed: 1
+08-07 at 02:16:39, name: rc106-1, Alg: random14, #particle: 25 seed: 1
+08-07 at 02:45:34, name: r205-1, Alg: random16, #particle: 25 seed: 1
+08-07 at 03:19:06, name: rc107-10, Alg: 5, #particle: 15, seed: 1
+08-07 at 04:10:36, name: rc106-1, Alg: random16, #particle: 25 seed: 1
+08-07 at 04:29:51, name: rc106-1, Alg: random14, #particle: 30 seed: 1
+08-07 at 04:48:16, name: r205-1, Alg: random16, #particle: 30 seed: 1
+08-07 at 05:32:54, name: r205-5, Alg: 15, #particle: 15, seed: 1
+08-07 at 06:08:46, name: rc106-1, Alg: random16, #particle: 30 seed: 1
+08-07 at 08:12:09, name: r205-1, Alg: random16, #particle: 35 seed: 1
+08-07 at 08:24:44, name: rc106-1, Alg: random14, #particle: 35 seed: 1
+08-07 at 08:34:19, name: rc106-1, Alg: random16, #particle: 35 seed: 1
+08-07 at 08:53:21, name: rc108-10, Alg: 5, #particle: 15, seed: 1
+08-07 at 14:29:42, name: r105-6, Alg: 8, #particle: 15, seed: 1
+08-07 at 15:46:01, name: r206-5, Alg: 15, #particle: 15, seed: 1
+08-07 at 19:32:51, name: r210-5, Alg: 8, #particle: 15, seed: 1
+08-07 at 21:23:15, name: r204-5, Alg: 16, #particle: 15, seed: 1
+08-08 at 01:27:57, name: r205-5, Alg: 16, #particle: 15, seed: 1
+08-08 at 02:06:23, name: r211-5, Alg: 8, #particle: 15, seed: 1
+08-08 at 07:43:37, name: r206-5, Alg: 16, #particle: 15, seed: 1
+08-08 at 08:05:07, name: rc104-5, Alg: 8, #particle: 15, seed: 1
+08-08 at 15:07:20, name: rc105-5, Alg: 8, #particle: 15, seed: 1
+08-08 at 16:53:25, name: rc106-1, Alg: random15, #particle: 20 seed: 1
+08-08 at 16:53:27, name: r106-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 17:07:10, name: r204-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 17:22:35, name: rc101-1, Alg: random16, #particle: 15 seed: 1
+08-08 at 17:22:38, name: r106-1, Alg: 16, #particle: 20, seed: 1
+08-08 at 17:45:51, name: rc101-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 17:52:01, name: rc101-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 19:00:02, name: r112-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 19:10:08, name: r106-1, Alg: random15, #particle: 20 seed: 1
+08-08 at 19:17:55, name: rc102-1, Alg: random16, #particle: 15 seed: 1
+08-08 at 19:32:06, name: rc101-1, Alg: random15, #particle: 20 seed: 1
+08-08 at 19:34:55, name: r205-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 19:37:16, name: rc102-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 19:52:47, name: r204-2, Alg: 16, #particle: 20, seed: 1
+08-08 at 20:40:55, name: r111-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 20:49:17, name: rc102-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 20:54:41, name: r205-1, Alg: random15, #particle: 20 seed: 1
+08-08 at 20:58:11, name: rc103-1, Alg: random16, #particle: 15 seed: 1
+08-08 at 21:07:49, name: r204-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 21:20:38, name: rc103-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 22:04:25, name: rc103-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 22:19:42, name: rc104-1, Alg: random16, #particle: 15 seed: 1
+08-08 at 22:36:36, name: r112-1, Alg: 16, #particle: 20, seed: 1
+08-08 at 22:37:20, name: r112-1, Alg: random14, #particle: 20 seed: 1
+08-08 at 22:41:21, name: rc102-1, Alg: random15, #particle: 20 seed: 1
+08-08 at 22:47:00, name: rc106-5, Alg: 8, #particle: 15, seed: 1
+08-08 at 22:49:26, name: rc104-1, Alg: random16, #particle: 20 seed: 1
+08-08 at 23:10:42, name: r110-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 00:00:03, name: rc105-1, Alg: random16, #particle: 15 seed: 1
+08-09 at 00:30:46, name: rc104-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 00:39:41, name: r204-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 00:42:58, name: rc105-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 00:43:42, name: r111-1, Alg: 16, #particle: 20, seed: 1
+08-09 at 00:51:44, name: r111-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 01:08:33, name: rc106-1, Alg: random16, #particle: 15 seed: 1
+08-09 at 01:51:34, name: rc106-2, Alg: random16, #particle: 20 seed: 1
+08-09 at 02:06:17, name: rc105-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 02:17:16, name: rc107-1, Alg: random16, #particle: 15 seed: 1
+08-09 at 02:18:58, name: r109-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 02:35:18, name: rc103-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 03:17:27, name: r112-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 03:18:32, name: rc107-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 03:47:13, name: rc106-2, Alg: random14, #particle: 20 seed: 1
+08-09 at 03:52:08, name: rc108-1, Alg: random16, #particle: 15 seed: 1
+08-09 at 04:01:31, name: r110-2, Alg: 16, #particle: 20, seed: 1
+08-09 at 04:03:29, name: r108-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 04:38:27, name: r110-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 05:02:46, name: rc107-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 05:06:31, name: rc108-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 05:11:11, name: rc104-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 05:25:33, name: r111-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 05:26:30, name: rc101-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 06:05:57, name: r109-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 06:16:17, name: r109-1, Alg: 16, #particle: 20, seed: 1
+08-09 at 06:44:01, name: r107-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 07:17:04, name: rc108-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 07:26:20, name: rc102-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 07:48:10, name: r110-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 08:22:58, name: rc105-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 08:30:46, name: r108-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 08:34:31, name: r104-1, Alg: random16, #particle: 20 seed: 1
+08-09 at 08:35:34, name: rc101-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 08:42:26, name: rc103-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 09:01:41, name: rc107-5, Alg: 8, #particle: 15, seed: 1
+08-09 at 09:39:06, name: r108-1, Alg: 16, #particle: 20, seed: 1
+08-09 at 09:57:14, name: rc104-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 10:02:38, name: rc101-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 10:02:45, name: r204-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 10:27:38, name: r109-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 10:57:53, name: r107-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 11:02:38, name: rc106-2, Alg: random15, #particle: 20 seed: 1
+08-09 at 11:03:13, name: rc102-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 11:40:08, name: rc105-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 12:00:46, name: r112-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 12:27:46, name: r107-1, Alg: 16, #particle: 20, seed: 1
+08-09 at 12:38:21, name: rc102-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 13:06:57, name: r108-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 13:10:17, name: rc103-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 13:11:04, name: r104-1, Alg: random14, #particle: 20 seed: 1
+08-09 at 13:21:51, name: rc106-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 13:28:53, name: rc107-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 14:06:02, name: r111-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 14:30:07, name: rc107-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 14:33:17, name: r104-1, Alg: 16, #particle: 20, seed: 1
+08-09 at 15:15:05, name: rc103-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 15:25:04, name: rc104-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 15:41:39, name: r106-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 15:47:15, name: r107-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 16:30:26, name: r110-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 16:40:26, name: rc108-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 16:41:12, name: rc108-2, Alg: random16, #particle: 15 seed: 1
+08-09 at 17:31:11, name: rc105-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 17:40:17, name: rc104-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 17:51:37, name: r106-1, Alg: 16, #particle: 25, seed: 1
+08-09 at 17:53:52, name: rc108-5, Alg: 8, #particle: 15, seed: 1
+08-09 at 17:54:17, name: r205-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 18:03:25, name: r104-1, Alg: random15, #particle: 20 seed: 1
+08-09 at 18:11:38, name: rc101-3, Alg: random16, #particle: 15 seed: 1
+08-09 at 19:05:50, name: r109-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 19:10:35, name: rc101-1, Alg: random15, #particle: 25 seed: 1
+08-09 at 19:39:52, name: rc106-2, Alg: random16, #particle: 25 seed: 1
+08-09 at 19:40:41, name: rc105-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 19:45:28, name: rc102-3, Alg: random16, #particle: 15 seed: 1
+08-09 at 20:28:26, name: r204-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 20:54:37, name: r204-2, Alg: 16, #particle: 25, seed: 1
+08-09 at 21:16:37, name: rc103-3, Alg: random16, #particle: 15 seed: 1
+08-09 at 21:23:04, name: r108-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 21:30:10, name: rc106-2, Alg: random14, #particle: 25 seed: 1
+08-09 at 22:28:56, name: r112-1, Alg: random14, #particle: 25 seed: 1
+08-09 at 22:38:45, name: rc107-1, Alg: random16, #particle: 25 seed: 1
+08-09 at 22:47:57, name: rc104-3, Alg: random16, #particle: 15 seed: 1
+08-09 at 23:04:55, name: rc102-1, Alg: random15, #particle: 25 seed: 1
+08-09 at 23:06:54, name: rc106-1, Alg: random15, #particle: 25 seed: 1
+08-09 at 23:26:00, name: rc107-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 00:03:43, name: r112-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 00:22:10, name: r107-1, Alg: random16, #particle: 25 seed: 1
+08-10 at 00:38:17, name: rc105-3, Alg: random16, #particle: 15 seed: 1
+08-10 at 01:04:04, name: rc108-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 01:33:29, name: rc108-1, Alg: random16, #particle: 25 seed: 1
+08-10 at 01:33:39, name: r111-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 01:52:29, name: rc103-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 02:07:30, name: rc106-3, Alg: random16, #particle: 15 seed: 1
+08-10 at 03:04:09, name: r111-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 03:57:01, name: rc101-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 04:09:41, name: r104-1, Alg: random16, #particle: 25 seed: 1
+08-10 at 04:24:06, name: r105-6, Alg: 10, #particle: 15, seed: 1
+08-10 at 04:33:35, name: rc107-3, Alg: random16, #particle: 15 seed: 1
+08-10 at 04:33:45, name: rc101-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 04:45:14, name: r110-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 05:11:41, name: rc104-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 05:13:10, name: r106-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 05:31:49, name: r110-2, Alg: 16, #particle: 25, seed: 1
+08-10 at 05:44:09, name: rc108-3, Alg: random16, #particle: 15 seed: 1
+08-10 at 06:28:28, name: r109-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 06:54:53, name: rc102-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 07:03:56, name: rc101-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 08:12:24, name: r205-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 08:15:47, name: rc102-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 08:16:56, name: r108-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 08:24:43, name: rc105-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 08:51:42, name: r109-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 08:51:58, name: r204-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 08:59:09, name: rc102-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 09:22:03, name: rc103-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 10:29:46, name: r204-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 10:53:08, name: rc103-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 10:54:08, name: r107-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 11:23:03, name: rc103-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 11:25:30, name: r108-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 11:34:09, name: rc104-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 12:10:30, name: rc104-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 12:48:35, name: r112-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 13:06:17, name: rc106-2, Alg: random15, #particle: 25 seed: 1
+08-10 at 13:28:55, name: rc105-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 13:32:35, name: r112-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 13:45:13, name: r210-5, Alg: 10, #particle: 15, seed: 1
+08-10 at 13:51:04, name: rc104-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 14:17:26, name: r107-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 14:24:54, name: r104-1, Alg: random14, #particle: 25 seed: 1
+08-10 at 14:39:10, name: rc105-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 15:01:38, name: r111-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 15:14:04, name: rc106-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 16:04:03, name: r111-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 16:29:38, name: rc107-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 16:31:26, name: rc105-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 16:47:56, name: r106-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 16:53:40, name: rc106-2, Alg: random16, #particle: 30 seed: 1
+08-10 at 17:26:59, name: r110-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 17:45:50, name: r104-1, Alg: 16, #particle: 25, seed: 1
+08-10 at 17:53:06, name: rc107-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 18:51:39, name: r110-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 19:00:23, name: rc108-4, Alg: random16, #particle: 15 seed: 1
+08-10 at 19:26:30, name: rc107-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 19:33:21, name: r205-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 20:11:22, name: r109-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 20:28:24, name: rc108-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 20:36:26, name: rc106-2, Alg: random14, #particle: 30 seed: 1
+08-10 at 20:52:00, name: r106-1, Alg: 16, #particle: 30, seed: 1
+08-10 at 21:19:25, name: rc108-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 21:53:24, name: r204-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 22:22:41, name: r109-1, Alg: random15, #particle: 25 seed: 1
+08-10 at 22:37:24, name: r108-1, Alg: random16, #particle: 30 seed: 1
+08-10 at 22:40:23, name: rc107-1, Alg: random14, #particle: 30 seed: 1
+08-10 at 23:19:13, name: r204-1, Alg: 16, #particle: 30, seed: 1
+08-10 at 23:36:18, name: rc101-1, Alg: random15, #particle: 30 seed: 1
+08-10 at 23:45:48, name: r112-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 00:11:05, name: r211-5, Alg: 10, #particle: 15, seed: 1
+08-11 at 00:40:57, name: rc101-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 00:47:50, name: rc108-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 01:01:03, name: r107-1, Alg: random16, #particle: 30 seed: 1
+08-11 at 02:30:36, name: r108-1, Alg: random15, #particle: 25 seed: 1
+08-11 at 02:45:45, name: r111-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 02:59:33, name: r112-1, Alg: 16, #particle: 30, seed: 1
+08-11 at 03:50:01, name: r104-1, Alg: random16, #particle: 30 seed: 1
+08-11 at 03:57:02, name: rc102-1, Alg: random15, #particle: 30 seed: 1
+08-11 at 04:32:56, name: rc101-1, Alg: random14, #particle: 35 seed: 1
+08-11 at 04:40:20, name: rc102-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 05:16:54, name: r107-1, Alg: random15, #particle: 25 seed: 1
+08-11 at 05:32:43, name: r110-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 06:28:51, name: rc101-9, Alg: random16, #particle: 15 seed: 1
+08-11 at 07:25:10, name: r204-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 07:29:19, name: rc103-1, Alg: random15, #particle: 30 seed: 1
+08-11 at 07:41:50, name: r111-1, Alg: 16, #particle: 30, seed: 1
+08-11 at 08:11:43, name: rc103-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 08:36:07, name: rc102-1, Alg: random14, #particle: 35 seed: 1
+08-11 at 08:52:23, name: r104-1, Alg: random15, #particle: 25 seed: 1
+08-11 at 10:18:24, name: r109-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 10:22:07, name: r110-1, Alg: 16, #particle: 30, seed: 1
+08-11 at 10:53:25, name: rc104-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 11:31:36, name: r112-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 11:34:56, name: rc103-1, Alg: random14, #particle: 35 seed: 1
+08-11 at 13:01:53, name: r108-1, Alg: random14, #particle: 30 seed: 1
+08-11 at 13:20:03, name: r109-1, Alg: 16, #particle: 30, seed: 1
+08-11 at 13:26:28, name: rc106-1, Alg: random15, #particle: 30 seed: 1
+08-11 at 13:31:29, name: rc105-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 13:55:05, name: rc104-5, Alg: 10, #particle: 15, seed: 1
+08-11 at 14:10:29, name: rc104-1, Alg: random15, #particle: 30 seed: 1
+08-11 at 14:48:58, name: r111-1, Alg: random16, #particle: 35 seed: 1
+08-11 at 15:07:44, name: rc102-9, Alg: random16, #particle: 15 seed: 1
+08-11 at 15:12:05, name: rc104-1, Alg: random14, #particle: 35 seed: 1
+08-11 at 15:53:36, name: r108-1, Alg: 16, #particle: 30, seed: 1
+08-11 at 17:28:22, name: rc106-2, Alg: random16, #particle: 35 seed: 1
+08-11 at 17:51:05, name: r106-1, Alg: random15, #particle: 30 seed: 1
+08-11 at 17:53:59, name: rc105-1, Alg: random14, #particle: 35 seed: 1
+08-11 at 18:06:34, name: r107-1, Alg: random14, #particle: 30 seed: 1
+08-12 at 12:23:49, name: rc201-1, Alg: 14, #particle: 20, seed: 1
+08-12 at 12:35:40, name: rc201-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 12:37:45, name: rc201-1, Alg: 15, #particle: 20, seed: 1
+08-12 at 13:12:20, name: rc201-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 13:19:48, name: rc201-1, Alg: random15, #particle: 20 seed: 1
+08-12 at 13:34:51, name: rc201-1, Alg: 16, #particle: 20, seed: 1
+08-12 at 14:07:29, name: rc202-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 15:03:50, name: rc202-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 15:25:30, name: rc203-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 15:27:13, name: rc202-1, Alg: random15, #particle: 20 seed: 1
+08-12 at 15:36:27, name: rc202-1, Alg: 16, #particle: 20, seed: 1
+08-12 at 15:48:32, name: rc202-1, Alg: 14, #particle: 20, seed: 1
+08-12 at 16:07:05, name: rc202-1, Alg: 15, #particle: 20, seed: 1
+08-12 at 16:36:46, name: rc204-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 16:38:14, name: rc101-14, Alg: random16, #particle: 15 seed: 1
+08-12 at 16:40:05, name: rc201-5, Alg: random16, #particle: 15 seed: 1
+08-12 at 16:49:57, name: rc203-1, Alg: random15, #particle: 20 seed: 1
+08-12 at 17:03:20, name: rc203-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 17:24:02, name: rc203-1, Alg: 16, #particle: 20, seed: 1
+08-12 at 17:32:34, name: rc203-1, Alg: 14, #particle: 20, seed: 1
+08-12 at 17:41:21, name: rc205-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 18:00:36, name: rc203-1, Alg: 15, #particle: 20, seed: 1
+08-12 at 18:34:05, name: rc204-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 19:08:18, name: rc204-1, Alg: 14, #particle: 20, seed: 1
+08-12 at 19:17:20, name: rc206-2, Alg: random14, #particle: 20 seed: 1
+08-12 at 19:28:39, name: rc204-1, Alg: random15, #particle: 20 seed: 1
+08-12 at 19:50:59, name: rc205-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 20:17:05, name: rc204-1, Alg: 16, #particle: 20, seed: 1
+08-12 at 20:41:29, name: rc207-1, Alg: random14, #particle: 20 seed: 1
+08-12 at 21:16:00, name: rc204-1, Alg: 15, #particle: 20, seed: 1
+08-12 at 21:17:06, name: rc205-1, Alg: 14, #particle: 20, seed: 1
+08-12 at 21:38:59, name: rc205-1, Alg: random15, #particle: 20 seed: 1
+08-12 at 21:48:50, name: rc205-1, Alg: 16, #particle: 20, seed: 1
+08-12 at 21:52:57, name: rc208-2, Alg: random14, #particle: 20 seed: 1
+08-12 at 21:55:05, name: rc206-2, Alg: random16, #particle: 20 seed: 1
+08-12 at 22:47:50, name: rc202-5, Alg: random16, #particle: 15 seed: 1
+08-12 at 22:48:20, name: rc102-14, Alg: random16, #particle: 15 seed: 1
+08-12 at 22:57:58, name: rc205-1, Alg: 15, #particle: 20, seed: 1
+08-12 at 23:06:54, name: rc207-1, Alg: random16, #particle: 20 seed: 1
+08-12 at 23:47:33, name: rc206-1, Alg: 14, #particle: 20, seed: 1
+08-13 at 00:14:47, name: rc206-2, Alg: 16, #particle: 20, seed: 1
+08-13 at 00:17:49, name: rc201-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 00:46:16, name: rc206-1, Alg: 15, #particle: 20, seed: 1
+08-13 at 00:53:08, name: rc206-1, Alg: random15, #particle: 20 seed: 1
+08-13 at 01:02:31, name: rc208-2, Alg: random16, #particle: 20 seed: 1
+08-13 at 01:11:37, name: rc207-1, Alg: 16, #particle: 20, seed: 1
+08-13 at 01:15:47, name: rc107-15, Alg: 5, #particle: 15, seed: 1
+08-13 at 01:53:50, name: rc207-1, Alg: 14, #particle: 20, seed: 1
+08-13 at 02:43:59, name: rc208-1, Alg: 16, #particle: 20, seed: 1
+08-13 at 02:52:30, name: rc207-1, Alg: random15, #particle: 20 seed: 1
+08-13 at 02:52:42, name: rc207-1, Alg: 15, #particle: 20, seed: 1
+08-13 at 03:14:52, name: rc201-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 03:43:23, name: rc202-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 03:55:12, name: rc208-1, Alg: 14, #particle: 20, seed: 1
+08-13 at 04:27:50, name: rc208-1, Alg: random15, #particle: 20 seed: 1
+08-13 at 04:45:56, name: rc201-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 04:56:21, name: rc208-1, Alg: 15, #particle: 20, seed: 1
+08-13 at 05:59:35, name: rc203-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 05:59:56, name: rc201-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 06:08:52, name: rc202-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 06:33:01, name: rc201-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 07:22:34, name: rc202-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 07:23:44, name: rc204-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 07:40:30, name: rc203-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 07:45:51, name: rc203-5, Alg: random16, #particle: 15 seed: 1
+08-13 at 07:52:30, name: rc103-11, Alg: random16, #particle: 15 seed: 1
+08-13 at 08:06:47, name: rc202-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 08:33:10, name: rc201-1, Alg: 15, #particle: 25, seed: 1
+08-13 at 08:48:24, name: rc107-10, Alg: 8, #particle: 15, seed: 1
+08-13 at 09:13:55, name: rc203-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 09:27:22, name: rc202-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 09:36:50, name: rc205-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 09:39:24, name: rc204-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 11:33:54, name: rc206-2, Alg: random14, #particle: 25 seed: 1
+08-13 at 11:35:27, name: rc203-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 11:45:18, name: rc203-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 11:50:03, name: rc205-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 12:17:56, name: rc204-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 13:35:26, name: rc204-5, Alg: random16, #particle: 15 seed: 1
+08-13 at 13:54:56, name: rc202-1, Alg: 15, #particle: 25, seed: 1
+08-13 at 14:00:55, name: rc204-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 14:16:57, name: rc206-2, Alg: random16, #particle: 25 seed: 1
+08-13 at 14:22:52, name: rc205-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 14:46:03, name: rc207-1, Alg: random14, #particle: 25 seed: 1
+08-13 at 16:18:24, name: rc204-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 16:22:16, name: rc207-1, Alg: random16, #particle: 25 seed: 1
+08-13 at 16:25:21, name: rc104-9, Alg: random16, #particle: 15 seed: 1
+08-13 at 16:28:10, name: rc205-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 16:35:10, name: rc107-5, Alg: 10, #particle: 15, seed: 1
+08-13 at 17:07:07, name: rc206-2, Alg: 16, #particle: 25, seed: 1
+08-13 at 17:32:50, name: rc208-2, Alg: random14, #particle: 25 seed: 1
+08-13 at 18:12:55, name: rc206-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 18:34:10, name: rc208-2, Alg: random16, #particle: 25 seed: 1
+08-13 at 19:03:35, name: rc203-1, Alg: 15, #particle: 25, seed: 1
+08-13 at 19:48:46, name: rc207-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 20:18:45, name: rc205-5, Alg: random16, #particle: 15 seed: 1
+08-13 at 21:06:53, name: rc201-1, Alg: random14, #particle: 30 seed: 1
+08-13 at 21:13:05, name: rc205-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 21:52:58, name: rc201-1, Alg: random16, #particle: 30 seed: 1
+08-13 at 21:56:55, name: rc208-1, Alg: 16, #particle: 25, seed: 1
+08-13 at 22:03:38, name: rc207-1, Alg: 14, #particle: 25, seed: 1
+08-13 at 23:24:06, name: rc105-9, Alg: random16, #particle: 15 seed: 1
+08-13 at 23:24:15, name: rc202-1, Alg: random14, #particle: 30 seed: 1
+08-13 at 23:38:35, name: rc206-1, Alg: random15, #particle: 25 seed: 1
+08-13 at 23:58:53, name: rc107-5, Alg: 11, #particle: 15, seed: 1
+08-14 at 00:01:30, name: rc204-1, Alg: 15, #particle: 25, seed: 1
+08-14 at 01:08:20, name: rc201-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 01:13:40, name: rc202-1, Alg: random16, #particle: 30 seed: 1
+08-14 at 02:45:25, name: rc207-1, Alg: random15, #particle: 25 seed: 1
+08-14 at 02:53:26, name: rc208-1, Alg: 14, #particle: 25, seed: 1
+08-14 at 03:38:04, name: rc203-1, Alg: random16, #particle: 30 seed: 1
+08-14 at 04:12:55, name: rc203-1, Alg: random14, #particle: 30 seed: 1
+08-14 at 04:23:20, name: rc205-1, Alg: 15, #particle: 25, seed: 1
+08-14 at 04:29:29, name: rc206-5, Alg: random16, #particle: 15 seed: 1
+08-14 at 04:56:26, name: rc106-9, Alg: random16, #particle: 15 seed: 1
+08-14 at 05:11:46, name: rc201-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 05:31:06, name: rc202-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 06:58:19, name: rc206-1, Alg: 15, #particle: 25, seed: 1
+08-14 at 07:04:14, name: rc208-1, Alg: random15, #particle: 25 seed: 1
+08-14 at 07:39:04, name: rc204-1, Alg: random16, #particle: 30 seed: 1
+08-14 at 08:08:13, name: rc107-5, Alg: 13, #particle: 15, seed: 1
+08-14 at 08:27:39, name: rc204-1, Alg: random14, #particle: 30 seed: 1
+08-14 at 09:58:50, name: rc202-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 10:06:13, name: rc203-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 10:14:16, name: rc207-1, Alg: 15, #particle: 25, seed: 1
+08-14 at 10:40:15, name: rc205-1, Alg: random16, #particle: 30 seed: 1
+08-14 at 11:40:00, name: rc201-1, Alg: random15, #particle: 30 seed: 1
+08-14 at 11:42:20, name: rc205-1, Alg: random14, #particle: 30 seed: 1
+08-14 at 12:33:28, name: rc203-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 13:06:51, name: rc206-2, Alg: random16, #particle: 30 seed: 1
+08-14 at 13:07:04, name: rc107-9, Alg: random16, #particle: 15 seed: 1
+08-14 at 13:31:44, name: rc204-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 13:45:16, name: rc207-5, Alg: random16, #particle: 15 seed: 1
+08-14 at 15:08:29, name: rc207-1, Alg: random16, #particle: 30 seed: 1
+08-14 at 15:25:23, name: rc206-2, Alg: random14, #particle: 30 seed: 1
+08-14 at 16:06:35, name: rc202-1, Alg: random15, #particle: 30 seed: 1
+08-14 at 16:22:56, name: rc204-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 16:42:59, name: rc208-1, Alg: 15, #particle: 25, seed: 1
+08-14 at 16:43:47, name: rc205-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 17:04:41, name: rc107-5, Alg: 14, #particle: 15, seed: 1
+08-14 at 17:24:20, name: rc207-1, Alg: random14, #particle: 30 seed: 1
+08-14 at 17:32:38, name: rc208-2, Alg: random16, #particle: 30 seed: 1
+08-14 at 18:53:31, name: rc205-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 19:04:09, name: rc206-2, Alg: 16, #particle: 30, seed: 1
+08-14 at 19:36:29, name: rc201-1, Alg: 15, #particle: 30, seed: 1
+08-14 at 20:33:27, name: rc201-1, Alg: random16, #particle: 35 seed: 1
+08-14 at 20:45:03, name: rc108-9, Alg: random16, #particle: 15 seed: 1
+08-14 at 21:16:02, name: rc206-1, Alg: 14, #particle: 30, seed: 1
+08-14 at 21:47:48, name: rc208-2, Alg: random14, #particle: 30 seed: 1
+08-14 at 22:54:27, name: rc207-1, Alg: 16, #particle: 30, seed: 1
+08-14 at 22:59:26, name: rc208-5, Alg: random16, #particle: 15 seed: 1
+08-14 at 23:58:16, name: rc201-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 00:06:22, name: rc203-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 00:28:04, name: rc202-1, Alg: random16, #particle: 35 seed: 1
+08-15 at 01:06:39, name: rc202-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 02:19:07, name: rc208-1, Alg: 16, #particle: 30, seed: 1
+08-15 at 02:19:52, name: rc202-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 03:11:23, name: rc207-1, Alg: 14, #particle: 30, seed: 1
+08-15 at 04:01:51, name: rc204-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 04:02:31, name: rc101-19, Alg: random16, #particle: 15 seed: 1
+08-15 at 04:31:36, name: rc203-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 05:31:05, name: rc203-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 05:47:21, name: rc208-1, Alg: 14, #particle: 30, seed: 1
+08-15 at 05:47:27, name: rc107-5, Alg: 15, #particle: 15, seed: 1
+08-15 at 05:48:46, name: rc203-1, Alg: random16, #particle: 35 seed: 1
+08-15 at 06:36:42, name: rc204-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 06:53:24, name: rc201-1, Alg: 16, #particle: 35, seed: 1
+08-15 at 07:28:22, name: rc201-10, Alg: random16, #particle: 15 seed: 1
+08-15 at 08:22:31, name: rc205-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 08:35:17, name: rc201-1, Alg: 14, #particle: 35, seed: 1
+08-15 at 09:06:09, name: rc205-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 10:45:21, name: rc204-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 11:10:40, name: rc202-1, Alg: 16, #particle: 35, seed: 1
+08-15 at 11:45:55, name: rc206-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 11:54:36, name: rc206-2, Alg: random14, #particle: 35 seed: 1
+08-15 at 12:11:26, name: rc204-1, Alg: random16, #particle: 35 seed: 1
+08-15 at 12:38:22, name: rc202-1, Alg: 14, #particle: 35, seed: 1
+08-15 at 13:45:05, name: rc102-19, Alg: random16, #particle: 15 seed: 1
+08-15 at 14:09:45, name: rc107-5, Alg: 16, #particle: 15, seed: 1
+08-15 at 14:25:50, name: rc207-1, Alg: random14, #particle: 35 seed: 1
+08-15 at 15:01:42, name: rc203-1, Alg: 16, #particle: 35, seed: 1
+08-15 at 15:18:17, name: rc207-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 15:18:37, name: rc202-10, Alg: random16, #particle: 15 seed: 1
+08-15 at 17:18:01, name: rc205-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 17:30:28, name: rc208-2, Alg: random14, #particle: 35 seed: 1
+08-15 at 17:41:11, name: rc205-1, Alg: random16, #particle: 35 seed: 1
+08-15 at 17:42:22, name: rc203-1, Alg: 14, #particle: 35, seed: 1
+08-15 at 19:44:30, name: rc204-1, Alg: 14, #particle: 35, seed: 1
+08-15 at 20:08:21, name: rc204-1, Alg: 16, #particle: 35, seed: 1
+08-15 at 20:41:10, name: rc206-2, Alg: random16, #particle: 35 seed: 1
+08-15 at 20:53:34, name: rc206-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 21:12:30, name: rc208-1, Alg: random15, #particle: 30 seed: 1
+08-15 at 22:17:13, name: rc203-10, Alg: random16, #particle: 15 seed: 1
+08-15 at 22:41:13, name: rc103-16, Alg: random16, #particle: 15 seed: 1
+08-15 at 23:40:33, name: rc205-1, Alg: 16, #particle: 35, seed: 1
+08-15 at 23:42:17, name: rc207-1, Alg: 15, #particle: 30, seed: 1
+08-15 at 23:42:17, name: rc207-1, Alg: random16, #particle: 35 seed: 1
+08-16 at 00:00:56, name: rc201-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 00:11:28, name: rc205-1, Alg: 14, #particle: 35, seed: 1
+08-16 at 02:58:10, name: rc206-1, Alg: 14, #particle: 35, seed: 1
+08-16 at 03:00:19, name: rc206-2, Alg: 16, #particle: 35, seed: 1
+08-16 at 03:57:58, name: rc202-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 04:27:09, name: rc208-2, Alg: random16, #particle: 35 seed: 1
+08-16 at 05:31:23, name: rc104-14, Alg: random16, #particle: 15 seed: 1
+08-16 at 06:34:54, name: rc208-1, Alg: 15, #particle: 30, seed: 1
+08-16 at 06:54:38, name: rc204-10, Alg: random16, #particle: 15 seed: 1
+08-16 at 08:06:09, name: rc203-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 08:18:43, name: rc207-1, Alg: 16, #particle: 35, seed: 1
+08-16 at 08:31:48, name: rc207-1, Alg: 14, #particle: 35, seed: 1
+08-16 at 10:38:44, name: rc204-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 10:58:24, name: rc201-1, Alg: 15, #particle: 35, seed: 1
+08-16 at 12:08:23, name: rc208-1, Alg: 14, #particle: 35, seed: 1
+08-16 at 13:00:14, name: rc208-1, Alg: 16, #particle: 35, seed: 1
+08-16 at 13:20:58, name: rc105-14, Alg: random16, #particle: 15 seed: 1
+08-16 at 14:32:57, name: rc205-10, Alg: random16, #particle: 15 seed: 1
+08-16 at 15:55:14, name: rc202-1, Alg: 15, #particle: 35, seed: 1
+08-16 at 16:50:32, name: rc205-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 19:58:34, name: rc203-1, Alg: 15, #particle: 35, seed: 1
+08-16 at 20:04:57, name: rc106-14, Alg: random16, #particle: 15 seed: 1
+08-16 at 21:57:10, name: rc206-1, Alg: random15, #particle: 35 seed: 1
+08-16 at 22:18:06, name: rc206-10, Alg: random16, #particle: 15 seed: 1
+08-17 at 00:40:57, name: rc204-1, Alg: 15, #particle: 35, seed: 1
+08-17 at 04:30:39, name: rc207-1, Alg: random15, #particle: 35 seed: 1
+08-17 at 05:32:11, name: rc205-1, Alg: 15, #particle: 35, seed: 1
+08-17 at 07:25:07, name: rc107-14, Alg: random16, #particle: 15 seed: 1
+08-17 at 09:09:53, name: rc206-1, Alg: 15, #particle: 35, seed: 1
+08-17 at 11:09:07, name: rc208-1, Alg: random15, #particle: 35 seed: 1
+08-17 at 11:10:39, name: rc207-10, Alg: random16, #particle: 15 seed: 1
+08-17 at 14:27:24, name: rc207-1, Alg: 15, #particle: 35, seed: 1
+08-17 at 16:52:38, name: rc108-14, Alg: random16, #particle: 15 seed: 1
+08-17 at 20:45:36, name: rc208-10, Alg: random16, #particle: 15 seed: 1
+08-17 at 21:05:10, name: rc208-1, Alg: 15, #particle: 35, seed: 1
+08-18 at 00:21:24, name: rc101-24, Alg: random16, #particle: 15 seed: 1
+08-18 at 03:14:25, name: rc201-15, Alg: random16, #particle: 15 seed: 1
+08-18 at 07:41:01, name: R1_2_1-5, Alg: 16, #particle: 30, seed: 1
+08-18 at 10:01:44, name: rc102-24, Alg: random16, #particle: 15 seed: 1
+08-18 at 10:26:15, name: rc202-15, Alg: random16, #particle: 15 seed: 1
+08-18 at 16:48:40, name: rc203-15, Alg: random16, #particle: 15 seed: 1
+08-18 at 18:21:44, name: rc103-21, Alg: random16, #particle: 15 seed: 1
+08-19 at 01:01:15, name: rc104-19, Alg: random16, #particle: 15 seed: 1
+08-19 at 02:38:22, name: rc204-15, Alg: random16, #particle: 15 seed: 1
+08-19 at 09:18:28, name: rc105-19, Alg: random16, #particle: 15 seed: 1
+08-19 at 11:09:42, name: rc205-15, Alg: random16, #particle: 15 seed: 1
+08-19 at 15:48:37, name: rc106-19, Alg: random16, #particle: 15 seed: 1
+08-19 at 17:46:32, name: rc206-15, Alg: random16, #particle: 15 seed: 1
+08-19 at 23:23:27, name: rc107-19, Alg: random16, #particle: 15 seed: 1
+08-20 at 03:19:26, name: rc207-15, Alg: random16, #particle: 15 seed: 1
+08-20 at 05:14:24, name: C1_2_3-1, Alg: 16, #particle: 15, seed: 1
+08-20 at 05:54:58, name: rc108-19, Alg: random16, #particle: 15 seed: 1
+08-20 at 10:51:12, name: rc208-15, Alg: random16, #particle: 15 seed: 1
+08-20 at 15:02:50, name: rc101-29, Alg: random16, #particle: 15 seed: 1
+08-20 at 19:09:32, name: rc201-20, Alg: random16, #particle: 15 seed: 1
+08-20 at 23:45:52, name: rc102-29, Alg: random16, #particle: 15 seed: 1
+08-21 at 02:44:44, name: rc202-20, Alg: random16, #particle: 15 seed: 1
+08-21 at 02:53:07, name: C1_2_4-1, Alg: 16, #particle: 15, seed: 1
+08-21 at 08:52:45, name: rc103-26, Alg: random16, #particle: 15 seed: 1
+08-21 at 10:53:48, name: rc203-20, Alg: random16, #particle: 15 seed: 1
+08-21 at 15:52:15, name: rc104-24, Alg: random16, #particle: 15 seed: 1
+08-21 at 18:24:13, name: rc204-20, Alg: random16, #particle: 15 seed: 1
+08-21 at 18:31:43, name: R1_2_2-5, Alg: 16, #particle: 15, seed: 1
+08-21 at 23:13:02, name: rc105-24, Alg: random16, #particle: 15 seed: 1
+08-22 at 01:07:15, name: rc205-20, Alg: random16, #particle: 15 seed: 1
+08-22 at 06:33:29, name: rc106-24, Alg: random16, #particle: 15 seed: 1
+08-22 at 06:41:33, name: rc206-20, Alg: random16, #particle: 15 seed: 1
+08-22 at 09:15:34, name: C2_2_1-5, Alg: 16, #particle: 15, seed: 1
+08-22 at 14:08:57, name: rc207-20, Alg: random16, #particle: 15 seed: 1
+08-22 at 15:34:00, name: rc107-24, Alg: random16, #particle: 15 seed: 1
+08-22 at 19:19:59, name: rc208-20, Alg: random16, #particle: 15 seed: 1
+08-22 at 20:49:41, name: rc108-24, Alg: random16, #particle: 15 seed: 1
+08-23 at 23:18:12, name: C2_2_2-1, Alg: 16, #particle: 15, seed: 1
+08-24 at 00:07:29, name: rc108-5, Alg: 16, #particle: 15, seed: 1
+08-24 at 01:54:38, name: rc107-10, Alg: 16, #particle: 15, seed: 1
+08-24 at 04:42:34, name: C2_2_2-1, Alg: 16, #particle: 15, seed: 1
+08-24 at 08:03:33, name: C2_2_3-1, Alg: 16, #particle: 15, seed: 1
+08-24 at 09:07:45, name: rc108-5, Alg: 15, #particle: 15, seed: 1
+08-24 at 17:43:54, name: C2_2_4-1, Alg: 16, #particle: 15, seed: 1
+08-24 at 20:11:47, name: C2_2_3-1, Alg: 16, #particle: 15, seed: 1
+08-25 at 07:43:11, name: r208-5, Alg: 16, #particle: 15, seed: 1
+08-25 at 08:44:50, name: rc108-5, Alg: 14, #particle: 15, seed: 1
+08-25 at 13:09:30, name: C2_2_5-1, Alg: 16, #particle: 15, seed: 1
+08-25 at 13:13:00, name: C2_2_4-2, Alg: 16, #particle: 15, seed: 1
+08-25 at 19:22:27, name: rc108-29, Alg: random16, #particle: 15 seed: 1
+08-25 at 22:47:11, name: C2_2_6-1, Alg: 16, #particle: 15, seed: 1
+08-26 at 02:09:40, name: r208-5, Alg: 15, #particle: 15, seed: 1
+08-26 at 07:06:20, name: C2_2_7-1, Alg: 16, #particle: 15, seed: 1
+08-26 at 08:03:26, name: rc108-10, Alg: 14, #particle: 15, seed: 1
+08-26 at 12:15:56, name: C2_2_5-2, Alg: 16, #particle: 15, seed: 1
+08-27 at 03:54:44, name: C2_2_6-2, Alg: 16, #particle: 15, seed: 1
+08-27 at 18:37:28, name: C2_2_7-2, Alg: 16, #particle: 15, seed: 1
+08-27 at 19:12:33, name: C2_2_9-1, Alg: 16, #particle: 15, seed: 1
+08-27 at 19:14:55, name: r208-6, Alg: random16, #particle: 15 seed: 1
+08-27 at 20:33:04, name: rc108-5, Alg: random15, #particle: 15 seed: 1
+08-27 at 23:56:02, name: C1_2_2-3, Alg: 16, #particle: 15, seed: 1
+08-28 at 03:13:45, name: C2_2_10-1, Alg: 16, #particle: 15, seed: 1
+08-28 at 19:28:39, name: r210-5, Alg: random16, #particle: 15 seed: 1
+08-28 at 20:31:05, name: r210-5, Alg: random15, #particle: 15 seed: 1
+08-29 at 22:45:52, name: r210-5, Alg: 16, #particle: 15, seed: 1
+08-30 at 01:01:36, name: r210-5, Alg: 15, #particle: 15, seed: 1
+08-31 at 06:26:24, name: r208-10, Alg: 16, #particle: 15, seed: 1
+08-31 at 06:28:24, name: C2_2_5-7, Alg: 16, #particle: 15, seed: 1
+08-31 at 10:11:58, name: r102-10, Alg: 16, #particle: 15, seed: 1
+08-31 at 10:17:59, name: r108-5, Alg: 15, #particle: 15, seed: 1
+08-31 at 12:55:44, name: C1_2_3-6, Alg: 16, #particle: 15, seed: 1
+08-31 at 14:18:07, name: r209-5, Alg: 16, #particle: 15, seed: 1
+08-31 at 19:35:36, name: r105-5, Alg: 16, #particle: 15, seed: 1
+08-31 at 21:16:37, name: r110-5, Alg: 15, #particle: 15, seed: 1
+08-31 at 23:15:01, name: r210-10, Alg: 16, #particle: 15, seed: 1
+09-01 at 04:13:28, name: r107-5, Alg: 16, #particle: 15, seed: 1
+09-01 at 06:41:49, name: r211-5, Alg: 16, #particle: 15, seed: 1
+09-01 at 07:13:37, name: r111-5, Alg: 15, #particle: 15, seed: 1
+09-01 at 12:27:46, name: r108-5, Alg: 16, #particle: 15, seed: 1
+09-01 at 15:58:05, name: r112-5, Alg: 15, #particle: 15, seed: 1
+09-01 at 20:03:32, name: rc101-10, Alg: 16, #particle: 15, seed: 1
+09-02 at 04:51:23, name: rc102-10, Alg: 16, #particle: 15, seed: 1
+09-03 at 18:55:12, name: r209-10, Alg: 16, #particle: 15, seed: 1
+09-03 at 19:05:40, name: rc105-5, Alg: 16, #particle: 15, seed: 1
+09-03 at 19:35:18, name: r107-10, Alg: 16, #particle: 15, seed: 1
+09-03 at 22:34:56, name: r208-15, Alg: 16, #particle: 15, seed: 1
+09-04 at 01:41:08, name: r108-10, Alg: 16, #particle: 15, seed: 1
+09-04 at 04:30:22, name: r211-10, Alg: 16, #particle: 15, seed: 1
+09-04 at 05:27:33, name: rc107-15, Alg: 16, #particle: 15, seed: 1
+09-04 at 07:05:52, name: r105-10, Alg: 16, #particle: 15, seed: 1
+09-04 at 08:08:08, name: r112-5, Alg: 16, #particle: 15, seed: 1
+09-04 at 11:24:33, name: rc108-10, Alg: 16, #particle: 15, seed: 1
+09-04 at 11:31:54, name: rc104-5, Alg: 16, #particle: 15, seed: 1
+09-04 at 16:59:59, name: r106-5, Alg: 16, #particle: 15, seed: 1
+09-04 at 17:43:46, name: R1_2_1-5, Alg: 16, #particle: 15, seed: 1
+09-04 at 18:15:37, name: r107-15, Alg: 16, #particle: 15, seed: 1
+09-04 at 20:14:03, name: rc105-10, Alg: 16, #particle: 15, seed: 1
+09-04 at 20:34:21, name: r209-15, Alg: 16, #particle: 15, seed: 1
+09-05 at 01:49:41, name: r108-15, Alg: 16, #particle: 15, seed: 1
+09-05 at 03:10:01, name: rc107-20, Alg: 16, #particle: 15, seed: 1
+09-05 at 03:34:53, name: r211-15, Alg: 16, #particle: 15, seed: 1
+09-05 at 06:35:15, name: r112-10, Alg: 16, #particle: 15, seed: 1
+09-05 at 08:50:25, name: r208-20, Alg: 16, #particle: 15, seed: 1
+09-05 at 09:27:38, name: rc108-15, Alg: 16, #particle: 15, seed: 1
+09-05 at 11:58:04, name: rc104-10, Alg: 16, #particle: 15, seed: 1
+09-05 at 16:06:34, name: r105-15, Alg: 16, #particle: 15, seed: 1
+09-05 at 23:58:17, name: R1_2_2-10, Alg: 16, #particle: 15, seed: 1
+09-06 at 00:03:05, name: r106-10, Alg: 16, #particle: 15, seed: 1
+09-07 at 09:10:34, name: r209-7, Alg: 15, #particle: 15, seed: 1
+09-07 at 09:12:49, name: rc105-7, Alg: 15, #particle: 15, seed: 1
+09-07 at 10:09:18, name: r107-7, Alg: 15, #particle: 15, seed: 1
+09-07 at 12:07:34, name: r208-12, Alg: 15, #particle: 15, seed: 1
+09-07 at 18:57:57, name: rc107-10, Alg: 15, #particle: 15, seed: 1
+09-07 at 19:31:30, name: r108-10, Alg: 15, #particle: 15, seed: 1
+09-07 at 20:51:39, name: r211-5, Alg: 15, #particle: 15, seed: 1
+09-07 at 21:57:47, name: r105-5, Alg: 15, #particle: 15, seed: 1
+09-08 at 03:21:45, name: r112-10, Alg: 15, #particle: 15, seed: 1
+09-08 at 05:18:23, name: rc108-10, Alg: 15, #particle: 15, seed: 1
+09-08 at 06:39:26, name: rc104-5, Alg: 15, #particle: 15, seed: 1
+09-08 at 08:18:50, name: r106-5, Alg: 15, #particle: 15, seed: 1
+09-08 at 20:21:19, name: R1_2_1-10, Alg: 16, #particle: 15, seed: 1
+09-08 at 22:57:57, name: C1_2_1-5, Alg: 16, #particle: 15, seed: 1
+09-08 at 23:08:16, name: rc105-12, Alg: 15, #particle: 15, seed: 1
+09-08 at 23:45:14, name: r107-12, Alg: 15, #particle: 15, seed: 1
+09-09 at 00:09:13, name: r111-10, Alg: 15, #particle: 15, seed: 1
+09-09 at 03:17:18, name: r208-17, Alg: 15, #particle: 15, seed: 1
+09-09 at 07:11:02, name: C1_2_8-5, Alg: 16, #particle: 15, seed: 1
+09-09 at 09:39:07, name: r108-15, Alg: 15, #particle: 15, seed: 1
+09-09 at 10:10:04, name: C1_2_6-5, Alg: 16, #particle: 15, seed: 1
+09-09 at 10:56:12, name: rc107-15, Alg: 15, #particle: 15, seed: 1
+09-09 at 12:19:58, name: r209-12, Alg: 15, #particle: 15, seed: 1
+09-09 at 12:40:12, name: r105-10, Alg: 15, #particle: 15, seed: 1
+09-09 at 17:05:54, name: r112-15, Alg: 15, #particle: 15, seed: 1
+09-09 at 21:16:23, name: r106-10, Alg: 15, #particle: 15, seed: 1
+09-09 at 22:29:38, name: rc108-15, Alg: 15, #particle: 15, seed: 1
+09-10 at 01:34:59, name: r211-10, Alg: 15, #particle: 15, seed: 1
+09-10 at 05:49:26, name: rc201-10, Alg: 15, #particle: 15, seed: 1
+09-10 at 06:46:25, name: rc101-10, Alg: 15, #particle: 15, seed: 1
+09-10 at 11:40:59, name: rc104-10, Alg: 15, #particle: 15, seed: 1
+09-10 at 14:56:55, name: rc202-6, Alg: 15, #particle: 15, seed: 1
+09-10 at 17:19:18, name: rc102-10, Alg: 15, #particle: 15, seed: 1
+09-10 at 19:42:55, name: R1_2_2-15, Alg: 16, #particle: 15, seed: 1
+09-10 at 21:46:47, name: rc106-5, Alg: 15, #particle: 15, seed: 1
+09-10 at 22:27:32, name: C1_2_5-5, Alg: 16, #particle: 15, seed: 1
+09-10 at 23:17:23, name: r205-10, Alg: 15, #particle: 15, seed: 1
+09-11 at 02:19:54, name: rc203-5, Alg: 15, #particle: 15, seed: 1
+09-11 at 04:09:48, name: rc103-5, Alg: 15, #particle: 15, seed: 1
+09-11 at 06:52:37, name: C1_2_5-5, Alg: 16, #particle: 15, seed: 1
+09-11 at 07:54:23, name: rc107-20, Alg: 15, #particle: 15, seed: 1
+09-11 at 10:28:12, name: r206-10, Alg: 15, #particle: 15, seed: 1
+09-11 at 11:51:22, name: C1_2_9-5, Alg: 16, #particle: 15, seed: 1
+09-11 at 12:47:43, name: rc104-15, Alg: 15, #particle: 15, seed: 1
+09-11 at 16:47:14, name: rc108-20, Alg: 15, #particle: 15, seed: 1
+09-11 at 18:56:33, name: rc204-6, Alg: 15, #particle: 15, seed: 1
+09-11 at 21:11:04, name: r207-5, Alg: 15, #particle: 15, seed: 1
+09-11 at 23:17:03, name: rc105-17, Alg: 15, #particle: 15, seed: 1
+09-12 at 03:33:09, name: rc205-6, Alg: 15, #particle: 15, seed: 1
+09-12 at 03:53:04, name: rc201-15, Alg: 15, #particle: 15, seed: 1
+09-12 at 07:28:45, name: r208-22, Alg: 15, #particle: 15, seed: 1
+09-12 at 14:49:09, name: R1_2_3-7, Alg: 16, #particle: 15, seed: 1
+09-12 at 18:06:08, name: C2_2_8-5, Alg: 16, #particle: 15, seed: 1
+09-12 at 19:23:36, name: rc201-10, Alg: 14, #particle: 15, seed: 1
+09-12 at 19:41:35, name: r205-10, Alg: 14, #particle: 15, seed: 1
+09-12 at 19:52:11, name: rc106-5, Alg: 14, #particle: 15, seed: 1
+09-12 at 22:28:32, name: rc101-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 01:58:31, name: r206-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 01:58:36, name: rc202-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 02:42:20, name: C1_2_10-5, Alg: 16, #particle: 15, seed: 1
+09-13 at 03:33:09, name: C1_2_7-5, Alg: 16, #particle: 15, seed: 1
+09-13 at 04:03:14, name: rc107-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 07:23:55, name: r207-5, Alg: 14, #particle: 15, seed: 1
+09-13 at 08:13:53, name: rc102-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 09:05:57, name: rc203-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 10:50:10, name: rc108-15, Alg: 14, #particle: 15, seed: 1
+09-13 at 13:35:00, name: r208-5, Alg: 14, #particle: 15, seed: 1
+09-13 at 14:42:12, name: c101-2, Alg: 16, #particle: 15, seed: 1
+09-13 at 15:30:36, name: rc204-6, Alg: 14, #particle: 15, seed: 1
+09-13 at 15:53:56, name: rc103-10, Alg: 14, #particle: 15, seed: 1
+09-13 at 16:54:45, name: c102-2, Alg: 16, #particle: 15, seed: 1
+09-13 at 18:53:31, name: rc201-15, Alg: 14, #particle: 15, seed: 1
+09-13 at 19:34:11, name: c103-3, Alg: 16, #particle: 15, seed: 1
+09-14 at 00:03:40, name: rc205-6, Alg: 14, #particle: 15, seed: 1
+09-14 at 00:15:53, name: R2_2_1-1, Alg: 16, #particle: 15, seed: 1
+09-14 at 00:30:42, name: c201-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 00:37:36, name: rc104-5, Alg: 14, #particle: 15, seed: 1
+09-14 at 00:46:32, name: c101-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 02:18:55, name: c202-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 03:17:20, name: c102-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 03:17:39, name: c104-5, Alg: 16, #particle: 15, seed: 1
+09-14 at 04:34:24, name: c105-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 05:02:54, name: R1_2_4-5, Alg: 16, #particle: 15, seed: 1
+09-14 at 06:01:36, name: c106-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 06:32:04, name: c103-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 07:07:42, name: c107-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 07:08:42, name: R2_2_4-3, Alg: 16, #particle: 15, seed: 1
+09-14 at 08:15:50, name: c108-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 09:43:09, name: c109-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 09:51:36, name: rc105-5, Alg: 14, #particle: 15, seed: 1
+09-14 at 14:28:11, name: c203-7, Alg: 15, #particle: 15, seed: 1
+09-14 at 15:28:45, name: c201-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 16:01:36, name: c101-3, Alg: 15, #particle: 15, seed: 1
+09-14 at 16:51:24, name: c202-2, Alg: 16, #particle: 15, seed: 1
+09-14 at 18:47:02, name: c104-5, Alg: 15, #particle: 15, seed: 1
+09-14 at 18:56:46, name: c102-4, Alg: 15, #particle: 15, seed: 1
+09-14 at 20:23:05, name: c105-2, Alg: 15, #particle: 15, seed: 1
+09-14 at 20:34:10, name: c103-3, Alg: 15, #particle: 15, seed: 1
+09-14 at 21:01:32, name: R2_2_7-3, Alg: 16, #particle: 15, seed: 1
+09-14 at 22:13:00, name: rc201-10, Alg: 13, #particle: 15, seed: 1
+09-14 at 22:15:25, name: c106-2, Alg: 15, #particle: 15, seed: 1
+09-15 at 00:35:16, name: c107-2, Alg: 15, #particle: 15, seed: 1
+09-15 at 02:00:11, name: c104-8, Alg: 15, #particle: 15, seed: 1
+09-15 at 03:01:40, name: c203-7, Alg: 16, #particle: 15, seed: 1
+09-15 at 03:22:32, name: c105-3, Alg: 15, #particle: 15, seed: 1
+09-15 at 03:28:48, name: c108-2, Alg: 15, #particle: 15, seed: 1
+09-15 at 05:03:20, name: c106-3, Alg: 15, #particle: 15, seed: 1
+09-15 at 05:04:51, name: c204-5, Alg: 15, #particle: 15, seed: 1
+09-15 at 06:35:29, name: c107-3, Alg: 15, #particle: 15, seed: 1
+09-15 at 06:37:35, name: c109-2, Alg: 15, #particle: 15, seed: 1
+09-15 at 06:42:57, name: R2_2_2-3, Alg: 16, #particle: 15, seed: 1
+09-15 at 06:58:52, name: rc202-10, Alg: 13, #particle: 15, seed: 1
+09-15 at 08:30:43, name: c108-3, Alg: 15, #particle: 15, seed: 1
+09-15 at 08:40:12, name: c205-2, Alg: 15, #particle: 15, seed: 1
+09-15 at 09:33:40, name: R2_2_5-3, Alg: 16, #particle: 15, seed: 1
+09-15 at 10:50:45, name: c109-3, Alg: 15, #particle: 15, seed: 1
+09-15 at 12:52:04, name: c204-5, Alg: 16, #particle: 15, seed: 1
+09-15 at 14:18:17, name: c205-1, Alg: 16, #particle: 15, seed: 1
+09-15 at 14:23:26, name: c101-1, Alg: random16, #particle: 15 seed: 1
+09-15 at 14:45:48, name: c101-2, Alg: 14, #particle: 15, seed: 1
+09-15 at 16:23:29, name: c102-2, Alg: 14, #particle: 15, seed: 1
+09-15 at 16:34:00, name: c102-1, Alg: random16, #particle: 15 seed: 1
+09-15 at 17:25:49, name: rc203-9, Alg: 13, #particle: 15, seed: 1
+09-16 at 16:52:05, name: c101-3, Alg: 14, #particle: 15, seed: 1
+09-16 at 17:09:27, name: c101-2, Alg: random16, #particle: 15 seed: 1
+09-16 at 17:30:44, name: c201-3, Alg: 15, #particle: 15, seed: 1
+09-16 at 17:49:31, name: c101-4, Alg: 15, #particle: 15, seed: 1
+09-16 at 19:06:06, name: c102-2, Alg: random16, #particle: 15 seed: 1
+09-16 at 19:18:50, name: c102-3, Alg: 14, #particle: 15, seed: 1
+09-16 at 20:13:42, name: c202-3, Alg: 15, #particle: 15, seed: 1
+09-16 at 20:49:21, name: c103-2, Alg: 14, #particle: 15, seed: 1
+09-16 at 21:01:54, name: c102-5, Alg: 15, #particle: 15, seed: 1
+09-16 at 22:50:16, name: c103-4, Alg: 15, #particle: 15, seed: 1
+09-16 at 23:04:45, name: c103-3, Alg: random16, #particle: 15 seed: 1
+09-16 at 23:23:22, name: rc101-35, Alg: random16, #particle: 15 seed: 1
+09-17 at 00:18:46, name: c101-4, Alg: 14, #particle: 15, seed: 1
+09-17 at 01:16:39, name: c102-4, Alg: 14, #particle: 15, seed: 1
+09-17 at 05:50:13, name: c104-5, Alg: random16, #particle: 15 seed: 1
+09-17 at 06:21:42, name: rc102-34, Alg: random16, #particle: 15 seed: 1
+09-17 at 06:51:30, name: c105-1, Alg: random16, #particle: 15 seed: 1
+09-17 at 07:38:19, name: c106-1, Alg: random16, #particle: 15 seed: 1
+09-17 at 07:50:00, name: c203-12, Alg: 15, #particle: 15, seed: 1
+09-17 at 08:29:34, name: c107-1, Alg: random16, #particle: 15 seed: 1
+09-17 at 09:25:51, name: c108-1, Alg: random16, #particle: 15 seed: 1
+09-17 at 11:37:39, name: c109-2, Alg: random16, #particle: 15 seed: 1
+09-17 at 12:12:56, name: rc103-31, Alg: random16, #particle: 15 seed: 1
+09-17 at 13:38:25, name: c101-3, Alg: random16, #particle: 15 seed: 1
+09-17 at 13:41:47, name: c101-5, Alg: 14, #particle: 15, seed: 1
+09-17 at 14:19:07, name: c101-5, Alg: 15, #particle: 15, seed: 1
+09-17 at 15:18:58, name: c102-3, Alg: random16, #particle: 15 seed: 1
+09-17 at 15:40:54, name: c102-5, Alg: 14, #particle: 15, seed: 1
+09-17 at 17:18:47, name: c102-6, Alg: 15, #particle: 15, seed: 1
+09-17 at 17:22:23, name: c103-3, Alg: 14, #particle: 15, seed: 1
+09-17 at 18:20:36, name: c103-5, Alg: random16, #particle: 15 seed: 1
+09-17 at 19:41:00, name: rc104-29, Alg: random16, #particle: 15 seed: 1
+09-17 at 23:06:22, name: c204-10, Alg: 15, #particle: 15, seed: 1
+09-18 at 01:16:03, name: rc201-16, Alg: 13, #particle: 15, seed: 1
+09-18 at 02:22:43, name: c104-10, Alg: random16, #particle: 15 seed: 1
+09-18 at 02:55:46, name: c104-5, Alg: 14, #particle: 15, seed: 1
+09-18 at 03:41:43, name: c105-2, Alg: random16, #particle: 15 seed: 1
+09-18 at 04:08:47, name: c105-2, Alg: 14, #particle: 15, seed: 1
+09-18 at 05:15:19, name: c106-2, Alg: random16, #particle: 15 seed: 1
+09-18 at 05:16:28, name: c103-9, Alg: 15, #particle: 15, seed: 1
+09-18 at 05:38:16, name: c106-2, Alg: 14, #particle: 15, seed: 1
+09-18 at 07:10:54, name: c107-2, Alg: random16, #particle: 15 seed: 1
+09-18 at 07:18:32, name: rc105-29, Alg: random16, #particle: 15 seed: 1
+09-18 at 07:19:49, name: c107-2, Alg: 14, #particle: 15, seed: 1
+09-18 at 08:25:40, name: c108-2, Alg: 14, #particle: 15, seed: 1
+09-18 at 08:52:07, name: c108-2, Alg: random16, #particle: 15 seed: 1
+09-18 at 12:46:02, name: c109-4, Alg: random16, #particle: 15 seed: 1
+09-18 at 13:00:28, name: rc202-15, Alg: 13, #particle: 15, seed: 1
+09-18 at 13:22:11, name: c109-4, Alg: 14, #particle: 15, seed: 1
+09-18 at 15:41:15, name: c104-13, Alg: 15, #particle: 15, seed: 1
+09-18 at 17:36:42, name: c105-4, Alg: 15, #particle: 15, seed: 1
+09-18 at 19:16:00, name: c106-4, Alg: 15, #particle: 15, seed: 1
+09-18 at 21:31:04, name: c107-4, Alg: 15, #particle: 15, seed: 1
+09-18 at 23:19:43, name: c108-4, Alg: 15, #particle: 15, seed: 1
+09-19 at 00:01:22, name: rc203-14, Alg: 13, #particle: 15, seed: 1
+09-19 at 01:15:17, name: c109-4, Alg: 15, #particle: 15, seed: 1
+09-19 at 06:59:29, name: rc204-6, Alg: 13, #particle: 15, seed: 1
+09-19 at 10:10:49, name: R1_2_5-8, Alg: 16, #particle: 15, seed: 1
+09-19 at 10:27:05, name: c101-2, Alg: 13, #particle: 15, seed: 1
+09-19 at 10:38:05, name: c101-6, Alg: 14, #particle: 15, seed: 1
+09-19 at 10:47:49, name: R2_2_8-7, Alg: 16, #particle: 15, seed: 1
+09-19 at 11:26:24, name: c201-4, Alg: 15, #particle: 15, seed: 1
+09-19 at 11:34:33, name: c102-3, Alg: 13, #particle: 15, seed: 1
+09-19 at 11:53:07, name: c101-1, Alg: random15, #particle: 15 seed: 1
+09-19 at 12:07:13, name: R1_2_6-5, Alg: 16, #particle: 15, seed: 1
+09-19 at 12:30:14, name: c102-6, Alg: 14, #particle: 15, seed: 1
+09-19 at 13:01:47, name: c202-4, Alg: 15, #particle: 15, seed: 1
+09-19 at 13:37:33, name: c102-1, Alg: random15, #particle: 15 seed: 1
+09-19 at 14:40:09, name: rc205-6, Alg: 13, #particle: 15, seed: 1
+09-19 at 15:10:44, name: c103-4, Alg: 14, #particle: 15, seed: 1
+09-19 at 15:24:40, name: c103-1, Alg: random15, #particle: 15 seed: 1
+09-19 at 15:30:28, name: RC2_2_1-5, Alg: 16, #particle: 15, seed: 1
+09-19 at 18:01:56, name: rc101-5, Alg: random15, #particle: 15 seed: 1
+09-19 at 18:46:14, name: c103-7, Alg: 13, #particle: 15, seed: 1
+09-20 at 00:55:17, name: c104-10, Alg: 14, #particle: 15, seed: 1
+09-20 at 01:52:49, name: c104-5, Alg: random15, #particle: 15 seed: 1
+09-20 at 02:24:53, name: c105-3, Alg: 14, #particle: 15, seed: 1
+09-20 at 03:21:10, name: c104-5, Alg: 13, #particle: 15, seed: 1
+09-20 at 03:28:30, name: rc102-5, Alg: random15, #particle: 15 seed: 1
+09-20 at 03:35:32, name: c105-1, Alg: random15, #particle: 15 seed: 1
+09-20 at 03:52:03, name: c106-3, Alg: 14, #particle: 15, seed: 1
+09-20 at 04:43:33, name: c105-2, Alg: 13, #particle: 15, seed: 1
+09-20 at 04:45:34, name: c203-17, Alg: 15, #particle: 15, seed: 1
+09-20 at 05:01:10, name: c106-1, Alg: random15, #particle: 15 seed: 1
+09-20 at 05:33:53, name: c107-3, Alg: 14, #particle: 15, seed: 1
+09-20 at 05:45:18, name: c106-2, Alg: 13, #particle: 15, seed: 1
+09-20 at 07:04:26, name: c107-2, Alg: 13, #particle: 15, seed: 1
+09-20 at 07:07:39, name: c107-1, Alg: random15, #particle: 15 seed: 1
+09-20 at 08:41:11, name: c108-2, Alg: 13, #particle: 15, seed: 1
+09-20 at 09:03:38, name: c108-4, Alg: 14, #particle: 15, seed: 1
+09-20 at 11:14:19, name: c109-5, Alg: 14, #particle: 15, seed: 1
+09-20 at 11:47:54, name: rc103-5, Alg: random15, #particle: 15 seed: 1
+09-20 at 12:34:01, name: c108-3, Alg: random15, #particle: 15 seed: 1
+09-20 at 14:11:52, name: c109-1, Alg: random15, #particle: 15 seed: 1
+09-20 at 15:43:01, name: c109-6, Alg: 13, #particle: 15, seed: 1
+09-20 at 16:29:56, name: c101-3, Alg: 16, #particle: 15, seed: 1
+09-20 at 16:37:38, name: c101-3, Alg: 16, #particle: 15, seed: 1
+09-20 at 18:04:03, name: c102-3, Alg: 16, #particle: 15, seed: 1
+09-20 at 18:12:33, name: c204-15, Alg: 15, #particle: 15, seed: 1
+09-20 at 18:25:27, name: c102-3, Alg: 16, #particle: 15, seed: 1
+09-20 at 19:59:44, name: c205-3, Alg: 15, #particle: 15, seed: 1
+09-20 at 20:08:22, name: c103-4, Alg: 16, #particle: 15, seed: 1
+09-20 at 20:25:01, name: c103-4, Alg: 16, #particle: 15, seed: 1
+09-20 at 22:08:46, name: rc104-5, Alg: random15, #particle: 15 seed: 1
+09-21 at 03:08:19, name: rc201-21, Alg: 13, #particle: 15, seed: 1
+09-21 at 04:40:36, name: c104-10, Alg: 16, #particle: 15, seed: 1
+09-21 at 05:29:04, name: c206-9, Alg: 15, #particle: 15, seed: 1
+09-21 at 06:09:43, name: c105-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 06:41:47, name: c104-11, Alg: 16, #particle: 15, seed: 1
+09-21 at 07:41:58, name: c106-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 07:53:03, name: c105-4, Alg: 16, #particle: 15, seed: 1
+09-21 at 08:24:38, name: rc105-5, Alg: random15, #particle: 15 seed: 1
+09-21 at 09:05:33, name: c107-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 09:06:31, name: c106-4, Alg: 16, #particle: 15, seed: 1
+09-21 at 10:13:41, name: c107-4, Alg: 16, #particle: 15, seed: 1
+09-21 at 10:20:26, name: c207-3, Alg: 15, #particle: 15, seed: 1
+09-21 at 10:48:41, name: c108-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 11:06:49, name: rc202-20, Alg: 13, #particle: 15, seed: 1
+09-21 at 12:08:07, name: c108-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 12:55:56, name: c109-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 13:18:32, name: c109-3, Alg: 16, #particle: 15, seed: 1
+09-21 at 14:28:30, name: R1_2_6-9, Alg: 16, #particle: 15, seed: 1
+09-21 at 14:46:19, name: R1_2_7-5, Alg: 16, #particle: 15, seed: 1
+09-21 at 16:15:17, name: R2_2_9-5, Alg: 16, #particle: 15, seed: 1
+09-21 at 18:32:30, name: RC2_2_2-5, Alg: 16, #particle: 15, seed: 1
+09-21 at 19:28:55, name: c208-10, Alg: 15, #particle: 15, seed: 1
+09-21 at 21:13:56, name: rc203-19, Alg: 13, #particle: 15, seed: 1
+09-22 at 07:36:56, name: rc204-11, Alg: 13, #particle: 15, seed: 1
+09-22 at 17:20:34, name: rc205-11, Alg: 13, #particle: 15, seed: 1
+09-22 at 21:36:21, name: c101-4, Alg: 16, #particle: 15, seed: 1
+09-22 at 21:41:05, name: c101-4, Alg: 16, #particle: 15, seed: 1
+09-22 at 22:24:46, name: c101-6, Alg: 15, #particle: 15, seed: 1
+09-22 at 23:14:08, name: c102-4, Alg: 16, #particle: 15, seed: 1
+09-22 at 23:30:48, name: c102-4, Alg: 16, #particle: 15, seed: 1
+09-23 at 01:18:33, name: c102-7, Alg: 15, #particle: 15, seed: 1
+09-23 at 02:26:52, name: c103-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 02:27:36, name: c103-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 03:02:38, name: R1_2_8-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 05:25:09, name: rc201-10, Alg: 16, #particle: 15, seed: 1
+09-23 at 05:39:01, name: rc101-15, Alg: 16, #particle: 15, seed: 1
+09-23 at 05:44:11, name: c103-11, Alg: 15, #particle: 15, seed: 1
+09-23 at 07:42:45, name: c104-14, Alg: 16, #particle: 15, seed: 1
+09-23 at 08:46:00, name: R2_2_10-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 08:50:31, name: R1_2_7-9, Alg: 16, #particle: 15, seed: 1
+09-23 at 08:52:52, name: c105-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 10:04:17, name: c106-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 11:18:50, name: c107-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 12:44:51, name: c108-4, Alg: 16, #particle: 15, seed: 1
+09-23 at 13:05:44, name: c104-17, Alg: 16, #particle: 15, seed: 1
+09-23 at 14:32:51, name: c105-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 14:47:17, name: c109-4, Alg: 16, #particle: 15, seed: 1
+09-23 at 15:25:46, name: rc202-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 15:44:34, name: RC2_2_3-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 15:56:23, name: c106-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 16:10:57, name: rc102-15, Alg: 16, #particle: 15, seed: 1
+09-23 at 17:24:38, name: c107-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 18:00:07, name: c104-18, Alg: 15, #particle: 15, seed: 1
+09-23 at 19:03:17, name: c108-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 19:27:32, name: c105-5, Alg: 15, #particle: 15, seed: 1
+09-23 at 20:46:52, name: c106-5, Alg: 15, #particle: 15, seed: 1
+09-23 at 22:38:56, name: rc203-5, Alg: 16, #particle: 15, seed: 1
+09-23 at 22:41:30, name: c109-6, Alg: 16, #particle: 15, seed: 1
+09-23 at 22:49:16, name: c107-5, Alg: 15, #particle: 15, seed: 1
+09-24 at 00:34:01, name: c108-5, Alg: 15, #particle: 15, seed: 1
+09-24 at 02:54:12, name: c109-5, Alg: 15, #particle: 15, seed: 1
+09-24 at 05:54:52, name: rc204-6, Alg: 16, #particle: 15, seed: 1
+09-24 at 13:32:08, name: rc205-6, Alg: 16, #particle: 15, seed: 1
+09-24 at 14:47:25, name: rc101-20, Alg: 16, #particle: 15, seed: 1
+09-24 at 22:07:20, name: rc206-6, Alg: 16, #particle: 15, seed: 1
+09-25 at 02:09:41, name: rc102-20, Alg: 16, #particle: 15, seed: 1
+09-25 at 05:24:08, name: rc207-6, Alg: 16, #particle: 15, seed: 1
+09-25 at 12:22:33, name: rc103-7, Alg: 16, #particle: 15, seed: 1
+09-25 at 15:30:28, name: rc208-6, Alg: 16, #particle: 15, seed: 1
+09-25 at 21:50:08, name: R1_2_9-5, Alg: 16, #particle: 15, seed: 1
+09-25 at 22:23:43, name: rc104-15, Alg: 16, #particle: 15, seed: 1
+09-25 at 23:29:04, name: R1_2_1-15, Alg: 16, #particle: 15, seed: 1
+09-26 at 00:57:07, name: R1_2_8-10, Alg: 16, #particle: 15, seed: 1
+09-26 at 07:32:37, name: RC2_2_4-5, Alg: 16, #particle: 15, seed: 1
+09-26 at 08:51:42, name: rc105-15, Alg: 16, #particle: 15, seed: 1
+09-26 at 09:16:45, name: RC1_2_1-5, Alg: 16, #particle: 15, seed: 1
+09-26 at 19:32:37, name: c101-5, Alg: 16, #particle: 15, seed: 1
+09-27 at 10:50:09, name: RC1_2_6-5, Alg: 16, #particle: 15, seed: 1
+09-27 at 20:32:19, name: RC1_2_1-7, Alg: 16, #particle: 15, seed: 1
+09-27 at 21:59:56, name: RC2_2_9-5, Alg: 16, #particle: 15, seed: 1
+09-28 at 00:58:24, name: R1_2_10-5, Alg: 16, #particle: 15, seed: 1
+09-28 at 06:35:31, name: R1_2_9-10, Alg: 16, #particle: 15, seed: 1
+09-28 at 10:53:58, name: RC1_2_2-5, Alg: 16, #particle: 15, seed: 1
+09-29 at 08:21:31, name: R1_2_2-20, Alg: 16, #particle: 15, seed: 1
+09-29 at 10:11:49, name: RC2_2_3-10, Alg: 16, #particle: 15, seed: 1
+09-30 at 07:33:04, name: RC1_2_7-5, Alg: 16, #particle: 15, seed: 1
+09-30 at 10:31:46, name: R1_2_10-10, Alg: 16, #particle: 15, seed: 1
+10-01 at 00:25:33, name: c204-10, Alg: 16, #particle: 15, seed: 1
+10-01 at 08:40:55, name: RC1_2_3-5, Alg: 16, #particle: 15, seed: 1
+10-01 at 15:49:01, name: RC2_2_10-5, Alg: 16, #particle: 15, seed: 1
+10-01 at 16:01:35, name: RC1_2_6-10, Alg: 16, #particle: 15, seed: 1
+10-01 at 16:29:47, name: RC1_2_2-9, Alg: 16, #particle: 15, seed: 1
+10-02 at 06:36:08, name: c204-5, Alg: 16, #particle: 30, seed: 1
+10-02 at 06:48:37, name: RC2_2_3-11, Alg: 16, #particle: 15, seed: 1
+10-02 at 19:28:59, name: R1_2_3-12, Alg: 16, #particle: 15, seed: 1
+10-02 at 19:53:39, name: c204-1, Alg: 16, #particle: 50, seed: 1
+10-06 at 03:25:50, name: RC1_2_5-6, Alg: 16, #particle: 15, seed: 1
+10-06 at 05:05:27, name: RC1_2_9-5, Alg: 16, #particle: 15, seed: 1
+10-06 at 07:39:45, name: RC2_2_10-10, Alg: 16, #particle: 15, seed: 1
+10-06 at 08:19:56, name: RC2_2_7-5, Alg: 16, #particle: 15, seed: 1
+10-06 at 10:44:38, name: RC1_2_10-5, Alg: 16, #particle: 15, seed: 1
+10-06 at 13:22:04, name: case_study-400-2-1, Alg: 16, #particle: 15, seed: 1
+10-08 at 02:06:34, name: case_study-400-2-2, Alg: 16, #particle: 15, seed: 1
+10-08 at 03:10:58, name: RC2_2_10-15, Alg: 16, #particle: 15, seed: 1
+10-08 at 17:13:33, name: RC2_2_6-5, Alg: 16, #particle: 15, seed: 1
+10-09 at 20:07:29, name: RC2_2_6-8, Alg: 16, #particle: 15, seed: 1
+10-10 at 00:09:58, name: case_study-400-1-2, Alg: 16, #particle: 15, seed: 1
+10-12 at 08:27:28, name: RC2_2_7-10, Alg: 16, #particle: 15, seed: 1
+10-12 at 21:57:26, name: RC2_2_10-20, Alg: 16, #particle: 15, seed: 1
+10-15 at 02:59:41, name: RC2_2_4-10, Alg: 16, #particle: 15, seed: 1
+10-17 at 14:03:17, name: RC2_2_4-15, Alg: 16, #particle: 15, seed: 1
+10-22 at 08:31:40, name: RC2_2_4-5, Alg: 16, #particle: 20, seed: 1
+10-24 at 03:29:31, name: RC2_2_4-35, Alg: 16, #particle: 15, seed: 1
+10-26 at 13:48:46, name: c101-6, Alg: 1, #particle: 15, seed: 1
+10-26 at 17:18:42, name: c102-3, Alg: 1, #particle: 15, seed: 1
+10-26 at 18:46:19, name: c201-10, Alg: 1, #particle: 15, seed: 1
+10-26 at 22:15:42, name: r201-13, Alg: 1, #particle: 15, seed: 1
+10-26 at 23:32:35, name: rc201-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 00:18:52, name: c202-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 00:49:52, name: r101-11, Alg: 1, #particle: 15, seed: 1
+10-27 at 01:44:55, name: rc101-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 01:55:06, name: c103-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 05:07:50, name: r202-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 05:53:59, name: c203-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 08:52:27, name: rc202-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 11:13:25, name: c104-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 11:37:38, name: r102-13, Alg: 1, #particle: 15, seed: 1
+10-27 at 11:55:05, name: r203-8, Alg: 1, #particle: 15, seed: 1
+10-27 at 11:59:49, name: c204-5, Alg: 1, #particle: 15, seed: 1
+10-27 at 13:41:43, name: rc102-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 16:36:18, name: rc203-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 17:12:39, name: c205-5, Alg: 1, #particle: 15, seed: 1
+10-27 at 17:47:16, name: c105-7, Alg: 1, #particle: 15, seed: 1
+10-27 at 18:21:49, name: RC2_2_4-5, Alg: 16, #particle: 25, seed: 1
+10-27 at 18:29:09, name: r204-5, Alg: 1, #particle: 15, seed: 1
+10-27 at 22:05:37, name: rc204-5, Alg: 1, #particle: 15, seed: 1
+10-27 at 22:06:18, name: c206-10, Alg: 1, #particle: 15, seed: 1
+10-27 at 23:00:38, name: r103-10, Alg: 1, #particle: 15, seed: 1
+10-28 at 00:22:01, name: c106-6, Alg: 1, #particle: 15, seed: 1
+10-28 at 00:38:57, name: rc103-10, Alg: 1, #particle: 15, seed: 1
+10-28 at 01:04:29, name: r205-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 02:48:56, name: c207-10, Alg: 1, #particle: 15, seed: 1
+10-28 at 02:55:57, name: c107-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 05:12:00, name: rc205-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 07:03:31, name: r104-6, Alg: 1, #particle: 15, seed: 1
+10-28 at 07:34:15, name: c208-10, Alg: 1, #particle: 15, seed: 1
+10-28 at 09:23:56, name: r206-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 09:34:52, name: c108-9, Alg: 1, #particle: 15, seed: 1
+10-28 at 09:51:20, name: rc104-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 10:16:46, name: RC2_2_4-5, Alg: 16, #particle: 35, seed: 1
+10-28 at 11:10:40, name: rc206-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 14:21:51, name: r207-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 16:30:11, name: r105-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 17:35:33, name: rc207-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 17:46:36, name: c109-10, Alg: 1, #particle: 15, seed: 1
+10-28 at 19:19:32, name: r208-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 19:28:42, name: rc105-5, Alg: 1, #particle: 15, seed: 1
+10-28 at 22:12:52, name: rc208-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 00:08:12, name: r209-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 01:12:41, name: r106-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 03:50:29, name: rc106-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 06:43:28, name: r210-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 08:33:46, name: r107-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 11:18:54, name: r211-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 12:01:32, name: rc107-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 15:51:27, name: r108-5, Alg: 1, #particle: 15, seed: 1
+10-29 at 18:13:05, name: rc108-5, Alg: 1, #particle: 15, seed: 1
+10-30 at 00:17:57, name: r109-5, Alg: 1, #particle: 15, seed: 1
+10-30 at 08:00:22, name: r110-5, Alg: 1, #particle: 15, seed: 1
+10-30 at 14:36:21, name: r111-5, Alg: 1, #particle: 15, seed: 1
+10-30 at 21:49:37, name: r112-5, Alg: 1, #particle: 15, seed: 1
+10-31 at 16:06:41, name: c201-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 17:17:20, name: c101-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 17:41:38, name: c202-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 17:42:59, name: r201-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 18:00:18, name: rc201-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 18:44:52, name: c102-8, Alg: 2, #particle: 15, seed: 1
+10-31 at 18:56:31, name: rc101-11, Alg: 2, #particle: 15, seed: 1
+10-31 at 19:33:25, name: c203-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 19:36:11, name: r101-11, Alg: 2, #particle: 15, seed: 1
+10-31 at 20:08:18, name: c103-7, Alg: 2, #particle: 15, seed: 1
+10-31 at 21:08:13, name: rc202-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 21:21:28, name: r202-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 21:49:48, name: c204-5, Alg: 2, #particle: 15, seed: 1
+10-31 at 23:09:35, name: rc102-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 23:22:00, name: c205-5, Alg: 2, #particle: 15, seed: 1
+10-31 at 23:30:37, name: rc203-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 23:48:14, name: c104-10, Alg: 2, #particle: 15, seed: 1
+10-31 at 23:54:47, name: r102-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 00:01:56, name: r203-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 00:54:30, name: c206-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 01:05:00, name: rc204-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 01:49:42, name: c105-8, Alg: 2, #particle: 15, seed: 1
+11-01 at 02:27:51, name: c207-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 02:54:02, name: rc103-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 03:41:28, name: r103-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 03:51:24, name: rc205-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 03:56:33, name: c208-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 04:30:03, name: c106-9, Alg: 2, #particle: 15, seed: 1
+11-01 at 06:04:28, name: rc206-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 06:11:53, name: rc104-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 07:22:48, name: c107-8, Alg: 2, #particle: 15, seed: 1
+11-01 at 07:27:56, name: r104-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 08:13:12, name: c108-6, Alg: 2, #particle: 15, seed: 1
+11-01 at 08:19:29, name: rc207-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 09:47:21, name: rc105-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 10:17:17, name: rc208-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 11:15:24, name: c109-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 11:26:57, name: r105-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 13:47:22, name: rc106-5, Alg: 2, #particle: 15, seed: 1
+11-01 at 00:50:42, name: r109-5, Alg: 16, #particle: 15, seed: 1
+11-01 at 16:14:29, name: c201-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 18:08:40, name: c101-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 18:30:37, name: r201-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 18:46:51, name: rc201-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 19:02:38, name: c202-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 19:09:42, name: r101-5, Alg: 1, #particle: 5, seed: 1
+11-01 at 19:44:27, name: rc101-16, Alg: 2, #particle: 15, seed: 1
+11-01 at 20:30:27, name: r101-16, Alg: 2, #particle: 15, seed: 1
+11-01 at 20:53:53, name: c102-13, Alg: 2, #particle: 15, seed: 1
+11-01 at 21:29:02, name: r202-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 21:29:15, name: c203-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 21:51:17, name: rc202-15, Alg: 2, #particle: 15, seed: 1
+11-01 at 23:23:38, name: r102-5, Alg: 1, #particle: 5, seed: 1
+11-01 at 23:35:01, name: c204-10, Alg: 2, #particle: 15, seed: 1
+11-01 at 23:56:52, name: c103-12, Alg: 2, #particle: 15, seed: 1
+11-02 at 00:17:38, name: r203-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 00:48:42, name: r102-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 00:55:20, name: rc203-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 01:02:21, name: rc102-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 01:22:43, name: c205-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 02:32:58, name: r204-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 02:52:05, name: r103-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 03:10:01, name: r201-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 03:14:39, name: c206-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 03:21:38, name: rc204-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 03:26:53, name: rc101-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 03:38:09, name: c104-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 04:11:50, name: r103-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 04:56:27, name: c207-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 05:25:12, name: r205-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 05:31:02, name: rc103-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 05:31:03, name: rc201-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 06:19:35, name: c105-13, Alg: 2, #particle: 15, seed: 1
+11-02 at 06:21:04, name: r104-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 06:30:38, name: r104-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 07:00:30, name: rc205-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 07:08:20, name: c208-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 07:22:20, name: r206-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:02:35, name: c106-14, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:06:16, name: rc104-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:22:10, name: r101-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 09:37:26, name: r105-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:39:41, name: c107-9, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:41:31, name: rc206-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 09:44:52, name: r207-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 10:02:06, name: c201-7, Alg: 3, #particle: 15, seed: 1
+11-02 at 10:05:14, name: r105-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 11:48:30, name: r208-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 12:27:24, name: rc207-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 12:39:34, name: c108-11, Alg: 2, #particle: 15, seed: 1
+11-01 at 10:26:44, name: r111-5, Alg: 16, #particle: 15, seed: 1
+11-02 at 13:16:57, name: rc105-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 14:00:24, name: r106-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 14:03:56, name: r106-7, Alg: 2, #particle: 15, seed: 1
+11-02 at 14:36:08, name: r209-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 14:37:14, name: rc208-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 14:53:54, name: r202-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 16:25:45, name: c109-15, Alg: 2, #particle: 15, seed: 1
+11-02 at 16:55:15, name: rc202-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 17:11:19, name: rc102-5, Alg: 1, #particle: 20, seed: 1
+11-02 at 17:23:05, name: c202-10, Alg: 3, #particle: 15, seed: 1
+11-02 at 17:30:41, name: r210-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 17:36:10, name: rc106-10, Alg: 2, #particle: 15, seed: 1
+11-02 at 17:42:41, name: r107-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 17:59:59, name: c101-2, Alg: 3, #particle: 15, seed: 1
+11-02 at 18:56:04, name: r107-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 19:32:04, name: r211-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 19:59:01, name: c102-3, Alg: 3, #particle: 15, seed: 1
+11-02 at 20:46:56, name: r108-5, Alg: 1, #particle: 5, seed: 1
+11-02 at 21:38:50, name: rc107-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 23:50:04, name: r108-5, Alg: 2, #particle: 15, seed: 1
+11-02 at 23:50:35, name: c103-4, Alg: 3, #particle: 15, seed: 1
+11-03 at 00:22:06, name: r203-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 00:46:43, name: r109-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 01:11:33, name: rc108-5, Alg: 2, #particle: 15, seed: 1
+11-03 at 01:34:53, name: c203-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 01:54:39, name: r102-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 02:35:40, name: rc203-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 02:41:43, name: rc201-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 03:45:26, name: r109-5, Alg: 2, #particle: 15, seed: 1
+11-03 at 04:21:08, name: r110-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 04:30:06, name: rc103-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 07:36:26, name: r201-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 07:37:14, name: r111-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 08:19:49, name: r110-5, Alg: 2, #particle: 15, seed: 1
+11-03 at 08:29:09, name: c104-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 08:46:00, name: c204-5, Alg: 3, #particle: 15, seed: 1
+11-03 at 08:55:53, name: r204-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 10:07:50, name: c105-3, Alg: 3, #particle: 15, seed: 1
+11-03 at 10:30:40, name: r112-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 10:45:56, name: rc204-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 11:29:34, name: c106-2, Alg: 3, #particle: 15, seed: 1
+11-03 at 12:47:05, name: rc202-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 12:50:04, name: r111-5, Alg: 2, #particle: 15, seed: 1
+11-03 at 13:02:02, name: c107-2, Alg: 3, #particle: 15, seed: 1
+11-03 at 13:06:53, name: rc101-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 13:24:28, name: r201-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 15:58:36, name: r202-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 16:00:26, name: c205-5, Alg: 3, #particle: 15, seed: 1
+11-03 at 16:04:23, name: r202-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 17:17:23, name: r103-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 17:18:22, name: rc104-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 17:42:04, name: c108-3, Alg: 3, #particle: 15, seed: 1
+11-03 at 18:09:39, name: r112-5, Alg: 2, #particle: 15, seed: 1
+11-03 at 18:41:32, name: r203-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 19:01:36, name: r205-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 21:04:47, name: r204-5, Alg: 1, #particle: 5, seed: 1
+11-03 at 21:25:20, name: c109-6, Alg: 3, #particle: 15, seed: 1
+11-03 at 22:44:10, name: rc203-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 22:56:27, name: rc205-5, Alg: 1, #particle: 20, seed: 1
+11-03 at 23:39:09, name: c206-10, Alg: 3, #particle: 15, seed: 1
+11-03 at 23:58:25, name: c101-2, Alg: 4, #particle: 15, seed: 1
+11-04 at 00:01:40, name: r205-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 00:21:15, name: rc102-10, Alg: 3, #particle: 15, seed: 1
+11-04 at 01:20:20, name: r203-7, Alg: 3, #particle: 15, seed: 1
+11-04 at 01:35:55, name: c102-2, Alg: 4, #particle: 15, seed: 1
+11-04 at 02:25:04, name: r206-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 04:27:21, name: r206-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 04:37:15, name: r207-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 05:20:20, name: c103-3, Alg: 4, #particle: 15, seed: 1
+11-04 at 06:40:41, name: r208-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 06:50:49, name: rc204-5, Alg: 3, #particle: 15, seed: 1
+11-04 at 07:12:56, name: c207-10, Alg: 3, #particle: 15, seed: 1
+11-04 at 07:28:29, name: r104-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 08:14:54, name: rc105-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 09:30:47, name: r209-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 09:37:39, name: r204-5, Alg: 3, #particle: 15, seed: 1
+11-04 at 10:16:16, name: rc206-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 11:21:19, name: r101-10, Alg: 3, #particle: 15, seed: 1
+11-04 at 11:55:53, name: r210-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 12:29:20, name: rc103-10, Alg: 3, #particle: 15, seed: 1
+11-04 at 14:31:29, name: r211-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 14:38:51, name: c208-10, Alg: 3, #particle: 15, seed: 1
+11-04 at 14:47:35, name: r207-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 15:30:26, name: c101-2, Alg: 1, #particle: 5, seed: 1
+11-04 at 17:03:31, name: c104-6, Alg: 4, #particle: 15, seed: 1
+11-04 at 17:59:48, name: c102-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 18:32:15, name: c105-2, Alg: 4, #particle: 15, seed: 1
+11-04 at 19:18:07, name: r205-5, Alg: 3, #particle: 15, seed: 1
+11-04 at 19:33:17, name: rc205-5, Alg: 3, #particle: 15, seed: 1
+11-04 at 20:31:22, name: c106-2, Alg: 4, #particle: 15, seed: 1
+11-04 at 20:48:13, name: c103-5, Alg: 1, #particle: 5, seed: 1
+11-04 at 21:31:05, name: c201-4, Alg: 4, #particle: 15, seed: 1
+11-04 at 21:58:24, name: rc207-5, Alg: 1, #particle: 20, seed: 1
+11-04 at 22:04:44, name: c107-2, Alg: 4, #particle: 15, seed: 1
+11-04 at 23:48:23, name: r105-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 00:06:20, name: c104-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 00:30:00, name: rc106-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 00:33:25, name: r208-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 01:56:48, name: c108-3, Alg: 4, #particle: 15, seed: 1
+11-05 at 02:29:35, name: c105-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 02:35:31, name: c202-3, Alg: 4, #particle: 15, seed: 1
+11-05 at 02:53:09, name: c106-1, Alg: 1, #particle: 5, seed: 1
+11-05 at 03:08:21, name: rc104-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 03:25:18, name: r102-10, Alg: 3, #particle: 15, seed: 1
+11-05 at 04:27:17, name: r206-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 05:17:31, name: c107-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 06:16:01, name: rc206-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 06:35:27, name: c109-3, Alg: 4, #particle: 15, seed: 1
+11-05 at 08:05:10, name: rc208-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 08:08:05, name: c108-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 08:46:02, name: c101-2, Alg: 5, #particle: 15, seed: 1
+11-05 at 10:14:03, name: c102-2, Alg: 5, #particle: 15, seed: 1
+11-05 at 11:20:50, name: c109-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 11:34:00, name: r209-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 11:45:49, name: r207-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 13:13:57, name: rc201-5, Alg: 2, #particle: 20, seed: 1
+11-05 at 13:16:49, name: c201-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 14:06:29, name: rc107-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 14:16:16, name: c203-10, Alg: 4, #particle: 15, seed: 1
+11-05 at 14:42:14, name: rc105-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 14:56:41, name: rc207-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 15:11:01, name: c202-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 15:39:15, name: r106-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 16:50:34, name: c103-4, Alg: 5, #particle: 15, seed: 1
+11-05 at 17:04:08, name: r103-10, Alg: 3, #particle: 15, seed: 1
+11-05 at 17:12:47, name: c203-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 18:21:10, name: rc202-5, Alg: 2, #particle: 20, seed: 1
+11-05 at 19:01:42, name: r208-5, Alg: 3, #particle: 15, seed: 1
+11-05 at 19:24:13, name: c204-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 20:20:10, name: rc101-30, Alg: 3, #particle: 15, seed: 1
+11-05 at 21:10:45, name: c205-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 22:00:26, name: rc203-5, Alg: 2, #particle: 20, seed: 1
+11-05 at 22:32:44, name: r210-5, Alg: 1, #particle: 20, seed: 1
+11-05 at 22:33:29, name: c104-7, Alg: 5, #particle: 15, seed: 1
+11-05 at 22:59:27, name: c206-5, Alg: 1, #particle: 5, seed: 1
+11-05 at 23:07:22, name: rc208-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 00:24:03, name: rc204-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 00:24:15, name: c105-6, Alg: 5, #particle: 15, seed: 1
+11-06 at 00:46:42, name: c207-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 02:05:13, name: rc106-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 02:28:39, name: c208-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 02:56:58, name: rc108-5, Alg: 1, #particle: 20, seed: 1
+11-06 at 03:08:15, name: c106-2, Alg: 5, #particle: 15, seed: 1
+11-06 at 03:19:51, name: c204-5, Alg: 4, #particle: 15, seed: 1
+11-06 at 03:40:41, name: r209-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 03:53:46, name: r107-5, Alg: 1, #particle: 20, seed: 1
+11-06 at 04:35:20, name: r104-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 05:03:32, name: c107-3, Alg: 5, #particle: 15, seed: 1
+11-06 at 05:19:33, name: c205-1, Alg: 4, #particle: 15, seed: 1
+11-06 at 05:33:09, name: rc205-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 06:25:28, name: rc101-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 07:04:13, name: c108-2, Alg: 5, #particle: 15, seed: 1
+11-06 at 08:40:03, name: r211-5, Alg: 1, #particle: 20, seed: 1
+11-06 at 09:30:51, name: rc206-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 10:03:41, name: rc101-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 10:51:05, name: rc102-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 10:53:54, name: rc201-10, Alg: 4, #particle: 15, seed: 1
+11-06 at 11:49:07, name: c109-3, Alg: 5, #particle: 15, seed: 1
+11-06 at 12:53:29, name: rc107-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 13:29:49, name: r201-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 13:31:00, name: r210-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 13:36:26, name: c101-8, Alg: 6, #particle: 15, seed: 1
+11-06 at 13:39:08, name: rc207-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 14:02:29, name: rc103-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 14:41:58, name: c102-5, Alg: 6, #particle: 15, seed: 1
+11-06 at 16:23:45, name: rc208-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 16:36:33, name: rc102-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 16:53:08, name: c206-10, Alg: 4, #particle: 15, seed: 1
+11-06 at 17:02:35, name: rc104-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 17:36:24, name: r108-5, Alg: 1, #particle: 20, seed: 1
+11-06 at 17:49:33, name: r202-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 19:06:29, name: c207-2, Alg: 4, #particle: 15, seed: 1
+11-06 at 19:09:39, name: c103-10, Alg: 6, #particle: 15, seed: 1
+11-06 at 19:14:36, name: r105-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 20:51:15, name: rc105-5, Alg: 1, #particle: 5, seed: 1
+11-06 at 20:57:28, name: r203-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 20:59:26, name: rc103-5, Alg: 2, #particle: 20, seed: 1
+11-06 at 21:53:27, name: r211-5, Alg: 3, #particle: 15, seed: 1
+11-06 at 22:43:53, name: c104-10, Alg: 6, #particle: 15, seed: 1
+11-06 at 23:19:00, name: rc202-10, Alg: 4, #particle: 15, seed: 1
+11-06 at 23:48:42, name: c105-3, Alg: 6, #particle: 15, seed: 1
+11-07 at 00:07:24, name: r204-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 00:10:35, name: rc108-5, Alg: 3, #particle: 15, seed: 1
+11-07 at 00:26:05, name: rc106-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 00:38:19, name: c106-2, Alg: 6, #particle: 15, seed: 1
+11-07 at 01:20:46, name: c107-3, Alg: 6, #particle: 15, seed: 1
+11-07 at 01:22:29, name: rc104-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 02:11:19, name: c108-2, Alg: 6, #particle: 15, seed: 1
+11-07 at 02:50:21, name: r205-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 03:40:53, name: rc107-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 04:26:51, name: c109-7, Alg: 6, #particle: 15, seed: 1
+11-07 at 04:40:01, name: rc201-5, Alg: 3, #particle: 20, seed: 1
+11-07 at 04:57:53, name: c101-4, Alg: 7, #particle: 15, seed: 1
+11-07 at 05:34:30, name: r206-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 06:04:24, name: c208-10, Alg: 4, #particle: 15, seed: 1
+11-07 at 06:37:41, name: c102-3, Alg: 7, #particle: 15, seed: 1
+11-07 at 06:53:11, name: r106-5, Alg: 3, #particle: 15, seed: 1
+11-07 at 07:03:24, name: r109-5, Alg: 1, #particle: 20, seed: 1
+11-07 at 07:24:32, name: rc108-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 07:33:29, name: rc105-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 08:21:19, name: c103-4, Alg: 7, #particle: 15, seed: 1
+11-07 at 08:48:42, name: r207-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 09:13:29, name: r201-10, Alg: 4, #particle: 15, seed: 1
+11-07 at 10:35:37, name: rc201-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 11:03:27, name: rc203-10, Alg: 4, #particle: 15, seed: 1
+11-07 at 11:31:03, name: r208-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 11:40:38, name: c104-4, Alg: 7, #particle: 15, seed: 1
+11-07 at 11:57:02, name: rc106-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 12:24:04, name: c105-3, Alg: 7, #particle: 15, seed: 1
+11-07 at 12:34:29, name: rc101-10, Alg: 4, #particle: 15, seed: 1
+11-07 at 12:51:36, name: rc202-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 13:25:28, name: c106-2, Alg: 7, #particle: 15, seed: 1
+11-07 at 14:00:09, name: c107-2, Alg: 7, #particle: 15, seed: 1
+11-07 at 14:28:10, name: c108-2, Alg: 7, #particle: 15, seed: 1
+11-07 at 15:20:45, name: rc203-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 15:31:55, name: r209-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 16:10:10, name: c109-3, Alg: 7, #particle: 15, seed: 1
+11-07 at 16:21:18, name: rc107-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 17:19:17, name: c201-6, Alg: 5, #particle: 15, seed: 1
+11-07 at 17:24:33, name: rc204-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 18:17:19, name: rc202-5, Alg: 3, #particle: 20, seed: 1
+11-07 at 18:45:30, name: c101-7, Alg: 8, #particle: 15, seed: 1
+11-07 at 19:16:31, name: r210-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 19:52:28, name: c202-6, Alg: 5, #particle: 15, seed: 1
+11-07 at 19:56:04, name: rc205-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 20:24:23, name: c102-6, Alg: 8, #particle: 15, seed: 1
+11-07 at 20:25:10, name: r202-10, Alg: 4, #particle: 15, seed: 1
+11-07 at 20:34:29, name: r110-5, Alg: 1, #particle: 20, seed: 1
+11-07 at 20:52:46, name: r107-5, Alg: 3, #particle: 15, seed: 1
+11-07 at 21:13:29, name: rc204-5, Alg: 4, #particle: 15, seed: 1
+11-07 at 22:04:53, name: r211-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 22:14:49, name: rc206-5, Alg: 1, #particle: 5, seed: 1
+11-07 at 22:20:59, name: rc108-5, Alg: 2, #particle: 20, seed: 1
+11-07 at 23:26:19, name: c103-10, Alg: 8, #particle: 15, seed: 1
+11-08 at 00:41:16, name: rc207-5, Alg: 1, #particle: 5, seed: 1
+11-08 at 00:49:19, name: rc102-10, Alg: 4, #particle: 15, seed: 1
+11-08 at 02:17:45, name: c104-10, Alg: 8, #particle: 15, seed: 1
+11-08 at 03:12:53, name: rc208-5, Alg: 1, #particle: 5, seed: 1
+11-08 at 03:46:16, name: c105-5, Alg: 8, #particle: 15, seed: 1
+11-08 at 04:21:29, name: r101-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 05:28:34, name: r102-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 06:20:02, name: c106-10, Alg: 8, #particle: 15, seed: 1
+11-08 at 06:42:02, name: r103-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 07:00:59, name: rc203-5, Alg: 3, #particle: 20, seed: 1
+11-08 at 07:06:31, name: r203-5, Alg: 4, #particle: 15, seed: 1
+11-08 at 07:14:47, name: r111-5, Alg: 1, #particle: 20, seed: 1
+11-08 at 07:41:56, name: r108-5, Alg: 3, #particle: 15, seed: 1
+11-08 at 07:48:12, name: r104-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 08:36:42, name: c203-10, Alg: 5, #particle: 15, seed: 1
+11-08 at 08:37:02, name: rc205-5, Alg: 4, #particle: 15, seed: 1
+11-08 at 08:50:52, name: r105-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 09:25:45, name: c107-10, Alg: 8, #particle: 15, seed: 1
+11-08 at 09:54:24, name: r106-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 11:06:04, name: r107-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 12:18:03, name: c108-9, Alg: 8, #particle: 15, seed: 1
+11-08 at 12:20:31, name: r108-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 12:22:14, name: rc101-5, Alg: 3, #particle: 20, seed: 1
+11-08 at 13:05:40, name: rc103-10, Alg: 4, #particle: 15, seed: 1
+11-08 at 13:09:42, name: r109-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 14:27:41, name: r110-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 14:54:20, name: r201-5, Alg: 3, #particle: 20, seed: 1
+11-08 at 15:13:46, name: c109-10, Alg: 8, #particle: 15, seed: 1
+11-08 at 15:53:29, name: r111-5, Alg: 2, #particle: 5, seed: 1
+11-08 at 18:39:03, name: r204-5, Alg: 4, #particle: 15, seed: 1
+11-08 at 20:51:55, name: r109-5, Alg: 3, #particle: 15, seed: 1
+11-09 at 07:12:21, name: r205-5, Alg: 4, #particle: 15, seed: 1
+11-09 at 12:07:16, name: r110-5, Alg: 3, #particle: 15, seed: 1
+11-09 at 19:24:31, name: r206-5, Alg: 4, #particle: 15, seed: 1
+11-10 at 01:42:13, name: r111-5, Alg: 3, #particle: 15, seed: 1
+11-10 at 07:44:57, name: r207-5, Alg: 4, #particle: 15, seed: 1
+11-10 at 12:15:54, name: r112-5, Alg: 3, #particle: 15, seed: 1
+11-11 at 20:08:07, name: r103-35, Alg: 3, #particle: 15, seed: 1
+11-12 at 01:45:08, name: r105-35, Alg: 3, #particle: 15, seed: 1
+11-12 at 04:52:13, name: r103-35, Alg: 1, #particle: 15, seed: 1
+11-12 at 10:15:30, name: r106-30, Alg: 1, #particle: 15, seed: 1
+11-12 at 12:51:17, name: r101-35, Alg: 1, #particle: 15, seed: 1
+11-12 at 15:35:50, name: r104-35, Alg: 3, #particle: 15, seed: 1
+11-12 at 17:02:13, name: r101-38, Alg: 3, #particle: 15, seed: 1
+11-12 at 18:34:32, name: r105-35, Alg: 1, #particle: 15, seed: 1
+11-12 at 21:32:46, name: r107-39, Alg: 1, #particle: 15, seed: 1
+11-12 at 22:15:34, name: r102-35, Alg: 1, #particle: 15, seed: 1
+11-13 at 03:06:59, name: r104-35, Alg: 1, #particle: 15, seed: 1
+11-13 at 04:17:31, name: r102-35, Alg: 3, #particle: 15, seed: 1
+11-13 at 05:19:36, name: r108-30, Alg: 1, #particle: 15, seed: 1
+11-13 at 06:37:36, name: r106-55, Alg: 1, #particle: 15, seed: 1
+11-13 at 07:00:37, name: r108-30, Alg: 3, #particle: 15, seed: 1
+11-13 at 08:07:18, name: r107-30, Alg: 3, #particle: 15, seed: 1
+11-13 at 08:25:49, name: r106-30, Alg: 3, #particle: 15, seed: 1
+11-13 at 14:59:45, name: r109-35, Alg: 1, #particle: 15, seed: 1
+11-13 at 17:30:24, name: r110-35, Alg: 3, #particle: 15, seed: 1
+11-13 at 18:52:32, name: r111-35, Alg: 1, #particle: 15, seed: 1
+11-13 at 20:24:36, name: r109-35, Alg: 3, #particle: 15, seed: 1
+11-14 at 07:08:57, name: r205-35, Alg: 1, #particle: 15, seed: 1
+11-14 at 11:01:25, name: r201-43, Alg: 1, #particle: 15, seed: 1
+11-14 at 11:03:48, name: r209-35, Alg: 1, #particle: 15, seed: 1
+11-14 at 11:12:43, name: rc101-59, Alg: 1, #particle: 15, seed: 1
+11-14 at 13:39:43, name: r110-35, Alg: 1, #particle: 15, seed: 1
+11-14 at 14:50:34, name: r112-35, Alg: 1, #particle: 15, seed: 1
+11-14 at 16:00:39, name: rc101-60, Alg: 3, #particle: 15, seed: 1
+11-14 at 16:10:02, name: r111-35, Alg: 3, #particle: 15, seed: 1
+11-14 at 16:31:00, name: r209-35, Alg: 3, #particle: 15, seed: 1
+11-14 at 16:42:05, name: r201-40, Alg: 3, #particle: 15, seed: 1
+11-14 at 17:16:04, name: rc102-40, Alg: 1, #particle: 15, seed: 1
+11-14 at 17:37:44, name: r205-35, Alg: 3, #particle: 15, seed: 1
+11-14 at 21:56:16, name: r206-35, Alg: 1, #particle: 15, seed: 1
+11-15 at 04:59:32, name: r210-35, Alg: 1, #particle: 15, seed: 1
+11-15 at 05:34:05, name: rc202-40, Alg: 1, #particle: 15, seed: 1
+11-15 at 06:01:01, name: r202-40, Alg: 1, #particle: 15, seed: 1
+11-15 at 10:56:31, name: rc103-40, Alg: 1, #particle: 15, seed: 1
+11-15 at 12:43:34, name: rc102-40, Alg: 3, #particle: 15, seed: 1
+11-15 at 12:44:29, name: r207-35, Alg: 1, #particle: 15, seed: 1
+11-15 at 12:51:27, name: r210-35, Alg: 3, #particle: 15, seed: 1
+11-15 at 13:08:39, name: r112-35, Alg: 3, #particle: 15, seed: 1
+11-15 at 14:31:26, name: r206-35, Alg: 3, #particle: 15, seed: 1
+11-15 at 17:11:33, name: r202-40, Alg: 3, #particle: 15, seed: 1
+11-15 at 21:21:25, name: r211-35, Alg: 1, #particle: 15, seed: 1
+11-15 at 23:46:45, name: rc203-40, Alg: 1, #particle: 15, seed: 1
+11-16 at 01:07:35, name: r203-38, Alg: 1, #particle: 15, seed: 1
+11-16 at 02:24:05, name: rc205-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 02:59:08, name: rc105-35, Alg: 3, #particle: 15, seed: 1
+11-16 at 03:31:28, name: r208-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 04:22:30, name: rc104-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 04:59:29, name: rc105-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 08:33:58, name: r211-35, Alg: 3, #particle: 15, seed: 1
+11-16 at 09:07:06, name: rc103-40, Alg: 3, #particle: 15, seed: 1
+11-16 at 10:15:48, name: r207-35, Alg: 3, #particle: 15, seed: 1
+11-16 at 14:04:50, name: rc204-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 14:49:22, name: r203-37, Alg: 3, #particle: 15, seed: 1
+11-16 at 15:58:20, name: r204-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 20:18:44, name: rc206-35, Alg: 1, #particle: 15, seed: 1
+11-16 at 21:23:18, name: rc106-35, Alg: 3, #particle: 15, seed: 1
+11-16 at 22:22:13, name: rc106-35, Alg: 1, #particle: 15, seed: 1
+11-17 at 03:11:03, name: r208-35, Alg: 3, #particle: 15, seed: 1
+11-17 at 04:35:14, name: rc104-35, Alg: 3, #particle: 15, seed: 1
+11-17 at 08:21:02, name: rc101-89, Alg: 1, #particle: 15, seed: 1
+11-17 at 08:59:51, name: rc205-65, Alg: 1, #particle: 15, seed: 1
+11-17 at 10:36:30, name: rc101-90, Alg: 3, #particle: 15, seed: 1
+11-17 at 10:41:00, name: r204-35, Alg: 3, #particle: 15, seed: 1
+11-17 at 10:47:48, name: rc205-35, Alg: 3, #particle: 15, seed: 1
+11-17 at 11:12:52, name: rc201-40, Alg: 1, #particle: 15, seed: 1
+11-17 at 12:04:52, name: rc207-35, Alg: 1, #particle: 15, seed: 1
+11-17 at 14:40:30, name: rc107-35, Alg: 3, #particle: 15, seed: 1
+11-17 at 16:04:02, name: rc107-35, Alg: 1, #particle: 15, seed: 1
+11-17 at 19:47:03, name: c101-8, Alg: 1, #particle: 15, seed: 1
+11-17 at 20:36:22, name: c101-5, Alg: 3, #particle: 15, seed: 1
+11-17 at 22:52:28, name: c102-8, Alg: 1, #particle: 15, seed: 1
+11-18 at 00:13:23, name: c102-8, Alg: 3, #particle: 15, seed: 1
+11-18 at 00:23:55, name: rc206-65, Alg: 1, #particle: 15, seed: 1
+11-18 at 03:05:23, name: rc102-70, Alg: 1, #particle: 15, seed: 1
+11-18 at 05:23:33, name: rc208-35, Alg: 1, #particle: 15, seed: 1
+11-18 at 06:36:15, name: c103-11, Alg: 3, #particle: 15, seed: 1
+11-18 at 07:09:24, name: c201-40, Alg: 1, #particle: 15, seed: 1
+11-18 at 08:03:51, name: rc202-70, Alg: 1, #particle: 15, seed: 1
+11-18 at 08:29:50, name: rc206-35, Alg: 3, #particle: 15, seed: 1
+11-18 at 09:59:52, name: rc102-70, Alg: 3, #particle: 15, seed: 1
+11-18 at 11:10:01, name: rc108-35, Alg: 1, #particle: 15, seed: 1
+11-18 at 11:11:14, name: rc108-35, Alg: 3, #particle: 15, seed: 1
+11-18 at 14:35:17, name: c103-32, Alg: 1, #particle: 15, seed: 1
+11-18 at 17:42:48, name: rc201-40, Alg: 3, #particle: 15, seed: 1
+11-18 at 18:59:33, name: rc207-65, Alg: 1, #particle: 15, seed: 1
+11-18 at 19:37:05, name: c202-40, Alg: 1, #particle: 15, seed: 1
+11-18 at 20:42:33, name: rc205-65, Alg: 3, #particle: 15, seed: 1
+11-18 at 21:59:49, name: rc103-70, Alg: 1, #particle: 15, seed: 1
+11-19 at 00:24:26, name: rc203-70, Alg: 1, #particle: 15, seed: 1
+11-19 at 01:43:54, name: rc207-35, Alg: 3, #particle: 15, seed: 1
+11-19 at 05:05:09, name: c104-40, Alg: 3, #particle: 15, seed: 1
+11-19 at 05:10:58, name: rc103-70, Alg: 3, #particle: 15, seed: 1
+11-19 at 05:46:26, name: c105-4, Alg: 3, #particle: 15, seed: 1
+11-19 at 06:25:08, name: c106-3, Alg: 3, #particle: 15, seed: 1
+11-19 at 07:40:54, name: c107-4, Alg: 3, #particle: 15, seed: 1
+11-19 at 09:30:49, name: c203-40, Alg: 1, #particle: 15, seed: 1
+11-19 at 09:38:35, name: rc208-65, Alg: 1, #particle: 15, seed: 1
+11-19 at 09:43:11, name: c108-6, Alg: 3, #particle: 15, seed: 1
+11-19 at 11:10:47, name: c104-40, Alg: 1, #particle: 15, seed: 1
+11-19 at 12:06:41, name: rc104-65, Alg: 1, #particle: 15, seed: 1
+11-19 at 15:16:10, name: rc202-40, Alg: 3, #particle: 15, seed: 1
+11-19 at 16:39:09, name: rc206-65, Alg: 3, #particle: 15, seed: 1
+11-19 at 17:08:23, name: rc204-65, Alg: 1, #particle: 15, seed: 1
+11-19 at 20:18:42, name: rc208-35, Alg: 3, #particle: 15, seed: 1
+11-19 at 22:33:10, name: c109-24, Alg: 3, #particle: 15, seed: 1
+11-19 at 22:55:54, name: c204-35, Alg: 1, #particle: 15, seed: 1
+11-20 at 00:00:39, name: r107-31, Alg: 5, #particle: 15, seed: 1
+11-20 at 02:54:25, name: r101-35, Alg: 5, #particle: 15, seed: 1
+11-20 at 03:51:33, name: rc104-65, Alg: 3, #particle: 15, seed: 1
+11-20 at 05:23:50, name: c101-38, Alg: 1, #particle: 15, seed: 1
+11-20 at 06:15:13, name: c201-37, Alg: 3, #particle: 15, seed: 1
+11-20 at 07:53:16, name: rc203-40, Alg: 3, #particle: 15, seed: 1
+11-20 at 08:19:50, name: c101-35, Alg: 3, #particle: 15, seed: 1
+11-20 at 08:53:33, name: c205-35, Alg: 1, #particle: 15, seed: 1
+11-20 at 10:25:45, name: rc207-65, Alg: 3, #particle: 15, seed: 1
+11-20 at 11:08:31, name: r108-33, Alg: 5, #particle: 15, seed: 1
+11-20 at 14:49:49, name: r102-35, Alg: 5, #particle: 15, seed: 1
+11-20 at 19:32:45, name: c206-40, Alg: 1, #particle: 15, seed: 1
+11-20 at 21:10:06, name: r109-31, Alg: 5, #particle: 15, seed: 1
+11-20 at 21:17:12, name: c102-38, Alg: 1, #particle: 15, seed: 1
+11-20 at 23:19:14, name: c202-40, Alg: 3, #particle: 15, seed: 1
+11-20 at 23:37:10, name: rc204-35, Alg: 3, #particle: 15, seed: 1
+11-21 at 03:30:38, name: r103-37, Alg: 5, #particle: 15, seed: 1
+11-21 at 04:55:44, name: c102-38, Alg: 3, #particle: 15, seed: 1
+11-23 at 03:48:08, name: c109-34, Alg: 3, #particle: 15, seed: 1
+11-23 at 03:48:12, name: c203-31, Alg: 3, #particle: 15, seed: 1
+11-23 at 06:16:10, name: c206-30, Alg: 3, #particle: 15, seed: 1
+11-23 at 08:02:16, name: r105-36, Alg: 5, #particle: 15, seed: 1
+11-23 at 10:51:06, name: c105-29, Alg: 3, #particle: 15, seed: 1
+11-23 at 12:02:28, name: c204-30, Alg: 3, #particle: 15, seed: 1
+11-23 at 13:48:29, name: c207-30, Alg: 3, #particle: 15, seed: 1
+11-23 at 13:55:54, name: c105-31, Alg: 3, #particle: 15, seed: 1
+11-23 at 14:24:32, name: c207-30, Alg: 3, #particle: 15, seed: 1
+11-23 at 17:23:57, name: r106-31, Alg: 5, #particle: 15, seed: 1
+11-23 at 22:00:05, name: c208-30, Alg: 3, #particle: 15, seed: 1
+11-23 at 22:36:16, name: c103-32, Alg: 3, #particle: 15, seed: 1
+11-23 at 23:05:44, name: c106-28, Alg: 3, #particle: 15, seed: 1
+11-23 at 23:06:44, name: c205-30, Alg: 3, #particle: 15, seed: 1
+11-24 at 01:18:48, name: r111-31, Alg: 5, #particle: 15, seed: 1
+11-24 at 09:25:48, name: r112-31, Alg: 5, #particle: 15, seed: 1
+11-26 at 03:50:17, name: c105-30, Alg: 1, #particle: 15, seed: 1
+11-26 at 08:29:09, name: c208-30, Alg: 1, #particle: 15, seed: 1
+11-26 at 09:35:46, name: c108-30, Alg: 1, #particle: 15, seed: 1
+11-26 at 12:18:53, name: c107-30, Alg: 1, #particle: 15, seed: 1
+11-26 at 13:59:26, name: c108-30, Alg: 3, #particle: 15, seed: 1
+11-26 at 14:38:00, name: c107-30, Alg: 3, #particle: 15, seed: 1
+11-26 at 16:47:01, name: r104-30, Alg: 5, #particle: 15, seed: 1
+11-26 at 19:20:44, name: r201-45, Alg: 5, #particle: 15, seed: 1
+11-27 at 04:24:53, name: r202-35, Alg: 5, #particle: 15, seed: 1
+11-27 at 11:53:34, name: r203-35, Alg: 5, #particle: 15, seed: 1
+11-27 at 21:17:45, name: r204-35, Alg: 5, #particle: 15, seed: 1
+11-28 at 05:54:14, name: r205-35, Alg: 5, #particle: 15, seed: 1
+11-28 at 13:59:19, name: r206-35, Alg: 5, #particle: 15, seed: 1
+11-28 at 22:39:11, name: r207-45, Alg: 5, #particle: 15, seed: 1
+11-29 at 07:11:18, name: r208-35, Alg: 5, #particle: 15, seed: 1
+11-29 at 15:43:39, name: r209-33, Alg: 5, #particle: 15, seed: 1
+11-29 at 23:36:20, name: r210-40, Alg: 5, #particle: 15, seed: 1
+11-30 at 08:08:06, name: r211-40, Alg: 5, #particle: 15, seed: 1
+11-30 at 17:29:47, name: r110-30, Alg: 5, #particle: 15, seed: 1
+11-30 at 20:03:47, name: c201-30, Alg: 5, #particle: 15, seed: 1
+11-30 at 20:22:53, name: rc201-30, Alg: 5, #particle: 15, seed: 1
+11-30 at 21:51:43, name: rc101-30, Alg: 5, #particle: 15, seed: 1
+11-30 at 22:18:59, name: c101-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 02:24:52, name: rc202-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 02:33:54, name: r201-30, Alg: 6, #particle: 15, seed: 1
+12-01 at 04:04:21, name: c202-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 04:11:31, name: rc102-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 08:25:04, name: c102-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 10:36:23, name: rc203-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 10:47:05, name: rc103-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 11:18:50, name: c203-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 14:46:38, name: r202-30, Alg: 6, #particle: 15, seed: 1
+12-01 at 17:03:49, name: rc104-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 17:54:38, name: c103-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 19:36:26, name: rc204-30, Alg: 5, #particle: 15, seed: 1
+12-01 at 20:00:12, name: c204-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 00:09:23, name: rc105-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 00:12:07, name: r203-30, Alg: 6, #particle: 15, seed: 1
+12-02 at 02:20:34, name: c104-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 04:02:52, name: c205-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 04:55:03, name: rc205-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 07:05:16, name: rc106-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 10:27:51, name: c206-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 10:38:53, name: c105-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 12:28:57, name: rc107-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 12:39:30, name: r204-30, Alg: 6, #particle: 15, seed: 1
+12-02 at 14:03:34, name: rc206-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 19:33:09, name: rc108-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 19:45:12, name: c207-30, Alg: 5, #particle: 15, seed: 1
+12-02 at 20:18:28, name: r101-30, Alg: 4, #particle: 15, seed: 1
+12-02 at 20:41:31, name: r201-30, Alg: 16, #particle: 15, seed: 1
+12-02 at 21:19:21, name: c106-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 00:06:27, name: rc207-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 00:07:39, name: r101-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 02:35:31, name: r205-30, Alg: 6, #particle: 15, seed: 1
+12-03 at 04:01:24, name: c208-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 04:43:56, name: r202-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 06:52:20, name: r102-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 08:15:54, name: c107-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 09:00:12, name: r102-30, Alg: 4, #particle: 15, seed: 1
+12-03 at 09:33:17, name: rc208-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 12:20:25, name: r203-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 14:32:31, name: r206-30, Alg: 6, #particle: 15, seed: 1
+12-03 at 14:42:57, name: r103-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 18:08:34, name: c108-30, Alg: 5, #particle: 15, seed: 1
+12-03 at 20:12:11, name: r204-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 21:40:20, name: r104-30, Alg: 16, #particle: 15, seed: 1
+12-03 at 22:44:16, name: r103-30, Alg: 4, #particle: 15, seed: 1
+12-04 at 00:41:00, name: r207-30, Alg: 6, #particle: 15, seed: 1
+12-04 at 01:41:06, name: r105-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 03:37:53, name: r205-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 04:22:52, name: c109-30, Alg: 5, #particle: 15, seed: 1
+12-04 at 07:18:31, name: r106-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 10:00:29, name: r208-30, Alg: 6, #particle: 15, seed: 1
+12-04 at 11:27:04, name: r107-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 11:35:39, name: r206-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 12:03:24, name: r104-30, Alg: 4, #particle: 15, seed: 1
+12-04 at 15:02:44, name: r108-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 17:21:46, name: r105-30, Alg: 4, #particle: 15, seed: 1
+12-04 at 18:37:38, name: r207-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 21:19:12, name: r109-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 21:42:58, name: r208-30, Alg: 16, #particle: 15, seed: 1
+12-04 at 23:13:33, name: r209-30, Alg: 6, #particle: 15, seed: 1
+12-05 at 02:24:10, name: r209-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 05:54:37, name: r106-30, Alg: 4, #particle: 15, seed: 1
+12-05 at 05:58:00, name: r110-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 08:26:34, name: r210-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 12:25:50, name: r111-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 12:35:21, name: r210-30, Alg: 6, #particle: 15, seed: 1
+12-05 at 12:50:15, name: r211-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 17:14:50, name: r112-30, Alg: 16, #particle: 15, seed: 1
+12-05 at 20:23:38, name: r107-30, Alg: 4, #particle: 15, seed: 1
+12-05 at 22:15:53, name: r211-30, Alg: 6, #particle: 15, seed: 1
+12-06 at 07:37:23, name: r108-30, Alg: 4, #particle: 15, seed: 1
+12-06 at 19:38:03, name: r109-30, Alg: 4, #particle: 15, seed: 1
+12-07 at 03:17:17, name: r101-30, Alg: 15, #particle: 15, seed: 1
+12-07 at 04:01:24, name: rc101-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 05:50:30, name: r201-30, Alg: 15, #particle: 15, seed: 1
+12-07 at 07:23:50, name: rc102-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 08:28:59, name: rc201-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 08:55:09, name: c201-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 11:14:56, name: c101-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 12:19:46, name: r102-30, Alg: 15, #particle: 15, seed: 1
+12-07 at 14:13:39, name: rc103-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 17:15:35, name: c202-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 17:23:45, name: r202-30, Alg: 15, #particle: 15, seed: 1
+12-07 at 18:55:15, name: rc104-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 19:02:09, name: rc202-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 19:09:32, name: r103-30, Alg: 15, #particle: 15, seed: 1
+12-07 at 20:48:32, name: c102-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 23:34:07, name: rc105-30, Alg: 16, #particle: 15, seed: 1
+12-07 at 23:40:02, name: c203-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 03:36:18, name: rc203-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 04:14:42, name: r104-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 04:24:22, name: r203-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 06:12:47, name: c204-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 07:10:07, name: c103-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 08:07:50, name: rc106-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 10:21:02, name: r105-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 10:28:27, name: rc107-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 10:33:51, name: rc204-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 12:22:33, name: c104-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 13:51:50, name: r204-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 14:14:51, name: rc108-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 14:40:53, name: c205-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 16:38:13, name: r106-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 19:13:12, name: rc205-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 20:44:28, name: r205-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 22:07:13, name: c105-30, Alg: 16, #particle: 15, seed: 1
+12-08 at 22:37:58, name: r107-30, Alg: 15, #particle: 15, seed: 1
+12-08 at 23:42:57, name: c206-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 02:58:31, name: rc206-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 03:40:06, name: r108-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 04:57:09, name: r206-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 07:52:47, name: c207-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 08:26:28, name: c106-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 10:41:55, name: rc207-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 12:22:49, name: r109-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 13:59:11, name: r207-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 15:46:34, name: c208-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 17:14:08, name: r208-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 17:45:30, name: c107-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 18:58:15, name: c201-30, Alg: 2, #particle: 15, seed: 1
+12-09 at 19:06:46, name: rc208-30, Alg: 16, #particle: 15, seed: 1
+12-09 at 20:07:02, name: r110-30, Alg: 15, #particle: 15, seed: 1
+12-09 at 21:57:44, name: rc101-30, Alg: 2, #particle: 15, seed: 1
+12-09 at 22:20:56, name: c202-30, Alg: 2, #particle: 15, seed: 1
+12-09 at 23:01:56, name: r209-30, Alg: 15, #particle: 15, seed: 1
+12-10 at 02:10:52, name: c203-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 02:18:28, name: r111-30, Alg: 15, #particle: 15, seed: 1
+12-10 at 04:12:46, name: c108-30, Alg: 16, #particle: 15, seed: 1
+12-10 at 04:51:42, name: rc102-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 07:03:49, name: r112-30, Alg: 15, #particle: 15, seed: 1
+12-10 at 08:15:33, name: c204-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 09:11:04, name: r210-30, Alg: 15, #particle: 15, seed: 1
+12-10 at 11:00:24, name: rc103-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 12:25:41, name: c205-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 13:02:58, name: c109-30, Alg: 16, #particle: 15, seed: 1
+12-10 at 15:26:10, name: c206-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 15:58:55, name: r211-30, Alg: 15, #particle: 15, seed: 1
+12-10 at 18:21:57, name: c207-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 18:46:20, name: rc104-30, Alg: 2, #particle: 15, seed: 1
+12-10 at 21:44:35, name: c208-30, Alg: 2, #particle: 15, seed: 1
+12-11 at 04:36:47, name: rc105-30, Alg: 2, #particle: 15, seed: 1
+12-11 at 11:36:59, name: rc106-30, Alg: 2, #particle: 15, seed: 1
+12-11 at 19:52:19, name: rc107-30, Alg: 2, #particle: 15, seed: 1
+12-12 at 04:55:25, name: rc108-30, Alg: 2, #particle: 15, seed: 1
+12-15 at 12:36:22, name: rc101-30, Alg: 4, #particle: 15, seed: 1
+12-15 at 17:18:27, name: r201-30, Alg: 2, #particle: 15, seed: 1
+12-15 at 17:34:48, name: r101-30, Alg: 2, #particle: 15, seed: 1
+12-15 at 18:20:37, name: rc201-30, Alg: 2, #particle: 15, seed: 1
+12-15 at 22:14:28, name: c201-30, Alg: 4, #particle: 15, seed: 1
+12-15 at 22:32:45, name: c106-30, Alg: 1, #particle: 15, seed: 1
+12-16 at 00:14:05, name: r202-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 00:29:42, name: rc102-30, Alg: 4, #particle: 15, seed: 1
+12-16 at 00:55:44, name: rc202-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 01:12:42, name: r102-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 04:59:24, name: r203-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 05:58:47, name: rc203-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 08:47:45, name: r103-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 09:01:40, name: c109-30, Alg: 1, #particle: 15, seed: 1
+12-16 at 10:31:59, name: rc103-30, Alg: 4, #particle: 15, seed: 1
+12-16 at 11:23:15, name: rc204-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 13:15:17, name: c202-30, Alg: 4, #particle: 15, seed: 1
+12-16 at 14:45:16, name: r204-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 15:00:44, name: c101-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 18:49:24, name: r104-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 19:12:00, name: rc205-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 21:59:41, name: c102-30, Alg: 2, #particle: 15, seed: 1
+12-16 at 22:59:22, name: r205-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 01:01:09, name: rc104-30, Alg: 4, #particle: 15, seed: 1
+12-17 at 02:14:57, name: rc206-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 02:20:32, name: c203-30, Alg: 4, #particle: 15, seed: 1
+12-17 at 04:51:04, name: r105-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 06:18:16, name: r206-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 06:27:18, name: c103-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 08:34:21, name: rc207-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 12:38:00, name: r207-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 13:39:38, name: c104-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 14:47:07, name: rc208-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 15:10:40, name: rc105-30, Alg: 4, #particle: 15, seed: 1
+12-17 at 16:52:18, name: r106-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 17:41:02, name: c204-30, Alg: 4, #particle: 15, seed: 1
+12-17 at 19:15:06, name: r208-30, Alg: 2, #particle: 15, seed: 1
+12-17 at 20:28:51, name: c105-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 00:28:56, name: rc201-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 02:36:35, name: c106-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 03:19:44, name: rc106-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 04:17:36, name: r107-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 05:08:13, name: r209-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 09:49:49, name: rc202-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 09:55:59, name: c205-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 10:06:54, name: c107-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 13:44:00, name: r210-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 16:51:26, name: r108-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 17:38:17, name: rc107-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 18:35:17, name: c108-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 20:09:58, name: c206-30, Alg: 4, #particle: 15, seed: 1
+12-18 at 20:45:18, name: r211-30, Alg: 2, #particle: 15, seed: 1
+12-18 at 21:27:19, name: rc203-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 01:14:50, name: c109-30, Alg: 2, #particle: 15, seed: 1
+12-19 at 02:29:28, name: c106-30, Alg: 3, #particle: 15, seed: 1
+12-19 at 05:38:50, name: r109-30, Alg: 2, #particle: 15, seed: 1
+12-19 at 06:44:52, name: r201-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 08:29:26, name: rc108-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 10:05:40, name: rc204-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 10:37:30, name: c207-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 16:38:51, name: c101-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 18:05:29, name: r110-30, Alg: 2, #particle: 15, seed: 1
+12-19 at 18:54:33, name: rc101-30, Alg: 6, #particle: 15, seed: 1
+12-19 at 19:47:00, name: r202-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 20:31:47, name: c208-30, Alg: 4, #particle: 15, seed: 1
+12-19 at 23:16:04, name: rc205-30, Alg: 4, #particle: 15, seed: 1
+12-20 at 03:24:56, name: c201-30, Alg: 6, #particle: 15, seed: 1
+12-20 at 06:22:38, name: r111-30, Alg: 2, #particle: 15, seed: 1
+12-20 at 07:24:29, name: r203-30, Alg: 4, #particle: 15, seed: 1
+12-20 at 07:54:52, name: c102-30, Alg: 4, #particle: 15, seed: 1
+12-20 at 08:23:23, name: rc102-30, Alg: 6, #particle: 15, seed: 1
+12-20 at 10:21:06, name: c202-30, Alg: 6, #particle: 15, seed: 1
+12-20 at 14:38:03, name: rc206-30, Alg: 4, #particle: 15, seed: 1
+12-20 at 18:25:21, name: c203-30, Alg: 6, #particle: 15, seed: 1
+12-20 at 19:12:59, name: rc103-30, Alg: 6, #particle: 15, seed: 1
+12-20 at 19:31:11, name: r112-30, Alg: 2, #particle: 15, seed: 1
+12-20 at 22:06:04, name: r204-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 01:39:44, name: c103-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 04:35:23, name: c204-30, Alg: 6, #particle: 15, seed: 1
+12-21 at 06:44:49, name: r110-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 06:55:43, name: rc207-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 10:14:25, name: r205-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 11:32:11, name: rc104-30, Alg: 6, #particle: 15, seed: 1
+12-21 at 12:50:49, name: c205-30, Alg: 6, #particle: 15, seed: 1
+12-21 at 16:25:50, name: c104-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 21:23:04, name: c206-30, Alg: 6, #particle: 15, seed: 1
+12-21 at 22:07:39, name: r206-30, Alg: 4, #particle: 15, seed: 1
+12-21 at 23:04:11, name: r111-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 00:42:07, name: rc208-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 03:51:29, name: rc105-30, Alg: 6, #particle: 15, seed: 1
+12-22 at 04:13:03, name: c207-30, Alg: 6, #particle: 15, seed: 1
+12-22 at 06:31:03, name: c105-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 10:16:28, name: r207-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 11:29:01, name: c208-30, Alg: 6, #particle: 15, seed: 1
+12-22 at 12:07:46, name: rc201-30, Alg: 6, #particle: 15, seed: 1
+12-22 at 16:56:07, name: r112-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 17:23:50, name: rc106-30, Alg: 6, #particle: 15, seed: 1
+12-22 at 19:35:37, name: c201-30, Alg: 7, #particle: 15, seed: 1
+12-22 at 20:02:50, name: c106-30, Alg: 4, #particle: 15, seed: 1
+12-22 at 23:53:56, name: rc202-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 00:08:43, name: r208-30, Alg: 4, #particle: 15, seed: 1
+12-23 at 05:35:55, name: r101-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 06:41:03, name: c202-30, Alg: 7, #particle: 15, seed: 1
+12-23 at 07:22:24, name: rc107-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 08:48:13, name: rc203-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 10:07:26, name: c107-30, Alg: 4, #particle: 15, seed: 1
+12-23 at 16:10:22, name: c203-30, Alg: 7, #particle: 15, seed: 1
+12-23 at 17:29:57, name: r209-30, Alg: 4, #particle: 15, seed: 1
+12-23 at 18:06:50, name: rc204-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 19:07:40, name: r102-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 20:07:05, name: rc108-30, Alg: 6, #particle: 15, seed: 1
+12-23 at 23:58:41, name: c108-30, Alg: 4, #particle: 15, seed: 1
+12-24 at 05:18:48, name: c204-30, Alg: 7, #particle: 15, seed: 1
+12-24 at 06:55:51, name: rc101-30, Alg: 7, #particle: 15, seed: 1
+12-24 at 08:33:15, name: r103-30, Alg: 6, #particle: 15, seed: 1
+12-24 at 08:40:20, name: r210-30, Alg: 4, #particle: 15, seed: 1
+12-24 at 10:06:16, name: rc205-30, Alg: 6, #particle: 15, seed: 1
+12-24 at 15:24:06, name: c109-30, Alg: 4, #particle: 15, seed: 1
+12-24 at 15:26:46, name: c205-30, Alg: 7, #particle: 15, seed: 1
+12-24 at 17:38:39, name: rc102-30, Alg: 7, #particle: 15, seed: 1
+12-24 at 21:04:25, name: rc206-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 00:19:35, name: c101-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 01:03:16, name: r104-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 02:20:00, name: r211-30, Alg: 4, #particle: 15, seed: 1
+12-25 at 02:23:35, name: c206-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 03:38:26, name: rc103-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 08:08:50, name: rc207-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 11:24:12, name: c102-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 12:18:34, name: c207-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 13:55:31, name: r201-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 16:52:15, name: rc104-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 18:04:31, name: r105-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 19:32:04, name: rc208-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 21:00:43, name: c103-30, Alg: 6, #particle: 15, seed: 1
+12-25 at 21:29:25, name: c208-30, Alg: 7, #particle: 15, seed: 1
+12-25 at 23:39:36, name: r202-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 03:11:10, name: c201-30, Alg: 8, #particle: 15, seed: 1
+12-26 at 06:02:46, name: rc201-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 06:29:22, name: c104-30, Alg: 6, #particle: 15, seed: 1
+12-26 at 07:21:14, name: rc105-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 09:49:50, name: c202-30, Alg: 8, #particle: 15, seed: 1
+12-26 at 11:12:11, name: r203-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 11:22:03, name: r106-30, Alg: 6, #particle: 15, seed: 1
+12-26 at 15:23:43, name: c203-30, Alg: 8, #particle: 15, seed: 1
+12-26 at 15:56:54, name: rc202-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 16:52:08, name: rc106-30, Alg: 7, #particle: 15, seed: 1
+12-26 at 18:01:14, name: c105-30, Alg: 6, #particle: 15, seed: 1
+12-26 at 22:54:01, name: c204-30, Alg: 8, #particle: 15, seed: 1
+12-26 at 23:36:38, name: r204-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 01:44:56, name: rc203-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 02:39:38, name: r107-30, Alg: 6, #particle: 15, seed: 1
+12-27 at 05:03:54, name: c205-30, Alg: 8, #particle: 15, seed: 1
+12-27 at 05:18:07, name: c106-30, Alg: 6, #particle: 15, seed: 1
+12-27 at 05:25:59, name: rc107-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 10:39:34, name: r205-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 11:31:39, name: rc204-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 11:39:31, name: c206-30, Alg: 8, #particle: 15, seed: 1
+12-27 at 15:44:16, name: c107-30, Alg: 6, #particle: 15, seed: 1
+12-27 at 17:29:16, name: c207-30, Alg: 8, #particle: 15, seed: 1
+12-27 at 19:47:24, name: rc108-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 20:24:46, name: r108-30, Alg: 6, #particle: 15, seed: 1
+12-27 at 21:43:53, name: r206-30, Alg: 7, #particle: 15, seed: 1
+12-27 at 23:15:53, name: c208-30, Alg: 8, #particle: 15, seed: 1
+12-27 at 23:47:31, name: rc205-30, Alg: 7, #particle: 15, seed: 1
+12-28 at 02:48:47, name: rc101-30, Alg: 8, #particle: 15, seed: 1
+12-28 at 04:55:02, name: c108-30, Alg: 6, #particle: 15, seed: 1
+12-28 at 06:36:10, name: r207-30, Alg: 7, #particle: 15, seed: 1
+12-28 at 09:53:19, name: rc102-30, Alg: 8, #particle: 15, seed: 1
+12-28 at 11:48:10, name: rc206-30, Alg: 7, #particle: 15, seed: 1
+12-28 at 12:28:17, name: c201-30, Alg: 9, #particle: 15, seed: 1
+12-28 at 13:49:02, name: r109-30, Alg: 6, #particle: 15, seed: 1
+12-28 at 16:18:52, name: c109-30, Alg: 6, #particle: 15, seed: 1
+12-28 at 16:27:09, name: r208-30, Alg: 7, #particle: 15, seed: 1
+12-28 at 17:09:12, name: rc103-30, Alg: 8, #particle: 15, seed: 1
+12-28 at 22:34:14, name: rc207-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 00:25:50, name: rc104-30, Alg: 8, #particle: 15, seed: 1
+12-29 at 03:00:48, name: r209-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 03:14:24, name: c101-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 04:26:32, name: c202-30, Alg: 9, #particle: 15, seed: 1
+12-29 at 06:36:33, name: r110-30, Alg: 6, #particle: 15, seed: 1
+12-29 at 08:01:35, name: rc105-30, Alg: 8, #particle: 15, seed: 1
+12-29 at 09:31:20, name: rc208-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 14:33:39, name: rc106-30, Alg: 8, #particle: 15, seed: 1
+12-29 at 14:47:18, name: r210-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 15:05:30, name: c102-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 15:59:18, name: rc201-30, Alg: 8, #particle: 15, seed: 1
+12-29 at 19:21:23, name: c203-30, Alg: 9, #particle: 15, seed: 1
+12-29 at 20:31:03, name: rc107-30, Alg: 8, #particle: 15, seed: 1
+12-29 at 22:50:38, name: r111-30, Alg: 6, #particle: 15, seed: 1
+12-29 at 23:29:11, name: r211-30, Alg: 7, #particle: 15, seed: 1
+12-29 at 23:51:45, name: rc202-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 04:54:48, name: rc108-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 05:00:35, name: c103-30, Alg: 7, #particle: 15, seed: 1
+12-30 at 05:30:27, name: rc203-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 06:30:07, name: r201-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 12:00:57, name: c204-30, Alg: 9, #particle: 15, seed: 1
+12-30 at 12:49:22, name: rc204-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 13:49:05, name: r202-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 15:37:36, name: r112-30, Alg: 6, #particle: 15, seed: 1
+12-30 at 15:42:10, name: rc101-30, Alg: 9, #particle: 15, seed: 1
+12-30 at 18:48:08, name: c104-30, Alg: 7, #particle: 15, seed: 1
+12-30 at 20:50:39, name: r203-30, Alg: 8, #particle: 15, seed: 1
+12-30 at 21:07:21, name: rc205-30, Alg: 8, #particle: 15, seed: 1
+12-31 at 02:55:56, name: c205-30, Alg: 9, #particle: 15, seed: 1
+12-31 at 03:00:55, name: r101-30, Alg: 7, #particle: 15, seed: 1
+12-31 at 03:22:59, name: r204-30, Alg: 8, #particle: 15, seed: 1
+12-31 at 04:03:23, name: rc102-30, Alg: 9, #particle: 15, seed: 1
+12-31 at 05:14:20, name: rc206-30, Alg: 8, #particle: 15, seed: 1
+12-31 at 06:22:22, name: c105-30, Alg: 7, #particle: 15, seed: 1
+12-31 at 10:30:23, name: r205-30, Alg: 8, #particle: 15, seed: 1
+12-31 at 11:32:45, name: rc207-30, Alg: 8, #particle: 15, seed: 1
+12-31 at 14:43:49, name: r102-30, Alg: 7, #particle: 15, seed: 1
+12-31 at 15:49:03, name: c206-30, Alg: 9, #particle: 15, seed: 1
+12-31 at 17:05:00, name: c106-30, Alg: 7, #particle: 15, seed: 1
+12-31 at 19:13:10, name: rc103-30, Alg: 9, #particle: 15, seed: 1
+01-01 at 02:45:47, name: r103-30, Alg: 7, #particle: 15, seed: 1
+01-01 at 04:20:37, name: c107-30, Alg: 7, #particle: 15, seed: 1
+01-01 at 06:19:38, name: c207-30, Alg: 9, #particle: 15, seed: 1
+01-01 at 11:05:15, name: rc104-30, Alg: 9, #particle: 15, seed: 1
+01-01 at 15:26:26, name: r104-30, Alg: 7, #particle: 15, seed: 1
+01-01 at 17:22:55, name: c108-30, Alg: 7, #particle: 15, seed: 1
+01-01 at 19:28:19, name: c208-30, Alg: 9, #particle: 15, seed: 1
+01-02 at 02:49:52, name: rc105-30, Alg: 9, #particle: 15, seed: 1
+01-02 at 05:56:21, name: r105-30, Alg: 7, #particle: 15, seed: 1
+01-02 at 06:02:54, name: c201-30, Alg: 10, #particle: 15, seed: 1
+01-02 at 07:16:50, name: c109-30, Alg: 7, #particle: 15, seed: 1
+01-02 at 14:35:19, name: rc106-30, Alg: 9, #particle: 15, seed: 1
+01-02 at 14:57:58, name: c101-30, Alg: 8, #particle: 15, seed: 1
+01-02 at 16:45:35, name: c202-30, Alg: 10, #particle: 15, seed: 1
+01-02 at 19:41:47, name: r106-30, Alg: 7, #particle: 15, seed: 1
+01-02 at 23:21:10, name: c102-30, Alg: 8, #particle: 15, seed: 1
+01-03 at 02:43:33, name: c203-30, Alg: 10, #particle: 15, seed: 1
+01-03 at 03:41:43, name: rc107-30, Alg: 9, #particle: 15, seed: 1
+01-03 at 06:05:30, name: c103-30, Alg: 8, #particle: 15, seed: 1
+01-03 at 11:14:11, name: r107-30, Alg: 7, #particle: 15, seed: 1
+01-03 at 12:52:04, name: c104-30, Alg: 8, #particle: 15, seed: 1
+01-03 at 14:06:40, name: c204-30, Alg: 10, #particle: 15, seed: 1
+01-03 at 17:38:59, name: rc108-30, Alg: 9, #particle: 15, seed: 1
+01-03 at 20:33:16, name: c105-30, Alg: 8, #particle: 15, seed: 1
+01-03 at 23:30:00, name: c205-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 00:24:18, name: r108-30, Alg: 7, #particle: 15, seed: 1
+01-04 at 02:42:14, name: rc101-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 03:14:36, name: c106-30, Alg: 8, #particle: 15, seed: 1
+01-04 at 07:36:12, name: c206-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 10:16:01, name: c107-30, Alg: 8, #particle: 15, seed: 1
+01-04 at 11:54:59, name: r109-30, Alg: 7, #particle: 15, seed: 1
+01-04 at 13:50:15, name: rc102-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 17:03:24, name: c108-30, Alg: 8, #particle: 15, seed: 1
+01-04 at 18:11:22, name: c207-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 23:01:32, name: rc103-30, Alg: 10, #particle: 15, seed: 1
+01-04 at 23:49:56, name: c109-30, Alg: 8, #particle: 15, seed: 1
+01-05 at 00:39:28, name: r110-30, Alg: 7, #particle: 15, seed: 1
+01-05 at 03:57:26, name: c208-30, Alg: 10, #particle: 15, seed: 1
+01-05 at 07:46:43, name: rc104-30, Alg: 10, #particle: 15, seed: 1
+01-05 at 12:58:16, name: c201-30, Alg: 11, #particle: 15, seed: 1
+01-05 at 13:50:05, name: c101-30, Alg: 9, #particle: 15, seed: 1
+01-05 at 14:25:21, name: r111-30, Alg: 7, #particle: 15, seed: 1
+01-05 at 18:07:48, name: rc105-30, Alg: 10, #particle: 15, seed: 1
+01-05 at 22:30:49, name: c202-30, Alg: 11, #particle: 15, seed: 1
+01-06 at 03:55:45, name: c102-30, Alg: 9, #particle: 15, seed: 1
+01-06 at 03:59:43, name: rc106-30, Alg: 10, #particle: 15, seed: 1
+01-06 at 04:11:08, name: r112-30, Alg: 7, #particle: 15, seed: 1
+01-06 at 08:06:34, name: c203-30, Alg: 11, #particle: 15, seed: 1
+01-06 at 11:24:34, name: r101-30, Alg: 8, #particle: 15, seed: 1
+01-06 at 12:32:03, name: rc107-30, Alg: 10, #particle: 15, seed: 1
+01-06 at 16:42:24, name: c204-30, Alg: 11, #particle: 15, seed: 1
+01-06 at 20:13:18, name: r102-30, Alg: 8, #particle: 15, seed: 1
+01-06 at 20:52:47, name: c103-30, Alg: 9, #particle: 15, seed: 1
+01-06 at 22:00:42, name: rc108-30, Alg: 10, #particle: 15, seed: 1
+01-07 at 02:19:34, name: c205-30, Alg: 11, #particle: 15, seed: 1
+01-07 at 05:25:45, name: r103-30, Alg: 8, #particle: 15, seed: 1
+01-07 at 06:25:02, name: rc101-30, Alg: 11, #particle: 15, seed: 1
+01-07 at 08:20:52, name: c206-30, Alg: 11, #particle: 15, seed: 1
+01-07 at 13:37:23, name: r104-30, Alg: 8, #particle: 15, seed: 1
+01-07 at 14:00:14, name: c104-30, Alg: 9, #particle: 15, seed: 1
+01-07 at 14:10:13, name: rc102-30, Alg: 11, #particle: 15, seed: 1
+01-07 at 17:46:55, name: c207-30, Alg: 11, #particle: 15, seed: 1
+01-07 at 22:27:11, name: r105-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 00:47:11, name: rc103-30, Alg: 11, #particle: 15, seed: 1
+01-08 at 01:40:43, name: c208-30, Alg: 11, #particle: 15, seed: 1
+01-08 at 03:21:43, name: c105-30, Alg: 9, #particle: 15, seed: 1
+01-08 at 08:05:08, name: r106-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 09:46:09, name: c201-30, Alg: 12, #particle: 15, seed: 1
+01-08 at 09:49:48, name: rc104-30, Alg: 11, #particle: 15, seed: 1
+01-08 at 13:07:37, name: r206-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 14:58:09, name: rc208-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 17:04:13, name: c106-30, Alg: 9, #particle: 15, seed: 1
+01-08 at 17:35:55, name: r107-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 18:38:09, name: r207-30, Alg: 8, #particle: 15, seed: 1
+01-08 at 19:17:50, name: rc105-30, Alg: 11, #particle: 15, seed: 1
+01-08 at 20:20:18, name: c202-30, Alg: 12, #particle: 15, seed: 1
+01-09 at 00:20:34, name: r208-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 03:05:02, name: rc201-30, Alg: 9, #particle: 15, seed: 1
+01-09 at 04:37:19, name: rc106-30, Alg: 11, #particle: 15, seed: 1
+01-09 at 05:06:35, name: r108-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 06:23:54, name: c203-30, Alg: 12, #particle: 15, seed: 1
+01-09 at 08:13:01, name: r209-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 08:40:26, name: c107-30, Alg: 9, #particle: 15, seed: 1
+01-09 at 13:15:01, name: rc107-30, Alg: 11, #particle: 15, seed: 1
+01-09 at 14:01:37, name: r210-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 14:39:48, name: r109-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 16:45:41, name: c204-30, Alg: 12, #particle: 15, seed: 1
+01-09 at 18:47:37, name: rc202-30, Alg: 9, #particle: 15, seed: 1
+01-09 at 19:59:56, name: r211-30, Alg: 8, #particle: 15, seed: 1
+01-09 at 23:42:22, name: rc108-30, Alg: 11, #particle: 15, seed: 1
+01-10 at 00:00:53, name: c108-30, Alg: 9, #particle: 15, seed: 1
+01-10 at 00:17:57, name: r201-30, Alg: 9, #particle: 15, seed: 1
+01-10 at 01:19:46, name: r110-30, Alg: 8, #particle: 15, seed: 1
+01-10 at 01:43:04, name: c205-30, Alg: 12, #particle: 15, seed: 1
+01-10 at 08:32:05, name: rc203-30, Alg: 9, #particle: 15, seed: 1
+01-10 at 09:08:54, name: rc101-30, Alg: 12, #particle: 15, seed: 1
+01-10 at 09:56:06, name: c206-30, Alg: 12, #particle: 15, seed: 1
+01-10 at 11:22:23, name: r111-30, Alg: 8, #particle: 15, seed: 1
+01-10 at 15:31:47, name: r202-30, Alg: 9, #particle: 15, seed: 1
+01-10 at 16:25:41, name: c109-30, Alg: 9, #particle: 15, seed: 1
+01-10 at 19:56:29, name: c207-30, Alg: 12, #particle: 15, seed: 1
+01-10 at 20:49:45, name: r112-30, Alg: 8, #particle: 15, seed: 1
+01-10 at 22:45:06, name: rc102-30, Alg: 12, #particle: 15, seed: 1
+01-11 at 00:00:51, name: rc204-30, Alg: 9, #particle: 15, seed: 1
+01-11 at 04:29:55, name: c208-30, Alg: 12, #particle: 15, seed: 1
+01-11 at 04:52:12, name: r101-30, Alg: 9, #particle: 15, seed: 1
+01-11 at 05:49:06, name: c101-30, Alg: 10, #particle: 15, seed: 1
+01-11 at 06:23:42, name: r203-30, Alg: 9, #particle: 15, seed: 1
+01-11 at 10:53:55, name: rc103-30, Alg: 12, #particle: 15, seed: 1
+01-11 at 12:05:52, name: c201-30, Alg: 13, #particle: 15, seed: 1
+01-11 at 16:31:09, name: rc205-30, Alg: 9, #particle: 15, seed: 1
+01-11 at 17:30:08, name: r102-30, Alg: 9, #particle: 15, seed: 1
+01-11 at 18:08:07, name: c102-30, Alg: 10, #particle: 15, seed: 1
+01-11 at 18:44:48, name: c202-30, Alg: 13, #particle: 15, seed: 1
+01-11 at 21:44:52, name: r204-30, Alg: 9, #particle: 15, seed: 1
+01-12 at 00:02:09, name: rc104-30, Alg: 12, #particle: 15, seed: 1
+01-12 at 01:45:05, name: c203-30, Alg: 13, #particle: 15, seed: 1
+01-12 at 07:11:42, name: c103-30, Alg: 10, #particle: 15, seed: 1
+01-12 at 08:11:56, name: rc206-30, Alg: 9, #particle: 15, seed: 1
+01-12 at 09:49:35, name: c204-30, Alg: 13, #particle: 15, seed: 1
+01-12 at 11:43:20, name: r205-30, Alg: 9, #particle: 15, seed: 1
+01-12 at 12:23:17, name: r103-30, Alg: 9, #particle: 15, seed: 1
+01-12 at 15:38:17, name: rc105-30, Alg: 12, #particle: 15, seed: 1
+01-12 at 17:28:57, name: c205-30, Alg: 13, #particle: 15, seed: 1
+01-13 at 14:39:47, name: c104-30, Alg: 10, #particle: 15, seed: 1
+01-13 at 18:26:09, name: c206-30, Alg: 13, #particle: 15, seed: 1
+01-13 at 20:02:38, name: rc207-30, Alg: 9, #particle: 15, seed: 1
+01-13 at 21:09:32, name: r206-30, Alg: 9, #particle: 15, seed: 1
+01-13 at 21:24:09, name: rc106-30, Alg: 12, #particle: 15, seed: 1
+01-13 at 23:59:47, name: r104-30, Alg: 9, #particle: 15, seed: 1
+01-14 at 02:01:54, name: c207-30, Alg: 13, #particle: 15, seed: 1
+01-14 at 03:33:34, name: c105-30, Alg: 10, #particle: 15, seed: 1
+01-14 at 09:00:50, name: c208-30, Alg: 13, #particle: 15, seed: 1
+01-14 at 09:33:35, name: rc107-30, Alg: 12, #particle: 15, seed: 1
+01-14 at 11:47:06, name: r207-30, Alg: 9, #particle: 15, seed: 1
+01-14 at 14:25:31, name: r105-30, Alg: 9, #particle: 15, seed: 1
+01-14 at 15:52:32, name: c201-30, Alg: 14, #particle: 15, seed: 1
+01-14 at 15:56:55, name: c106-30, Alg: 10, #particle: 15, seed: 1
+01-14 at 16:03:56, name: rc208-30, Alg: 9, #particle: 15, seed: 1
+01-14 at 21:37:01, name: rc108-30, Alg: 12, #particle: 15, seed: 1
+01-14 at 23:52:15, name: c202-30, Alg: 14, #particle: 15, seed: 1
+01-15 at 02:53:49, name: r106-30, Alg: 9, #particle: 15, seed: 1
+01-15 at 03:02:15, name: rc201-30, Alg: 10, #particle: 15, seed: 1
+01-15 at 03:17:18, name: r208-30, Alg: 9, #particle: 15, seed: 1
+01-15 at 05:29:18, name: c107-30, Alg: 10, #particle: 15, seed: 1
+01-15 at 07:50:47, name: c203-30, Alg: 14, #particle: 15, seed: 1
+01-15 at 07:53:43, name: rc101-30, Alg: 13, #particle: 15, seed: 1
+01-15 at 13:04:36, name: rc202-30, Alg: 10, #particle: 15, seed: 1
+01-15 at 15:07:49, name: c204-30, Alg: 14, #particle: 15, seed: 1
+01-15 at 17:26:46, name: rc102-30, Alg: 13, #particle: 15, seed: 1
+01-15 at 18:21:40, name: r209-30, Alg: 9, #particle: 15, seed: 1
+01-15 at 20:22:37, name: c108-30, Alg: 10, #particle: 15, seed: 1
+01-15 at 20:25:00, name: r107-30, Alg: 9, #particle: 15, seed: 1
+01-15 at 22:24:23, name: c205-30, Alg: 14, #particle: 15, seed: 1
+01-16 at 00:39:05, name: rc103-30, Alg: 13, #particle: 15, seed: 1
+01-16 at 01:41:56, name: rc203-30, Alg: 10, #particle: 15, seed: 1
+01-16 at 06:18:13, name: c206-30, Alg: 14, #particle: 15, seed: 1
+01-16 at 08:53:27, name: r210-30, Alg: 9, #particle: 15, seed: 1
+01-16 at 10:16:51, name: rc104-30, Alg: 13, #particle: 15, seed: 1
+01-16 at 10:27:13, name: c109-30, Alg: 10, #particle: 15, seed: 1
+01-16 at 13:31:32, name: r108-30, Alg: 9, #particle: 15, seed: 1
+01-16 at 13:56:36, name: c207-30, Alg: 14, #particle: 15, seed: 1
+01-16 at 14:45:55, name: rc204-30, Alg: 10, #particle: 15, seed: 1
+01-16 at 20:21:34, name: rc105-30, Alg: 13, #particle: 15, seed: 1
+01-16 at 20:33:20, name: c208-30, Alg: 14, #particle: 15, seed: 1
+01-16 at 21:48:37, name: c101-30, Alg: 11, #particle: 15, seed: 1
+01-17 at 00:05:34, name: r211-30, Alg: 9, #particle: 15, seed: 1
+01-17 at 02:57:44, name: r109-30, Alg: 9, #particle: 15, seed: 1
+01-17 at 03:23:38, name: rc205-30, Alg: 10, #particle: 15, seed: 1
+01-17 at 04:44:10, name: rc106-30, Alg: 13, #particle: 15, seed: 1
+01-17 at 08:02:28, name: c201-30, Alg: 15, #particle: 15, seed: 1
+01-17 at 08:30:45, name: c102-30, Alg: 11, #particle: 15, seed: 1
+01-17 at 09:01:59, name: r201-30, Alg: 10, #particle: 15, seed: 1
+01-17 at 12:00:39, name: rc107-30, Alg: 13, #particle: 15, seed: 1
+01-17 at 16:07:39, name: rc206-30, Alg: 10, #particle: 15, seed: 1
+01-17 at 18:35:14, name: r202-30, Alg: 10, #particle: 15, seed: 1
+01-17 at 18:56:56, name: c202-30, Alg: 15, #particle: 15, seed: 1
+01-17 at 19:24:14, name: r110-30, Alg: 9, #particle: 15, seed: 1
+01-17 at 20:11:16, name: rc108-30, Alg: 13, #particle: 15, seed: 1
+01-17 at 20:49:56, name: c103-30, Alg: 11, #particle: 15, seed: 1
+01-18 at 00:43:25, name: c203-30, Alg: 15, #particle: 15, seed: 1
+01-18 at 02:23:31, name: rc101-30, Alg: 14, #particle: 15, seed: 1
+01-18 at 04:19:48, name: rc207-30, Alg: 10, #particle: 15, seed: 1
+01-18 at 05:04:45, name: r203-30, Alg: 10, #particle: 15, seed: 1
+01-18 at 07:22:32, name: c204-30, Alg: 15, #particle: 15, seed: 1
+01-18 at 08:17:49, name: rc102-30, Alg: 14, #particle: 15, seed: 1
+01-18 at 09:44:35, name: c104-30, Alg: 11, #particle: 15, seed: 1
+01-18 at 09:54:04, name: r111-30, Alg: 9, #particle: 15, seed: 1
+01-18 at 13:55:06, name: rc103-30, Alg: 14, #particle: 15, seed: 1
+01-18 at 16:18:50, name: r204-30, Alg: 10, #particle: 15, seed: 1
+01-18 at 17:15:49, name: rc208-30, Alg: 10, #particle: 15, seed: 1
+01-18 at 19:15:53, name: c205-30, Alg: 15, #particle: 15, seed: 1
+01-18 at 20:07:01, name: rc104-30, Alg: 14, #particle: 15, seed: 1
+01-18 at 20:49:47, name: c105-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 01:51:30, name: rc201-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 02:18:02, name: r112-30, Alg: 9, #particle: 15, seed: 1
+01-19 at 03:38:49, name: rc105-30, Alg: 14, #particle: 15, seed: 1
+01-19 at 03:57:47, name: r205-30, Alg: 10, #particle: 15, seed: 1
+01-19 at 04:40:41, name: c206-30, Alg: 15, #particle: 15, seed: 1
+01-19 at 08:03:38, name: c106-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 10:29:32, name: rc106-30, Alg: 14, #particle: 15, seed: 1
+01-19 at 11:04:11, name: r101-30, Alg: 10, #particle: 15, seed: 1
+01-19 at 11:32:06, name: rc202-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 12:43:16, name: r206-30, Alg: 10, #particle: 15, seed: 1
+01-19 at 15:23:12, name: c207-30, Alg: 15, #particle: 15, seed: 1
+01-19 at 16:46:48, name: rc107-30, Alg: 14, #particle: 15, seed: 1
+01-19 at 19:18:46, name: c107-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 20:30:06, name: r102-30, Alg: 10, #particle: 15, seed: 1
+01-19 at 20:43:17, name: rc108-30, Alg: 14, #particle: 15, seed: 1
+01-19 at 21:28:15, name: rc203-30, Alg: 11, #particle: 15, seed: 1
+01-19 at 22:35:10, name: r207-30, Alg: 10, #particle: 15, seed: 1
+01-20 at 01:00:27, name: c208-30, Alg: 15, #particle: 15, seed: 1
+01-20 at 03:16:46, name: rc101-30, Alg: 15, #particle: 15, seed: 1
+01-20 at 05:43:38, name: r103-30, Alg: 10, #particle: 15, seed: 1
+01-20 at 06:52:39, name: c108-30, Alg: 11, #particle: 15, seed: 1
+01-20 at 07:51:57, name: r208-30, Alg: 10, #particle: 15, seed: 1
+01-20 at 08:28:38, name: rc204-30, Alg: 11, #particle: 15, seed: 1
+01-20 at 09:55:31, name: rc102-30, Alg: 15, #particle: 15, seed: 1
+01-20 at 15:11:15, name: r104-30, Alg: 10, #particle: 15, seed: 1
+01-20 at 17:11:46, name: r209-30, Alg: 10, #particle: 15, seed: 1
+01-20 at 17:25:55, name: rc103-30, Alg: 15, #particle: 15, seed: 1
+01-20 at 18:07:44, name: c109-30, Alg: 11, #particle: 15, seed: 1
+01-20 at 19:49:18, name: rc205-30, Alg: 11, #particle: 15, seed: 1
+01-20 at 21:46:45, name: rc104-30, Alg: 15, #particle: 15, seed: 1
+01-21 at 00:22:16, name: r105-30, Alg: 10, #particle: 15, seed: 1
+01-21 at 01:00:58, name: r210-30, Alg: 10, #particle: 15, seed: 1
+01-21 at 02:13:16, name: rc105-30, Alg: 15, #particle: 15, seed: 1
+01-21 at 04:37:17, name: c101-30, Alg: 12, #particle: 15, seed: 1
+01-21 at 05:52:06, name: rc206-30, Alg: 11, #particle: 15, seed: 1
+01-21 at 08:55:42, name: rc106-30, Alg: 15, #particle: 15, seed: 1
+01-21 at 09:14:57, name: r211-30, Alg: 10, #particle: 15, seed: 1
+01-21 at 10:23:15, name: r106-30, Alg: 10, #particle: 15, seed: 1
+01-21 at 12:18:17, name: rc107-30, Alg: 15, #particle: 15, seed: 1
+01-21 at 15:47:34, name: rc108-30, Alg: 15, #particle: 15, seed: 1
+01-21 at 15:56:01, name: rc207-30, Alg: 11, #particle: 15, seed: 1
+01-21 at 15:56:30, name: r201-30, Alg: 11, #particle: 15, seed: 1
+01-21 at 16:35:14, name: c102-30, Alg: 12, #particle: 15, seed: 1
+01-21 at 20:47:33, name: r107-30, Alg: 10, #particle: 15, seed: 1
+01-21 at 23:53:30, name: r202-30, Alg: 11, #particle: 15, seed: 1
+01-22 at 01:42:51, name: rc208-30, Alg: 11, #particle: 15, seed: 1
+01-22 at 05:51:09, name: r108-30, Alg: 10, #particle: 15, seed: 1
+01-22 at 06:24:27, name: c103-30, Alg: 12, #particle: 15, seed: 1
+01-22 at 09:17:18, name: r203-30, Alg: 11, #particle: 15, seed: 1
+01-22 at 13:25:25, name: rc201-30, Alg: 12, #particle: 15, seed: 1
+01-22 at 16:03:08, name: r109-30, Alg: 10, #particle: 15, seed: 1
+01-22 at 18:34:24, name: r204-30, Alg: 11, #particle: 15, seed: 1
+01-22 at 19:10:35, name: c104-30, Alg: 12, #particle: 15, seed: 1
+01-23 at 02:17:00, name: rc202-30, Alg: 12, #particle: 15, seed: 1
+01-23 at 02:26:28, name: r110-30, Alg: 10, #particle: 15, seed: 1
+01-23 at 03:16:57, name: r205-30, Alg: 11, #particle: 15, seed: 1
+01-23 at 05:49:53, name: c105-30, Alg: 12, #particle: 15, seed: 1
+01-23 at 11:14:42, name: r206-30, Alg: 11, #particle: 15, seed: 1
+01-23 at 13:01:27, name: rc203-30, Alg: 12, #particle: 15, seed: 1
+01-23 at 13:13:53, name: r111-30, Alg: 10, #particle: 15, seed: 1
+01-23 at 16:17:54, name: c106-30, Alg: 12, #particle: 15, seed: 1
+01-23 at 20:31:43, name: r207-30, Alg: 11, #particle: 15, seed: 1
+01-23 at 22:55:50, name: r112-30, Alg: 10, #particle: 15, seed: 1
+01-24 at 00:04:32, name: rc204-30, Alg: 12, #particle: 15, seed: 1
+01-24 at 04:07:12, name: c107-30, Alg: 12, #particle: 15, seed: 1
+01-24 at 04:59:06, name: r208-30, Alg: 11, #particle: 15, seed: 1
+01-24 at 06:08:13, name: r101-30, Alg: 11, #particle: 15, seed: 1
+01-24 at 11:43:08, name: rc205-30, Alg: 12, #particle: 15, seed: 1
+01-24 at 13:05:45, name: r209-30, Alg: 11, #particle: 15, seed: 1
+01-24 at 13:54:03, name: r102-30, Alg: 11, #particle: 15, seed: 1
+01-24 at 16:56:27, name: c108-30, Alg: 12, #particle: 15, seed: 1
+01-24 at 21:41:09, name: r210-30, Alg: 11, #particle: 15, seed: 1
+01-24 at 22:01:47, name: r103-30, Alg: 11, #particle: 15, seed: 1
+01-25 at 01:45:34, name: rc206-30, Alg: 12, #particle: 15, seed: 1
+01-25 at 05:18:51, name: r104-30, Alg: 11, #particle: 15, seed: 1
+01-25 at 06:37:54, name: r211-30, Alg: 11, #particle: 15, seed: 1
+01-25 at 07:29:24, name: c109-30, Alg: 12, #particle: 15, seed: 1
+01-25 at 13:09:05, name: r105-30, Alg: 11, #particle: 15, seed: 1
+01-25 at 13:32:36, name: rc207-30, Alg: 12, #particle: 15, seed: 1
+01-25 at 17:28:34, name: r201-30, Alg: 12, #particle: 15, seed: 1
+01-25 at 17:31:21, name: c101-30, Alg: 13, #particle: 15, seed: 1
+01-25 at 21:47:49, name: r106-30, Alg: 11, #particle: 15, seed: 1
+01-26 at 02:28:45, name: c102-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 03:04:22, name: rc208-30, Alg: 12, #particle: 15, seed: 1
+01-26 at 04:11:40, name: r202-30, Alg: 12, #particle: 15, seed: 1
+01-26 at 06:26:03, name: rc201-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 06:40:56, name: r107-30, Alg: 11, #particle: 15, seed: 1
+01-26 at 10:03:50, name: rc202-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 10:18:32, name: c103-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 13:23:19, name: rc203-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 14:45:27, name: r108-30, Alg: 11, #particle: 15, seed: 1
+01-26 at 15:19:35, name: r203-30, Alg: 12, #particle: 15, seed: 1
+01-26 at 18:53:32, name: rc204-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 19:17:25, name: c104-30, Alg: 13, #particle: 15, seed: 1
+01-26 at 23:38:33, name: r109-30, Alg: 11, #particle: 15, seed: 1
+01-27 at 00:32:25, name: rc205-30, Alg: 13, #particle: 15, seed: 1
+01-27 at 01:46:36, name: r204-30, Alg: 12, #particle: 15, seed: 1
+01-27 at 04:58:05, name: c105-30, Alg: 13, #particle: 15, seed: 1
+01-27 at 09:06:24, name: rc206-30, Alg: 13, #particle: 15, seed: 1
+01-27 at 09:09:23, name: r110-30, Alg: 11, #particle: 15, seed: 1
+01-27 at 11:54:23, name: r205-30, Alg: 12, #particle: 15, seed: 1
+01-27 at 15:54:28, name: c106-30, Alg: 13, #particle: 15, seed: 1
+01-27 at 21:34:09, name: rc207-30, Alg: 13, #particle: 15, seed: 1
+01-27 at 22:30:53, name: r111-30, Alg: 11, #particle: 15, seed: 1
+01-28 at 05:44:00, name: RC1_2_1-10, Alg: 16, #particle: 15, seed: 1
+01-28 at 09:49:36, name: r206-30, Alg: 12, #particle: 15, seed: 1
+01-28 at 11:54:15, name: RC1_2_2-10, Alg: 16, #particle: 15, seed: 1
+01-28 at 13:08:00, name: c107-30, Alg: 13, #particle: 15, seed: 1
+01-28 at 16:26:03, name: R1_2_4-10, Alg: 16, #particle: 15, seed: 1
+01-28 at 17:41:46, name: rc208-30, Alg: 13, #particle: 15, seed: 1
+01-28 at 18:08:49, name: r112-30, Alg: 11, #particle: 15, seed: 1
+01-28 at 18:36:51, name: RC2_2_1-10, Alg: 16, #particle: 15, seed: 1
+01-28 at 22:53:40, name: C2_2_1-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 00:32:47, name: R1_2_5-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 01:57:54, name: rc201-30, Alg: 14, #particle: 15, seed: 1
+01-29 at 04:34:25, name: C1_2_1-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 05:53:12, name: r207-30, Alg: 12, #particle: 15, seed: 1
+01-29 at 10:08:27, name: R2_2_1-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 11:13:01, name: c108-30, Alg: 13, #particle: 15, seed: 1
+01-29 at 11:19:04, name: R1_2_6-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 14:36:43, name: rc202-30, Alg: 14, #particle: 15, seed: 1
+01-29 at 15:51:33, name: r101-30, Alg: 12, #particle: 15, seed: 1
+01-29 at 15:57:19, name: RC1_2_3-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 17:05:52, name: R1_2_7-10, Alg: 16, #particle: 15, seed: 1
+01-29 at 19:20:49, name: RC2_2_2-10, Alg: 16, #particle: 15, seed: 1
+01-30 at 00:34:38, name: rc203-30, Alg: 14, #particle: 15, seed: 1
+01-30 at 01:31:10, name: r208-30, Alg: 12, #particle: 15, seed: 1
+01-30 at 06:15:45, name: c109-30, Alg: 13, #particle: 15, seed: 1
+01-30 at 13:03:25, name: r102-30, Alg: 12, #particle: 15, seed: 1
+01-30 at 13:35:07, name: rc204-30, Alg: 14, #particle: 15, seed: 1
+01-30 at 15:30:47, name: C2_2_2-10, Alg: 16, #particle: 15, seed: 1
+01-30 at 19:13:11, name: R2_2_2-10, Alg: 16, #particle: 15, seed: 1
+01-30 at 20:42:32, name: C1_2_2-10, Alg: 16, #particle: 15, seed: 1
+01-30 at 21:31:49, name: c101-30, Alg: 14, #particle: 15, seed: 1
+01-30 at 23:29:27, name: r209-30, Alg: 12, #particle: 15, seed: 1
+01-31 at 02:48:54, name: rc205-30, Alg: 14, #particle: 15, seed: 1
+01-31 at 09:29:53, name: r103-30, Alg: 12, #particle: 15, seed: 1
+01-31 at 09:58:50, name: RC1_2_4-10, Alg: 16, #particle: 15, seed: 1
+01-31 at 12:56:11, name: c102-30, Alg: 14, #particle: 15, seed: 1
+01-31 at 18:02:40, name: rc206-30, Alg: 14, #particle: 15, seed: 1
+01-31 at 18:42:07, name: C1_2_3-10, Alg: 16, #particle: 15, seed: 1
+01-31 at 22:14:26, name: r210-30, Alg: 12, #particle: 15, seed: 1
+02-01 at 04:52:41, name: c103-30, Alg: 14, #particle: 15, seed: 1
+02-01 at 05:05:32, name: RC1_2_5-10, Alg: 16, #particle: 15, seed: 1
+02-01 at 07:38:49, name: r104-30, Alg: 12, #particle: 15, seed: 1
+02-01 at 08:13:29, name: rc207-30, Alg: 14, #particle: 15, seed: 1
+02-01 at 12:02:53, name: C2_2_3-10, Alg: 16, #particle: 15, seed: 1
+02-01 at 13:26:30, name: RC1_2_7-10, Alg: 16, #particle: 15, seed: 1
+02-01 at 14:09:03, name: R2_2_3-10, Alg: 16, #particle: 15, seed: 1
+02-01 at 18:01:47, name: c104-30, Alg: 14, #particle: 15, seed: 1
+02-01 at 18:30:23, name: r211-30, Alg: 12, #particle: 15, seed: 1
+02-01 at 22:38:42, name: rc208-30, Alg: 14, #particle: 15, seed: 1
+02-02 at 07:05:30, name: r201-30, Alg: 13, #particle: 15, seed: 1
+02-02 at 07:32:48, name: r105-30, Alg: 12, #particle: 15, seed: 1
+02-02 at 08:27:35, name: rc201-30, Alg: 15, #particle: 15, seed: 1
+02-02 at 10:14:53, name: c105-30, Alg: 14, #particle: 15, seed: 1
+02-02 at 11:20:24, name: C1_2_4-10, Alg: 16, #particle: 15, seed: 1
+02-02 at 16:31:39, name: C2_2_4-10, Alg: 16, #particle: 15, seed: 1
+02-02 at 17:31:52, name: RC1_2_8-10, Alg: 16, #particle: 15, seed: 1
+02-02 at 20:51:12, name: r202-30, Alg: 13, #particle: 15, seed: 1
+02-03 at 02:01:30, name: rc202-30, Alg: 15, #particle: 15, seed: 1
+02-03 at 02:59:23, name: c106-30, Alg: 14, #particle: 15, seed: 1
+02-03 at 07:00:00, name: C2_2_5-10, Alg: 16, #particle: 15, seed: 1
+02-03 at 08:07:57, name: R2_2_4-10, Alg: 16, #particle: 15, seed: 1
+02-03 at 09:37:41, name: r106-30, Alg: 12, #particle: 15, seed: 1
+02-03 at 11:34:01, name: r203-30, Alg: 13, #particle: 15, seed: 1
+02-03 at 16:47:39, name: RC1_2_9-10, Alg: 16, #particle: 15, seed: 1
+02-03 at 17:56:50, name: C1_2_5-10, Alg: 16, #particle: 15, seed: 1
+02-03 at 18:46:29, name: rc203-30, Alg: 15, #particle: 15, seed: 1
+02-03 at 19:24:17, name: c107-30, Alg: 14, #particle: 15, seed: 1
+02-03 at 21:04:23, name: C2_2_6-10, Alg: 16, #particle: 15, seed: 1
+02-04 at 01:01:38, name: r204-30, Alg: 13, #particle: 15, seed: 1
+02-04 at 11:55:59, name: c108-30, Alg: 14, #particle: 15, seed: 1
+02-04 at 12:21:55, name: r107-30, Alg: 12, #particle: 15, seed: 1
+02-04 at 12:30:56, name: r205-30, Alg: 13, #particle: 15, seed: 1
+02-04 at 13:38:17, name: rc204-30, Alg: 15, #particle: 15, seed: 1
+02-04 at 17:51:27, name: C1_2_6-10, Alg: 16, #particle: 15, seed: 1
+02-04 at 19:24:30, name: RC1_2_10-10, Alg: 16, #particle: 15, seed: 1
+02-04 at 21:45:19, name: R2_2_5-10, Alg: 16, #particle: 15, seed: 1
+02-04 at 23:58:15, name: r206-30, Alg: 13, #particle: 15, seed: 1
+02-05 at 05:18:13, name: c109-30, Alg: 14, #particle: 15, seed: 1
+02-05 at 08:47:46, name: rc205-30, Alg: 15, #particle: 15, seed: 1
+02-05 at 12:25:23, name: r108-30, Alg: 12, #particle: 15, seed: 1
+02-05 at 12:35:14, name: r207-30, Alg: 13, #particle: 15, seed: 1
+02-05 at 14:52:11, name: C2_2_7-10, Alg: 16, #particle: 15, seed: 1
+02-06 at 01:42:56, name: c101-30, Alg: 15, #particle: 15, seed: 1
+02-06 at 03:07:43, name: r208-30, Alg: 13, #particle: 15, seed: 1
+02-06 at 03:35:26, name: C1_2_7-10, Alg: 16, #particle: 15, seed: 1
+02-06 at 04:52:40, name: rc206-30, Alg: 15, #particle: 15, seed: 1
+02-06 at 10:41:03, name: R2_2_6-10, Alg: 16, #particle: 15, seed: 1
+02-06 at 18:29:00, name: r109-30, Alg: 12, #particle: 15, seed: 1
+02-06 at 19:59:27, name: C2_2_8-10, Alg: 16, #particle: 15, seed: 1
+02-06 at 21:19:28, name: r209-30, Alg: 13, #particle: 15, seed: 1
+02-06 at 23:32:23, name: c102-30, Alg: 15, #particle: 15, seed: 1
+02-07 at 06:42:33, name: rc207-30, Alg: 15, #particle: 15, seed: 1
+02-07 at 15:02:04, name: r210-30, Alg: 13, #particle: 15, seed: 1
+02-07 at 15:42:36, name: C1_2_8-10, Alg: 16, #particle: 15, seed: 1
+02-07 at 17:14:37, name: c103-30, Alg: 15, #particle: 15, seed: 1
+02-07 at 21:24:25, name: r110-30, Alg: 12, #particle: 15, seed: 1
+02-08 at 01:04:53, name: R2_2_7-10, Alg: 16, #particle: 15, seed: 1
+02-08 at 06:05:21, name: c104-30, Alg: 15, #particle: 15, seed: 1
+02-08 at 08:50:07, name: r211-30, Alg: 13, #particle: 15, seed: 1
+02-08 at 10:51:09, name: rc208-30, Alg: 15, #particle: 15, seed: 1
+02-08 at 16:18:49, name: R2_2_8-10, Alg: 16, #particle: 15, seed: 1
+02-08 at 21:14:13, name: r201-30, Alg: 14, #particle: 15, seed: 1
+02-09 at 02:54:23, name: c105-30, Alg: 15, #particle: 15, seed: 1
+02-09 at 04:21:49, name: r111-30, Alg: 12, #particle: 15, seed: 1
+02-09 at 04:49:11, name: C1_2_9-10, Alg: 16, #particle: 15, seed: 1
+02-24 at 15:03:45, name: r201-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 15:53:13, name: r202-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 16:34:27, name: r203-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 17:05:16, name: r204-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 18:14:50, name: r205-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 19:10:25, name: r206-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 20:10:20, name: r207-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 20:41:24, name: r208-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 21:04:11, name: C2_2_9-10, Alg: 16, #particle: 15, seed: 1
+02-24 at 21:51:22, name: r209-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 22:24:39, name: r210-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 22:57:05, name: r211-31, Alg: 16, #particle: 15, seed: 1
+02-24 at 23:42:48, name: c101-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 00:25:59, name: c102-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 01:03:46, name: c103-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 01:37:36, name: R2_2_9-10, Alg: 16, #particle: 15, seed: 1
+02-25 at 01:59:01, name: c104-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 02:50:42, name: c105-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 03:30:10, name: c106-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 04:24:02, name: c107-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 04:54:19, name: c108-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 06:00:33, name: c109-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 06:40:48, name: c201-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 07:15:56, name: c202-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 08:03:28, name: c203-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 08:54:31, name: c204-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 09:27:49, name: c205-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 10:24:52, name: c206-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 11:33:06, name: c207-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 12:06:19, name: c208-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 12:51:33, name: rc101-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 13:39:46, name: rc102-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 14:17:30, name: rc103-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 15:07:47, name: rc104-31, Alg: 16, #particle: 15, seed: 1
+02-25 at 15:53:23, name: rc105-31, Alg: 16, #particle: 15, seed: 1
