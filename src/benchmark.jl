@@ -520,31 +520,31 @@ function service_time(name::AbstractString)
     return service
 end
 
-function load_case_study_dict(name, case_size, num)
-    split_name = split(name, "-")
+# function load_case_study_dict(name, case_size, num)
+#     split_name = split(name, "-")
 
-    c = Dict()
-    c[name] = Dict()
+#     c = Dict()
+#     c[name] = Dict()
 
-    location = "case_study_solutions"
-    p = readdlm("case_study_solutions/save_data/p/p$(case_size)-$(num).csv", ',', Float64)
-    d = readdlm("case_study_solutions/save_data/d/d$(case_size)-$(num).csv", ',', Float64)
-    low_d = readdlm("case_study_solutions/save_data/low_d/low_d$(case_size)-$(num).csv", ',', Float64)
-    distance_matrix = readdlm("case_study_solutions/save_data/distance_matrix/distance_matrix$(case_size)-$(num).csv", ',', Float64)
-    service = readdlm("case_study_solutions/save_data/service/service$(case_size)-$(num).csv", ',', Float64)
+#     location = "case_study_solutions"
+#     p = readdlm("case_study_solutions/save_data/p/p$(case_size)-$(num).csv", ',', Float64)
+#     d = readdlm("case_study_solutions/save_data/d/d$(case_size)-$(num).csv", ',', Float64)
+#     low_d = readdlm("case_study_solutions/save_data/low_d/low_d$(case_size)-$(num).csv", ',', Float64)
+#     distance_matrix = readdlm("case_study_solutions/save_data/distance_matrix/distance_matrix$(case_size)-$(num).csv", ',', Float64)
+#     service = readdlm("case_study_solutions/save_data/service/service$(case_size)-$(num).csv", ',', Float64)
 
-    demand = zeros(length(d))
-    solomon_demand = 10000
+#     demand = zeros(length(d))
+#     solomon_demand = 10000
 
-    dd = Dict()
-    dd[0] = 1000000
-    for (iter, i) in enumerate(d[2:end])
-        dd[iter] = i
-    end
-    c[name]["duedate"] = dd
+#     dd = Dict()
+#     dd[0] = 1000000
+#     for (iter, i) in enumerate(d[2:end])
+#         dd[iter] = i
+#     end
+#     c[name]["duedate"] = dd
 
-    return c
-end
+#     return c
+# end
 
 
 # the function calculate the  distance from coordinate
@@ -552,8 +552,8 @@ solomon100 = load_all_solomon_100()  # load solomon data out size the function, 
 # add new 200 points of problem
 merge!(solomon100, load_all_solomon_200())  # load solomon data out size the function, for use all function below
 
-merge!(solomon100, load_case_study_dict("case_study-400-1", 400, 1))  # load case_study data out size the function, for use all function below
-merge!(solomon100, load_case_study_dict("case_study-400-2", 400, 1))  # load case_study data out size the function, for use all function below
+# merge!(solomon100, load_case_study_dict("case_study-400-1", 400, 1))  # load case_study data out size the function, for use all function below
+# merge!(solomon100, load_case_study_dict("case_study-400-2", 400, 1))  # load case_study data out size the function, for use all function below
 
 function distance_solomon(route, name; sort=false, disp=false)
 

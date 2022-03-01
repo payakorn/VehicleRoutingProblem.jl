@@ -15,7 +15,9 @@ rc2 =  ["rc$(i)"  for i in 201:208]
 
 Name = [r1, r2, c1, c2, rc1, rc2]
 
-# main function
+# @doc"""
+# This is the example of doc
+# """
 function run(;duedate=true, low_duedate=false)
     data = benchmark(duedate=duedate, low_duedate=low_duedate)
     solomon = read_Solomon()
