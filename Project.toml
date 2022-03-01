@@ -1,0 +1,13 @@
+name = "VehicleRoutingProblems"
+uuid = "08fac39a-36ba-499d-8b1f-cea6a6b78768"
+authors = ["Payakorn Saksuriya <payakornn@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
