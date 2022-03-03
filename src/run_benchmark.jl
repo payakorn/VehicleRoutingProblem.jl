@@ -15,9 +15,11 @@ rc2 =  ["rc$(i)"  for i in 201:208]
 
 Name = [r1, r2, c1, c2, rc1, rc2]
 
-# @doc"""
-# This is the example of doc
-# """
+"""
+    run()
+
+Returns double the number `x` plus `1`.
+"""
 function run(;duedate=true, low_duedate=false)
     data = benchmark(duedate=duedate, low_duedate=low_duedate)
     solomon = read_Solomon()
@@ -102,7 +104,10 @@ function run(;duedate=true, low_duedate=false)
     close(Solo)
 end
 
-
+"""
+read_solomon()
+Return Somthings
+"""
 function read_Solomon()
     f = CSV.read("Benchmark/Solomon_data.csv", DataFrame)
     # colomn 1 : Name
@@ -1095,10 +1100,10 @@ function Alg_phase5(alg)
 end
 
 
-function Conclusion()
-    df = create_csv([10 10 10], ["clustering-heuristic", "phase2_phase5", "phase5_phase2"], [1, 1, 1])
-    CSV.write("Conclusion.csv", df)
-end
+# function Conclusion()
+#     df = create_csv([10 10 10], ["clustering-heuristic", "phase2_phase5", "phase5_phase2"], [1, 1, 1])
+#     CSV.write("Conclusion.csv", df)
+# end
 
 
 function pull_out_insert(name::AbstractString, alg; sort_function=sort_processing_matrix)

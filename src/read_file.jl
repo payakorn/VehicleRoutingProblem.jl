@@ -712,3 +712,8 @@ function read_particle(name::String, num::Int64, objective_function::Function, c
     location = "particle_swarm/$objective_function/$case/$name/$num_particle/$seed"
     return read_txt3("$location/$name-$num.txt", name)
 end
+
+
+function read_csv_to_dataframe(location::String)
+    return CSV.File(location) |> DataFrame
+end

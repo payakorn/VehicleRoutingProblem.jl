@@ -1,3 +1,18 @@
+"""
+    Particle(
+        route::Array, 
+        route::Array
+        p::Array
+        l::Array
+        u::Array
+        demand::Array
+        max_capacity::Float64
+        distance_matrix::Array
+        service::Array
+        max_vehicle::Int64
+        name::String)
+where route in the form of [vehicle1, 0, vehicle2, 0, vehicle3, ...] (0 seperates the vehicle)
+"""
 mutable struct Particle
     route::Array
     p::Array
@@ -11,7 +26,13 @@ mutable struct Particle
     name::String
 end
 
+"""
+    point_distance(p1, p2)
+- `p1`: coordiante point in the form of [x1, y1]
+- `p2`: coordiante point in the form of [x2, y2]
 
+## return eucledian distance from (x1, y1) -> (x2, y2)
+"""
 function point_distance(p1, p2)
     return sqrt(((p1[1] - p2[1])^2 + (p1[2] - p2[2])^2))
 end
