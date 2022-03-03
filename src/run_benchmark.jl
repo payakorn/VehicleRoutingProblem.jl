@@ -15,11 +15,7 @@ rc2 =  ["rc$(i)"  for i in 201:208]
 
 Name = [r1, r2, c1, c2, rc1, rc2]
 
-"""
-    run()
 
-Returns double the number `x` plus `1`.
-"""
 function run(;duedate=true, low_duedate=false)
     data = benchmark(duedate=duedate, low_duedate=low_duedate)
     solomon = read_Solomon()
@@ -104,12 +100,10 @@ function run(;duedate=true, low_duedate=false)
     close(Solo)
 end
 
-"""
-read_solomon()
-Return Somthings
-"""
+
 function read_Solomon()
-    f = CSV.read("Benchmark/Solomon_data.csv", DataFrame)
+    f = CSV.read(joinpath(@__DIR__, "..", "Benchmark", "Solomon_data.csv"), DataFrame)
+    # f = CSV.read("Benchmark/Solomon_data.csv", DataFrame)
     # colomn 1 : Name
     # colomn 2 : NV (the number of vehicles)
     # colomn 3 : Distance
@@ -701,7 +695,7 @@ function run_clustering(f::Function; Alg=heuristic::Function, function_name=Full
             
             @timeit to "$(name)" vehicle = clustering(name; f=f, Alg=Alg, to_txt=false)
             new_dis = distance_solomon_all(vehicle, name)
-            write(io, "$(i+1),$(vehicle["num_vehicle"]),$(new_dis)\n")
+            write(io, "$(i + 1),$(vehicle["num_vehicle"]),$(new_dis)\n")
 
             if new_dis < best_dis
 
@@ -1244,7 +1238,7 @@ function conclusion_clustering_200()
         append!(num_vehicle, vehicle["num_vehicle"])
     end
 
-    df = DataFrame(name=all_name, NV=num_vehicle, NV_solo=NV_solomon, dis=dis, dis_solo=dis_solomon, diff=dis-dis_solomon)
+    df = DataFrame(name=all_name, NV=num_vehicle, NV_solo=NV_solomon, dis=dis, dis_solo=dis_solomon, diff=dis - dis_solomon)
     return df
 end
 
@@ -1324,17 +1318,17 @@ function conclusion_waiting_time(alg; phase_2=nothing, pre_dir=nothing)
     df = DataFrame(name=fullname, 
                     WA=TotalWaitingTime_alg, 
                     WB=TotalWaitingTime_benchmark, 
-                    Diff_W=TotalWaitingTime_alg-TotalWaitingTime_benchmark,
+                    Diff_W=TotalWaitingTime_alg - TotalWaitingTime_benchmark,
                     CA=TotalCompletionAlg,
                     CB=TotalCompletionBenchmark,
-                    Diff_C=TotalCompletionAlg-TotalCompletionBenchmark,
+                    Diff_C=TotalCompletionAlg - TotalCompletionBenchmark,
                     DA=TotalDistanceAlg, 
                     DB=TotalDistanceBenchmark, 
                     DS=TotalDistanceSolomon,)
     CSV.write("waiting_time_$(alg)_$(phase_2).csv", df)
     
     # find waiting time 
-    w = findall(x -> x < -0.001, TotalWaitingTime_alg-TotalWaitingTime_benchmark)
+    w = findall(x -> x < -0.001, TotalWaitingTime_alg - TotalWaitingTime_benchmark)
     println("there is $(length(w)) of $(length(fullname)) cases have total waiting time less than benchmark")
     less_than_cases = fullname[w]
     dg = df[w, :]
@@ -1342,7 +1336,7 @@ function conclusion_waiting_time(alg; phase_2=nothing, pre_dir=nothing)
 
 
     # find completion time 
-    r = findall(x -> x < -0.001, TotalCompletionAlg-TotalCompletionBenchmark)
+    r = findall(x -> x < -0.001, TotalCompletionAlg - TotalCompletionBenchmark)
     println("there is $(length(r)) of $(length(fullname)) cases have total completion time less than benchmark")
     less_than_cases = fullname[r]
     dh = df[r, :]
@@ -1672,7 +1666,7 @@ function run_in_com_arjarn(;start_iter=1, pre_dir="phase1_completion_time")
     all_name = glob_only_name("*.txt", "solutions_benchmark")
     alg = "clustering-heuristic"
     phase_2 = "move_all_no_update-sort_processing_matrix"
-    phase_3="random_swap_move"
+    phase_3 = "random_swap_move"
     
 
     # run phase 3 for all instances
@@ -1692,7 +1686,7 @@ function plot_scatter_points()
     ycoor = c101["ycoor"]
     xcoor = [xcoor[i] for i in 0:100]
 	ycoor = [ycoor[i] for i in 0:100]
-    marker_solomon =  vcat([1], 2*ones(Int, 100))
+    marker_solomon =  vcat([1], 2 * ones(Int, 100))
 
     p1 = plot()
     p1 = scatter([xcoor[1]], [ycoor[1]], markershape=:diamond)
@@ -1706,7 +1700,7 @@ function plot_scatter_points()
     ycoor = r101["ycoor"]
     xcoor = [xcoor[i] for i in 0:100]
 	ycoor = [ycoor[i] for i in 0:100]
-    marker_solomon =  vcat([1], 2*ones(Int, 100))
+    marker_solomon =  vcat([1], 2 * ones(Int, 100))
     
     p2 = plot()
     # p2 = scatter!(xcoor, ycoor, legend=false, marker_z=marker_solomon, color=:lightrainbow)
@@ -1721,7 +1715,7 @@ function plot_scatter_points()
     ycoor = rc101["ycoor"]
     xcoor = [xcoor[i] for i in 0:100]
 	ycoor = [ycoor[i] for i in 0:100]
-    marker_solomon =  vcat([1], 2*ones(Int, 100))
+    marker_solomon =  vcat([1], 2 * ones(Int, 100))
     
     p3 = plot()
     p3 = scatter([xcoor[1]], [ycoor[1]], markershape=:diamond)
@@ -1779,12 +1773,12 @@ function range_of_time_window()
         min_d_RC2 = minimum(diff_d_RC2)
 
         println("i: $i") 
-        println("C1type  min: $min_d_C1,  max: $max_d_C1,  diff: $(min_d_C1-max_d_C1)")
-        println("R1type  min: $min_d_R1,  max: $max_d_R1,  diff: $(min_d_R1-max_d_R1)")
-        println("RC1type min: $min_d_RC1, max: $max_d_RC1, diff: $(min_d_RC1-max_d_RC1)")
-        println("C2type  min: $min_d_C2,  max: $max_d_C2,  diff: $(min_d_C2-max_d_C2)")
-        println("R2type  min: $min_d_R2,  max: $max_d_R2,  diff: $(min_d_R2-max_d_R2)")
-        println("RC2type min: $min_d_RC2, max: $max_d_RC2, diff: $(min_d_RC2-max_d_RC2)")
+        println("C1type  min: $min_d_C1,  max: $max_d_C1,  diff: $(min_d_C1 - max_d_C1)")
+        println("R1type  min: $min_d_R1,  max: $max_d_R1,  diff: $(min_d_R1 - max_d_R1)")
+        println("RC1type min: $min_d_RC1, max: $max_d_RC1, diff: $(min_d_RC1 - max_d_RC1)")
+        println("C2type  min: $min_d_C2,  max: $max_d_C2,  diff: $(min_d_C2 - max_d_C2)")
+        println("R2type  min: $min_d_R2,  max: $max_d_R2,  diff: $(min_d_R2 - max_d_R2)")
+        println("RC2type min: $min_d_RC2, max: $max_d_RC2, diff: $(min_d_RC2 - max_d_RC2)")
         println("")
     end
 end
@@ -1802,9 +1796,9 @@ end
 
 # save graph with 3 types
 function save_fig(fig, dir::String, name::String)
-    savefig(fig, dir*"/$(name).png")
-    savefig(fig, dir*"/$(name).pdf")
-    savefig(fig, dir*"/$(name).eps")
+    savefig(fig, dir * "/$(name).png")
+    savefig(fig, dir * "/$(name).pdf")
+    savefig(fig, dir * "/$(name).eps")
 end
 
 
@@ -1866,8 +1860,8 @@ function waiting_time_for_each_vehicle(vehicle::Dict)
     tol_waiting = total_waiting_time_vec(vehicle)
     w = []
     for i in 1:length(tol_waiting)
-        append!(w, sum(tol_waiting[i])/3600)
-        println("total waiting time for nurse $i: $(sum(tol_waiting[i])/3600)")
+        append!(w, sum(tol_waiting[i]) / 3600)
+        println("total waiting time for nurse $i: $(sum(tol_waiting[i]) / 3600)")
     end
     println("average: $(mean(w))")
 end

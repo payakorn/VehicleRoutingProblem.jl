@@ -5,3 +5,4 @@ makedocs(sitename="Vehicle Routing Problems",
             prettyurls = get(ENV, "CI", nothing) == "true"
         ))
 
+# run by `python -m http.server --bind localhost`

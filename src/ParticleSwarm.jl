@@ -31,7 +31,7 @@ end
 - `p1`: coordiante point in the form of [x1, y1]
 - `p2`: coordiante point in the form of [x2, y2]
 
-## return eucledian distance from (x1, y1) -> (x2, y2)
+Return euclidian distance from (x1, y1) -> (x2, y2)
 """
 function point_distance(p1, p2)
     return sqrt(((p1[1] - p2[1])^2 + (p1[2] - p2[2])^2))
@@ -60,7 +60,7 @@ function load_data_solomon(name::String; problem_size=100)
         xcoor = solomon_data["xcoor"]
         ycoor = solomon_data["ycoor"]
         distance_matrix = DistanceMatrix(xcoor, ycoor, name)
-        distance_matrix = floor.(distance_matrix, digits=1)
+        # distance_matrix = floor.(distance_matrix, digits=1)
         # return p, d, low_d, demand, solomon_demand, reshape(distance_matrix, (problem_size+1, problem_size+1)), service
         return p, d, low_d, demand, solomon_demand, distance_matrix, service
     end
@@ -3646,7 +3646,7 @@ function run_case(i::String, name_case::Array; num_particle=15, while_iter=5, se
 end
 
 
-using SMTPClient
+# using SMTPClient
 function sent_email(subject::String, massage::String)
     username = "payakorn.sak@gmail.com"
     opt = SendOptions(
@@ -3913,33 +3913,45 @@ function create_csv_seed_new(num_particle::Int64)
 end
 
 
+"""
+    create_csv_min_all_distance()
+
+create csv file contains minimum distance of all runs using PSO
+"""
 function create_csv_min_all_distance()
     all_cases = ["case$i" for i in 1:16]
     append!(all_cases, ["random$i" for i in 1:16])
     append!(all_cases, ["new1", "new2", "new3"])
 
-    io = open("conslusion_min_all_distance.csv", "w")
+    # location
+    location = joinpath(@__DIR__, "..", "particle_swarm", "total_distance")
 
-    write(io, "Name,Khoo,NV,Min,Alg,Num_par\n")
+    # io = open("conslusion_min_all_distance.csv", "w")
+    io = open(joinpath(@__DIR__, "..", "Tables", "conslusion_min_all_distance.csv"), "w")
+
+    write(io, "Name,Khoo,NV,Min,Min_floor,Alg,Num_par\n")
 
     for name in Full_Name()
         min_value = 100000
+        min_value_floor = 100000
         NV = 100
         alg = nothing
         num_par = nothing
 
         for case in all_cases
-            list_particle = try first(walkdir("particle_swarm/total_distance/$case/$name"))[2] catch e; continue end
+            list_particle = try first(walkdir("$location/$case/$name"))[2] catch e; continue end
             for num_particle in list_particle
-                num_seed = first(walkdir("particle_swarm/total_distance/$case/$name/$num_particle"))[2]
+                num_seed = first(walkdir("$location/$case/$name/$num_particle"))[2]
                 for seed in num_seed
-                    num_files = glob("$name*.txt", "particle_swarm/total_distance/$case/$name/$num_particle/$seed")
+                    num_files = glob("$name*.txt", "$location/$case/$name/$num_particle/$seed")
                     for file in num_files
-                        vehicle = read_txt3(file, name)
-                        dis = total_distance(vehicle)
+                        solution = read_solution(file, name)
+                        dis = total_distance(solution, floor_digit=false)
+                        dis_floor = total_distance(solution, floor_digit=true)
                         if dis < min_value
                             min_value = dis
-                            NV = vehicle["num_vehicle"]
+                            min_value_floor = dis_floor
+                            NV = total_route(solution)
                             alg = case
                             num_par = num_particle
                         end
@@ -3947,7 +3959,7 @@ function create_csv_min_all_distance()
                 end
             end
         end
-        write(io, "$name,$(Khoo()[name]),$NV,$min_value,$alg,$num_par\n")
+        write(io, "$name,$(Khoo()[name]),$NV,$min_value,$min_value_floor,$alg,$num_par\n")
     end
     close(io)
 end

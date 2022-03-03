@@ -717,3 +717,57 @@ end
 function read_csv_to_dataframe(location::String)
     return CSV.File(location) |> DataFrame
 end
+
+
+"""
+    read_route(file_name::String)
+
+return route representation from file text
+
+For example: 
+
+-----------------
+
+Text file\n
+1 2 4 5\n
+8 9 3 6
+
+-----------------
+
+Return Vector[0, 1, 2, 4, 5, 0, 8, 9, 3, 6, 0] where 0 represented depot
+"""
+function read_route(file_name::String)
+    route = Dict()
+    open(file_name) do file
+        lines = eachline(file)
+        for i in enumerate(lines)
+            route[i[1]] = [parse(Int, j) for j in split(i[2])]
+        end
+    end
+
+    # create route representation [route_1, 0, route_2, ..., route_n]
+    route_rep = [0]
+    for i in 1:length(route)
+        if isempty(route[i]) == false
+            append!(route_rep, route[i], 0)
+        end
+    end
+
+    return route_rep
+end
+
+
+function read_solution(file_name::String, instance_name::String)
+    route = read_route(file_name)
+
+    # load data
+    processing_time, upper, lower, demand, max_capacity, distance_matrix, service = load_data_solomon(instance_name)
+
+    # crete the truncated matrix
+    distance_matrix_floor = floor.(distance_matrix, digits=1)
+
+    # apply to Solution struct
+    solution = Solution(instance_name, route, processing_time, lower, upper, demand, max_capacity, distance_matrix, distance_matrix_floor, service)
+
+    return solution
+end

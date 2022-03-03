@@ -1,6 +1,6 @@
-# VehicleRoutingProblems.jl Documentation
+# VehicleRoutingProblems
 
 ```@autodocs
 Modules = [VehicleRoutingProblems]
-Order   = [:function, :struct]
+Order   = [:function]
 ```
