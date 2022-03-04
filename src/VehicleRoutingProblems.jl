@@ -1,6 +1,6 @@
 module VehicleRoutingProblems
 
-using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Plots, Clustering, Random, JLD2
+using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Plots, Clustering, Random, JLD2, JuMP, Gurobi, DrWatson, SMTPClient
 
 # include files
 include("read_file.jl")
@@ -12,6 +12,10 @@ include("Conclusions.jl")
 include("compare.jl")
 include("tabulation.jl")
 include("Solution.jl")
+include("run_project.jl")
+include("model.jl")
+include("model2.jl")
+
 
 export load_all_data, 
         read_txt3, 
@@ -29,5 +33,6 @@ export load_all_data,
         read_solution,
         seperate_route,
         total_distance,
-        add_our_best_to_dataframe
+        add_our_best_to_dataframe,
+        run_simulation_opt
 end

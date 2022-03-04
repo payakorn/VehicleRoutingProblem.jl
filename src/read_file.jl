@@ -771,3 +771,8 @@ function read_solution(file_name::String, instance_name::String)
 
     return solution
 end
+
+
+function opt_dir(dir...)
+    path = joinpath(@__DIR__, "..", "opt_solomon", dir)
+end
