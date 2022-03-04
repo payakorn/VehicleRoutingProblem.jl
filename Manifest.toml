@@ -392,12 +392,6 @@ git-tree-sha1 = "53bb909d1151e57e2484c3d1b53e19552b887fb2"
 uuid = "42e2da0e-8278-4e71-bc24-59509adca0fe"
 version = "1.0.2"
 
-[[deps.Gurobi]]
-deps = ["Libdl", "MathOptInterface", "Pkg"]
-git-tree-sha1 = "d75a6c39ca5bc1a51ac467d1d3084a740b59c7c3"
-uuid = "2e9cd046-0924-5485-92f1-d5272153d98b"
-version = "0.11.0"
-
 [[deps.HTTP]]
 deps = ["Base64", "Dates", "IniFile", "Logging", "MbedTLS", "NetworkOptions", "Sockets", "URIs"]
 git-tree-sha1 = "0fa77022fe4b511826b39c894c90daf5fce3334a"
