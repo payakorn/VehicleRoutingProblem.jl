@@ -3,6 +3,5 @@ using Test
 
 @testset "VehicleRoutingProblems.jl" begin
     # Write your tests here.
-    vehicle = read_solution(joinpath(@__DIR__, "..", "particle_swarm", "total_distance", "case16", "c101", "15", "1", "c101-1.txt"), "c101")
-    @test total_distance(vehicle, floor_digit=true) == 827.3
+    @test total_route([0, 1, 2, 3, 0, 4, 5, 6, 0, 7, 8, 0]) == 3
 end
