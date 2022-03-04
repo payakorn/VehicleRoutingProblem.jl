@@ -41,6 +41,21 @@ function seperate_route(solution::Solution)
 end
 
 
+function seperate_route(solution::Array)
+    separation_point = findall(x -> x == 0, solution.route)
+
+    solution_route = solution.route
+
+    # Route
+    route = []
+    for i in 1:length(separation_point) - 1
+        route_i = Array(solution_route[(separation_point[i]+1):(separation_point[i+1]-1)])
+        push!(route, route_i)
+    end
+    return route
+end
+
+
 """
     total_route(solution::Solution)
 
