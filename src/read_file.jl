@@ -757,22 +757,57 @@ function read_route(file_name::String)
 end
 
 
-function read_solution(file_name::String, instance_name::String)
-    route = read_route(file_name)
-
-    # load data
-    processing_time, upper, lower, demand, max_capacity, distance_matrix, service = load_data_solomon(instance_name)
-
-    # crete the truncated matrix
-    distance_matrix_floor = floor.(distance_matrix, digits=1)
-
-    # apply to Solution struct
-    solution = Solution(instance_name, route, processing_time, lower, upper, demand, max_capacity, distance_matrix, distance_matrix_floor, service)
-
-    return solution
-end
-
-
 function opt_dir(dir...)
     path = joinpath(@__DIR__, "..", "opt_solomon", dir)
 end
+
+
+"""
+    read_data_solomon(name_instance::String)
+
+Load instance parameters:
+
+p = processing time matrix \n
+upper  \n
+lower  \n
+demand \n
+capacity  \n
+service time \n
+distance matrix 
+"""
+function read_data_solomon(name_instance::String)
+    data = read_data_solomon_dict(name_instance)
+    return data["p"], data["upper"], data["lower"], data["demand"], data["capacity"], data["distance_matrix"], data["service"], data["last_time_window"]
+end
+
+
+function read_data_solomon_dict(name_instance::String)
+    return load(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$name_instance.jld2"))
+end
+
+"""
+    read_and_save_solomon()
+
+run to create data files of solomon
+"""
+function read_and_save_solomon()
+    for num_vehicle in [25, 50, 75, 100]
+        for name_instance in Full_Name()
+            println("number of vehicle: $num_vehicle, instance name: $name_instance")
+            p, upper, lower, demand, capacity, service, distance_matrix, last_time_window = load_all_data2(name_instance)
+            p = p[1:num_vehicle, 1:num_vehicle]
+            upper = upper[1:num_vehicle]
+            lower = lower[1:num_vehicle]
+            demand = demand[1:num_vehicle]
+            service = service[1:num_vehicle]
+            distance_matrix = distance_matrix[1:(num_vehicle+1), 1:(num_vehicle+1)]
+            jldsave(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$name_instance-$num_vehicle.jld2"); p, upper, lower, demand, capacity, service, distance_matrix, last_time_window)
+        end
+    end
+end
+
+
+function save_data(x, name_data::String)
+    save_object(joinpath(@__DIR__, "..", "data", "raw_data_solomon-jl", name_data), name_data)
+end
+

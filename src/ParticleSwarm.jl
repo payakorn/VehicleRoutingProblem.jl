@@ -1,14 +1,13 @@
 """
     Particle(
-        route::Array, 
         route::Array
         p::Array
-        l::Array
-        u::Array
-        demand::Array
+        l::Vector
+        u::Vector
+        demand::Vector
         max_capacity::Float64
         distance_matrix::Array
-        service::Array
+        service::Vector
         max_vehicle::Int64
         name::String)
 where route in the form of [vehicle1, 0, vehicle2, 0, vehicle3, ...] (0 seperates the vehicle)
@@ -148,7 +147,7 @@ function check_feasible(particle::Particle)
     end
 
     completion_time = 0
-    duedate = solomon100[particle.name]["duedate"][0]
+    duedate = try solomon100[particle.name]["duedate"][0] catch e; read_data_solomon_dict(particle.name)["last_time_window"] end
     for i in 1:length(vehicle)
         late, last_completion_time, meet_demand = job_late(vehicle[i], p=particle.p, d=particle.u, low_d=particle.l, demand=particle.demand, solomon_demand=particle.max_capacity)
         completion_time += last_completion_time
@@ -1119,7 +1118,7 @@ end
 function particle_swarm_fix(name::String, objective_function::Function; num_particle=15, max_iter=100, localsearch=false, cut_car=false, generate=false, num_save=nothing, save_dir=nothing, random_set=false, seed=1)
     particles = Dict()
     best_obj_vec = []
-    max_vehicle = read_Solomon()[name]["NV"]*2
+    max_vehicle = try read_Solomon()[name]["NV"]*2 catch e; 15 end
 
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/") catch nothing end
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/$(name)/") catch nothing end
@@ -1336,6 +1335,16 @@ function particle_swarm_fix(name::String, objective_function::Function; num_part
     end
 
     return particles[best_index], objective_value
+end
+
+
+function location_particle_swarm(name; objective_function=total_distance)
+    return joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "$objective_function", "$name")
+end
+
+
+function location_particle_swarm_initial(name; objective_function=total_distance)
+    return joinpath(location_particle_swarm(name, objective_function=objective_function), "initial")
 end
 
 
@@ -2363,6 +2372,9 @@ function generate_initial(name, num; seed=1, max_vehicle=25, objective_function=
 end
 
 
+
+
+
 function pull_random_particle(name, set; num_particle=15, seed=1, max_vehicle=25, objective_function=total_distance)
     all_name = glob("$name*.txt", "particle_swarm/$objective_function/initial/$name/$seed/")
     a = length(all_name)
@@ -2382,6 +2394,9 @@ function pull_random_particle(name, set; num_particle=15, seed=1, max_vehicle=25
     println("end: $last_number")
     return start_number, last_number
 end
+
+
+
 
 
 function particle_swarm_ruin(name::String, objective_function::Function; num_particle=15, max_iter=150)
@@ -2619,9 +2634,9 @@ end
 
 
 function run_particle(name::String, objective_function::Function; max_iter=200, save_dir="fix_route", max_iter_while=1, f=particle_swarm::Function, localsearch=false, cut_car=false, generate=false, num_particle=15, random_set=false, seed=1)
-    khoo = Khoo()[name]
+    # khoo = Khoo()[name]
     iter = 1
-    new_obj = khoo + 1
+    # new_obj = khoo + 1
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/") catch nothing end
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/$(name)/") catch nothing end
     # location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/"

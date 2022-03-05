@@ -725,6 +725,45 @@ function load_all_data(name::AbstractString; case_size=200, num=1)
 end
 
 
+function load_all_data2(name::AbstractString; case_size=200, num=1)
+
+    if name == "case_study"
+        # data = load_case_study()
+
+        # import data
+        p, d, low_d, demand, service, distance_matrix, solomon_demand = import_case_study(case_size, num)
+
+        # p, distance_matrix = create_processing_matrix()
+        # low_d, d, service = create_time_window(p)
+
+        demand = zeros(size(p, 1))
+        solomon_demand = 10000
+        return p, d, low_d, demand, solomon_demand, service, distance_matrix
+    else
+        solomon = solomon100[name]
+        num_jobs = solomon["num_jobs"]
+        d = solomon["duedate"]
+
+        last_time_window = d[0]
+        
+        d = [d[i] for i in 1:num_jobs]
+        service = service_time(name)
+        service = service * ones(length(d))
+        xcoor = solomon["xcoor"]
+        ycoor = solomon["ycoor"]
+        p = ProcessingTimeMatrix(xcoor, ycoor, name)
+        distance_matrix = DistanceMatrix(xcoor, ycoor, name)
+        low_d = solomon["readytime"]
+        low_d = [low_d[i] for i in 1:num_jobs]
+        demand = solomon["demand"]
+        demand = [demand[i] for i in 1:num_jobs]
+        solomon_demand = solomon["capacity"]
+
+        return p, d, low_d, demand, solomon_demand, service, distance_matrix, last_time_window
+    end
+end
+
+
 function total_distance_case_study(vehicle::Dict)
     case_size = vehicle["case_size"]
     num = vehicle["num"]

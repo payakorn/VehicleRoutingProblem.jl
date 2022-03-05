@@ -41,18 +41,33 @@ function seperate_route(solution::Solution)
 end
 
 
-function seperate_route(solution::Array)
-    separation_point = findall(x -> x == 0, solution.route)
+function read_solution(file_name::String, instance_name::String)
+    route = read_route(file_name)
 
-    solution_route = solution.route
+    # load data
+    processing_time, upper, lower, demand, max_capacity, distance_matrix, service = read_data_solomon(instance_name)
+
+    # crete the truncated matrix
+    distance_matrix_floor = floor.(distance_matrix, digits=1)
+
+    # apply to Solution struct
+    solution = Solution(instance_name, route, processing_time, lower, upper, demand, max_capacity, distance_matrix, distance_matrix_floor, service)
+
+    return solution
+end
+
+
+function seperate_route(particle::Particle)
+    routes = vcat(0, particle.route, 0)
+    separation_point = findall(x -> x == 0, routes)
 
     # Route
-    route = []
+    output_route = []
     for i in 1:length(separation_point) - 1
-        route_i = Array(solution_route[(separation_point[i]+1):(separation_point[i+1]-1)])
-        push!(route, route_i)
+        route_i = Array(routes[(separation_point[i]+1):(separation_point[i+1]-1)])
+        push!(output_route, route_i)
     end
-    return route
+    return output_route
 end
 
 
@@ -63,6 +78,26 @@ Return the number of route
 """
 function total_route(solution::Solution)
     return length(findall(x -> x == 0, solution.route)) - 1
+end
+
+
+"""
+    total_route(route::Vector)
+
+Return the number of route
+"""
+function total_route(route::Vector)
+    return length(findall(x -> x == 0, route)) - 1
+end
+
+
+"""
+    total_route(particle::Particle)
+
+Return the number of route
+"""
+function total_route(particle::Particle)
+    return length(findall(x -> x == 0, particle.route)) + 1
 end
 
 
@@ -84,4 +119,18 @@ function total_distance(solution::Solution; floor_digit=false::Bool)
 
     return dis
 
+end
+
+
+function write_solution_to_txt(particle::Particle, location::String)
+    routes = seperate_route(particle)
+
+    io = open(location, "w")
+    for route in routes
+        for i in route
+            write(io, "$i ")
+        end
+        write(io, "\n")
+    end
+    close(io)
 end
