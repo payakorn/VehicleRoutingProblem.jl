@@ -318,11 +318,11 @@ end
 
 function fix_missing_vehicle(route::Array)
     test_route = deepcopy(route)
-    if test_route[1] == 0
-        popfirst!(test_route)
-    end
-
     if isempty(test_route) == false
+        if test_route[1] == 0
+            popfirst!(test_route)
+        end
+
         if test_route[end] == 0
             pop!(test_route)
         end
@@ -390,12 +390,12 @@ function two_opt(particle::Particle, objective_function::Function; best_route=[]
         new_test_particle.route = vcat(right_sch, middle_sch, left_sch)
         if (check_feasible(new_test_particle) == true) && (objective_function(new_test_particle) < objective_function(test_particle))
             if isempty(best_route)
-                println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
+                # println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
                 return new_test_particle
             else
                 append!(new_test_particle.route, 0)
                 append!(new_test_particle.route, best_route)
-                println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
+                # println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
                 return new_test_particle
             end
         end
@@ -629,14 +629,21 @@ function swap_to_first_or_last_position(particle::Particle, input_position::Int6
     position_zero = findall(x -> x == 0, best_particle.route)
     number_of_vehicle = length(position_zero) + 1
     
-    if position_zero[1] == 1
-        vehicle_index = [(1, position_zero[1])]
+
+    if isempty(position_zero)
+        vehicle_index = [(1, length(best_position.route))]
     else
-        vehicle_index = [(1, position_zero[1] - 1)]
+        vehicle_index = [(1, position_zero[1])]
     end
 
+    # if position_zero[1] == 1
+    #     vehicle_index = [(1, position_zero[1])]
+    # else
+    #     vehicle_index = [(1, position_zero[1] - 1)]
+    # end
+
     for k in 2:number_of_vehicle - 1
-        append!(vehicle_index, [(vehicle_index[k - 1][2] + 2, position_zero[k] - 1)])
+        append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
     end
 
     if number_of_vehicle == 2
@@ -660,6 +667,11 @@ function swap_to_first_or_last_position(particle::Particle, input_position::Int6
             current_particle_first = deepcopy(particle)
             current_particle_last = deepcopy(particle)
             current_particle_first.route[first_position_job], current_particle_first.route[input_position] = current_particle_first.route[input_position], current_particle_first.route[first_position_job]
+            # @show first_position_job
+            # @show last_position_job
+            # @show input_position
+            # @show vehicle_range
+            # @show current_particle_last.route
             current_particle_last.route[last_position_job], current_particle_last.route[input_position] = current_particle_last.route[input_position], current_particle_last.route[last_position_job]
             first_feasible = check_feasible(current_particle_first)
             last_feasible = check_feasible(current_particle_last)
@@ -704,14 +716,19 @@ function move_to_first_or_last_position(particle::Particle, input_position::Int6
     position_zero = findall(x -> x == 0, test_particle.route)
     number_of_vehicle = length(position_zero) + 1
     
-    if position_zero[1] == 1
-        vehicle_index = [(1, position_zero[1])]
+    if isempty(position_zero)
+        vehicle_index = [(1, length(best_position.route))]
     else
-        vehicle_index = [(1, position_zero[1] - 1)]
+        vehicle_index = [(1, position_zero[1])]
     end
+    # if position_zero[1] == 1
+    #     vehicle_index = [(1, position_zero[1])]
+    # else
+    #     vehicle_index = [(1, position_zero[1] - 1)]
+    # end
 
     for k in 2:number_of_vehicle - 1
-        append!(vehicle_index, [(vehicle_index[k - 1][2] + 2, position_zero[k] - 1)])
+        append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
     end
 
     if number_of_vehicle == 2
@@ -725,6 +742,7 @@ function move_to_first_or_last_position(particle::Particle, input_position::Int6
         first_position_job, last_position_job = vehicle_range
         current_particle_first = deepcopy(test_particle)
         current_particle_last = deepcopy(test_particle)
+        # @show last_position_job
         insert!(current_particle_first.route, first_position_job, job)
         insert!(current_particle_last.route, last_position_job, job)
         first_feasible = check_feasible(current_particle_first)
@@ -840,7 +858,9 @@ end
 
 function local_search(particle::Particle, objective_function::Function; best_route=[])
     particle = two_opt(particle, objective_function, best_route=best_route)
+    particle.route = fix_missing_vehicle(particle.route)
     particle = swap(particle, objective_function, best_route=best_route)
+    particle.route = fix_missing_vehicle(particle.route)
     particle = move(particle, objective_function, best_route=best_route)
     return particle
 end

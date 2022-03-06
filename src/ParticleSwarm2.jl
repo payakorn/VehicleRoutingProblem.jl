@@ -78,10 +78,10 @@ end
 function particle_swarm_fix2(name::String, objective_function::Function; num_particle=15, max_iter=100, localsearch=false, cut_car=false, generate=false, num_save=nothing, random_set=false, seed=1)
     particles = Dict()
     best_obj_vec = []
-    if 4 < length(name) < 7
-        max_vehicle = 15
+    if name[1] == 'r'
+        max_vehicle = 25
     else
-        max_vehicle = 21
+        max_vehicle = 15
     end
 
     
@@ -154,6 +154,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
             
                 # local search
                 particles[i].route = fix_missing_vehicle(particles[i].route)
+                # println("route: $(particles[i].route)")
                 particles[i] = local_search_function(particles[i], objective_function, best_route=best_route)
                 append!(best_obj_vec, objective_function(particles[i]))
 
