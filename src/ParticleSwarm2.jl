@@ -72,6 +72,139 @@ function load_particle_from_file(file_location::String, instance_name::String)
 end
 
 
+function swap2(particle::Particle, objective_function::Function; best_route=[]::Array)
+    
+    # remove best route from particle
+    # particle = remove_best_route(particle, best_route)
+
+    # define list
+    list = two_opt_list2(length(particle.route))
+    # list = shuffle(sort_processing_matrix(particle.p, best_route=best_route))
+    first_obj = objective_function(particle)
+
+    for (iter, (position1, position2)) in enumerate(list)
+        swap_particle = deepcopy(particle)
+        
+        swap_particle.route[position1], swap_particle.route[position2] = swap_particle.route[position2], swap_particle.route[position1]
+        if objective_function(swap_particle) < objective_function(particle) && check_feasible(swap_particle)
+            particle = deepcopy(swap_particle)
+        end
+    end
+
+    # last_objective = objective_function(particle)
+
+    # add the removed route to particle
+    # if isnothing(best_route) == false
+    #     append!(particle.route, 0)
+    #     append!(particle.route, best_route)
+    # end
+    
+    return particle
+end
+
+
+function move2(particle::Particle, objective_function::Function)
+    # list = shuffle(sort_processing_matrix(particle.p, best_route=best_route))
+    list = two_opt_list2(length(particle.route))
+    original_obj = objective_function(particle)
+    for (iter, (position1, position2)) in enumerate(list)
+        swap_particle = deepcopy(particle)
+        first_obj = objective_function(swap_particle)
+        
+        # position1 = findfirst(x -> x == i, swap_particle.route)
+        # position2 = findfirst(x -> x == j, swap_particle.route)
+        
+        # # move
+        if position1 < position2
+            job = try splice!(swap_particle.route, position2) catch e; continue end
+            insert!(swap_particle.route, position1, job)
+        else
+            # job = splice!(swap_particle.route, position2)
+            job = try splice!(swap_particle.route, position2) catch e; continue end
+            insert!(swap_particle.route, position1-1, job)
+        end
+
+        
+        if objective_function(swap_particle) < objective_function(particle) && check_feasible(swap_particle)
+
+            swap_particle.route = fix_missing_vehicle(swap_particle.route)
+
+            # set to best vehicle
+            particle = deepcopy(swap_particle)
+        end
+    end
+    # last_objective = objective_function(particle)
+
+    # # second round
+    # original_obj = objective_function(particle)
+    # for (iter, (position2, position1)) in enumerate(list)
+    #     swap_particle = deepcopy(particle)
+    #     first_obj = objective_function(swap_particle)
+        
+    #     # position1 = findfirst(x -> x == i, swap_particle.route)
+    #     # position2 = findfirst(x -> x == j, swap_particle.route)
+        
+    #     # # move
+    #     if position1 < position2
+    #         job = splice!(swap_particle.route, position2)
+    #         insert!(swap_particle.route, position1, job)
+    #     else
+    #         job = splice!(swap_particle.route, position2)
+    #         insert!(swap_particle.route, position1-1, job)
+    #     end
+        
+    #     if objective_function(swap_particle) < objective_function(particle) && check_feasible(swap_particle)
+
+    #         swap_particle.route = fix_missing_vehicle(swap_particle.route)
+
+    #         # set to best vehicle
+    #         particle = deepcopy(swap_particle)
+    #     end
+    # end
+    # last_objective = objective_function(particle)
+    return  particle
+end
+
+
+function two_opt_list2(length_of_route::Int64)
+    return shuffle!(collect(combinations(1:length_of_route, 2)))
+end
+
+
+function two_opt2(particle::Particle, objective_function::Function)
+    test_particle = deepcopy(particle)
+    original_obj = objective_function(particle)
+    List = two_opt_list2(length(particle.route))
+    # test_particle = remove_best_route(test_particle, best_route)
+    # length_route = length(test_particle.route)
+    # List = two_opt_list2(length_route)
+    # @show test_particle.route
+    # @show List
+    for list in List
+        new_test_particle = deepcopy(test_particle)
+        left_sch = new_test_particle.route[1:list[1]]
+        right_sch = new_test_particle.route[list[2]:end]
+        middle_sch = new_test_particle.route[list[1]+1:list[2]-1]
+        new_test_particle.route = vcat(right_sch, middle_sch, left_sch)
+        if (check_feasible(new_test_particle) == true) && (objective_function(new_test_particle) < objective_function(test_particle))
+            # println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
+            return new_test_particle
+        end
+    end
+    return particle
+end
+
+
+function local_search2(particle::Particle, objective_function::Function; best_route=[])
+    # list = two_opt_list2(length(particle.route))
+    particle = two_opt2(particle, objective_function)
+    particle.route = fix_missing_vehicle(particle.route)
+    particle = swap2(particle, objective_function)
+    particle.route = fix_missing_vehicle(particle.route)
+    particle = move2(particle, objective_function)
+    return particle
+end
+
 """
     run particle swarm function
 """
@@ -88,7 +221,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
     location = location_particle_swarm(name, objective_function=objective_function)
 
     if localsearch
-        local_search_function = local_search
+        local_search_function = local_search2
     else
         local_search_function = local_search_old
     end
@@ -131,6 +264,9 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
     append!(best_index_save, best_index)
     append!(best_obj_save, best_objective_value)
 
+    # generate list
+    # list = shuffle(sort_processing_matrix(particles[1].p))
+
     # time
     while iter <= max_iter && terminate == false
         @time begin
@@ -153,7 +289,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
                 particles[i] = path_relinking(particles[i], best_route, objective_function)
             
                 # local search
-                particles[i].route = fix_missing_vehicle(particles[i].route)
+                # particles[i].route = fix_missing_vehicle(particles[i].route)
                 # println("route: $(particles[i].route)")
                 particles[i] = local_search_function(particles[i], objective_function, best_route=best_route)
                 append!(best_obj_vec, objective_function(particles[i]))
