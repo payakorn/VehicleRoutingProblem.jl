@@ -318,21 +318,24 @@ end
 
 function fix_missing_vehicle(route::Array)
     test_route = deepcopy(route)
-    if isempty(test_route) == false
+    if !isempty(test_route)
         if test_route[1] == 0
             popfirst!(test_route)
         end
+    end
 
+    if !isempty(test_route)
         if test_route[end] == 0
             pop!(test_route)
         end
+
+        vehicle_position = findall(x -> x == 0, test_route)
+        s = deepcopy(test_route)
+        positions = findall(x -> x == 1, [vehicle_position[i + 1] - vehicle_position[i] for i in 1:length(vehicle_position) - 1])
+        delete_position = vehicle_position[positions]
+        deleteat!(test_route, delete_position)
     end
 
-    vehicle_position = findall(x -> x == 0, test_route)
-    s = deepcopy(test_route)
-    positions = findall(x -> x == 1, [vehicle_position[i + 1] - vehicle_position[i] for i in 1:length(vehicle_position) - 1])
-    delete_position = vehicle_position[positions]
-    deleteat!(test_route, delete_position)
     return test_route
 end
 
@@ -631,25 +634,19 @@ function swap_to_first_or_last_position(particle::Particle, input_position::Int6
     
 
     if isempty(position_zero)
-        vehicle_index = [(1, length(best_position.route))]
+        vehicle_index = [(1, length(best_particle.route))]
     else
         vehicle_index = [(1, position_zero[1])]
-    end
 
-    # if position_zero[1] == 1
-    #     vehicle_index = [(1, position_zero[1])]
-    # else
-    #     vehicle_index = [(1, position_zero[1] - 1)]
-    # end
+        for k in 2:number_of_vehicle - 1
+            append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
+        end
 
-    for k in 2:number_of_vehicle - 1
-        append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
-    end
-
-    if number_of_vehicle == 2
-        append!(vehicle_index, [(position_zero[end] + 1, length(particle.route))])
-    else
-        append!(vehicle_index, [(position_zero[end - 1] + 1, length(particle.route))])
+        if number_of_vehicle == 2
+            append!(vehicle_index, [(position_zero[end] + 1, length(particle.route))])
+        else
+            append!(vehicle_index, [(position_zero[end - 1] + 1, length(particle.route))])
+        end
     end
     # append!(vehicle_index, [(vehicle_index[end][2]+2, length(particle.route))])
 
@@ -717,24 +714,19 @@ function move_to_first_or_last_position(particle::Particle, input_position::Int6
     number_of_vehicle = length(position_zero) + 1
     
     if isempty(position_zero)
-        vehicle_index = [(1, length(best_position.route))]
+        vehicle_index = [(1, length(best_particle.route))]
     else
         vehicle_index = [(1, position_zero[1])]
-    end
-    # if position_zero[1] == 1
-    #     vehicle_index = [(1, position_zero[1])]
-    # else
-    #     vehicle_index = [(1, position_zero[1] - 1)]
-    # end
 
-    for k in 2:number_of_vehicle - 1
-        append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
-    end
+        for k in 2:number_of_vehicle - 1
+            append!(vehicle_index, [(vehicle_index[k - 1][2] + 1, position_zero[k] - 1)])
+        end
 
-    if number_of_vehicle == 2
-        append!(vehicle_index, [(position_zero[end] + 1, length(test_particle.route))])
-    else
-        append!(vehicle_index, [(position_zero[end - 1] + 1, length(test_particle.route))])
+        if number_of_vehicle == 2
+            append!(vehicle_index, [(position_zero[end] + 1, length(test_particle.route))])
+        else
+            append!(vehicle_index, [(position_zero[end - 1] + 1, length(test_particle.route))])
+        end
     end
     # append!(vehicle_index, [(vehicle_index[end][2]+2, length(test_particle.route))])
 
@@ -791,8 +783,9 @@ function swap(particle::Particle, objective_function::Function; best_route=[]::A
     for (iter, (i, j)) in enumerate(list)
         swap_particle = deepcopy(particle)
         
-        position1 = findfirst(x -> x == i, swap_particle.route)
-        position2 = findfirst(x -> x == j, swap_particle.route)
+        # @show swap_particle.route
+        @show position1 = findfirst(x -> x == i, swap_particle.route)
+        @show position2 = findfirst(x -> x == j, swap_particle.route)
         
         # swap
         if position1 == position2
@@ -807,7 +800,7 @@ function swap(particle::Particle, objective_function::Function; best_route=[]::A
         
     end
 
-    last_objective = objective_function(particle)
+    # last_objective = objective_function(particle)
 
     # add the removed route to particle
     # if isnothing(best_route) == false
@@ -857,6 +850,7 @@ end
 
 
 function local_search(particle::Particle, objective_function::Function; best_route=[])
+    @show particle.route
     particle = two_opt(particle, objective_function, best_route=best_route)
     particle.route = fix_missing_vehicle(particle.route)
     particle = swap(particle, objective_function, best_route=best_route)

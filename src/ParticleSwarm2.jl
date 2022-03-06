@@ -326,19 +326,22 @@ function run_case2(name_case::Array; num_particle=15, while_iter=1, seed=1, obje
         # try mkdir("particle_swarm/$objective_function/case$i/$name") catch e; nothing end
         # try mkdir("particle_swarm/$objective_function/case$i/$name/$num_particle") catch e; nothing end
         # try mkdir(location) catch e; nothing end
-        
+        location = location_particle_swarm(name, objective_function=objective_function)
+        num_run = while_iter - length((glob("$(name)*.txt", location)))
         
         # run 
-        run_particle2(name, objective_function; max_iter=200, max_iter_while=while_iter, localsearch=true, cut_car=true, generate=true, num_particle=15, random_set=true, seed=1)
-        # record 
-        location = location_particle_swarm(name, objective_function=objective_function)
-        io = open("$(location)/run.txt", "a")
-        a = length(glob("$name*.txt", location))
-        write(io, "$(date_txt()), name: $name-$a, Alg: 16, particle: $num_particle, \n")
-        close(io)
+        if num_run > 0
+            run_particle2(name, objective_function; max_iter=200, max_iter_while=num_run, localsearch=true, cut_car=true, generate=true, num_particle=15, random_set=true, seed=1)
 
-        # sent email
-        sent_email("finished $name", obj_email_text(name))
+            # record 
+            io = open("$(location)/run.txt", "a")
+            a = length(glob("$name*.txt", location))
+            write(io, "$(date_txt()), name: $name-$a, Alg: 16, particle: $num_particle, \n")
+            close(io)
+    
+            # sent email
+            sent_email("finished $name", obj_email_text(name))
+        end
     end
 end
 
