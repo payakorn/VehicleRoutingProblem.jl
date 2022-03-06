@@ -50,5 +50,12 @@ export load_all_data,
         particle_swarm_fix2,
         run_case2,
         obj_email_text,
-        generate_run_name
+        generate_run_name,
+        two_opt,
+        local_search,
+        move,
+        swap,
+        two_opt_list,
+        two_opt_list2,
+        sort_processing_matrix
 end
