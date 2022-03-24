@@ -57,5 +57,8 @@ export load_all_data,
         swap,
         two_opt_list,
         two_opt_list2,
-        sort_processing_matrix
+        sort_processing_matrix,
+        create_csv_solomon_25_50,
+        location_opt_solomon,
+        add_our_best_to_dataframe_25_50
 end

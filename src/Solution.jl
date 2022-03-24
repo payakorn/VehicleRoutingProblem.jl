@@ -134,3 +134,26 @@ function write_solution_to_txt(particle::Particle, location::String)
     end
     close(io)
 end
+
+
+function location_opt_solomon(name::String)
+    if ispath(joinpath(@__DIR__, "..", "data", "opt_solomon", name[1:2]))
+        println("true")
+        return joinpath(@__DIR__, "..", "data", "opt_solomon", name[1:2])
+    else
+        println("false")
+        return joinpath(@__DIR__, "..", "data", "opt_solomon", name[1:3])
+    end
+end
+
+
+function create_csv_solomon_25_50()
+    io = open("")
+    for name in Full_Name()
+        instance_name = "$name-25"
+        location = location_particle_swarm(instance_name)
+        min_solution = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$name*.txt", location)])
+        opt_value = read_solution("$(location_opt_solomon()/$())")
+        println("$instance_name: $min_solution")
+    end
+end
