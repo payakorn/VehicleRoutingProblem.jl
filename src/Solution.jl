@@ -153,7 +153,7 @@ function create_csv_solomon_25_50()
         instance_name = "$name-25"
         location = location_particle_swarm(instance_name)
         min_solution = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$name*.txt", location)])
-        opt_value = read_solution("$(location_opt_solomon()/$())")
+        # opt_value = read_solution("$(location_opt_solomon()/$())")
         println("$instance_name: $min_solution")
     end
 end

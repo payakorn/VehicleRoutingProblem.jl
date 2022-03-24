@@ -60,5 +60,6 @@ export load_all_data,
         sort_processing_matrix,
         create_csv_solomon_25_50,
         location_opt_solomon,
-        add_our_best_to_dataframe_25_50
+        add_our_best_to_dataframe_25_50,
+        create_csv_conclusion_all_opt
 end

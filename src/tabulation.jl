@@ -67,8 +67,8 @@ function add_our_best_to_dataframe()
         df1 = read_csv_to_dataframe(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-100.csv"))
         # df1[index_name_type, :Our] = df2[!, :Min]
         # df1[index_name_type, :Our_floor] = df2[!, :Min_floor]
-        df1 = hcat(df1, df2[index_name_type, :Min_floor],  makeunique=true )
-        df1 = hcat(df1, df2[index_name_type, :Min],  makeunique=true )
+        df1 = hcat(df1, ceil.(df2[index_name_type, :Min_floor], digits=1),  makeunique=true )
+        df1 = hcat(df1, ceil.(df2[index_name_type, :Min], digits=1),  makeunique=true )
         # DataFrames.names!(df1, Symbol.(["Problem", "Num_customer", "NV", "Opt", "Our", "Our_floor"])) 
         rename!(df1, :Distance => :Opt)
         rename!(df1, :x1 => :Our_floor)
@@ -89,8 +89,8 @@ function add_our_best_to_dataframe_25_50()
                 location = location_particle_swarm(instance_name)
                 min_solution_1 = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$instance_name*.txt", location)])
                 min_solution_2 = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=false) for location_name in glob("$instance_name*.txt", location)])
-                push!(df2_1, min_solution_1)
-                push!(df2_2, min_solution_2)
+                push!(df2_1, ceil(min_solution_1, digits=1))
+                push!(df2_2, ceil(min_solution_2, digits=1))
             end
             # @show df2_1
             # @show df2_2
@@ -102,5 +102,19 @@ function add_our_best_to_dataframe_25_50()
             rename!(df1, :x1_1 => :Our)
             CSV.write(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-$num_cus.csv"), df1)
         end
+    end
+end
+
+
+function create_csv_conclusion_all_opt()
+    for n in (25, 50, 100)
+        c1_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "c1", "c1-$n.csv")) |> DataFrame
+        c2_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "c2", "c2-$n.csv")) |> DataFrame
+        r1_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "r1", "r1-$n.csv")) |> DataFrame
+        r2_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "r2", "r2-$n.csv")) |> DataFrame
+        rc1_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "rc1", "rc1-$n.csv")) |> DataFrame
+        rc2_25 = CSV.File(joinpath(@__DIR__, "..", "data", "opt_solomon", "rc2", "rc2-$n.csv")) |> DataFrame
+        df = vcat(c1_25, c2_25, r1_25, r2_25, rc1_25, rc2_25)
+        CSV.write(joinpath(@__DIR__, "..", "data", "opt_solomon", "all_$n.csv"), df)
     end
 end
