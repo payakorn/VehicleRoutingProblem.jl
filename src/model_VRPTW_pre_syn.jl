@@ -1,4 +1,4 @@
-using JuMP, Gurobi
+using JuMP, CPLEX
 
 # load parameters
 num_node = 11
@@ -17,7 +17,7 @@ IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
 
 const r = [
     1 1 1 1 1 1;
-    0 0 0 1 0 0;
+    0 0 1 1 0 0; #old 0 0 0 1 0 0;
     0 0 0 0 1 0;
     0 1 0 0 0 0;
     0 0 0 1 0 0;
@@ -50,7 +50,7 @@ d = [
 
 # a_ks = 1 if vehicle k can process job s
 const a = [ 1 1 1 0 0 0;
-            0 0 0 0 1 1;
+            0 0 1 0 1 1; #0 0 0 0 1 1;
             0 0 0 1 1 1;
 ];
 # const a = [ 1 1 1 1 1 1;
@@ -60,29 +60,32 @@ const a = [ 1 1 1 0 0 0;
 
 # processing time
 p = zeros(Float64, num_vehi, num_serv)
-for i in 2:num_node-1
+for i in 2:num_node
     global p
     p = cat(p, 14.0*ones(Float64, num_vehi, num_serv), dims=3)
 end
-p = cat(p, zeros(Float64, num_vehi, num_serv), dims=3)
+# p = cat(p, zeros(Float64, num_vehi, num_serv), dims=3)
 
 mind=[ 14,24,36,38,46,10,27,16,0,51,8,36];
 maxd=[ 28,48,72,76,92,20,54,32,0,102,16,72]; 
-e=[0, 345,268,247,393,254,184,434,46,298,148,0]; 
+e=[0,   345,268,247,393,254,184,434,46,298,148,0]; 
 l=[600, 465,388,367,513,374,304,554,166,418,268,1000]; 
 
 # create PRE set
 PRE = []
 for i in N
     xx = findall(x -> x == 1, r[i, :])
-        push!(PRE, (i, xx[j], xx[j+1]))
+    if length(xx) > 1
+        for j in 2:length(xx)
+            push!(PRE, (i, xx[j-1], xx[j]))
+        end
     end
 end
 
 
 # model
-model = Model(Gurobi.Optimizer)
-set_optimizer_attribute(model, "Presolve", 0)
+model = Model(CPLEX.Optimizer)
+# set_optimizer_attribute(model, "Presolve", 0)
 
 # variables
 @variable(model, x[i=N, j=N, k=K; i!=j], Bin)
@@ -147,8 +150,10 @@ for k in K
 end
 
 for (i, j) in IJ
-    for k in K
-        @constraint(model, t[i, k] + sum(p[k, s, i]*y[i, k, s] for s in S) + d[i, j] - M*(1-x[i, j, k]) <= t[j, k])
+    if i > 1
+        for k in K
+            @constraint(model, t[i, k] + sum(p[k, s, i]*y[i, k, s] for s in S) + d[i, j] - M*(1-x[i, j, k]) <= t[j, k])
+        end
     end
 end
 
@@ -174,6 +179,12 @@ for i in N
     end
 end
 
+# Synchronization
+# SYN = [(11, 3, 1, 2)]
+# for (i, s, k1, k2) in SYN
+#     @constraint(model, ts[i, k1, s] == t[i, k2, s])
+# end
+@constraint(model, ts[11, 1, 3] == ts[11, 2, 3])
 
 # objective function
 @objective(model, Min, sum(d[i, j]*x[i, j, k] for i in N for j in N for k in K if i != j))
