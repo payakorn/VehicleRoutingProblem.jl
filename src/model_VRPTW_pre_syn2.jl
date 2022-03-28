@@ -14,6 +14,7 @@ S = 1:num_serv
 
 # generate set of i, j in N with i != j
 IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
+SS = Iterators.filter(x -> x[1] != x[2], Iterators.product(S, S))
 
 const r = [
     1 1 1 1 1 1;
@@ -28,6 +29,10 @@ const r = [
     1 0 0 1 0 0;
     0 0 1 0 0 1;
     1 1 1 1 1 1;
+];
+const a = [ 1 1 1 0 0 0;
+            0 0 1 0 1 1; #0 0 0 0 1 1;
+            0 0 0 1 1 1;
 ];
 
 DS = (11,10,9);
@@ -48,11 +53,7 @@ d = [
 ]; 
 # d /= 2
 
-# a_ks = 1 if vehicle k can process job s
-const a = [ 1 1 1 0 0 0;
-            0 0 1 0 1 1; #0 0 0 0 1 1;
-            0 0 0 1 1 1;
-];
+
 # const a = [ 1 1 1 1 1 1;
 #             1 1 1 1 1 1;
 #             1 1 1 1 1 1;
@@ -72,16 +73,24 @@ e=[0,   345,268,247,393,254,184,434,46,298,148,0];
 l=[600, 465,388,367,513,374,304,554,166,418,268,1000]; 
 
 # create PRE set
-PRE = []
-for i in N_c
-    xx = findall(x -> x == 1, r[i, :])
-    if length(xx) > 1
-        for j in 2:length(xx)
-            push!(PRE, (i, xx[j-1], xx[j]))
-        end
-    end
-end
-
+# PRE = []
+# for i in N_c
+#     xx = findall(x -> x == 1, r[i, :])
+#     if length(xx) > 1
+#         for j in 2:length(xx)
+#             push!(PRE, (i, xx[j-1], xx[j]))
+#         end
+#     end
+# end
+PRE = [ (2, 4, 3)
+(3, 2, 5)
+# (6, 1, 2)
+# (6, 2, 3)
+(6, 3, 5)
+(6, 5, 4)
+(9, 5, 6)
+(10, 1, 4)
+(11, 6, 3)]
 
 # model
 model = Model(Gurobi.Optimizer)
@@ -89,11 +98,11 @@ model = Model(Gurobi.Optimizer)
 
 # variables
 @variable(model, x[i=N, j=N, k=K; i!=j], Bin)
-@variable(model, t[i=N, k=K])
-@variable(model, ts[i=N, k=K, s=S])
+@variable(model, e[i]<=t[i=N, k=K]<=l[i])
+@variable(model, ts[i=N, k=K, s=S] >= 0)
 @variable(model, y[i=N_c, k=K, s=S], Bin)
-# @variable(model, t[i=N, k=K])
-
+# @variable(model, z[j=N_c, s1=S, s2=S]<=r[j, s2], Bin) # s1 is position of job, s2 is service
+@variable(model, z[j=N_c, s1=S, s2=S], Bin) # s1 is position of job, s2 is service
 # constraints
 
 # 1
@@ -138,6 +147,7 @@ end
 for s in S
     for j in N_c
         @constraint(model, sum(a[k, s]*y[j, k, s] for k in K) == r[j, s])
+        # @constraint(model, sum(y[j, k, s] for k in K) == r[j, s])
     end
 end
 
@@ -152,39 +162,40 @@ end
 for (i, j) in IJ
     if i > 1
         for k in K
-            @constraint(model, t[i, k] + sum(p[k, s, i]*y[i, k, s] for s in S) + d[i, j] - M*(1-x[i, j, k]) <= t[j, k])
+            # @constraint(model, t[i, k] + sum(p[k, s, i]*y[i, k, s] for s in S) + d[i, j] - M*(1-x[i, j, k]) <= t[j, k])
+            for s in S
+                @constraint(model, ts[i, k, s] + p[k, s, i] + d[i, j] - M*(1-x[i, j, k]) <= t[j, k])
+            end
         end
     end
 end
 
-for j in N
-    for k in K
-        @constraint(model, e[j]*sum(x[i, j, k] for i in N if i != j) <= t[j, k])
-        @constraint(model, l[j]*sum(x[i, j, k] for i in N if i != j) >= t[j, k])
-    end
-end
-
-# for j in N_c
-#     # test
+# for j in N
 #     for k in K
-#         for s in S
-#             @constraint(model, e[j]*sum(x[i, j, k] for i in N if i != j) <= ts[j, k, s]*y[j, k, s])
-#             @constraint(model, l[j]*sum(x[i, j, k] for i in N if i != j) >= ts[j, k, s]*y[j, k, s])
-#         end
+#         @constraint(model, e[j]*sum(x[i, j, k] for i in N if i != j) <= t[j, k])
+#         @constraint(model, l[j]*sum(x[i, j, k] for i in N if i != j) >= t[j, k])
 #     end
 # end
 
-# 7
-for (i, s1, s2) in PRE
+for j in N_c
+    # test
     for k in K
-        @constraint(model, ts[i, k, s1] + p[k, s1, i] <= ts[i, k, s2])
+        for s in S
+            @constraint(model, e[j]*y[j, k, s] <= ts[j, k, s])
+            @constraint(model, l[j]*y[j, k, s] >= ts[j, k, s])
+        end
     end
 end
 
-for i in N
+# 7
+for (i, s1, s2) in PRE
+    @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+end
+
+for i in N_c
     for k in K
         for s in S
-            @constraint(model, t[i, k] <= ts[i, k, s])
+            @constraint(model, t[i, k] <= ts[i, k, s] + M*(1-y[i, k, s]))
         end
     end
 end
@@ -194,7 +205,43 @@ end
 # for (i, s) in SYN
 #     @constraint(model, sum(ts[i, k1, s]) == sum(ts[i, k2, s]))
 # end
-@constraint(model, ts[11, 1, 3] == ts[11, 2, 3])
+# @constraint(model, ts[11, 1, 3] == ts[11, 2, 3])
+
+# new constraints z positions ()
+
+for j in N_c
+    position = findall(x -> x != 1.0, r[j, :])
+    for i in 1:num_serv-length(position)
+        for l in position
+            fix(z[j, i, l], 0, force=true)
+        end
+    end
+    
+    for i in num_serv-length(position)+1:num_serv
+        for l in S
+            fix(z[j, i, l], 0, force=true)
+        end
+    end
+    
+end
+
+for j in N_c
+    position = findall(x -> x == 1.0, r[j, :])
+    for i in 1:length(position)
+        @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
+    end
+    for s in S
+        @constraint(model, sum(z[j, i, s] for i in 1:length(position)) == sum(y[j, k, s] for k in K))
+    end
+end
+
+for (s1, s2) in SS
+    for s in setdiff(S, 1)
+        for j in N_c
+            @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
+        end
+    end
+end
 
 # objective function
 @objective(model, Min, sum(d[i, j]*x[i, j, k] for i in N for j in N for k in K if i != j))

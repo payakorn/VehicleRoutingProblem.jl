@@ -42,3 +42,9 @@ function show_opt_solution(x, n, num_vehicle, name)
     close(io)
     return tex
 end
+
+function print_solution()
+    for k in K
+        println("$k")
+    end
+end

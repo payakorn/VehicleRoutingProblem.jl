@@ -157,3 +157,10 @@ function create_csv_solomon_25_50()
         println("$instance_name: $min_solution")
     end
 end
+
+
+function find_min_solution(name)
+    solution = [read_solution("data\\simulations\\particle_swarm\\total_distance\\$name\\$name-$i.txt", "$name") for i in 1:length(glob("$name*.txt", "data\\simulations\\particle_swarm\\total_distance\\$name\\"))]
+    min_dis = minimum(total_distance.(solution, floor_digit=true))
+    println("min distance = $min_dis")
+end
