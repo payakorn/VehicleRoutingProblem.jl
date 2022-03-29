@@ -90,8 +90,8 @@ function add_our_best_to_dataframe_25_50()
             for i in 1:length(df1[:, :Problem])
                 instance_name = "$(lowercase(df1[i, :Problem]))-$num_cus"
                 location = location_particle_swarm(instance_name)
-                min_solution_1_position = argmin([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$instance_name*.txt", location)])
-                min_solution_2_position = argmin([total_distance(read_solution(location_name, instance_name), floor_digit=false) for location_name in glob("$instance_name*.txt", location)])
+                min_solution_1_position = argmin([total_distance(read_solution("$location/$instance_name-$i.txt", instance_name), floor_digit=true) for i in 1:length(glob("$instance_name*.txt", location))])
+                min_solution_2_position = argmin([total_distance(read_solution("$location/$instance_name-$i.txt", instance_name), floor_digit=false) for i in 1:length(glob("$instance_name*.txt", location))])
 
                 min_solution_1 = total_distance(read_solution("$location/$instance_name-$min_solution_1_position.txt", instance_name), floor_digit=true)
                 min_solution_2 = total_distance(read_solution("$location/$instance_name-$min_solution_2_position.txt", instance_name), floor_digit=false)
