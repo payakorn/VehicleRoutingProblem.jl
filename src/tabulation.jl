@@ -36,7 +36,7 @@ end
 Create the csv file contain all solomon instances r101-rc208
 Output name: data/opt_solomon/`name_type(r1, r2, ...)`/`name`-`num_customer`
 """
-function create_conclution_opt_solomon()
+function create_conclusion_opt_solomon()
     name_types = ["r1", "r2", "c1", "c2", "rc1", "rc2"]
     num_customer = [25, 50, 100]
     for name_type in name_types
@@ -60,19 +60,21 @@ end
 
 
 function add_our_best_to_dataframe()
-    create_conclution_opt_solomon()
+    create_conclusion_opt_solomon()
     df2 = read_csv_to_dataframe("Tables\\conslusion_min_all_distance.csv")
     index_name_types = [1:12, 13:23, 24:32, 33:40, 41:48, 49:56] 
     for (name_type, index_name_type) in zip(["r1", "r2", "c1", "c2", "rc1", "rc2"], index_name_types)
         df1 = read_csv_to_dataframe(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-100.csv"))
         # df1[index_name_type, :Our] = df2[!, :Min]
         # df1[index_name_type, :Our_floor] = df2[!, :Min_floor]
-        df1 = hcat(df1, ceil.(df2[index_name_type, :Min_floor], digits=1),  makeunique=true )
-        df1 = hcat(df1, ceil.(df2[index_name_type, :Min], digits=1),  makeunique=true )
+        df1 = hcat(df1, df2[index_name_type, :NV],  makeunique=true)
+        df1 = hcat(df1, round.(df2[index_name_type, :Min_floor], digits=1),  makeunique=true )
+        df1 = hcat(df1, round.(df2[index_name_type, :Min], digits=1),  makeunique=true )
         # DataFrames.names!(df1, Symbol.(["Problem", "Num_customer", "NV", "Opt", "Our", "Our_floor"])) 
         rename!(df1, :Distance => :Opt)
-        rename!(df1, :x1 => :Our_floor)
-        rename!(df1, :x1_1 => :Our)
+        rename!(df1, :x1 => :Our_NV)
+        rename!(df1, :x1_1 => :Our_floor)
+        rename!(df1, :x1_2 => :Our)
         CSV.write(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-100.csv"), df1)
     end
 end
@@ -84,22 +86,31 @@ function add_our_best_to_dataframe_25_50()
             df1 = read_csv_to_dataframe(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-$num_cus.csv"))
             df2_1 = []
             df2_2 = []
+            df2_3 = []
             for i in 1:length(df1[:, :Problem])
                 instance_name = "$(lowercase(df1[i, :Problem]))-$num_cus"
                 location = location_particle_swarm(instance_name)
-                min_solution_1 = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$instance_name*.txt", location)])
-                min_solution_2 = minimum([total_distance(read_solution(location_name, instance_name), floor_digit=false) for location_name in glob("$instance_name*.txt", location)])
-                push!(df2_1, ceil(min_solution_1, digits=1))
-                push!(df2_2, ceil(min_solution_2, digits=1))
+                min_solution_1_position = argmin([total_distance(read_solution(location_name, instance_name), floor_digit=true) for location_name in glob("$instance_name*.txt", location)])
+                min_solution_2_position = argmin([total_distance(read_solution(location_name, instance_name), floor_digit=false) for location_name in glob("$instance_name*.txt", location)])
+
+                min_solution_1 = total_distance(read_solution("$location/$instance_name-$min_solution_1_position.txt", instance_name), floor_digit=true)
+                min_solution_2 = total_distance(read_solution("$location/$instance_name-$min_solution_2_position.txt", instance_name), floor_digit=false)
+                min_solution_3 = total_route(read_solution("$location/$instance_name-$min_solution_2_position.txt", instance_name))
+                
+                push!(df2_1, round(min_solution_1, digits=1))
+                push!(df2_2, round(min_solution_2, digits=1))
+                push!(df2_3, min_solution_3)
             end
             # @show df2_1
             # @show df2_2
+            df1 = hcat(df1, df2_3,  makeunique=true)
             df1 = hcat(df1, df2_1,  makeunique=true)
             df1 = hcat(df1, df2_2,  makeunique=true)
             # DataFrames.names!(df1, Symbol.(["Problem", "Num_customer", "NV", "Opt", "Our", "Our_floor"])) 
             rename!(df1, :Distance => :Opt)
-            rename!(df1, :x1 => :Our_floor)
-            rename!(df1, :x1_1 => :Our)
+            rename!(df1, :x1 => :Our_NV)
+            rename!(df1, :x1_1 => :Our_floor)
+            rename!(df1, :x1_2 => :Our)
             CSV.write(joinpath(@__DIR__, "..", "data", "opt_solomon", name_type, "$name_type-$num_cus.csv"), df1)
         end
     end
