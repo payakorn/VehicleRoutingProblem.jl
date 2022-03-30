@@ -15,6 +15,7 @@ S = 1:num_serv
 # generate set of i, j in N with i != j
 IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
 SS = Iterators.filter(x -> x[1] != x[2], Iterators.product(S, S))
+KK = Iterators.filter(x -> x[1] != x[2], Iterators.product(K, K))
 
 r=[
     1 1 1 1 1 1;
@@ -30,10 +31,34 @@ r=[
     0 0 1 0 0 1;
     1 1 1 1 1 1;
 ];
+
+Q = []
+SYN = []
+SYN_num = ones(num_node, num_serv)
+for i in N_c
+    position = findall(x -> x == 1.0, r[i, :])
+    if mind[i] == 0 && maxd[i] == 0
+        push!(Q, (i, length(position)-1))
+        push!(SYN, (i, position[1]))
+        r[i, position[1]] = 2
+        r[i, position[2]] = 0
+        SYN_num[i, position[1]] = 2.0
+        # delete syn points from SS
+        # delete!(SS, (position[1], position[2]))
+        # delete!(SS, (position[2], position[1]))
+    else
+        push!(Q, (i, length(position)))
+    end
+end
+
 const a = [ 1 1 1 0 0 0;
             0 0 0 0 1 1; #0 0 0 0 1 1;
             0 0 0 1 1 1;
 ];
+# const a = [ 1 1 1 1 1 1;
+#             1 1 1 1 1 1; #0 0 0 0 1 1;
+#             1 1 1 1 1 1;
+# ];
 
 DS = (11,10,9);
 
@@ -190,11 +215,11 @@ for j in N_c
 end
 
 # 7
-for (i, s1, s2, min_d, max_d) in PRE
-    # @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-    @constraint(model, sum(ts[i, k, s1] for k in K) + min_d <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-    @constraint(model, sum(ts[i, k, s2] for k in K) - max_d <= sum(ts[i, k, s1] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-end
+# for (i, s1, s2, min_d, max_d) in PRE
+#     # @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+#     @constraint(model, sum(ts[i, k, s1] for k in K) + min_d <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+#     @constraint(model, sum(ts[i, k, s2] for k in K) - max_d <= sum(ts[i, k, s1] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+# end
 
 for i in N_c
     for k in K
@@ -211,6 +236,12 @@ end
 # end
 # @constraint(model, ts[11, 1, 3] == ts[11, 2, 3])
 
+for (i, s) in SYN
+    for (k1, k2) in KK
+        @constraint(model, -M*(2-y[i, k1, s]-y[i, k2, s]) <= ts[i, k1, s] - ts[i, k2, s])
+        @constraint(model, ts[i, k1, s] - ts[i, k2, s] <= M*(2-y[i, k1, s]-y[i, k2, s]))
+    end
+end
 # new constraints z positions ()
 
 for j in N_c
@@ -229,20 +260,19 @@ for j in N_c
     
 end
 
-for j in N_c
-    position = findall(x -> x == 1.0, r[j, :])
-    for i in 1:length(position)
+for (j, num_q) in Q
+    for i in 1:num_q
         @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
     end
     for s in S
-        @constraint(model, sum(z[j, i, s] for i in 1:length(position)) == sum(y[j, k, s] for k in K))
+        @constraint(model, sum(z[j, i, s] for i in 1:num_q) == sum(y[j, k, s] for k in K))
     end
 end
 
 for (s1, s2) in SS
     for s in setdiff(S, 1)
         for j in N_c
-            @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
+            @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2]/SYN_num[j, s2] for k in K))
         end
     end
 end
