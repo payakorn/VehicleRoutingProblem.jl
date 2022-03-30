@@ -17,6 +17,11 @@ IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
 SS = Iterators.filter(x -> x[1] != x[2], Iterators.product(S, S))
 KK = Iterators.filter(x -> x[1] != x[2], Iterators.product(K, K))
 
+mind=[ 14,24,36,38,46,10,27,16,0,51,8,36];
+maxd=[ 28,48,72,76,92,20,54,32,0,102,16,72]; 
+e=[0,   345,268,247,393,254,184,434,46,298,148,0]; 
+l=[600, 465,388,367,513,374,304,554,166,418,268,1000]; 
+
 r=[
     1 1 1 1 1 1;
     0 0 0 1 0 0;
@@ -32,6 +37,7 @@ r=[
     1 1 1 1 1 1;
 ];
 
+r_syn = deepcopy(r)
 Q = []
 SYN = []
 SYN_num = ones(num_node, num_serv)
@@ -40,8 +46,9 @@ for i in N_c
     if mind[i] == 0 && maxd[i] == 0
         push!(Q, (i, length(position)-1))
         push!(SYN, (i, position[1]))
-        r[i, position[1]] = 2
-        r[i, position[2]] = 0
+        r_syn[i, position[1]] = 2.0
+        r_syn[i, position[2]] = 0.0
+        r[i, position[2]] = 0.0
         SYN_num[i, position[1]] = 2.0
         # delete syn points from SS
         # delete!(SS, (position[1], position[2]))
@@ -91,11 +98,6 @@ for i in 2:num_node
     p = cat(p, 14.0*ones(Float64, num_vehi, num_serv), dims=3)
 end
 # p = cat(p, zeros(Float64, num_vehi, num_serv), dims=3)
-
-mind=[ 14,24,36,38,46,10,27,16,0,51,8,36];
-maxd=[ 28,48,72,76,92,20,54,32,0,102,16,72]; 
-e=[0,   345,268,247,393,254,184,434,46,298,148,0]; 
-l=[600, 465,388,367,513,374,304,554,166,418,268,1000]; 
 
 # create PRE set
 PRE = []
@@ -173,7 +175,7 @@ end
 # 5
 for s in S
     for j in N_c
-        @constraint(model, sum(a[k, s]*y[j, k, s] for k in K) == r[j, s])
+        @constraint(model, sum(a[k, s]*y[j, k, s] for k in K) == r_syn[j, s])
         # @constraint(model, sum(y[j, k, s] for k in K) == r[j, s])
     end
 end
@@ -215,11 +217,11 @@ for j in N_c
 end
 
 # 7
-# for (i, s1, s2, min_d, max_d) in PRE
-#     # @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-#     @constraint(model, sum(ts[i, k, s1] for k in K) + min_d <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-#     @constraint(model, sum(ts[i, k, s2] for k in K) - max_d <= sum(ts[i, k, s1] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
-# end
+for (i, s1, s2, min_d, max_d) in PRE
+    # @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+    @constraint(model, sum(ts[i, k, s1] for k in K) + min_d <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+    @constraint(model, sum(ts[i, k, s2] for k in K) - max_d <= sum(ts[i, k, s1] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
+end
 
 for i in N_c
     for k in K
@@ -265,14 +267,16 @@ for (j, num_q) in Q
         @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
     end
     for s in S
-        @constraint(model, sum(z[j, i, s] for i in 1:num_q) == sum(y[j, k, s] for k in K))
+        # @constraint(model, sum(z[j, i, s] for i in 1:num_q) == sum(y[j, k, s] for k in K))
+        @constraint(model, sum(z[j, i, s] for i in 1:num_q) == r[j, s])
     end
 end
 
 for (s1, s2) in SS
     for s in setdiff(S, 1)
         for j in N_c
-            @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2]/SYN_num[j, s2] for k in K))
+            # @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
+            @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K)/SYN_num[j, s2])
         end
     end
 end
@@ -346,5 +350,5 @@ for k in K
                 break
             end
         end
-    end     
+    end
 end
