@@ -69,7 +69,7 @@ const a = [ 1 1 1 0 0 0;
 
 DS = (11,10,9);
 
-d = [ 
+d = [
     0.0 38.470768 34.88553 55.946404 7.28011 23.345236 71.470276 32.526913 13.038404 26.400757 88.88757 0.0;
     38.470768 0.0 23.086792 21.400934 32.01562 31.827662 34.0 32.649654 45.276924 57.45433 56.859474 38.470768;
     34.88553 23.086792 0.0 43.829212 27.784887 15.033297 53.037724 10.630146 46.615448 42.755116 54.91812 34.88553;
@@ -132,6 +132,8 @@ model = Model(Gurobi.Optimizer)
 @variable(model, y[i=N_c, k=K, s=S], Bin)
 # @variable(model, z[j=N_c, s1=S, s2=S]<=r[j, s2], Bin) # s1 is position of job, s2 is service
 @variable(model, z[j=N_c, s1=S, s2=S], Bin) # s1 is position of job, s2 is service
+@variable(model, zz[i=N, s=S] >= 0)
+@variable(model, Tmax >= 0)
 # constraints
 
 # 1
@@ -163,19 +165,24 @@ for k in K
 end
 
 # subtour
-@variable(model, 1 <= u[i=N_c, k=K] <= num_node-1)
-for (i, j) in IJ
-    if i > 1 && j > 1
-        for k in K
-            @constraint(model, u[i, k] - u[j, k] + 1 <= num_node*(1 - x[i, j, k]))
-        end
-    end
-end
+# @variable(model, 1 <= u[i=N_c, k=K] <= num_node-1)
+# for (i, j) in IJ
+#     if i > 1 && j > 1
+#         for k in K
+#             @constraint(model, u[i, k] - u[j, k] + 1 <= M*(1 - x[i, j, k]))
+#         end
+#     end
+# end
 
 # 5
 for s in S
     for j in N_c
-        @constraint(model, sum(a[k, s]*y[j, k, s] for k in K) == r_syn[j, s])
+        if r_syn[j, s] != 0.0
+            @constraint(model, sum(a[k, s]*y[j, k, s] for k in K) == r_syn[j, s])
+        else
+            @constraint(model, sum(y[j, k, s] for k in K) == 0)
+        end
+
         # @constraint(model, sum(y[j, k, s] for k in K) == r[j, s])
     end
 end
@@ -211,8 +218,15 @@ for j in N_c
     for k in K
         for s in S
             @constraint(model, e[j]*y[j, k, s] <= ts[j, k, s])
-            @constraint(model, l[j]*y[j, k, s] >= ts[j, k, s])
+            @constraint(model, (l[j] + zz[j, s])*y[j, k, s] >= ts[j, k, s])
         end
+    end
+end
+
+# Tmax
+for i in N
+    for s in S
+        @constraint(model, Tmax >= zz[i, s])
     end
 end
 
@@ -282,7 +296,7 @@ for (s1, s2) in SS
 end
 
 # objective function
-@objective(model, Min, sum(d[i, j]*x[i, j, k] for i in N for j in N for k in K if i != j))
+@objective(model, Min, 1/3*sum(d[i, j]*x[i, j, k] for i in N for j in N for k in K if i != j) + 1/3*Tmax + 1/3*sum(zz[i, s] for i in N for s in S))
 
 
 # optimize
@@ -327,7 +341,7 @@ for k in K
 
     job = 1
     for j in N_c
-        if value.(x[1, j, k]) == 1.0
+        if abs(value.(x[1, j, k]) - 1.0) <= 1e-6
             job = deepcopy(j)
             push!(route[k], job)
             push!(starttime[k], value.(t[j, k]))
@@ -340,7 +354,7 @@ for k in K
     while job != 1 && iter <= num_node-1
         iter += 1
         for j in setdiff(N, job)
-            if value.(x[job, j, k]) == 1.0
+            if abs(value.(x[job, j, k]) - 1.0) <= 1e-20
                 job = deepcopy(j)
                 push!(route[k], job)
                 push!(starttime[k], value.(t[j, k]))
