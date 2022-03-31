@@ -11,7 +11,7 @@
 # load data
 # file_name = "r101"
 
-function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
+function find_opt(file_name, num_vehicle; Solver_name=Solver_name)
     # cd("DrProject\\src\\")
     # p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(file_name)
 
@@ -24,17 +24,19 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     distance_matrix = data["distance_matrix"]
     service = data["service"]
 
+    # number of node
+    n = length(d) - 1
 
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
     # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
     m = Model(Solver_name.Optimizer)
-    try set_optimizer_attribute(m, "TimeLimit", 60) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 60) end
+    try set_optimizer_attribute(m, "TimeLimit", 120) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 120) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)
     # n = 100
     # num_vehicle = 20
     K = 1:num_vehicle
-    M = n*20
+    M = n*1000
 
     # test round distance (some papers truncate digits)
     distance_matrix = floor.(distance_matrix, digits=1)
