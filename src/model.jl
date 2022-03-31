@@ -34,7 +34,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
 
     # add variables
     @variable(m, x[i=0:n, j=0:n, k=K; i!=j], Bin)
-    @variable(m, low_d[i] <= t[i=1:n, k=K] <= d[i])
+    @variable(m, low_d[i] <= t[i=1:n] <= d[i])
 
 
 
@@ -58,7 +58,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     for k in K
         # fix(t[0,k], 0, force=true)
         for j in 1:n
-            @constraint(m, distance_matrix[1, j+1] <= t[j, k]+ M*(1-x[0, j, k]))
+            @constraint(m, distance_matrix[1, j+1] <= t[j]+ M*(1-x[0, j, k]))
         end
     end
 
@@ -66,7 +66,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
         for j in 1:n
             if i != j
                 for k in K
-                    @constraint(m, t[i, k] + service[i] + distance_matrix[i+1, j+1] - M*(1-x[i, j, k]) <= t[j, k] )
+                    @constraint(m, t[i] + service[i] + distance_matrix[i+1, j+1] - M*(1-x[i, j, k]) <= t[j] )
                 end
             end
         end
