@@ -67,5 +67,6 @@ export load_all_data,
         find_opt,
         load_data_solomon,
         read_data_solomon_dict,
-        solomon100
+        solomon100,
+        save_HHCRSP
 end

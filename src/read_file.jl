@@ -807,6 +807,11 @@ function read_and_save_solomon()
 end
 
 
+function save_HHCRSP(name, num_node, num_vehi, num_serv, mind, maxd, DS, a, r, d, xx, yy, p, e, l)
+    jldsave(joinpath(@__DIR__, "..", "data", "raw_HHCRSP", "$name.jld2"); num_node, num_vehi, num_serv, mind, maxd, DS, a, r, d, xx, yy, p, e, l)
+end
+
+
 function save_data(x, name_data::String)
     save_object(joinpath(@__DIR__, "..", "data", "raw_data_solomon-jl", name_data), name_data)
 end
