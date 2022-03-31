@@ -17,13 +17,13 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
     # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
     m = Model(Solver_name.Optimizer)
-    try set_optimizer_attribute(m, "TimeLimit", 3600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 3600) end
+    try set_optimizer_attribute(m, "TimeLimit", 600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 600) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)
     # n = 100
     # num_vehicle = 20
     K = 1:num_vehicle
-    M = n*1000
+    M = n*20
 
     # test round distance (some papers truncate digits)
     distance_matrix = floor.(distance_matrix, digits=1)
@@ -35,7 +35,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
 
     # add variables
     @variable(m, x[i=0:n, j=0:n, k=K; i!=j], Bin)
-    @variable(m, low_d[i] <= t[i=1:n] <= d[i])
+    @variable(m, low_d[i] <= t[i=0:n] <= d[i])
 
 
 
@@ -64,7 +64,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     end
 
     for i in 1:n
-        for j in 1:n
+        for j in 0:n
             if i != j
                 for k in K
                     @constraint(m, t[i] + service[i] + distance_matrix[i+1, j+1] - M*(1-x[i, j, k]) <= t[j] )
