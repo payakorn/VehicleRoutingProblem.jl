@@ -1,12 +1,12 @@
 # using JuMP, GLPK, DelimitedFiles
 # include("model2.jl")
-try 
-    using JuMP, Gurobi
-    global Solver_name = "Gurobi"
-catch e;
-    using JuMP, CPLEX 
-    global Solver_name = "CPLEX"
-end
+# try 
+#     using JuMP, Gurobi
+#     global Solver_name = "Gurobi"
+# catch e;
+#     using JuMP, CPLEX 
+#     global Solver_name = "CPLEX"
+# end
 # using JuMP, Gurobi
 # load data
 # file_name = "r101"
@@ -15,7 +15,8 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     # cd("DrProject\\src\\")
     p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(file_name)
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
-    m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
+    # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
+    m = Model(Solver_name.Optimizer)
     try set_optimizer_attribute(m, "TimeLimit", 3600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 3600) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)

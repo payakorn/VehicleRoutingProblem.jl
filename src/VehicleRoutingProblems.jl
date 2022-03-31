@@ -14,7 +14,7 @@ include("compare.jl")
 include("tabulation.jl")
 include("Solution.jl")
 include("run_project.jl")
-# include("model.jl")
+include("model.jl")
 include("model2.jl")
 
 
@@ -63,5 +63,6 @@ export load_all_data,
         add_our_best_to_dataframe_25_50,
         create_csv_conclusion_all_opt,
         print_solution,
-        find_min_solution
+        find_min_solution,
+        find_opt
 end
