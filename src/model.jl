@@ -110,7 +110,7 @@ function find_opt(file_name, num_vehicle; Solver_name=Solver_name)
         return text_route, JuMP.objective_value(m), solve_time(m), relative_gap(m), Solver_name, m
     else
         text_route = "No Solution"
-        sent_email("No Solution -- Solver: $(Solver_name) $file_name-$n-$num_vehicle", "$(text_route)")
+        sent_email("No Solution -- Solver: $(Solver_name) $file_name-$num_vehicle", "$(text_route)")
         return text_route, nothing, nothing, nothing, Solver_name, m
     end
 
