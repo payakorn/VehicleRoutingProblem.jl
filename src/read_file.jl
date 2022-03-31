@@ -791,17 +791,17 @@ end
 run to create data files of solomon
 """
 function read_and_save_solomon()
-    for num_vehicle in [25, 50, 75, 100]
+    for num_node in [25, 50, 75, 100]
         for name_instance in Full_Name()
-            println("number of vehicle: $num_vehicle, instance name: $name_instance")
+            println("number of vehicle: $num_node, instance name: $name_instance")
             p, upper, lower, demand, capacity, service, distance_matrix, last_time_window = load_all_data2(name_instance)
-            p = p[1:num_vehicle, 1:num_vehicle]
-            upper = upper[1:num_vehicle]
-            lower = lower[1:num_vehicle]
-            demand = demand[1:num_vehicle]
-            service = service[1:num_vehicle]
-            distance_matrix = distance_matrix[1:(num_vehicle+1), 1:(num_vehicle+1)]
-            jldsave(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$name_instance-$num_vehicle.jld2"); p, upper, lower, demand, capacity, service, distance_matrix, last_time_window)
+            p = p[1:num_node, 1:num_node]
+            upper = upper[1:num_node+1]
+            lower = lower[1:num_node+1]
+            demand = demand[1:num_node+1]
+            service = service[1:num_node+1]
+            distance_matrix = distance_matrix[1:(num_node+1), 1:(num_node+1)]
+            jldsave(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$name_instance-$num_node.jld2"); p, upper, lower, demand, capacity, service, distance_matrix, last_time_window)
         end
     end
 end

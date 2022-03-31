@@ -64,5 +64,8 @@ export load_all_data,
         create_csv_conclusion_all_opt,
         print_solution,
         find_min_solution,
-        find_opt
+        find_opt,
+        load_data_solomon,
+        read_data_solomon_dict,
+        solomon100
 end

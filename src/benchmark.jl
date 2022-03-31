@@ -746,7 +746,7 @@ function load_all_data2(name::AbstractString; case_size=200, num=1)
 
         last_time_window = d[0]
         
-        d = [d[i] for i in 1:num_jobs]
+        d = [d[i] for i in 0:num_jobs]
         service = service_time(name)
         service = service * ones(length(d))
         xcoor = solomon["xcoor"]
@@ -754,9 +754,9 @@ function load_all_data2(name::AbstractString; case_size=200, num=1)
         p = ProcessingTimeMatrix(xcoor, ycoor, name)
         distance_matrix = DistanceMatrix(xcoor, ycoor, name)
         low_d = solomon["readytime"]
-        low_d = [low_d[i] for i in 1:num_jobs]
+        low_d = [low_d[i] for i in 0:num_jobs]
         demand = solomon["demand"]
-        demand = [demand[i] for i in 1:num_jobs]
+        demand = [demand[i] for i in 0:num_jobs]
         solomon_demand = solomon["capacity"]
 
         return p, d, low_d, demand, solomon_demand, service, distance_matrix, last_time_window

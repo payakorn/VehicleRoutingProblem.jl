@@ -13,11 +13,22 @@
 
 function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
     # cd("DrProject\\src\\")
-    p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(file_name)
+    # p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(file_name)
+
+
+    data = read_data_solomon_dict(file_name)
+    d = data["upper"]
+    low_d = data["lower"]
+    demand = data["demand"]
+    solomon_demand = data["capacity"]
+    distance_matrix = data["distance_matrix"]
+    service = data["service"]
+
+
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
     # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
     m = Model(Solver_name.Optimizer)
-    try set_optimizer_attribute(m, "TimeLimit", 600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 600) end
+    try set_optimizer_attribute(m, "TimeLimit", 60) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 60) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)
     # n = 100
@@ -35,7 +46,7 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
 
     # add variables
     @variable(m, x[i=0:n, j=0:n, k=K; i!=j], Bin)
-    @variable(m, low_d[i] <= t[i=0:n] <= d[i])
+    @variable(m, low_d[i+1] <= t[i=0:n] <= d[i+1])
 
 
 
@@ -67,19 +78,19 @@ function find_opt(file_name, n, num_vehicle; Solver_name=Solver_name)
         for j in 0:n
             if i != j
                 for k in K
-                    @constraint(m, t[i] + service[i] + distance_matrix[i+1, j+1] - M*(1-x[i, j, k]) <= t[j] )
+                    @constraint(m, t[i] + service[i+1] + distance_matrix[i+1, j+1] - M*(1-x[i, j, k]) <= t[j] )
                 end
             end
         end
     end
 
     # subtour elimination constraints
-    @variable(m, demand[i] <= u[i=1:n] <= solomon_demand)
+    @variable(m, demand[i+1] <= u[i=1:n] <= solomon_demand)
     for i in 1:n
         for j in 1:n
             for k in K
                 if i!=j
-                    @constraint(m, u[i] - u[j] + demand[j] <= solomon_demand*(1 - x[i, j, k]))
+                    @constraint(m, u[i] - u[j] + demand[j+1] <= solomon_demand*(1 - x[i, j, k]))
                 end
             end
         end
@@ -149,4 +160,3 @@ end
 #         save = true
 #     end
 # end
-
