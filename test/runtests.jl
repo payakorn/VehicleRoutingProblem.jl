@@ -1,4 +1,3 @@
-using VehicleRoutingProblems
 using Test
 
 @testset "VehicleRoutingProblems.jl" begin
