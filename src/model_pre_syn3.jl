@@ -179,7 +179,7 @@ for s in S
     end
 end
 
-6
+# 6
 for k in K
     # fix(t[0,k], 0, force=true)
     for j in N_c
