@@ -1,6 +1,6 @@
 using JuMP, Gurobi, JLD2
 
-@load "data/raw_HHCRSP/ins25-1.jld2"
+@load "data/raw_HHCRSP/ins10-2.jld2"
 
 # load parameters
 # num_node = 11
@@ -29,6 +29,7 @@ end
 
 # model
 model = Model(Gurobi.Optimizer)
+set_optimizer_attribute(model, "TimeLimit", 12000)
 # set_optimizer_attribute(model, "Presolve", 0)
 
 # variables
@@ -181,3 +182,44 @@ end
 
 # optimize
 optimize!(model)
+
+
+route = Dict()
+starttime = Dict()
+late = Dict()
+num_job = Dict()
+for k in K
+    route[k] = [1]
+    starttime[k] = [0.0]
+    late[k] = [0.0]
+    num_job[k] = [0]
+
+    job = 1
+    for j in N_c
+        if abs(value.(x[1, j, k]) - 1.0) <= 1e-6
+            job = deepcopy(j)
+            push!(route[k], job)
+            push!(starttime[k], value.(t[j, k]))
+            push!(late[k], l[j] - value.(t[j, k]))
+            push!(num_job[k], sum([value.(y[job, k, s]) for s in S]))
+            break
+        end
+    end
+    
+    iter = 1
+    while job != 1 && iter <= num_node-1
+        iter += 1
+        for j in setdiff(N, job)
+            if abs(value.(x[job, j, k]) - 1.0) <= 1e-20
+                job = deepcopy(j)
+                push!(route[k], job)
+                push!(starttime[k], value.(t[j, k]))
+                push!(late[k], l[j] - value.(t[j, k]))
+                if job != 1
+                    push!(num_job[k], sum([value.(y[job, k, s]) for s in S]))
+                end
+                break
+            end
+        end
+    end
+end

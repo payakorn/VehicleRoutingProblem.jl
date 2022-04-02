@@ -1,6 +1,6 @@
 using JuMP, Gurobi, JLD2
 
-@load "data/raw_HHCRSP/ins25-1.jld2"
+@load "data/raw_HHCRSP/ins10-6.jld2"
 
 # load parameters
 # num_node = 11
@@ -19,61 +19,12 @@ IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
 SS = Iterators.filter(x -> x[1] != x[2], Iterators.product(S, S))
 KK = Iterators.filter(x -> x[1] != x[2], Iterators.product(K, K))
 
-# mind=[ 14,24,36,38,46,10,27,16,0,51,8,36];
-# maxd=[ 28,48,72,76,92,20,54,32,0,102,16,72]; 
-# e=[0,   345,268,247,393,254,184,434,46,298,148,0]; 
-# l=[600, 465,388,367,513,374,304,554,166,418,268,1000]; 
-
-# r=[
-#     1 1 1 1 1 1;
-#     0 0 0 1 0 0;
-#     0 0 0 0 1 0;
-#     0 1 0 0 0 0;
-#     0 0 0 1 0 0;
-#     0 0 1 0 0 0;
-#     0 0 0 0 1 0;
-#     0 0 1 0 0 0;
-#     0 0 0 0 1 1;
-#     1 0 0 1 0 0;
-#     0 0 1 0 0 1;
-#     1 1 1 1 1 1;
-# ];
-
-# a = [   1 1 1 0 0 0;
-#         0 0 0 0 1 1; #0 0 0 0 1 1;
-#         0 0 0 1 1 1;
-# ];
-
-# DS = (11,10,9);
-
-# d = [
-#     0.0 38.470768 34.88553 55.946404 7.28011 23.345236 71.470276 32.526913 13.038404 26.400757 88.88757 0.0;
-#     38.470768 0.0 23.086792 21.400934 32.01562 31.827662 34.0 32.649654 45.276924 57.45433 56.859474 38.470768;
-#     34.88553 23.086792 0.0 43.829212 27.784887 15.033297 53.037724 10.630146 46.615448 42.755116 54.91812 34.88553;
-#     55.946404 21.400934 43.829212 0.0 50.606323 53.15073 17.029387 53.851646 59.22837 77.801025 59.64059 55.946404;
-#     7.28011 32.01562 27.784887 50.606323 0.0 17.492855 65.551506 26.400757 19.104973 28.42534 81.608826 7.28011;
-#     23.345236 31.827662 15.033297 53.15073 17.492855 0.0 65.0 9.219544 36.23534 27.89265 69.58448 23.345236;
-#     71.470276 34.0 53.037724 17.029387 65.551506 65.0 0.0 63.63961 75.802376 91.416626 50.92151 71.470276;
-#     32.526913 32.649654 10.630146 53.851646 26.400757 9.219544 63.63961 0.0 45.343136 34.0147 62.072536 32.526913;
-#     13.038404 45.276924 46.615448 59.22837 19.104973 36.23534 75.802376 45.343136 0.0 35.22783 99.16148 13.038404;
-#     26.400757 57.45433 42.755116 77.801025 28.42534 27.89265 91.416626 34.0147 35.22783 0.0 96.02083 26.400757;
-#     88.88757 56.859474 54.91812 59.64059 81.608826 69.58448 50.92151 62.072536 99.16148 96.02083 0.0 88.88757;
-#     0.0 38.470768 34.88553 55.946404 7.28011 23.345236 71.470276 32.526913 13.038404 26.400757 88.88757 0.;
-# ]; 
-
-# # processing time
-# p = zeros(Float64, num_vehi, num_serv)
-# for i in 2:num_node
-#     global p
-#     p = cat(p, 14.0*ones(Float64, num_vehi, num_serv), dims=3)
-# end
-
 r_syn = deepcopy(r)
 Q = []
 SYN = []
 SYN_num = ones(num_node, num_serv)
 for i in N_c
-    pos = collect(findall(x -> x == 1.0, r[i, :]))
+    pos = findall(x -> x == 1.0, r[i, :])
     if mind[i] == 0 && maxd[i] == 0
         push!(Q, (i, length(pos)-1))
         push!(SYN, (i, pos[1]))
@@ -81,9 +32,6 @@ for i in N_c
         r_syn[i, pos[2]] = 0.0
         r[i, pos[2]] = 0.0
         SYN_num[i, pos[1]] = 2.0
-        # delete syn points from SS
-        # delete!(SS, (position[1], position[2]))
-        # delete!(SS, (position[2], position[1]))
     else
         push!(Q, (i, length(pos)))
     end
@@ -92,29 +40,24 @@ end
 
 # create PRE set
 PRE = []
+PRE_node = []
 for i in N_c
     xx = findall(x -> x == 1, r[i, :])
     if length(xx) > 1
         for j in 2:length(xx)
             push!(PRE, (i, xx[j-1], xx[j], mind[i], maxd[i]))
+            push!(PRE_node, i)
         end
     end
 end
 
-# precedence set 
-# PRE = [ (2, 4, 3)
-# (3, 2, 5)
-# # (6, 1, 2)
-# # (6, 2, 3)
-# (6, 3, 5)
-# (6, 5, 4)
-# (9, 5, 6)
-# (10, 1, 4)
-# (11, 6, 3)]
+# for (i, x1, x2, min_d, max_d) in PRE
+#     Iterators.filter!(x -> (x[1], x[2]) == (x1, x2), SS)
+# end
 
 # model
 model = Model(Gurobi.Optimizer)
-# set_optimizer_attribute(model, "Presolve", 0)
+set_optimizer_attribute(model, "TimeLimit", 12000)
 
 # variables
 @variable(model, x[i=N, j=N, k=K; i!=j], Bin)
@@ -256,35 +199,34 @@ for (i, s) in SYN
 end
 # new constraints z positions ()
 
-for j in N_c
-    position = findall(x -> x != 1.0, r[j, :])
-    for i in 1:num_serv-length(position)
-        for l in position
-            fix(z[j, i, l], 0, force=true)
-        end
-    end
+# for j in N_c
+#     position = findall(x -> x != 1.0, r[j, :])
+#     for i in 1:num_serv-length(position)
+#         for l in position
+#             fix(z[j, i, l], 0, force=true)
+#         end
+#     end
     
-    for i in num_serv-length(position)+1:num_serv
-        for l in S
-            fix(z[j, i, l], 0, force=true)
-        end
-    end
+#     for i in num_serv-length(position)+1:num_serv
+#         for l in S
+#             fix(z[j, i, l], 0, force=true)
+#         end
+#     end
     
-end
+# end
 
 for (j, num_q) in Q
     for i in 1:num_q
         @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
     end
     for s in S
-        # @constraint(model, sum(z[j, i, s] for i in 1:num_q) == sum(y[j, k, s] for k in K))
         @constraint(model, sum(z[j, i, s] for i in 1:num_q) == r[j, s])
     end
 end
 
 for (s1, s2) in SS
-    for s in setdiff(S, 1)
-        for j in N_c
+    for s in setdiff(S, 1) # position from 2 to S
+        for j in setdiff(N_c, PRE_node)
             # @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
             @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K)/SYN_num[j, s2])
         end
@@ -329,10 +271,12 @@ end
 
 route = Dict()
 starttime = Dict()
+late = Dict()
 num_job = Dict()
 for k in K
     route[k] = [1]
     starttime[k] = [0.0]
+    late[k] = [0.0]
     num_job[k] = [0]
 
     job = 1
@@ -341,6 +285,7 @@ for k in K
             job = deepcopy(j)
             push!(route[k], job)
             push!(starttime[k], value.(t[j, k]))
+            push!(late[k], l[j] - value.(t[j, k]))
             push!(num_job[k], sum([value.(y[job, k, s]) for s in S]))
             break
         end
@@ -354,6 +299,7 @@ for k in K
                 job = deepcopy(j)
                 push!(route[k], job)
                 push!(starttime[k], value.(t[j, k]))
+                push!(late[k], l[j] - value.(t[j, k]))
                 if job != 1
                     push!(num_job[k], sum([value.(y[job, k, s]) for s in S]))
                 end
