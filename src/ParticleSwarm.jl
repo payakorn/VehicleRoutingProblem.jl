@@ -23,6 +23,7 @@ mutable struct Particle
     service::Array
     max_vehicle::Int64
     name::String
+    Q::Matrix
 end
 
 """

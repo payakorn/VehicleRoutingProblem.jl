@@ -2,11 +2,16 @@ using JuMP, Gurobi, JLD2
 
 @load "data/raw_HHCRSP/ins10-2.jld2"
 
+# a = ones(num_vehi, num_serv)
+# r = ones(num_node, num_serv)
+
 # load parameters
 # num_node = 11
 # num_vehi = 3
 # num_serv = 6
 M = num_node*1000
+mind = zeros(num_node)
+maxd = M*ones(num_node)
 
 # create set of indices
 N = 1:(num_node)
@@ -30,7 +35,7 @@ end
 # model
 model = Model(Gurobi.Optimizer)
 set_optimizer_attribute(model, "TimeLimit", 12000)
-# set_optimizer_attribute(model, "Presolve", 0)
+# set_optimizer_attribute(model, "Presolve", 0) # for Gurobi
 
 # variables
 @variable(model, x[i=N, j=N, k=K; i!=j], Bin)
@@ -38,7 +43,6 @@ set_optimizer_attribute(model, "TimeLimit", 12000)
 @variable(model, t[i=N, k=K] >= e[i])
 @variable(model, ts[i=N, k=K, s=S] >= 0)
 @variable(model, y[i=N_c, k=K, s=S], Bin)
-# @variable(model, z[j=N_c, s1=S, s2=S], Bin) # s1 is position of job, s2 is service
 @variable(model, zz[i=N_c, s=S] >= 0)
 @variable(model, Tmax >= 0)
 
@@ -80,8 +84,6 @@ for s in S
         else
             @constraint(model, sum(y[j, k, s] for k in K) == 0)
         end
-
-        # @constraint(model, sum(y[j, k, s] for k in K) == r[j, s])
     end
 end
 
@@ -142,7 +144,6 @@ for i in N_c
     end
 end
 
-    # @constraint(model, sum(ts[i, k, s1] for k in K) + sum(p[k, s1, i]*y[i, k, s1] for k in K) <= sum(ts[i, k, s2] for k in K) + M*(2-sum(y[i, k, s1] for k in K)-sum(y[i, k, s2] for k in K)))
 
 for i in N_c
     for k in K
