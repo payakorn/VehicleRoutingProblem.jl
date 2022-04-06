@@ -618,8 +618,11 @@ function insert_job(particle::Particle)
         rand_new = possible_job[randcycle(length(possible_job))]
         append!(rand_job, rand_new)
     end
+    unique!(rand_job)
 
-    while !isempty(rand_job)
+    m = length(rand_job)
+    iter = 1
+    while !isempty(rand_job) && iter <= m
         i = popfirst!(rand_job)
         len_route = length(particle.route)
         go = true
@@ -633,7 +636,9 @@ function insert_job(particle::Particle)
             end
             j += 1
         end
+        iter += 1
     end
+    @show particle.route = fix_missing_vehicle(particle.route)
     return particle
 end
 
@@ -658,9 +663,14 @@ function generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, s
     # end
     sch = zeros(Int64, max_vehicle-1)
     particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
-    while length(particle.route) != length(particle.l) + particle.max_vehicle - 1
-        particle = insert_job(particle)
-    end
+    particle = insert_job(particle)
+    # while length(particle.route) != length(particle.l) + particle.max_vehicle - 1
+    #     particle.max_vehicle += 1
+    #     # global Q = vcat(Q, ones(length(particle.l)))
+    #     sch = zeros(Int64, particle.max_vehicle-1)
+    #     particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+    #     particle = insert_job(particle)
+    # end
     
     # while !check_feasible(particle)
     #     sch = zeros(Int64, max_vehicle-1)

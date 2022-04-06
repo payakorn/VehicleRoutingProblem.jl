@@ -216,7 +216,18 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
     # else
     #     max_vehicle = 15
     # end
-    max_vehicle = size(Q, 1)
+    num_v = size(Q, 1)
+    max_v = size(Q, 2)
+    # max_vehicle = size(Q, 2)
+    max_vehicle = size(Q, 2)
+    
+    # add new row for Q
+    # QQ = [Q;ones(size(Q, 2) - max_v, size(Q, 2))] 
+    QQ = ones(max_v, max_v)
+    QQ[1:num_v, :] = Q
+    Q = deepcopy(QQ)
+    println("size Q: $(size(Q))")
+
 
     
     location = location_particle_swarm(name, objective_function=objective_function)
@@ -368,7 +379,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
         #     mean_obj = mean(best_obj_vec)
         # end
 
-        if out == 10
+        if out == 50
             terminate = true
         end
     
