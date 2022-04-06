@@ -70,5 +70,6 @@ export load_all_data,
         solomon100,
         save_HHCRSP,
         check_feasible,
-        insert_job
+        insert_job,
+        sent_email
 end
