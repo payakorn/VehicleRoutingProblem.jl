@@ -7,7 +7,7 @@
 #     using JuMP, CPLEX 
 #     global Solver_name = "CPLEX"
 # end
-using Random, JuMP, CPLEX, SMTPClient, Printf
+using Random, JuMP, Gurobi, SMTPClient, Printf
 
 num_vehicle = 5
 num_node = 50
