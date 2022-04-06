@@ -1,3 +1,0 @@
-03-06 at 19:30:40, name: c208-25-5, Alg: 16, particle: 15, 
-03-24 at 14:06:47, name: c208-25-15, Alg: 16, particle: 15, 
-03-29 at 17:52:27, name: c208-25-100, Alg: 16, particle: 15, 

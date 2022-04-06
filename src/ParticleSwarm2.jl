@@ -1,12 +1,12 @@
 """
     generate_one_initial(name, num; seed=1, max_vehicle=25, objective_function=total_distance)
 """
-function generate_one_initial_particle(name, num; max_vehicle=25, objective_function=total_distance)
+function generate_one_initial_particle(name, num; max_vehicle=25, objective_function=total_distance, Q=Q)
     all_name = glob("$name*.txt", location_particle_swarm_initial(name))
     a = length(all_name)
     for i in (a+1):(a+num)
         io = open("$(location_particle_swarm_initial(name, objective_function=objective_function))/$name-$i.txt", "w")
-        particle = generate_particles(name, max_vehicle=max_vehicle)
+        particle = generate_particles(name, max_vehicle=max_vehicle, Q=Q)
         vehicle = find_vehicle(particle)
         for v in 1:length(vehicle)
             for j in vehicle[v]
@@ -26,7 +26,7 @@ name = name of instance
 
 set = the number of set (devide the initial particle into multiple sets)
 """
-function generate_initial_particles(name, set; num_particle=15, max_vehicle=25, objective_function=total_distance)
+function generate_initial_particles(name, set; num_particle=15, max_vehicle=25, objective_function=total_distance, Q=Q)
     # defind the directory
     location = joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "$objective_function", "name", "initial")
     location = location_particle_swarm_initial(name, objective_function=objective_function)
@@ -45,7 +45,7 @@ function generate_initial_particles(name, set; num_particle=15, max_vehicle=25, 
     end
 
     if a < last_number
-        generate_one_initial_particle(name, last_number-a, max_vehicle=max_vehicle, objective_function=objective_function)
+        generate_one_initial_particle(name, last_number-a, max_vehicle=max_vehicle, objective_function=objective_function, Q=Q)
     end
 
     println("start: $start_number")
@@ -57,18 +57,18 @@ end
 """
     generate_one_particle(name::String; max_vehicle=25, best_route=[])
 """
-function generate_particles(name::String; max_vehicle=25, best_route=[])
+function generate_particles(name::String; max_vehicle=25, best_route=[], Q=Q)
     p, d, low_d, demand, max_capacity, distance_matrix, service = read_data_solomon(name)
-    return generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name, best_route=best_route)
+    return generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name, best_route=best_route, Q=Q)
 end
 
 
-function load_particle_from_file(file_location::String, instance_name::String)
+function load_particle_from_file(file_location::String, instance_name::String; Q=Q::Matrix)
     p, d, low_d, demand, max_capacity, distance_matrix, service = read_data_solomon(instance_name)
     route = read_route(file_location) 
     max_vehicle = total_route(route) 
     route = route[2:end-1] # in particle swarm there is no zero at index 1 and last index
-    return Particle(route, p, low_d, d, demand, max_capacity, distance_matrix, service, max_vehicle, instance_name)
+    return Particle(route, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, instance_name, Q)
 end
 
 
@@ -208,14 +208,15 @@ end
 """
     run particle swarm function
 """
-function particle_swarm_fix2(name::String, objective_function::Function; num_particle=15, max_iter=100, localsearch=false, cut_car=false, generate=false, num_save=nothing, random_set=false, seed=1)
+function particle_swarm_fix2(name::String, objective_function::Function; num_particle=15, max_iter=100, localsearch=false, cut_car=false, generate=false, num_save=nothing, random_set=false, seed=1, Q=Q)
     particles = Dict()
     best_obj_vec = []
-    if name[1] == 'r'
-        max_vehicle = 25
-    else
-        max_vehicle = 15
-    end
+    # if name[1] == 'r'
+    #     max_vehicle = 25
+    # else
+    #     max_vehicle = 15
+    # end
+    max_vehicle = size(Q, 1)
 
     
     location = location_particle_swarm(name, objective_function=objective_function)
@@ -232,10 +233,10 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
     objective_value[1] = Dict()
 
     # initial
-    start_num, end_num = generate_initial_particles(name, 0, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function)
+    start_num, end_num = generate_initial_particles(name, 0, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function, Q=Q)
     for i in 1:num_particle
         # particles[i] = generate_particle(name, max_vehicle=max_vehicle)
-        particles[i] = load_particle_from_file("$(location_particle_swarm_initial(name))/$name-$i.txt", name)
+        particles[i] = load_particle_from_file("$(location_particle_swarm_initial(name))/$name-$i.txt", name, Q=Q)
         append!(best_obj_vec, objective_function(particles[i]))
 
         objective_value[1][i] = Dict()
@@ -328,44 +329,44 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
             out = 1
         end
         
-        # generate new particles
-        if random == 5 && generate
-            random_count += 1
-            random = 1
-            iter += 1
+        # # generate new particles
+        # if random == 5 && generate
+        #     random_count += 1
+        #     random = 1
+        #     iter += 1
 
-            start_num, end_num = generate_initial_particles(name, random_count, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function)
+        #     start_num, end_num = generate_initial_particles(name, random_count, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function, Q=Q)
 
-            # objective value
-            objective_value[iter] = Dict()
+        #     # objective value
+        #     objective_value[iter] = Dict()
 
-            sort_obj = sortperm(best_obj_vec, rev=true)
-            if random_set
-                for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
-                    particles[j] = load_particle_from_file("$(location_particle_swarm_initial(name, objective_function=objective_function))/$name-$j.txt", name)
-                    best_obj_vec[j] = objective_function(particles[j])
-                end
-            else
-                for j in sort_obj[1:end-1]
-                    particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route)
-                    best_obj_vec[j] = objective_function(particles[j])
-                end
-            end
+        #     sort_obj = sortperm(best_obj_vec, rev=true)
+        #     if random_set
+        #         for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
+        #             particles[j] = load_particle_from_file("$(location_particle_swarm_initial(name, objective_function=objective_function))/$name-$j.txt", name, Q=Q)
+        #             best_obj_vec[j] = objective_function(particles[j])
+        #         end
+        #     else
+        #         for j in sort_obj[1:end-1]
+        #             particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route)
+        #             best_obj_vec[j] = objective_function(particles[j])
+        #         end
+        #     end
 
-            # collect objective value
-            for i in 1:num_particle
-                objective_value[iter][i] = Dict()
-                objective_value[iter][i]["obj"] = best_obj_vec[i]
-                objective_value[iter][i]["method"] = "random"
-            end
+        #     # collect objective value
+        #     for i in 1:num_particle
+        #         objective_value[iter][i] = Dict()
+        #         objective_value[iter][i]["obj"] = best_obj_vec[i]
+        #         objective_value[iter][i]["method"] = "random"
+        #     end
 
-            # find new best solution
-            best_index = argmin(best_obj_vec)
-            append!(best_index_save, best_index)
-            append!(best_obj_save, best_objective_value)
-            best_objective_value = best_obj_vec[best_index]
-            mean_obj = mean(best_obj_vec)
-        end
+        #     # find new best solution
+        #     best_index = argmin(best_obj_vec)
+        #     append!(best_index_save, best_index)
+        #     append!(best_obj_save, best_objective_value)
+        #     best_objective_value = best_obj_vec[best_index]
+        #     mean_obj = mean(best_obj_vec)
+        # end
 
         if out == 10
             terminate = true
@@ -432,14 +433,14 @@ end
 
 
 
-function run_particle2(name::String, objective_function::Function; max_iter=200, max_iter_while=1, localsearch=false, cut_car=false, generate=false, num_particle=15, random_set=false, seed=1)
+function run_particle2(name::String, objective_function::Function; max_iter=200, max_iter_while=1, localsearch=false, cut_car=false, generate=false, num_particle=15, random_set=false, seed=1, Q=Q)
     iter = 1
     location = location_particle_swarm(name, objective_function=objective_function)
     while iter <= max_iter_while
         # length files
         num_files = length(glob("$name*.txt", "$location")) + 1
         
-        best_particle, objective_value = particle_swarm_fix2(name, objective_function, max_iter=max_iter, num_particle=num_particle, localsearch=localsearch, cut_car=cut_car, generate=generate, num_save=num_files, random_set=random_set, seed=seed)
+        best_particle, objective_value = particle_swarm_fix2(name, objective_function, max_iter=max_iter, num_particle=num_particle, localsearch=localsearch, cut_car=cut_car, generate=generate, num_save=num_files, random_set=random_set, seed=seed, Q=Q)
         # new_obj = objective_function(best_particle)
         
         # # write best particle
@@ -454,7 +455,7 @@ function run_particle2(name::String, objective_function::Function; max_iter=200,
     end
 end
 
-function run_case2(name_case::Array; num_particle=15, while_iter=1, seed=1, objective_function=total_distance::Function)
+function run_case2(name_case::Array; num_particle=15, while_iter=1, seed=1, objective_function=total_distance::Function, Q=nothing)
     for name in name_case
         # location
         # # create subfolders
@@ -467,7 +468,7 @@ function run_case2(name_case::Array; num_particle=15, while_iter=1, seed=1, obje
         
         # run 
         if num_run > 0
-            run_particle2(name, objective_function; max_iter=200, max_iter_while=num_run, localsearch=true, cut_car=true, generate=true, num_particle=15, random_set=true, seed=1)
+            run_particle2(name, objective_function; max_iter=200, max_iter_while=num_run, localsearch=true, cut_car=true, generate=true, num_particle=15, random_set=true, seed=1, Q=Q)
 
             # record 
             io = open("$(location)/run.txt", "a")

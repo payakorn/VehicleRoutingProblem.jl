@@ -7,7 +7,9 @@
 #     using JuMP, CPLEX 
 #     global Solver_name = "CPLEX"
 # end
-num_vehicle = 3
+using Random, JuMP, Gurobi, SMTPClient, Printf
+
+num_vehicle = 8
 num_node = 25
 
 for k in 1:num_node

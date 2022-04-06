@@ -14,7 +14,7 @@ include("compare.jl")
 include("tabulation.jl")
 include("Solution.jl")
 include("run_project.jl")
-include("model.jl")
+# include("model.jl")
 include("model2.jl")
 
 
@@ -68,5 +68,7 @@ export load_all_data,
         load_data_solomon,
         read_data_solomon_dict,
         solomon100,
-        save_HHCRSP
+        save_HHCRSP,
+        check_feasible,
+        insert_job
 end

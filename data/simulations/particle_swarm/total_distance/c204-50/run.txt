@@ -1,4 +1,0 @@
-03-06 at 08:42:06, name: c204-50-5, Alg: 16, particle: 15, 
-03-24 at 14:20:00, name: c204-50-15, Alg: 16, particle: 15, 
-03-25 at 01:34:03, name: c204-50-30, Alg: 16, particle: 15, 
-03-25 at 11:23:51, name: c204-50-40, Alg: 16, particle: 15, 

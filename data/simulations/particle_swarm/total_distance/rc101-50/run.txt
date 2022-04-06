@@ -1,4 +1,0 @@
-03-06 at 09:48:01, name: rc101-50-5, Alg: 16, particle: 15, 
-03-24 at 14:35:50, name: rc101-50-15, Alg: 16, particle: 15, 
-03-25 at 01:27:52, name: rc101-50-30, Alg: 16, particle: 15, 
-03-25 at 11:12:33, name: rc101-50-40, Alg: 16, particle: 15, 

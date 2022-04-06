@@ -1,4 +1,0 @@
-03-06 at 05:12:11, name: r210-50-5, Alg: 16, particle: 15, 
-03-24 at 17:05:15, name: r210-50-15, Alg: 16, particle: 15, 
-03-25 at 04:58:05, name: r210-50-30, Alg: 16, particle: 15, 
-03-25 at 13:28:04, name: r210-50-40, Alg: 16, particle: 15, 

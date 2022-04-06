@@ -139,11 +139,29 @@ function total_completion_time(particle::Particle)
 end
 
 
+function check_compat(particle::Particle)
+    vehi = 1
+    for i in particle.route
+        if i == 0
+            vehi += 1
+        elseif try particle.Q[vehi, i] == 0.0 catch e; return false end
+            return false
+        end
+    end
+    return true
+end
+
+
 function check_feasible(particle::Particle)
     vehicle = find_vehicle(particle)
     number_of_vehicle = length(vehicle)
 
     if number_of_vehicle > particle.max_vehicle
+        return false
+    end
+
+    # check compatibility
+    if !check_compat(particle)
         return false
     end
 
@@ -352,7 +370,12 @@ function remove_best_route(particle::Particle, best_route::Array)
         input_particle.route = fix_missing_vehicle(input_particle.route)
     end
 
-    return input_particle
+    if check_feasible(input_particle)
+        return input_particle
+    else
+        return particle
+    end
+
 end
 
 
@@ -365,8 +388,13 @@ function path_relinking(particle::Particle, best_route::Array, objective_functio
     # add the new route
     append!(new_particle.route, 0)
     append!(new_particle.route, best_route)
+    new_particle.route = fix_missing_vehicle(new_particle.route)
     # println("path relinking best route = $(best_route)")
-    return new_particle
+    if check_feasible(new_particle)
+        return new_particle
+    else
+        return particle
+    end
 end
 
 
@@ -519,7 +547,7 @@ end
 function fix_infeasible(particle::Particle; best_route=[])
 
     # remove best route
-    particle = remove_best_route(particle, best_route)
+    # particle = remove_best_route(particle, best_route)
 
     vehicle = find_vehicle(particle)
     number_of_vehicle = length(vehicle)
@@ -546,8 +574,8 @@ function fix_infeasible(particle::Particle; best_route=[])
     particle.route = sch
 
     # add best route
-    append!(particle.route, 0)
-    append!(particle.route, best_route)
+    # append!(particle.route, 0)
+    # append!(particle.route, best_route)
 
     return particle
 end
@@ -580,29 +608,72 @@ function check_particle(list::Array, number_of_customer::Int64)
 end
 
 
-function generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name; best_route=[])
-    println("random particle #$(length(d))")
-    num_job = length(d)
-    sch = random_particle(num_job, max_vehicle)
-    particle = Particle(sch, p, low_d, d, demand, max_capacity, distance_matrix, service, max_vehicle, name)
-    particle = remove_best_route(particle, best_route)
-    
-    iter = 1
-    while check_feasible(particle) == false 
-        particle = fix_infeasible(particle)
-        if check_feasible(particle) == false
-            sch = random_particle(num_job, max_vehicle)
-            particle = Particle(sch, p, low_d, d, demand, max_capacity, distance_matrix, service, max_vehicle, name)
-            particle = remove_best_route(particle, best_route)
+function insert_job(particle::Particle)
+    rand_job = collect(randcycle(length(particle.l)))
+    # rand_job = collect(1:length(particle.l))[sortperm(particle.l)]
+    possible_job = findall(x->x==1.0, particle.Q[1, :])
+    rand_job = possible_job[randcycle(length(possible_job))]
+    for k in 2:particle.max_vehicle
+        possible_job = findall(x->x==1.0, particle.Q[k, :])
+        rand_new = possible_job[randcycle(length(possible_job))]
+        append!(rand_job, rand_new)
+    end
+
+    while !isempty(rand_job)
+        i = popfirst!(rand_job)
+        len_route = length(particle.route)
+        go = true
+        j = 1
+        while go && j <= len_route + 1
+            new_particle = deepcopy(particle)
+            new_particle.route = vcat(new_particle.route[1:j-1], i, new_particle.route[j:end])
+            if check_feasible(new_particle)
+                particle = deepcopy(new_particle)
+                go = false
+            end
+            j += 1
         end
-
-        iter += 1
     end
+    return particle
+end
 
-    if isempty(best_route) == false
-        append!(particle.route, 0)
-        append!(particle.route, best_route)
+
+function generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name; best_route=[], Q=Q)
+    println("random particle #$(length(d)-1)")
+    num_job = length(d)-1
+    # sch = random_particle(num_job, max_vehicle)
+    # particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+    # # particle = remove_best_route(particle, best_route)
+    
+    # iter = 1
+    # while check_feasible(particle) == false 
+    #     particle = fix_infeasible(particle)
+    #     if check_feasible(particle) == false
+    #         sch = random_particle(num_job, max_vehicle)
+    #         particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+    #         # particle = remove_best_route(particle, best_route)
+    #     end
+
+    #     iter += 1
+    # end
+    sch = zeros(Int64, max_vehicle-1)
+    particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+    while length(particle.route) != length(particle.l) + particle.max_vehicle - 1
+        particle = insert_job(particle)
     end
+    
+    # while !check_feasible(particle)
+    #     sch = zeros(Int64, max_vehicle-1)
+    #     particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+    #     particle = insert_job(particle)
+    # end
+
+
+
+    # if isempty(best_route) == false
+    #     append!(particle.route, 0)
+    #     append!(particle.route, best_route)
+    # end
     return particle
     
 end
