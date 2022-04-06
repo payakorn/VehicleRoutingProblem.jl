@@ -7,7 +7,7 @@
 #     using JuMP, CPLEX 
 #     global Solver_name = "CPLEX"
 # end
-using Random, JuMP, Gurobi, SMTPClient, Printf
+using Random, JuMP, CPLEX, SMTPClient, Printf
 
 num_vehicle = 8
 num_node = 25
@@ -139,7 +139,7 @@ function find_opt(file_name, num_vehicle; Solver_name=Solver_name, Q=Q)
 
     optimize!(m)
 
-    if has_values(m)
+    if JuMP.has_values(m)
         text_route = show_opt_solution(x, n, num_vehicle, file_name)
 
         tx = "($(solution_summary(m))\n\n*---------*\n$(text_route)"
