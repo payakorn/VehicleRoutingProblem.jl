@@ -10,7 +10,7 @@
 using Random, JuMP, CPLEX, SMTPClient, Printf
 
 num_vehicle = 5
-num_node = 50
+num_node = 25
 
 for k in 1:num_node
     num_compat = rand(4:num_vehicle)
