@@ -72,5 +72,7 @@ export load_all_data,
         check_feasible,
         insert_job,
         show_opt_solution,
-        sent_email
+        sent_email,
+        print_solution,
+        solution_to_particle
 end

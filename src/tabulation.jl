@@ -80,6 +80,20 @@ function add_our_best_to_dataframe()
 end
 
 
+function print_all_solution()
+    for num_cus in [25]
+        for nname in Full_Name()
+            location = joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "total_distance", "$nname-$num_cus")
+            all_files = glob("$nname-$num_cus*.txt", location)
+            for ins in all_files
+                sol = read_solution(ins, "$nname-$num_cus")
+                println("$nname-$num_cus: $(total_route(sol)): $(total_distance(sol, floor_digit=true))")
+            end
+        end
+    end
+end
+
+
 function add_our_best_to_dataframe_25_50()
     for num_cus in [25, 50]
         for name_type in ["r1", "r2", "c1", "c2", "rc1", "rc2"]

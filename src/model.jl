@@ -84,7 +84,7 @@ function find_opt(file_name, num_vehicle; Solver_name=Solver_name, Q=Q)
     # conpatibility constraint
     for j in 1:n
         for k in K
-            @constraint(m, sum(x[i, j, k] for i in 1:n if i!=j) <= Q[k, j])
+            @constraint(m, sum(x[i, j, k] for i in 0:n if i!=j) <= Q[k, j])
         end
     end
 
