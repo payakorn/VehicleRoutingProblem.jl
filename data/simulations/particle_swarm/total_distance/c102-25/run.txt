@@ -1,3 +1,0 @@
-04-06 at 12:53:28, name: c102-25-1, Alg: 16, particle: 15, 
-04-06 at 12:54:17, name: c102-25-2, Alg: 16, particle: 15, 
-04-06 at 12:58:20, name: c102-25-10, Alg: 16, particle: 15, 
