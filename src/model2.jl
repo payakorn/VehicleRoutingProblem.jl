@@ -47,7 +47,7 @@ function show_opt_solution(x, n, num_vehicle, name)
 
         job = 0
         for j in 1:n
-            if abs(value.(x[0, j, k]) - 1.0) <= 1e-6
+            if abs(value.(x[0, j, k]) - 1.0) <= 1e-4
                 job = deepcopy(j)
                 push!(route[k], job)
                 break
@@ -58,7 +58,7 @@ function show_opt_solution(x, n, num_vehicle, name)
         while job != 0 && iter <= n+1
             iter += 1
             for j in setdiff(0:n, job)
-                if abs(value.(x[job, j, k]) - 1.0) <= 1e-20
+                if abs(value.(x[job, j, k]) - 1.0) <= 1e-4
                     job = deepcopy(j)
                     push!(route[k], job)
                     break
