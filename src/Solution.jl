@@ -164,3 +164,8 @@ function find_min_solution(name)
     min_dis = minimum(total_distance.(solution, floor_digit=true))
     println("min distance = $min_dis")
 end
+
+
+function solution_to_particle(solution::Solution, Q::Matrix)
+    particle = Particle(solution.route, solution.processing_time, solution.lower[2:end], solution.upper[2:end], solution.demand[2:end], solution.max_capacity, solution.distance_matrix, solution.service_time[2:end], total_route(solution), solution.name, Q)
+end

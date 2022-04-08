@@ -65,9 +65,9 @@ end
 
 function load_particle_from_file(file_location::String, instance_name::String; Q=Q::Matrix)
     p, d, low_d, demand, max_capacity, distance_matrix, service = read_data_solomon(instance_name)
-    route = read_route(file_location) 
-    max_vehicle = total_route(route) 
-    route = route[2:end-1] # in particle swarm there is no zero at index 1 and last index
+    route = read_route(file_location)
+    max_vehicle = total_route(route)
+    route = fix_missing_vehicle(route[2:end-1]) # in particle swarm there is no zero at index 1 and last index
     return Particle(route, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, instance_name, Q)
 end
 
@@ -127,41 +127,12 @@ function move2(particle::Particle, objective_function::Function)
         
         if objective_function(swap_particle) < objective_function(particle) && check_feasible(swap_particle)
 
-            swap_particle.route = fix_missing_vehicle(swap_particle.route)
+            # swap_particle.route = fix_missing_vehicle(swap_particle.route)
 
             # set to best vehicle
             particle = deepcopy(swap_particle)
         end
     end
-    # last_objective = objective_function(particle)
-
-    # # second round
-    # original_obj = objective_function(particle)
-    # for (iter, (position2, position1)) in enumerate(list)
-    #     swap_particle = deepcopy(particle)
-    #     first_obj = objective_function(swap_particle)
-        
-    #     # position1 = findfirst(x -> x == i, swap_particle.route)
-    #     # position2 = findfirst(x -> x == j, swap_particle.route)
-        
-    #     # # move
-    #     if position1 < position2
-    #         job = splice!(swap_particle.route, position2)
-    #         insert!(swap_particle.route, position1, job)
-    #     else
-    #         job = splice!(swap_particle.route, position2)
-    #         insert!(swap_particle.route, position1-1, job)
-    #     end
-        
-    #     if objective_function(swap_particle) < objective_function(particle) && check_feasible(swap_particle)
-
-    #         swap_particle.route = fix_missing_vehicle(swap_particle.route)
-
-    #         # set to best vehicle
-    #         particle = deepcopy(swap_particle)
-    #     end
-    # end
-    # last_objective = objective_function(particle)
     return  particle
 end
 
@@ -186,7 +157,7 @@ function two_opt2(particle::Particle, objective_function::Function)
         right_sch = new_test_particle.route[list[2]:end]
         middle_sch = new_test_particle.route[list[1]+1:list[2]-1]
         new_test_particle.route = vcat(right_sch, middle_sch, left_sch)
-        if (check_feasible(new_test_particle) == true) && (objective_function(new_test_particle) < objective_function(test_particle))
+        if check_feasible(new_test_particle) && (objective_function(new_test_particle) < objective_function(test_particle))
             # println("2-opt $(@sprintf("%.2f", original_obj)) => $(@sprintf("%.2f", objective_function(new_test_particle))) check: $(check_particle(new_test_particle, 100))")
             return new_test_particle
         end
@@ -202,6 +173,7 @@ function local_search2(particle::Particle, objective_function::Function; best_ro
     particle = swap2(particle, objective_function)
     particle.route = fix_missing_vehicle(particle.route)
     particle = move2(particle, objective_function)
+    particle.route = fix_missing_vehicle(particle.route)
     return particle
 end
 
@@ -293,7 +265,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
         best_route = best_vehicle[random_vehicle]
 
         for i in 1:num_particle
-            particles[i].max_vehicle = length(findall(x -> x == 0, particles[i].route)) + 1
+            # particles[i].max_vehicle = length(findall(x -> x == 0, particles[i].route)) + 1
 
 
             if i != best_index
@@ -303,7 +275,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
                 # local search
                 # particles[i].route = fix_missing_vehicle(particles[i].route)
                 # println("route: $(particles[i].route)")
-                particles[i] = local_search_function(particles[i], objective_function, best_route=best_route)
+                particles[i] = local_search_function(particles[i], objective_function)
                 append!(best_obj_vec, objective_function(particles[i]))
 
                 # collect objective value
@@ -312,7 +284,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
                 objective_value[iter][i]["method"] = "path, local"
             else
                 # local search
-                particles[i] = local_search_function(particles[i], objective_function, best_route=[])
+                particles[i] = local_search_function(particles[i], objective_function)
                 append!(best_obj_vec, objective_function(particles[i]))
 
                 # collect objective value
@@ -340,101 +312,17 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
             out = 1
         end
         
-        # # generate new particles
-        # if random == 5 && generate
-        #     random_count += 1
-        #     random = 1
-        #     iter += 1
-
-        #     start_num, end_num = generate_initial_particles(name, random_count, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function, Q=Q)
-
-        #     # objective value
-        #     objective_value[iter] = Dict()
-
-        #     sort_obj = sortperm(best_obj_vec, rev=true)
-        #     if random_set
-        #         for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
-        #             particles[j] = load_particle_from_file("$(location_particle_swarm_initial(name, objective_function=objective_function))/$name-$j.txt", name, Q=Q)
-        #             best_obj_vec[j] = objective_function(particles[j])
-        #         end
-        #     else
-        #         for j in sort_obj[1:end-1]
-        #             particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route)
-        #             best_obj_vec[j] = objective_function(particles[j])
-        #         end
-        #     end
-
-        #     # collect objective value
-        #     for i in 1:num_particle
-        #         objective_value[iter][i] = Dict()
-        #         objective_value[iter][i]["obj"] = best_obj_vec[i]
-        #         objective_value[iter][i]["method"] = "random"
-        #     end
-
-        #     # find new best solution
-        #     best_index = argmin(best_obj_vec)
-        #     append!(best_index_save, best_index)
-        #     append!(best_obj_save, best_objective_value)
-        #     best_objective_value = best_obj_vec[best_index]
-        #     mean_obj = mean(best_obj_vec)
-        # end
 
         if out == 10
             terminate = true
         end
     
-        # if remove == 5 && cut_car
-        #     remove = 1
-        #     iter += 1
-        #     # best_obj_vec = []
-
-        #     # objective value
-        #     objective_value[iter] = Dict()
-
-        #     for i in 1:num_particle
-        #         if i != best_index
-        #             random_number = rand(1:(length(findall(x -> x == 0, particles[i].route))+1))
-        #             obj_before = best_obj_vec[i]
-        #             particles[i] = remove_vehicle_and_apply_heuristic(particles[i], random_number)
-        #             best_obj_vec[i] =  objective_function(particles[i])
-        #             println("particle $i random vehicle: $random_number, $obj_before => $(best_obj_vec[i])")
-        #         else
-        #             best_obj_vec[i] = objective_function(particles[i])
-        #         end
-                    
-        #         # collect objective value
-        #         objective_value[iter][i] = Dict()
-        #         objective_value[iter][i]["obj"] = best_obj_vec[end]
-        #         objective_value[iter][i]["method"] = "remove"
-        #     end
-
-        #     # find new best solution
-        #     best_index = argmin(best_obj_vec)
-        #     append!(best_index_save, best_index)
-        #     best_objective_value = best_obj_vec[best_index]
-        #     append!(best_obj_save, best_objective_value)
-        #     mean_obj = mean(best_obj_vec)
-        # end
-
         # save
         im = open("$location/save-$(name)-$(num_save).csv", "a")
         write(im, "Date: $(Dates.format(now(), "mm-dd at HH:MM:SS")), particle: $num_particle, iter: $iter, fix: false, local: $(localsearch), cut car: $cut_car, new generate: $generate, best obj: $(@sprintf("%.2f", best_objective_value))($(find_number_of_vehicle(particles[best_index]))), mean: $(@sprintf("%.2f", mean_obj)), max: $(@sprintf("%.2f", maximum(best_obj_vec)))\n")
         close(im)
 
         println("\n$name iter: $iter, feasible: $(check_feasible(particles[best_index])), best objective value: $(@sprintf("%.2f", best_objective_value))($(find_number_of_vehicle(particles[best_index]))) mean: $(@sprintf("%.2f", mean_obj)), max: $(@sprintf("%.2f", maximum(best_obj_vec)))")
-        # println("\n$name, #particle: $num_particle, iter: $iter, fix: true, local: $(localsearch), cut car: $cut_car, new generate: $generate, Khoo: $(khoo), best obj: $(@sprintf("%.2f", best_objective_value))($(find_number_of_vehicle(particles[best_index]))), mean: $(@sprintf("%.2f", mean_obj)), max: $(@sprintf("%.2f", maximum(best_obj_vec)))")
-        # println("Dates: $(Dates.format(now(), "mm-dd at HH:MM:SS"))")
-
-        # write save best particle
-        # ig = open("$location/save-$(name)-$(num_save).txt", "w")
-        # vehicle = find_vehicle(particles[best_index])
-        # for i in 1:length(vehicle)
-        #     for j in vehicle[i]
-        #         write(ig, "$j ")
-        #     end
-        #     write(ig, "\n")
-        # end
-        # close(ig)
         end
         iter += 1
     end
@@ -444,7 +332,7 @@ end
 
 
 
-function run_particle2(name::String, objective_function::Function; max_iter=200, max_iter_while=1, localsearch=false, cut_car=false, generate=false, num_particle=15, random_set=false, seed=1, Q=Q)
+function run_particle2(name::String, objective_function::Function; max_iter=200, max_iter_while=1, localsearch=true, cut_car=false, generate=false, num_particle=15, random_set=false, seed=1, Q=Q)
     iter = 1
     location = location_particle_swarm(name, objective_function=objective_function)
     while iter <= max_iter_while

@@ -72,5 +72,17 @@ export load_all_data,
         check_feasible,
         insert_job,
         show_opt_solution,
-        sent_email
+        sent_email,
+        print_solution,
+        solution_to_particle,
+        find_vehicle,
+        check_compat,
+        job_late,
+        move2,
+        swap2,
+        two_opt2,
+        local_search2,
+        location_particle_swarm_initial,
+        fix_missing_vehicle,
+        check_route_particle
 end

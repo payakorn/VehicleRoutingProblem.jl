@@ -68,12 +68,13 @@ end
 
 
 function find_vehicle(particle::Particle)
-    seperate_index = findall(x -> x == 0, particle.route)
+    route = fix_missing_vehicle(particle.route)
+    seperate_index = findall(x -> x == 0, route)
     num_vehicle = length(seperate_index) + 1
     vehicle = Dict()
-    run_index = vcat(0, seperate_index, length(particle.route) + 1)
+    run_index = vcat(0, seperate_index, length(route) + 1)
     for i in 1:num_vehicle
-        vehicle[i] = particle.route[(run_index[i] + 1):(run_index[i + 1] - 1)]
+        vehicle[i] = route[(run_index[i] + 1):(run_index[i + 1] - 1)]
     end
     return vehicle
 end
@@ -140,11 +141,40 @@ end
 
 
 function check_compat(particle::Particle)
+    route = fix_missing_vehicle(particle.route)
     vehi = 1
-    for i in particle.route
+    for i in route
         if i == 0
             vehi += 1
         elseif try particle.Q[vehi, i] == 0.0 catch e; return false end
+            return false
+        end
+    end
+    return true
+end
+
+
+function check_route_particle(particle::Particle)
+    vehicle = find_vehicle(particle)
+    for v in 1:length(vehicle)
+
+        route = vehicle[v]
+        starttime = [particle.distance_matrix[1, route[1]+1]]
+        completiontime = [starttime[1] + particle.service[route[1]]]
+        total_demand = particle.demand[route[1]]
+
+        for i in 2:length(route)
+            if (completiontime[i-1] + particle.distance_matrix[route[i-1]+1, route[i]+1]) < particle.l[route[i]]
+                push!(starttime, particle.l[route[i]])
+            elseif (completiontime[i-1] + particle.distance_matrix[route[i-1]+1, route[i]+1]) > particle.u[route[i]]
+                return false
+            else
+                push!(starttime, completiontime[i-1] + particle.distance_matrix[route[i-1]+1, route[i]+1])
+            end
+            push!(completiontime, starttime[i] + particle.service[route[i]])
+            total_demand += particle.demand[route[i]]
+        end
+        if total_demand > particle.max_capacity
             return false
         end
     end
@@ -185,6 +215,11 @@ function check_feasible(particle::Particle)
             return false
         end
     end
+    # if check_route_particle(particle)
+    #     return true
+    # else
+    #     return false
+    # end
     # if isnothing(name)
     #     return false #change from true (maybe unnecessary)
     # else
@@ -341,9 +376,7 @@ function fix_missing_vehicle(route::Array)
         if test_route[1] == 0
             popfirst!(test_route)
         end
-    end
 
-    if !isempty(test_route)
         if test_route[end] == 0
             pop!(test_route)
         end
@@ -638,7 +671,7 @@ function insert_job(particle::Particle)
         end
         iter += 1
     end
-    @show particle.route = fix_missing_vehicle(particle.route)
+    particle.route = fix_missing_vehicle(particle.route)
     return particle
 end
 
@@ -4169,15 +4202,15 @@ function fix_save_name()
 end
 
 
-function check_feasible(dir::String)
-    files = readdir(dir)
-    for file in files
-        name = string(split(file, ".")[1])
-        vehicle = read_txt3("$dir/$file", name)
-        particle = vehicle_to_particle(vehicle)
-        println("file name: $(@sprintf("%5s", name)) => feasibility: $(@sprintf("%5s", check_feasible(particle))) => distance: $(@sprintf("%5.2f", total_distance(particle)))")
-    end
-end
+# function check_feasible(dir::String)
+#     files = readdir(dir)
+#     for file in files
+#         name = string(split(file, ".")[1])
+#         vehicle = read_txt3("$dir/$file", name)
+#         particle = vehicle_to_particle(vehicle)
+#         println("file name: $(@sprintf("%5s", name)) => feasibility: $(@sprintf("%5s", check_feasible(particle))) => distance: $(@sprintf("%5.2f", total_distance(particle)))")
+#     end
+# end
 
 
 function look(name::String, alg::String)
