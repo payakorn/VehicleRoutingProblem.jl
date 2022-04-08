@@ -167,5 +167,5 @@ end
 
 
 function solution_to_particle(solution::Solution, Q::Matrix)
-    particle = Particle(solution.route, solution.processing_time, solution.lower, solution.upper, solution.demand, solution.max_capacity, solution.distance_matrix, solution.service_time, total_route(solution), solution.name, Q)
+    particle = Particle(solution.route, solution.processing_time, solution.lower[2:end], solution.upper[2:end], solution.demand[2:end], solution.max_capacity, solution.distance_matrix, solution.service_time[2:end], total_route(solution), solution.name, Q)
 end
