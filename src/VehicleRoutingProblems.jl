@@ -84,5 +84,6 @@ export load_all_data,
         local_search2,
         location_particle_swarm_initial,
         fix_missing_vehicle,
-        check_route_particle
+        check_route_particle,
+        print_all_solution
 end
