@@ -174,7 +174,9 @@ function check_route_particle(particle::Particle)
             push!(completiontime, starttime[i] + particle.service[route[i]])
             total_demand += particle.demand[route[i]]
         end
-        if total_demand > particle.max_capacity
+        if completiontime[end] + particle.distance_matrix[route[end]+1, 1] > try solomon100[particle.name]["duedate"][0] catch e; read_data_solomon_dict(particle.name)["last_time_window"] end
+            return false
+        elseif total_demand > particle.max_capacity
             return false
         end
     end
@@ -183,6 +185,11 @@ end
 
 
 function check_feasible(particle::Particle)
+
+    # if length(setdiff(unique(particle.route), 0)) != length(particle.l)
+    #     return false
+    # end
+
     vehicle = find_vehicle(particle)
     number_of_vehicle = length(vehicle)
 
@@ -377,7 +384,7 @@ function fix_missing_vehicle(route::Array)
             popfirst!(test_route)
         end
 
-        if test_route[end] == 0
+        if try test_route[end] catch e; -1 end == 0 
             pop!(test_route)
         end
 
@@ -697,6 +704,12 @@ function generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, s
     sch = zeros(Int64, max_vehicle-1)
     particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
     particle = insert_job(particle)
+    while length(setdiff(unique(particle.route), 0)) != length(particle.l)
+        # max_vehicle += 1
+        sch = zeros(Int64, max_vehicle-1)
+        particle = Particle(sch, p, low_d[2:end], d[2:end], demand[2:end], max_capacity, distance_matrix, service[2:end], max_vehicle, name, Q)
+        particle = insert_job(particle)
+    end
     # while length(particle.route) != length(particle.l) + particle.max_vehicle - 1
     #     particle.max_vehicle += 1
     #     # global Q = vcat(Q, ones(length(particle.l)))
