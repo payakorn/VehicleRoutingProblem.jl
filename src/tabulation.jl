@@ -117,7 +117,7 @@ function print_all_solution()
                     end
                 end
             end
-            println("$nname-$num_cus: $(min_vehi): $(min_dis)")
+            println("$nname-$num_cus: $(min_vehi): $(round(min_dis, digits=1))")
         end
     end
 end

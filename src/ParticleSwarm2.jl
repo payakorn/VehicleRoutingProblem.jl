@@ -421,7 +421,7 @@ function obj_email_text(name::String)
     file_name = glob("$name-*.txt", location)
     for i in 1:length(file_name)
         sol = read_solution(file_name[i], name)
-        t *= "$name-$(@sprintf("%2d", i)) => route: $(total_route(sol)) => Obj: $(ceil(total_distance(sol, floor_digit=true), digits=1))\n"
+        t *= "$name-$(@sprintf("%2d", i)) => route: $(total_route(sol)) => Obj: $(round(total_distance(sol, floor_digit=true), digits=1))\n"
     end
     t *= "\n Min number of vehicles and min total distance \n"
     t *= print_one_solution(name)
