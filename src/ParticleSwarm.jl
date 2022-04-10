@@ -650,15 +650,15 @@ end
 
 function insert_job(particle::Particle)
     rand_job = collect(randcycle(length(particle.l)))
-    # rand_job = collect(1:length(particle.l))[sortperm(particle.l)]
-    possible_job = findall(x->x==1.0, particle.Q[1, :])
-    rand_job = possible_job[randcycle(length(possible_job))]
-    for k in 2:particle.max_vehicle
-        possible_job = findall(x->x==1.0, particle.Q[k, :])
-        rand_new = possible_job[randcycle(length(possible_job))]
-        append!(rand_job, rand_new)
-    end
-    unique!(rand_job)
+    # # rand_job = collect(1:length(particle.l))[sortperm(particle.l)]
+    # possible_job = findall(x->x==1.0, particle.Q[1, :])
+    # rand_job = possible_job[randcycle(length(possible_job))]
+    # for k in 2:particle.max_vehicle
+    #     possible_job = findall(x->x==1.0, particle.Q[k, :])
+    #     rand_new = possible_job[randcycle(length(possible_job))]
+    #     append!(rand_job, rand_new)
+    # end
+    # unique!(rand_job)
 
     m = length(rand_job)
     iter = 1

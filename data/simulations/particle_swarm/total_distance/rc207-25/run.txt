@@ -1,0 +1,2 @@
+04-10 at 03:42:29, name: rc207-25-20, Alg: 16, particle: 15, 
+04-10 at 14:09:08, name: rc207-25-30, Alg: 16, particle: 15, 
