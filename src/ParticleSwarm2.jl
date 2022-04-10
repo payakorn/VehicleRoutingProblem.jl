@@ -312,6 +312,38 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
             out = 1
         end
         
+        # if remove == 5 && cut_car
+        #     remove = 1
+        #     iter += 1
+        #     # best_obj_vec = []
+
+        #     # objective value
+        #     objective_value[iter] = Dict()
+
+        #     for i in 1:num_particle
+        #         if i != best_index
+        #             random_number = rand(1:(length(findall(x -> x == 0, particles[i].route))+1))
+        #             obj_before = best_obj_vec[i]
+        #             particles[i] = remove_vehicle_and_apply_heuristic(particles[i], random_number)
+        #             best_obj_vec[i] =  objective_function(particles[i])
+        #             println("particle $i random vehicle: $random_number, $obj_before => $(best_obj_vec[i])")
+        #         else
+        #             best_obj_vec[i] = objective_function(particles[i])
+        #         end
+                    
+        #         # collect objective value
+        #         objective_value[iter][i] = Dict()
+        #         objective_value[iter][i]["obj"] = best_obj_vec[end]
+        #         objective_value[iter][i]["method"] = "remove"
+        #     end
+
+        #     # find new best solution
+        #     best_index = argmin(best_obj_vec)
+        #     append!(best_index_save, best_index)
+        #     best_objective_value = best_obj_vec[best_index]
+        #     append!(best_obj_save, best_objective_value)
+        #     mean_obj = mean(best_obj_vec)
+        # end
 
         if out == 10
             terminate = true
@@ -388,8 +420,11 @@ function obj_email_text(name::String)
     location = location_particle_swarm(name)
     file_name = glob("$name-*.txt", location)
     for i in 1:length(file_name)
-        t *= "$name-$i => Objective value: $(total_distance(read_solution(file_name[i], name)))\n"
+        sol = read_solution(file_name[i], name)
+        t *= "$name-$(@sprintf("%2d", i)) => route: $(total_route(sol)) => Obj: $(ceil(total_distance(sol, floor_digit=true), digits=1))\n"
     end
+    t *= "\n Min number of vehicles and min total distance \n"
+    t *= print_one_solution(name)
     return t
 end
 

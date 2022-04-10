@@ -80,15 +80,44 @@ function add_our_best_to_dataframe()
 end
 
 
+function print_one_solution(nname::String)
+    location = joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "total_distance", "$nname")
+    all_files = glob("$nname*.txt", location)
+    min_vehi = Inf
+    min_dis = Inf
+    for ins in all_files
+        sol = read_solution(ins, "$nname")
+        if total_route(sol) < min_vehi
+            min_vehi = total_route(sol)
+            min_dis = total_distance(sol, floor_digit=true)
+        else
+            if total_distance(sol) < min_dis
+                min_dis = total_distance(sol, floor_digit=true)
+            end
+        end
+    end
+    return "$nname: $(min_vehi): $(min_dis)"
+end
+
 function print_all_solution()
     for num_cus in [25]
         for nname in Full_Name()
             location = joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "total_distance", "$nname-$num_cus")
             all_files = glob("$nname-$num_cus*.txt", location)
+            min_vehi = Inf
+            min_dis = Inf
             for ins in all_files
                 sol = read_solution(ins, "$nname-$num_cus")
-                println("$nname-$num_cus: $(total_route(sol)): $(total_distance(sol, floor_digit=true))")
+                if total_route(sol) < min_vehi
+                    min_vehi = total_route(sol)
+                    min_dis = total_distance(sol, floor_digit=true)
+                else
+                    if total_distance(sol) < min_dis
+                        min_dis = total_distance(sol, floor_digit=true)
+                    end
+                end
             end
+            println("$nname-$num_cus: $(min_vehi): $(min_dis)")
         end
     end
 end

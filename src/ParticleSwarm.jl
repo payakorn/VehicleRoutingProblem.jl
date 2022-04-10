@@ -320,12 +320,20 @@ function remove_vehicle_and_apply_heuristic(particle::Particle, random_vehicle::
     candidate = particle.route[(position_zeros[random_vehicle]+1):(position_zeros[random_vehicle+1]-1)]
     deleteat!(test_particle.route, (position_zeros_index[random_vehicle]):(position_zeros_index[random_vehicle+1]-1))
     vehicle = find_vehicle(test_particle)
+
+    # add compatibility conditions (remove incompat to candidate)
+    for k in 1:length(vehicle)
+        position_not_compat = findall(x->x==true, particle.Q[k, vehicle[k]] .== 0)
+        job_not_compat = vehicle[k][position_not_compat]
+        deleteat!(vehicle[k], position_not_compat)
+        union!(candidate, job_not_compat)
+    end
     
-    test_particle.route, candidate = apply_heuristic_all_vehicle_local(vehicle, particle.p, particle.u, particle.l, particle.demand, particle.max_capacity, candidate=candidate)
+    test_particle.route, candidate = apply_heuristic_all_vehicle_local(vehicle, particle.p, particle.u, particle.l, particle.demand, particle.max_capacity, particle.Q, candidate=candidate)
     iter = 1
     while isempty(candidate) == false && iter <= 100
         vehicle = find_vehicle(test_particle)
-        test_particle.route, candidate = apply_heuristic_all_vehicle_local(vehicle, particle.p, particle.u, particle.l, particle.demand, particle.max_capacity, candidate=candidate)
+        test_particle.route, candidate = apply_heuristic_all_vehicle_local(vehicle, particle.p, particle.u, particle.l, particle.demand, particle.max_capacity, particle.Q, candidate=candidate)
         iter += 1
     end
     
@@ -365,8 +373,10 @@ function ruin(particle::Particle, num_job::Int64)
 end
 
 
-function apply_heuristic(sch, unassign_sch, p, d, low_d, demand, max_capacity)
-    job_cannot_process = []
+function apply_heuristic(sch, unassign_sch, p, d, low_d, demand, max_capacity, Q)
+    position_cannot_process_job = findall(x->x==true, Q .== 0)
+    job_cannot_process = unassign_sch[position_cannot_process_job]
+    deleteat!(unassign_sch, position_cannot_process_job)
     while isempty(unassign_sch) == false
         job_in = unassign_sch[1]
         deleteat!(unassign_sch, 1)
@@ -553,12 +563,13 @@ function two_opt_new3(particle::Particle, objective_function::Function; best_rou
 end
 
 
-function apply_heuristic_all_vehicle_local(vehicle, p, d, low_d, demand, max_capacity; candidate=[])
+function apply_heuristic_all_vehicle_local(vehicle, p, d, low_d, demand, max_capacity, Q; candidate=[])
     number_of_vehicle = length(vehicle)
     route = []
     for (i, j) in enumerate(shuffle(1:number_of_vehicle))
         sch = vehicle[j]
-        sch, candidate = apply_heuristic(sch, candidate, p, d, low_d, demand, max_capacity)
+        Q_vehi = Q[j, :]
+        sch, candidate = apply_heuristic(sch, candidate, p, d, low_d, demand, max_capacity, Q_vehi)
         append!(route, sch)
         if i != number_of_vehicle
             append!(route, 0)
@@ -645,6 +656,13 @@ function check_particle(list::Array, number_of_customer::Int64)
     test_list = deepcopy(list)
     deleteat!(test_list, findall(x -> x == 0, test_list))
     number_of_job = length(unique(test_list)) == number_of_customer
+end
+
+
+function remove_and_insert(particle::Particle)
+    vehicle = find_vehicle(particle)
+    random_vehi = rand(1:length(vehicle))
+    remove_route = vehicle[random_vehi]
 end
 
 
