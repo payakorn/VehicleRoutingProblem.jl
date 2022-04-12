@@ -168,6 +168,7 @@ end
 
 function local_search2(particle::Particle, objective_function::Function; best_route=[])
     # list = two_opt_list2(length(particle.route))
+    particle.route = fix_missing_vehicle(particle.route)
     particle = two_opt2(particle, objective_function)
     particle.route = fix_missing_vehicle(particle.route)
     particle = swap2(particle, objective_function)
