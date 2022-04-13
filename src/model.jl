@@ -9,11 +9,11 @@
 # end
 using Random, JuMP, SMTPClient, Printf
 
-num_vehicle = 8
+num_vehicle = 10
 num_node = 25
 
 for k in 1:num_node
-    num_compat = rand(4:num_vehicle)
+    num_compat = rand(2:num_vehicle)
     if k > 1
         pp = hcat(pp, vcat(zeros(num_vehicle-num_compat), ones(num_compat))[randcycle(num_vehicle)])
     else
@@ -70,7 +70,7 @@ function find_opt(file_name, num_vehicle; Solver_name=Solver_name, Q=Q)
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
     # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
     m = Model(Solver_name.Optimizer)
-    # try set_optimizer_attribute(m, "TimeLimit", 3600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 7200) end
+    try set_optimizer_attribute(m, "TimeLimit", 3600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 600) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)
     # n = 100
