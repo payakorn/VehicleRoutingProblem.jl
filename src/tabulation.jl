@@ -112,7 +112,7 @@ function print_all_solution()
                     min_vehi = total_route(sol)
                     min_dis = total_distance(sol, floor_digit=true)
                 else
-                    if total_distance(sol) < min_dis
+                    if total_distance(sol, floor_digit=true) < min_dis
                         min_dis = total_distance(sol, floor_digit=true)
                     end
                 end
