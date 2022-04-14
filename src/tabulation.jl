@@ -106,18 +106,21 @@ function print_all_solution()
             all_files = glob("$nname-$num_cus*.txt", location)
             min_vehi = Inf
             min_dis = Inf
+            arg_min = ""
             for ins in all_files
                 sol = read_solution(ins, "$nname-$num_cus")
                 if total_route(sol) < min_vehi
                     min_vehi = total_route(sol)
                     min_dis = total_distance(sol, floor_digit=true)
-                else
+                    arg_min = ins
+                elseif total_route(sol) == min_vehi
                     if total_distance(sol, floor_digit=true) < min_dis
                         min_dis = total_distance(sol, floor_digit=true)
+                        arg_min = ins
                     end
                 end
             end
-            println("$nname-$num_cus: $(min_vehi): $(round(min_dis, digits=1))")
+            println("$nname-$num_cus: $(min_vehi): $(round(min_dis, digits=1)), $arg_min")
         end
     end
 end
