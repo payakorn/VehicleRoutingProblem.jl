@@ -1,3 +1,1 @@
-04-13 at 22:58:03, name: r202-25-10, Alg: 16, particle: 15, 
-04-13 at 23:05:59, name: r202-25-20, Alg: 16, particle: 5, 
-04-13 at 23:23:14, name: r202-25-30, Alg: 16, particle: 5, 
+04-14 at 14:26:39, name: r202-25-10, Alg: 16, particle: 15, 

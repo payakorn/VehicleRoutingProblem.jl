@@ -9,11 +9,11 @@
 # end
 using Random, JuMP, SMTPClient, Printf
 
-num_vehicle = 6
+num_vehicle = 5
 num_node = 25
 
 for k in 1:num_node
-    num_compat = rand(1:num_vehicle-3)
+    num_compat = rand(4:num_vehicle)
     if k > 1
         pp = hcat(pp, vcat(zeros(num_vehicle-num_compat), ones(num_compat))[randcycle(num_vehicle)])
     else
