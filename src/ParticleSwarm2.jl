@@ -346,7 +346,7 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
         #     mean_obj = mean(best_obj_vec)
         # end
 
-        if out == 10
+        if out == 15
             terminate = true
         end
     

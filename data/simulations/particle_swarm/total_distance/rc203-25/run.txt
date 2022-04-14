@@ -1,0 +1,3 @@
+04-14 at 12:23:14, name: rc203-25-20, Alg: 16, particle: 15, 
+04-14 at 12:40:08, name: rc203-25-30, Alg: 16, particle: 15, 
+04-14 at 13:20:16, name: rc203-25-40, Alg: 16, particle: 15, 
