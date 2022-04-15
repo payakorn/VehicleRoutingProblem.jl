@@ -70,7 +70,7 @@ function find_opt(file_name, num_vehicle; Solver_name=Solver_name, Q=Q)
     # m = Model(with_optimizer(Cbc.Optimizer, logLevel=1))
     # m = try Model(Gurobi.Optimizer) catch e Model(CPLEX.Optimizer) end
     m = Model(Solver_name.Optimizer)
-    try set_optimizer_attribute(m, "TimeLimit", 600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 600) end
+    # try set_optimizer_attribute(m, "TimeLimit", 600) catch e set_optimizer_attribute(m, "CPX_PARAM_TILIM", 600) end
     # set_optimizer_attribute(m, "Presolve", 0)
     # n = length(d)
     # n = 100
