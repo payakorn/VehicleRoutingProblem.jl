@@ -753,9 +753,9 @@ function generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, s
 end
 
 
-function generate_particle(name::String; max_vehicle=25, best_route=[])
+function generate_particle(name::String; max_vehicle=25, best_route=[], Q=Q)
     p, d, low_d, demand, max_capacity, distance_matrix, service = load_data_solomon(name)
-    return generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name, best_route=best_route)
+    return generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name, best_route=best_route, Q=Q)
 end
 
 

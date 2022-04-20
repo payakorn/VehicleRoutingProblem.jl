@@ -346,6 +346,45 @@ function particle_swarm_fix2(name::String, objective_function::Function; num_par
         #     mean_obj = mean(best_obj_vec)
         # end
 
+        # generate new particles
+        if random == 5 && generate
+            random_count += 1
+            random = 1
+            iter += 1
+
+            start_num, end_num = generate_initial_particles(name, random_count, num_particle=num_particle, max_vehicle=max_vehicle, objective_function=objective_function, Q=Q)
+
+            # objective value
+            objective_value[iter] = Dict()
+
+            sort_obj = sortperm(best_obj_vec, rev=true)
+            if random_set
+                for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
+                    particles[j] = load_particle_from_file("$(location_particle_swarm_initial(name, objective_function=objective_function))/$name-$j.txt", name, Q=Q)
+                    best_obj_vec[j] = objective_function(particles[j])
+                end
+            else
+                for j in sort_obj[1:end-1]
+                    particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route, Q=Q)
+                    best_obj_vec[j] = objective_function(particles[j])
+                end
+            end
+
+            # collect objective value
+            for i in 1:num_particle
+                objective_value[iter][i] = Dict()
+                objective_value[iter][i]["obj"] = best_obj_vec[i]
+                objective_value[iter][i]["method"] = "random"
+            end
+
+            # find new best solution
+            best_index = argmin(best_obj_vec)
+            append!(best_index_save, best_index)
+            append!(best_obj_save, best_objective_value)
+            best_objective_value = best_obj_vec[best_index]
+            mean_obj = mean(best_obj_vec)
+        end
+
         if out == 15
             terminate = true
         end
