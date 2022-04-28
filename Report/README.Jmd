@@ -1,0 +1,70 @@
+---
+title: Report
+author: Payakorn Saksuriya
+---
+
+# Vehicle Routing Problem with Time Windows
+
+---
+Import package:
+
+
+```julia
+using VehicleRoutingProblems
+using PrettyTables
+using DataFrames
+using CSV
+```
+
+
+---
+
+
+## Solomon's Instances Results
+
+
+Result of 25 customers compare with optimum
+
+
+```julia
+df = CSV.File("../data/opt_solomon/all_25.csv") |> DataFrame
+hl_v = HTMLHighlighter( (df,i,j)->(j in (6)) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
+```
+
+
+---
+
+
+Result of 50 customers compare with optimum
+
+
+```julia
+df = CSV.File("../data/opt_solomon/all_50.csv") |> DataFrame
+hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6] , HTMLDecoration(color = "red", font_weight = "bold"));
+pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ), formatters = ft_nomissing)
+```
+
+---
+
+Result of 100 customers compare with optimum
+
+
+```julia
+df = CSV.File("../data/opt_solomon/all_100.csv") |> DataFrame
+hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
+```
+
+---
+
+## Compatibility Results
+
+
+Result of Our Algorithm of 25 customers with Compatibility
+
+
+```julia
+pretty_table(print_all_solution(), show_row_number=true, tf=tf_html_matrix)
+```
+
