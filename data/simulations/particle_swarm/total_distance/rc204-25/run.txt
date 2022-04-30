@@ -1,1 +1,1 @@
-04-14 at 16:04:59, name: rc204-25-10, Alg: 16, particle: 15, 
+04-27 at 18:21:49, name: rc204-25-30, Alg: 16, particle: 15, 

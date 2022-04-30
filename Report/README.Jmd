@@ -28,7 +28,7 @@ Result of 25 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_25.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6)) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6)) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
 
@@ -41,7 +41,7 @@ Result of 50 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_50.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6] , HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6] , HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ), formatters = ft_nomissing)
 ```
 
@@ -52,7 +52,7 @@ Result of 100 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_100.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
 

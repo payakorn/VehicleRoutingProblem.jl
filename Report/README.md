@@ -32,7 +32,7 @@ Result of 25 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_25.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6)) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6)) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
 
@@ -98,7 +98,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
   <tbody>
     <tr>
       <td class = "rowNumber">1</td>
-      <td style = "text-align: right;">C101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C101</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -108,7 +108,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">2</td>
-      <td style = "text-align: right;">C102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C102</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">190.3</td>
@@ -118,7 +118,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">3</td>
-      <td style = "text-align: right;">C103</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C103</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">190.3</td>
@@ -128,7 +128,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">4</td>
-      <td style = "text-align: right;">C104</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C104</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">186.9</td>
@@ -138,7 +138,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">5</td>
-      <td style = "text-align: right;">C105</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C105</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -148,7 +148,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">6</td>
-      <td style = "text-align: right;">C106</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C106</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -158,7 +158,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">7</td>
-      <td style = "text-align: right;">C107</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C107</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -168,7 +168,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">8</td>
-      <td style = "text-align: right;">C108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C108</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -178,7 +178,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">9</td>
-      <td style = "text-align: right;">C109</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C109</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">191.3</td>
@@ -188,7 +188,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">10</td>
-      <td style = "text-align: right;">C201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C201</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">214.7</td>
@@ -198,7 +198,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">11</td>
-      <td style = "text-align: right;">C202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C202</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">214.7</td>
@@ -208,7 +208,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">12</td>
-      <td style = "text-align: right;">C203</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C203</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">214.7</td>
@@ -228,7 +228,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">14</td>
-      <td style = "text-align: right;">C205</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C205</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">214.7</td>
@@ -238,7 +238,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">15</td>
-      <td style = "text-align: right;">C206</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C206</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">214.7</td>
@@ -268,7 +268,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">18</td>
-      <td style = "text-align: right;">R101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R101</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">8.0</td>
       <td style = "text-align: right;">617.1</td>
@@ -278,7 +278,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">19</td>
-      <td style = "text-align: right;">R102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R102</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">7.0</td>
       <td style = "text-align: right;">547.1</td>
@@ -288,7 +288,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">20</td>
-      <td style = "text-align: right;">R103</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R103</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">454.6</td>
@@ -298,7 +298,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">21</td>
-      <td style = "text-align: right;">R104</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R104</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">416.9</td>
@@ -308,7 +308,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">22</td>
-      <td style = "text-align: right;">R105</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R105</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">6.0</td>
       <td style = "text-align: right;">530.5</td>
@@ -318,7 +318,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">23</td>
-      <td style = "text-align: right;">R106</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R106</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">465.4</td>
@@ -338,7 +338,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">25</td>
-      <td style = "text-align: right;">R108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R108</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">397.3</td>
@@ -348,7 +348,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">26</td>
-      <td style = "text-align: right;">R109</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R109</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">441.3</td>
@@ -358,7 +358,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">27</td>
-      <td style = "text-align: right;">R110</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R110</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">444.1</td>
@@ -368,7 +368,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">28</td>
-      <td style = "text-align: right;">R111</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R111</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">428.8</td>
@@ -378,7 +378,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">29</td>
-      <td style = "text-align: right;">R112</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R112</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">393.0</td>
@@ -388,7 +388,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">30</td>
-      <td style = "text-align: right;">R201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R201</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">463.3</td>
@@ -398,7 +398,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">31</td>
-      <td style = "text-align: right;">R202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R202</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">410.5</td>
@@ -408,7 +408,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">32</td>
-      <td style = "text-align: right;">R203</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R203</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">391.4</td>
@@ -418,7 +418,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">33</td>
-      <td style = "text-align: right;">R204</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R204</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">355.0</td>
@@ -428,7 +428,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">34</td>
-      <td style = "text-align: right;">R205</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R205</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">393.0</td>
@@ -438,7 +438,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">35</td>
-      <td style = "text-align: right;">R206</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R206</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">374.4</td>
@@ -448,7 +448,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">36</td>
-      <td style = "text-align: right;">R207</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R207</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">361.6</td>
@@ -458,7 +458,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">37</td>
-      <td style = "text-align: right;">R208</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R208</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">1.0</td>
       <td style = "text-align: right;">328.2</td>
@@ -468,7 +468,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">38</td>
-      <td style = "text-align: right;">R209</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R209</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">370.7</td>
@@ -478,7 +478,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">39</td>
-      <td style = "text-align: right;">R210</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R210</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">404.6</td>
@@ -488,7 +488,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">40</td>
-      <td style = "text-align: right;">R211</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R211</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">350.9</td>
@@ -498,7 +498,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">41</td>
-      <td style = "text-align: right;">RC101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC101</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">461.1</td>
@@ -508,7 +508,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">42</td>
-      <td style = "text-align: right;">RC102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC102</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">351.8</td>
@@ -518,7 +518,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">43</td>
-      <td style = "text-align: right;">RC103</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC103</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">332.8</td>
@@ -528,7 +528,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">44</td>
-      <td style = "text-align: right;">RC104</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC104</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">306.6</td>
@@ -538,7 +538,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">45</td>
-      <td style = "text-align: right;">RC105</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC105</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">411.3</td>
@@ -548,7 +548,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">46</td>
-      <td style = "text-align: right;">RC106</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC106</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">345.5</td>
@@ -558,7 +558,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">47</td>
-      <td style = "text-align: right;">RC107</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC107</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">298.3</td>
@@ -568,7 +568,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">48</td>
-      <td style = "text-align: right;">RC108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC108</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">294.5</td>
@@ -578,7 +578,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">49</td>
-      <td style = "text-align: right;">RC201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC201</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">360.2</td>
@@ -588,7 +588,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">50</td>
-      <td style = "text-align: right;">RC202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC202</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">338.0</td>
@@ -598,7 +598,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">51</td>
-      <td style = "text-align: right;">RC203</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC203</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">326.9</td>
@@ -608,7 +608,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">52</td>
-      <td style = "text-align: right;">RC204</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC204</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">299.7</td>
@@ -618,7 +618,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">53</td>
-      <td style = "text-align: right;">RC205</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC205</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">338.0</td>
@@ -628,7 +628,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">54</td>
-      <td style = "text-align: right;">RC206</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC206</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">324.0</td>
@@ -638,7 +638,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">55</td>
-      <td style = "text-align: right;">RC207</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC207</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">298.3</td>
@@ -648,7 +648,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">56</td>
-      <td style = "text-align: right;">RC208</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC208</td>
       <td style = "text-align: right;">25</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">269.1</td>
@@ -673,7 +673,7 @@ Result of 50 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_50.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6] , HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6] , HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ), formatters = ft_nomissing)
 ```
 
@@ -739,7 +739,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
   <tbody>
     <tr>
       <td class = "rowNumber">1</td>
-      <td style = "text-align: right;">C101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C101</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -749,7 +749,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">2</td>
-      <td style = "text-align: right;">C102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C102</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">361.4</td>
@@ -779,7 +779,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">5</td>
-      <td style = "text-align: right;">C105</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C105</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -789,7 +789,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">6</td>
-      <td style = "text-align: right;">C106</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C106</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -799,7 +799,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">7</td>
-      <td style = "text-align: right;">C107</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C107</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -809,7 +809,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">8</td>
-      <td style = "text-align: right;">C108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C108</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -819,7 +819,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">9</td>
-      <td style = "text-align: right;">C109</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C109</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">362.4</td>
@@ -829,7 +829,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">10</td>
-      <td style = "text-align: right;">C201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C201</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">360.2</td>
@@ -839,7 +839,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">11</td>
-      <td style = "text-align: right;">C202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C202</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">360.2</td>
@@ -849,7 +849,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">12</td>
-      <td style = "text-align: right;">C203</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C203</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">359.8</td>
@@ -869,7 +869,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">14</td>
-      <td style = "text-align: right;">C205</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C205</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">359.8</td>
@@ -879,7 +879,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">15</td>
-      <td style = "text-align: right;">C206</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C206</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">359.8</td>
@@ -889,7 +889,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">16</td>
-      <td style = "text-align: right;">C207</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C207</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">359.6</td>
@@ -899,7 +899,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">17</td>
-      <td style = "text-align: right;">C208</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C208</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">2.0</td>
       <td style = "text-align: right;">350.5</td>
@@ -919,7 +919,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">19</td>
-      <td style = "text-align: right;">R102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R102</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">11.0</td>
       <td style = "text-align: right;">909.0</td>
@@ -929,7 +929,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">20</td>
-      <td style = "text-align: right;">R103</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R103</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">9.0</td>
       <td style = "text-align: right;">772.9</td>
@@ -969,7 +969,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">24</td>
-      <td style = "text-align: right;">R107</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R107</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">7.0</td>
       <td style = "text-align: right;">711.1</td>
@@ -1109,7 +1109,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">38</td>
-      <td style = "text-align: right;">R209</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R209</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">4.0</td>
       <td style = "text-align: right;">600.6</td>
@@ -1209,7 +1209,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">48</td>
-      <td style = "text-align: right;">RC108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC108</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">6.0</td>
       <td style = "text-align: right;">598.1</td>
@@ -1219,7 +1219,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">49</td>
-      <td style = "text-align: right;">RC201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC201</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">684.8</td>
@@ -1229,7 +1229,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">50</td>
-      <td style = "text-align: right;">RC202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">RC202</td>
       <td style = "text-align: right;">50</td>
       <td style = "text-align: right;">5.0</td>
       <td style = "text-align: right;">613.6</td>
@@ -1312,7 +1312,7 @@ Result of 100 customers compare with optimum
 
 ```julia
 df = CSV.File("../data/opt_solomon/all_100.csv") |> DataFrame
-hl_v = HTMLHighlighter( (df,i,j)->(j in (6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
+hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
 
@@ -1378,7 +1378,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
   <tbody>
     <tr>
       <td class = "rowNumber">1</td>
-      <td style = "text-align: right;">C101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C101</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1388,7 +1388,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">2</td>
-      <td style = "text-align: right;">C102</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C102</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1398,7 +1398,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">3</td>
-      <td style = "text-align: right;">C103</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C103</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">826.3</td>
@@ -1408,7 +1408,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">4</td>
-      <td style = "text-align: right;">C104</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C104</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">822.9</td>
@@ -1418,7 +1418,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">5</td>
-      <td style = "text-align: right;">C105</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C105</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1428,7 +1428,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">6</td>
-      <td style = "text-align: right;">C106</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C106</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1438,7 +1438,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">7</td>
-      <td style = "text-align: right;">C107</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C107</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1448,7 +1448,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">8</td>
-      <td style = "text-align: right;">C108</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C108</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1458,7 +1458,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">9</td>
-      <td style = "text-align: right;">C109</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C109</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">10.0</td>
       <td style = "text-align: right;">827.3</td>
@@ -1468,7 +1468,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">10</td>
-      <td style = "text-align: right;">C201</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C201</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">589.1</td>
@@ -1478,7 +1478,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">11</td>
-      <td style = "text-align: right;">C202</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C202</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">589.1</td>
@@ -1488,7 +1488,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">12</td>
-      <td style = "text-align: right;">C203</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C203</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">588.7</td>
@@ -1498,7 +1498,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">13</td>
-      <td style = "text-align: right;">C204</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C204</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">588.1</td>
@@ -1508,7 +1508,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">14</td>
-      <td style = "text-align: right;">C205</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C205</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">586.4</td>
@@ -1518,7 +1518,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">15</td>
-      <td style = "text-align: right;">C206</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C206</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">586.0</td>
@@ -1528,7 +1528,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">16</td>
-      <td style = "text-align: right;">C207</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C207</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">585.8</td>
@@ -1538,7 +1538,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">17</td>
-      <td style = "text-align: right;">C208</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">C208</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">3.0</td>
       <td style = "text-align: right;">585.8</td>
@@ -1548,7 +1548,7 @@ pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, 
     </tr>
     <tr>
       <td class = "rowNumber">18</td>
-      <td style = "text-align: right;">R101</td>
+      <td style = "color: red; font-weight: bold; text-align: right;">R101</td>
       <td style = "text-align: right;">100</td>
       <td style = "text-align: right;">20.0</td>
       <td style = "text-align: right;">1637.7</td>

@@ -1,3 +1,2 @@
-04-17 at 19:55:42, name: rc206-25-50, Alg: 16, particle: 15, 
-04-17 at 22:20:05, name: rc206-25-100, Alg: 16, particle: 15, 
-04-17 at 22:56:03, name: rc206-25-200, Alg: 16, particle: 15, 
+04-28 at 14:21:39, name: rc206-25-10, Alg: 16, particle: 15, 
+04-28 at 14:57:10, name: rc206-25-50, Alg: 16, particle: 15, 

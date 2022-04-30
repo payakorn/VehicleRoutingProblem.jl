@@ -100,6 +100,8 @@ function print_one_solution(nname::String)
 end
 
 function print_all_solution()
+    # conclusion = ["name" "num_vehi" "dis" "file"]
+    df = DataFrame(Name=String[], num_vehi=Int64[], dis=Float64[], file=String[])
     for num_cus in [25]
         for nname in Full_Name()
             location = joinpath(@__DIR__, "..", "data", "simulations", "particle_swarm", "total_distance", "$nname-$num_cus")
@@ -120,9 +122,14 @@ function print_all_solution()
                     end
                 end
             end
-            println("$nname-$num_cus: $(min_vehi): $(round(min_dis, digits=1)), $arg_min")
+            # println("$nname-$num_cus: $(min_vehi): $(round(min_dis, digits=1)), $arg_min")
+            # push!(conclusion, ["$nname-$num_cus", min_vehi, round(min_dis, digits=1), split(split(arg_min, "\\")[end], ".")[1]])
+            # conclusion = vcat(conclusion, ["$nname-$num_cus" min_vehi round(min_dis, digits=1) split(split(arg_min, "\\")[end], ".")[1]])
+            push!(df, ["$nname-$num_cus" min_vehi round(min_dis, digits=1) split(split(arg_min, "\\")[end], ".")[1]])
         end
     end
+    return sort!(df, order(:Name))
+    # return reshape(conclusion, (56, 4))
 end
 
 

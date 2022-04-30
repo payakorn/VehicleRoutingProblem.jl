@@ -1,6 +1,6 @@
 using JuMP, Gurobi, JLD2
 
-@load "data/raw_HHCRSP/ins10-6.jld2"
+@load "data/raw_HHCRSP/ins10-1.jld2"
 
 # load parameters
 # num_node = 11
