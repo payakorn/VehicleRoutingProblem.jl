@@ -32,6 +32,7 @@ hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6)) && df[i,4] >= df[i, 6], HTMLDeco
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
 
+Optimum `j count(dropmissing(df)[!, :Opt] .== dropmissing(df)[!, :Our_floor])` of `j size(dropmissing(df), 1)` cases
 
 ---
 
@@ -45,6 +46,8 @@ hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ), formatters = ft_nomissing)
 ```
 
+Optimum `j count(dropmissing(df)[!, :Opt] .== dropmissing(df)[!, :Our_floor])` of `j size(dropmissing(df), 1)` cases
+
 ---
 
 Result of 100 customers compare with optimum
@@ -55,6 +58,9 @@ df = CSV.File("../data/opt_solomon/all_100.csv") |> DataFrame
 hl_v = HTMLHighlighter( (df,i,j)->(j in (1, 6) && !ismissing(df[i, 4])) && df[i,4] >= df[i, 6], HTMLDecoration(color = "red", font_weight = "bold"));
 pretty_table(df, show_row_number=true, tf=tf_html_matrix, highlighters = (hl_v, ))
 ```
+
+Optimum `j count(dropmissing(df)[!, :Opt] .== dropmissing(df)[!, :Our_floor])` of `j size(dropmissing(df), 1)` cases
+
 
 ---
 
