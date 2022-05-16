@@ -1,0 +1,30 @@
+---
+title: How to create report 
+---
+
+# From report\conclusion\_morethan\_100\how\_to.Jmd
+```julia
+using VehicleRoutingProblems
+using JLD2
+```
+---
+
+### save best-known solution from [sintef](https://www.sintef.no/projectweb/top/vrptw/solomon-benchmark/)
+
+- save to folder name `data\morethan100\fromweb\best-known...(#customer).csv`
+- convert to jld2 in `data\morethan100\jld2\best-known...(#customer).csv`
+```julia
+convert_to_jld2("best-known200")
+```
+
+---
+
+### load dataframe 
+```julia
+df = load_object(joinpath(@__DIR__, "..", "..", "data", "morethan100", "jld2", "best-known200.jld2"))
+```
+
+---
+
+
+

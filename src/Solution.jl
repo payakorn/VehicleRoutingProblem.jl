@@ -164,3 +164,10 @@ function find_min_solution(name)
     min_dis = minimum(total_distance.(solution, floor_digit=true))
     println("min distance = $min_dis")
 end
+
+
+function instance_names(;num_ins=(2, 4, 6, 8, 10))
+    class_name = ("C1", "C2", "R1", "R2", "RC1", "RC2")
+    all_names = ("$(cln)_$(numc)_$(numi)" for numi in 1:10, cln in class_name, numc in num_ins)
+    return all_names
+end

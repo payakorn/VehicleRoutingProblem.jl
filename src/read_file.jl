@@ -777,7 +777,7 @@ distance matrix
 """
 function read_data_solomon(name_instance::String)
     data = read_data_solomon_dict(name_instance)
-    return data["p"], data["upper"], data["lower"], data["demand"], data["capacity"], data["distance_matrix"], data["service"], data["last_time_window"]
+    return data["p"], collect(data["upper"]), data["lower"], data["demand"], data["capacity"], data["distance_matrix"], data["service"], data["last_time_window"]
 end
 
 
@@ -816,3 +816,28 @@ function save_data(x, name_data::String)
     save_object(joinpath(@__DIR__, "..", "data", "raw_data_solomon-jl", name_data), name_data)
 end
 
+
+"""
+To run this function, first, load all data of Homberger instances by `dt = load_all_solomon_200()`
+    then run the function `save_all_homberger(dt)`
+"""
+function save_all_homberger(dt::Dict)
+    for Name in instance_names()
+        dm = dt[Name]
+        # dt[Name]["p"] = []
+        # p, upper, lower, demand, capacity, service, distance_matrix, last_time_window = load_all_data2(name_instance)
+        p = ProcessingTimeMatrix(dm["xcoor"], dm["xcoor"], Name)
+        num_node = length(dm["duedate"])-1
+        # p = p[1:num_node, 1:num_node]
+        upper = dm["duedate"]
+        last_time_window = dm["readytime"][0]
+        lower = [dm["readytime"][i] for i in 1:num_node]
+        demand = [dm["demand"][i] for i in 1:num_node]
+        service = [dm["service"][i] for i in 1:num_node]
+        capacity = dm["capacity"]
+        distance_matrix = DistanceMatrix(dm["xcoor"], dm["xcoor"], Name)
+        # distance_matrix = distance_matrix[1:(num_node+1), 1:(num_node+1)]
+        jldsave(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$Name.jld2"); p, upper, lower, demand, capacity, service, distance_matrix, last_time_window)
+        # save_object(joinpath(@__DIR__, "..", "data", "raw_data_solomon_jld2", "$Name.jld2"), dt[Name])
+    end
+end

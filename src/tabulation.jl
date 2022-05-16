@@ -129,3 +129,16 @@ function create_csv_conclusion_all_opt()
         CSV.write(joinpath(@__DIR__, "..", "data", "opt_solomon", "all_$n.csv"), df)
     end
 end
+
+
+function convert_to_jld2(file_name::String)
+    location = joinpath(@__DIR__, "..", "data", "morethan100")
+    df = CSV.File("$location/fromweb/$file_name.csv") |> DataFrame
+    df = df[!, 1:3]
+    save_object("$location/jld2/$file_name.jld2", df)
+end
+
+
+function find_best_solution(location::String)
+    solution = nothing
+end
