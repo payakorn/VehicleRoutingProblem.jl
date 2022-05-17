@@ -68,5 +68,13 @@ export load_all_data,
         load_data_solomon,
         read_data_solomon_dict,
         solomon100,
-        save_HHCRSP
+        save_HHCRSP,
+        convert_to_jld2,
+        find_best_solution,
+        load_all_solomon_200,
+        load_all_data2,
+        AllName,
+        instance_names,
+        read_solomon,
+        save_all_homberger
 end

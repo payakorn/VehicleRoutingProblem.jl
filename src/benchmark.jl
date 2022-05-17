@@ -240,7 +240,8 @@ function read_solomon(class::AbstractString, num_jobs::Int64, num_instance::Int6
     detail["num_jobs"] = num_jobs
 
     class = uppercase(class)
-    dir = "homberger_$(num_jobs)_customer_instances"
+    # dir = "homberger_$(num_jobs)_customer_instances"
+    dir = joinpath(@__DIR__, "..", "data", "homberger_$(num_jobs)_customer_instances")
     num_job = Int64(num_jobs / 100)
     data = Dict()
 
@@ -267,23 +268,25 @@ function read_solomon(class::AbstractString, num_jobs::Int64, num_instance::Int6
     return detail
 end
 
-function AllName(;num_job=[200, 400])
-    name = []
-    for n in num_job
-        dir = "homberger_$(n)_customer_instances"
-        g = glob("*.TXT", dir)
-        gg1 = split.(g, "/")
-        gg2 = split.(g, "\\")
-        ggg = try 
-            split.([m[2] for m in gg1], ".")
-        catch e
-            split.([m[2] for m in gg2], ".")
-        end
-        append!(name, [m[1] for m in ggg])
-    end
-    return name
-end
 
+function AllName(;num_job=[200, 400])
+    Name = []
+    for n in num_job
+        dir = joinpath(@__DIR__, "..", "data", "homberger_$(n)_customer_instances")
+        len_path = length(dir)
+        @show g = glob("*.TXT", dir)
+        # gg1 = split.(g, ".")
+        # gg1 = gg1[end]
+        # gg2 = split.(g, ".")
+        # ggg = try 
+        #     split.([m[2] for m in gg1], ".")
+        # catch e
+        #     split.([m[2] for m in gg2], ".")
+        # end
+        append!(Name, [g[1][len_path:end]])
+    end
+    return Name
+end
 
 
 function All_solution_name()
@@ -318,7 +321,7 @@ function load_all_solomon_200(;duedate=true, low_dudate=false, num_job=[200, 400
     # create Dict
     solomon200 = Dict()
 
-    for name in AllName(num_job=num_job)
+    for name in instance_names()
 
         # read from txt file
         class, num_jobs, num_instance = split(name, "_")
@@ -550,7 +553,7 @@ end
 # the function calculate the  distance from coordinate
 solomon100 = load_all_solomon_100()  # load solomon data out size the function, for use all function below
 # add new 200 points of problem
-merge!(solomon100, load_all_solomon_200())  # load solomon data out size the function, for use all function below
+# merge!(solomon100, load_all_solomon_200())  # load solomon data out size the function, for use all function below
 
 # merge!(solomon100, load_case_study_dict("case_study-400-1", 400, 1))  # load case_study data out size the function, for use all function below
 # merge!(solomon100, load_case_study_dict("case_study-400-2", 400, 1))  # load case_study data out size the function, for use all function below
