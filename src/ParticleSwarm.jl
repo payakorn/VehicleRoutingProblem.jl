@@ -46,7 +46,8 @@ function load_data_solomon(name::String; problem_size=100)
         p, d, low_d, demand, solomon_demand, service, distance_matrix = load_all_data(split_name[1], case_size=case_size, num=num)
         return p, d, low_d, demand, solomon_demand, distance_matrix, service
     else
-        p, d, low_d, demand, solomon_demand = load_all_data(name)
+        # p, d, low_d, demand, solomon_demand = load_all_data(name)
+        p, d, low_d, demand, solomon_demand = read_data_solomon(name)
         service = service_time(name)
         service = service * ones(length(d))
         
@@ -784,8 +785,8 @@ function swap(particle::Particle, objective_function::Function; best_route=[]::A
         swap_particle = deepcopy(particle)
         
         # @show swap_particle.route
-        @show position1 = findfirst(x -> x == i, swap_particle.route)
-        @show position2 = findfirst(x -> x == j, swap_particle.route)
+        position1 = findfirst(x -> x == i, swap_particle.route)
+        position2 = findfirst(x -> x == j, swap_particle.route)
         
         # swap
         if position1 == position2
@@ -850,7 +851,7 @@ end
 
 
 function local_search(particle::Particle, objective_function::Function; best_route=[])
-    @show particle.route
+    particle.route
     particle = two_opt(particle, objective_function, best_route=best_route)
     particle.route = fix_missing_vehicle(particle.route)
     particle = swap(particle, objective_function, best_route=best_route)
@@ -1160,7 +1161,7 @@ function particle_swarm_fix(name::String, objective_function::Function; num_part
     start_num, end_num = pull_random_particle(name, 0, num_particle=num_particle, seed=seed, max_vehicle=max_vehicle, objective_function=objective_function)
     for i in 1:num_particle
         # particles[i] = generate_particle(name, max_vehicle=max_vehicle)
-        particles[i] = vehicle_to_particle(read_txt2(name, "particle_swarm/$(objective_function)/initial/$name/$seed", iter=i))
+        particles[i] = vehicle_to_particle(read_txt3("particle_swarm/$(objective_function)/initial/$name/$seed/$name-$i.txt", name))
         append!(best_obj_vec, objective_function(particles[i]))
 
         objective_value[1][i] = Dict()
@@ -2655,7 +2656,8 @@ function run_particle(name::String, objective_function::Function; max_iter=200, 
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/$(name)/") catch nothing end
     # location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/"
     # try mkdir("$location") catch nothing end
-    location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/$seed/"
+    # location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/$seed/"
+    location = joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "$save_dir", "$(name)", "$(num_particle)", "$seed")
     # try mkdir("$location") catch nothing end
     #while iter <= max_iter_while && new_obj > khoo
     while iter <= max_iter_while
@@ -2844,7 +2846,9 @@ function read_txt2(name::String, dir::String; iter=nothing, return_type="vehicle
         file_location = "$dir/$name-$iter.txt"
     end
 
-    p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(name)
+    # p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(name)
+    # p, d, low_d, demand, solomon_demand, distance_matrix, service = read_data_solomon(name)
+    p, d, low_d, demand, solomon_demand, distance_matrix, service = read_data_solomon(name)
 
     if return_type == "vehicle"
         vehicle = Dict()
@@ -2944,7 +2948,7 @@ function read_txt3(file_location::AbstractString, name::AbstractString)
             vehicle[i]["StartingTime"] = starting
             vehicle[i]["DueDate"] = d[current_sch]
             vehicle[i]["ReleaseDate"] = low_d[current_sch]
-            vehicle[i]["Distance"] = distance_solomon(current_sch, name)
+            # vehicle[i]["Distance"] = distance_solomon(current_sch, name)
 
             # calculate processing time
             processing_time = []
@@ -2959,8 +2963,8 @@ function read_txt3(file_location::AbstractString, name::AbstractString)
     end
     vehicle["num_vehicle"] = num_vehicle
     vehicle["name"] = name
-    total_dis = sum([vehicle[i]["Distance"] for i in 1:num_vehicle])
-    vehicle["TotalDistance"] = total_dis
+    # total_dis = sum([vehicle[i]["Distance"] for i in 1:num_vehicle])
+    # vehicle["TotalDistance"] = total_dis
     vehicle["dir"] = file_location
     return vehicle
 end
@@ -3626,19 +3630,20 @@ end
 function run_case(i::Int64, name_case::Array; num_particle=15, while_iter=5, seed=1, objective_function=total_distance::Function)
     for name in name_case
         # location
-        location = "particle_swarm/$objective_function/case$i/$(name)/$(num_particle)/$seed/"
+        location = joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "case$i", "$(name)", "$(num_particle)", "$seed")
 
         # create subfolders
-        try mkdir("particle_swarm/$objective_function/case$i") catch e; nothing end
-        try mkdir("particle_swarm/$objective_function/case$i/$name") catch e; nothing end
-        try mkdir("particle_swarm/$objective_function/case$i/$name/$num_particle") catch e; nothing end
+        try mkdir(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "case$i")) catch e; nothing end
+        try mkdir(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "case$i", "$(name)")) catch e; nothing end
+        try mkdir(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "case$i", "$(name)", "$(num_particle)")) catch e; nothing end
         try mkdir(location) catch e; nothing end
 
         # run 
         Case(i, name=name, num_particle=num_particle, while_iter=while_iter, seed=seed)
 
         # record 
-        io = open("particle_swarm/$objective_function/run.txt", "a")
+        io = open(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "run.txt"), "a")
+        # io = open("particle_swarm/$objective_function/run.txt", "a")
         a = length(glob("$name*.txt", location))
         write(io, "$(date_txt()), name: $name-$a, Alg: $i, #particle: $num_particle, seed: $seed\n")
         close(io)

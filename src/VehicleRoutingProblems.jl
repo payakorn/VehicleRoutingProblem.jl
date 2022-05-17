@@ -1,6 +1,6 @@
 module VehicleRoutingProblems
 
-using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Plots, Clustering, Random, JLD2, JuMP, DrWatson, SMTPClient
+using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Clustering, Random, JLD2, JuMP, DrWatson, SMTPClient
 
 # include files
 include("read_file.jl")
@@ -76,5 +76,9 @@ export load_all_data,
         AllName,
         instance_names,
         read_solomon,
-        save_all_homberger
+        save_all_homberger,
+        test_walk,
+        find_min_distance_from_dir,
+        create_csv_all_homberger,
+        run_case
 end

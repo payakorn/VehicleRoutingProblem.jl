@@ -41,7 +41,32 @@ function seperate_route(solution::Solution)
 end
 
 
-function read_solution(file_name::String, instance_name::String)
+function read_solution(location::String)
+    file_name = split(splitpath(location)[end], "-")
+    if length(file_name) == 3
+        Name = "$(file_name[1])-$(file_name[2])"
+    else
+        Name = "$(file_name[1])"
+    end
+    read_solution(location, Name)
+end
+
+
+function test_walk(location::String)
+    for (root, dirs, files) in walkdir("$location")
+        println("Directories in $root")
+        for dir in dirs
+            println(joinpath(root, dir)) # path to directories
+        end
+        println("Files in $root")
+        for file in files
+            println(joinpath(root, file)) # path to files
+        end
+    end
+end
+
+
+function read_solution(file_name::AbstractString, instance_name::AbstractString)
     route = read_route(file_name)
 
     # load data
@@ -170,4 +195,38 @@ function instance_names(;num_ins=(2, 4, 6, 8, 10))
     class_name = ("C1", "C2", "R1", "R2", "RC1", "RC2")
     all_names = ("$(cln)_$(numc)_$(numi)" for numi in 1:10, cln in class_name, numc in num_ins)
     return all_names
+end
+
+
+function find_min_distance_from_dir(location::AbstractString, name::String)
+    all_files = []
+    for num_par in readdir(location)
+        for seed in readdir("$location/$num_par")
+            println("#par/seed: $num_par/$seed")
+            append!(all_files, glob("$name*.txt", "$location/$num_par/$seed"))
+        end
+    end
+    solutions = read_solution.(all_files)
+    all_dis = total_distance.(solutions)
+    if isempty(all_dis)
+        return (missing, missing, missing)
+    else
+        arg_min = argmin(all_dis)
+        return all_dis[arg_min], total_route(solutions[arg_min]), splitpath(all_files[arg_min])[end-3:end]
+    end
+end
+
+
+function create_csv_all_homberger(num_case::Int64)
+    io = open("homberger$num_case.csv", "w")
+    write(io, "Name,NumVehi,Dis,NumPar,Dir\n")
+    for Name in collect(instance_names())[:, :, 1]
+        dis, vehi, loca = find_min_distance_from_dir(joinpath(@__DIR__, "..", "particle_swarm", "total_distance", "case16", Name), Name)
+        println("$(dis), $(vehi), $(loca)")
+        println("Name: $Name")
+        loca2 = try loca[2] catch e; missing end
+        loca3 = try loca[end] catch e; missing end
+        write(io, "$Name,$vehi,$dis,$(loca2),$(loca3)\n")
+    end
+    close(io)
 end

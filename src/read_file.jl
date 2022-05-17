@@ -1,4 +1,4 @@
-using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Plots, Clustering, Random
+# using Glob, Printf, Combinatorics, JSON, TimerOutputs, Dates, PrettyTables, DelimitedFiles, CSV, VegaLite, DataFrames, Statistics, Plots, Clustering, Random
 
 
 # include("heuristic.jl")
@@ -829,7 +829,7 @@ function save_all_homberger(dt::Dict)
         p = ProcessingTimeMatrix(dm["xcoor"], dm["xcoor"], Name)
         num_node = length(dm["duedate"])-1
         # p = p[1:num_node, 1:num_node]
-        upper = dm["duedate"]
+        upper = [dm["duedate"][i] for i in 1:num_node]
         last_time_window = dm["readytime"][0]
         lower = [dm["readytime"][i] for i in 1:num_node]
         demand = [dm["demand"][i] for i in 1:num_node]

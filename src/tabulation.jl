@@ -140,5 +140,6 @@ end
 
 
 function find_best_solution(location::String)
-    solution = nothing
+    all_files = glob("*.txt", location)
+    solutions = read_solution.(all_files)
 end
