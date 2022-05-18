@@ -218,15 +218,18 @@ end
 
 
 function create_csv_all_homberger(num_case::Int64)
+    data = load_object(joinpath(@__DIR__, "..", "data", "morethan100", "jld2", "best-known$(num_case)00.jld2"))
+    bn_vehi = data[!, 2]
+    bn_dist = data[!, 3]
     io = open("homberger$num_case.csv", "w")
-    write(io, "Name,NumVehi,Dis,NumPar,Dir\n")
-    for Name in collect(instance_names())[:, :, 1]
+    write(io, "Name,BNVehi,BNDis,NumVehi,Dis,NumPar,Dir\n")
+    for (num, Name) in enumerate(collect(instance_names())[:, :, 1])
         dis, vehi, loca = find_min_distance_from_dir(joinpath(@__DIR__, "..", "particle_swarm", "total_distance", "case16", Name), Name)
         println("$(dis), $(vehi), $(loca)")
         println("Name: $Name")
         loca2 = try loca[2] catch e; missing end
         loca3 = try loca[end] catch e; missing end
-        write(io, "$Name,$vehi,$dis,$(loca2),$(loca3)\n")
+        write(io, "$Name,$(bn_vehi[num]),$(bn_dist[num]),$vehi,$dis,$(loca2),$(loca3)\n")
     end
     close(io)
 end
