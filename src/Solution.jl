@@ -200,7 +200,7 @@ end
 
 function find_min_distance_from_dir(location::AbstractString, name::String)
     all_files = []
-    for num_par in readdir(location)
+    for num_par in try readdir(location) catch e; [] end
         for seed in readdir("$location/$num_par")
             println("#par/seed: $num_par/$seed")
             append!(all_files, glob("$name*.txt", "$location/$num_par/$seed"))
@@ -223,7 +223,7 @@ function create_csv_all_homberger(num_case::Int64)
     bn_dist = data[!, 3]
     io = open("homberger$num_case.csv", "w")
     write(io, "Name,BNVehi,BNDis,NumVehi,Dis,NumPar,Dir\n")
-    for (num, Name) in enumerate(collect(instance_names())[:, :, 1])
+    for (num, Name) in enumerate(collect(instance_names())[:, :, Int(num_case/2)])
         dis, vehi, loca = find_min_distance_from_dir(joinpath(@__DIR__, "..", "particle_swarm", "total_distance", "case16", Name), Name)
         println("$(dis), $(vehi), $(loca)")
         println("Name: $Name")
