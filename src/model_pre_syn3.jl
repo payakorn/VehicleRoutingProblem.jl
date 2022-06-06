@@ -1,6 +1,6 @@
-using JuMP, Gurobi, JLD2
+using JuMP, CPLEX, JLD2
 
-@load "data/raw_HHCRSP/ins10-6.jld2"
+@load "data/raw_HHCRSP/ins25-1.jld2"
 
 # load parameters
 # num_node = 11
@@ -56,9 +56,9 @@ end
 # end
 
 # model
-model = Model(Gurobi.Optimizer)
-set_optimizer_attribute(model, "TimeLimit", 12000)
-
+model = Model(CPLEX.Optimizer)
+# set_optimizer_attribute(model, "TimeLimit", 100000)
+set_optimizer_attribute(model, "CPX_PARAM_TILIM", 100000)
 # variables
 @variable(model, x[i=N, j=N, k=K; i!=j], Bin)
 # @variable(model, e[i]<=t[i=N, k=K]<=l[i])
@@ -277,7 +277,7 @@ for k in K
     route[k] = [1]
     starttime[k] = [0.0]
     late[k] = [0.0]
-    num_job[k] = [0]
+    num_job[k] = [0.0]
 
     job = 1
     for j in N_c

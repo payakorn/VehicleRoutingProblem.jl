@@ -609,7 +609,7 @@ end
 
 
 function generate_particle(name::String; max_vehicle=25, best_route=[])
-    p, d, low_d, demand, max_capacity, distance_matrix, service = load_data_solomon(name)
+    p, d, low_d, demand, max_capacity, distance_matrix, service = read_data_solomon(name)
     return generate_particle(p, d, low_d, demand, max_capacity, distance_matrix, service, max_vehicle, name, best_route=best_route)
 end
 
@@ -1133,7 +1133,7 @@ end
 function particle_swarm_fix(name::String, objective_function::Function; num_particle=15, max_iter=100, localsearch=false, cut_car=false, generate=false, num_save=nothing, save_dir=nothing, random_set=false, seed=1)
     particles = Dict()
     best_obj_vec = []
-    max_vehicle = try read_Solomon()[name]["NV"]*2 catch e; 15 end
+    max_vehicle = try read_Solomon()[name]["NV"]*2 catch e; 1000 end
 
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/") catch nothing end
     # try mkdir("particle_swarm/$(objective_function)/$save_dir/$(name)/") catch nothing end
@@ -1144,7 +1144,8 @@ function particle_swarm_fix(name::String, objective_function::Function; num_part
     #     location = "particle_swarm/$(objective_function)/$save_dir/$(name)/"
     # end
     
-    location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/$seed"
+    # location = "particle_swarm/$(objective_function)/$save_dir/$(name)/$(num_particle)/$seed"
+    location = joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "$save_dir", name, "$(num_particle)", "$(seed)")
 
     if localsearch
         local_search_function = local_search
@@ -1161,7 +1162,8 @@ function particle_swarm_fix(name::String, objective_function::Function; num_part
     start_num, end_num = pull_random_particle(name, 0, num_particle=num_particle, seed=seed, max_vehicle=max_vehicle, objective_function=objective_function)
     for i in 1:num_particle
         # particles[i] = generate_particle(name, max_vehicle=max_vehicle)
-        particles[i] = vehicle_to_particle(read_txt3("particle_swarm/$(objective_function)/initial/$name/$seed/$name-$i.txt", name))
+        particles[i] = vehicle_to_particle(read_txt3(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", name, "$seed", "$name-$i.txt"), name))
+        # particles[i] = vehicle_to_particle(read_txt3("particle_swarm/$(objective_function)/initial/$name/$seed/$name-$i.txt", name))
         append!(best_obj_vec, objective_function(particles[i]))
 
         objective_value[1][i] = Dict()
@@ -1251,43 +1253,44 @@ function particle_swarm_fix(name::String, objective_function::Function; num_part
         end
         
         # generate new particles
-        if random == 5 && generate
-            random_count += 1
-            random = 1
-            iter += 1
+        # if random == 5 && generate
+        #     random_count += 1
+        #     random = 1
+        #     iter += 1
 
-            start_num, end_num = pull_random_particle(name, random_count, num_particle=num_particle, seed=seed, max_vehicle=max_vehicle, objective_function=objective_function)
+        #     start_num, end_num = pull_random_particle(name, random_count, num_particle=num_particle, seed=seed, max_vehicle=max_vehicle, objective_function=objective_function)
 
-            # objective value
-            objective_value[iter] = Dict()
+        #     # objective value
+        #     objective_value[iter] = Dict()
 
-            sort_obj = sortperm(best_obj_vec, rev=true)
-            if random_set
-                for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
-                    particles[j] = vehicle_to_particle(read_txt2(name, "particle_swarm/$(objective_function)/initial/$name/$seed", iter=random_num))
-                    best_obj_vec[j] = objective_function(particles[j])
-                end
-            else
-                for j in sort_obj[1:end-1]
-                    particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route)
-                    best_obj_vec[j] = objective_function(particles[j])
-                end
-            end
+        #     sort_obj = sortperm(best_obj_vec, rev=true)
+        #     if random_set
+        #         for (j, random_num) in zip(sort_obj[1:end-1], start_num:end_num)
+        #             # particles[j] = vehicle_to_particle(read_txt2(name, "particle_swarm/$(objective_function)/initial/$name/$seed", iter=random_num))
+        #             particles[j] = vehicle_to_particle(read_txt2(name, joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", name, seed), iter=random_num))
+        #             best_obj_vec[j] = objective_function(particles[j])
+        #         end
+        #     else
+        #         for j in sort_obj[1:end-1]
+        #             particles[j] = generate_particle(name, max_vehicle=max_vehicle, best_route=best_route)
+        #             best_obj_vec[j] = objective_function(particles[j])
+        #         end
+        #     end
 
-            # collect objective value
-            for i in 1:num_particle
-                objective_value[iter][i] = Dict()
-                objective_value[iter][i]["obj"] = best_obj_vec[i]
-                objective_value[iter][i]["method"] = "random"
-            end
+        #     # collect objective value
+        #     for i in 1:num_particle
+        #         objective_value[iter][i] = Dict()
+        #         objective_value[iter][i]["obj"] = best_obj_vec[i]
+        #         objective_value[iter][i]["method"] = "random"
+        #     end
 
-            # find new best solution
-            best_index = argmin(best_obj_vec)
-            append!(best_index_save, best_index)
-            append!(best_obj_save, best_objective_value)
-            best_objective_value = best_obj_vec[best_index]
-            mean_obj = mean(best_obj_vec)
-        end
+        #     # find new best solution
+        #     best_index = argmin(best_obj_vec)
+        #     append!(best_index_save, best_index)
+        #     append!(best_obj_save, best_objective_value)
+        #     best_objective_value = best_obj_vec[best_index]
+        #     mean_obj = mean(best_obj_vec)
+        # end
 
         if out == 10
             terminate = true
@@ -2368,12 +2371,13 @@ end
 
 
 function generate_initial(name, num; seed=1, max_vehicle=25, objective_function=total_distance)
-    try mkdir("particle_swarm/$objective_function/initial/$name") catch e; nothing end
-    try mkdir("particle_swarm/$objective_function/initial/$name/$seed") catch e; nothing end
-    all_name = glob("$name*.txt", "particle_swarm/$objective_function/initial/$name/$seed/")
+    try mkdir(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", name)) catch e; nothing end
+    try mkdir(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", name, "$seed")) catch e; nothing end
+    all_name = glob("$name*.txt", joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", "$name", "$seed"))
     a = length(all_name)
     for i in (a+1):(a+num)
-        io = open("particle_swarm/$objective_function/initial/$name/$seed/$name-$i.txt", "w")
+        io = open(joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", "$name", "$seed", "$name-$i.txt"), "w")
+        # io = open("particle_swarm/$objective_function/initial/$name/$seed/$name-$i.txt", "w")
         particle = generate_particle(name, max_vehicle=max_vehicle)
         vehicle = find_vehicle(particle)
         for v in 1:length(vehicle)
@@ -2391,7 +2395,9 @@ end
 
 
 function pull_random_particle(name, set; num_particle=15, seed=1, max_vehicle=25, objective_function=total_distance)
-    all_name = glob("$name*.txt", "particle_swarm/$objective_function/initial/$name/$seed/")
+    location = joinpath(@__DIR__, "..", "particle_swarm", "$objective_function", "initial", "$(name)", "$(seed)")
+    all_name = glob("$name*.txt", location)
+    # all_name = glob("$name*.txt", "particle_swarm/$objective_function/initial/$name/$seed/")
     a = length(all_name)
     if set == 0
         start_number = 1
@@ -2912,7 +2918,7 @@ end
 
 function read_txt3(file_location::AbstractString, name::AbstractString)
 
-    p, d, low_d, demand, solomon_demand, distance_matrix, service = load_data_solomon(name)
+    p, d, low_d, demand, solomon_demand, distance_matrix, service = read_data_solomon(name)
 
     vehicle = Dict()
     open(file_location) do file
@@ -2975,7 +2981,7 @@ end
 function vehicle_to_particle(vehicle::Dict; max_vehicle=100)::Particle
     new_vehicle = Dict()
     name = vehicle["name"]
-    p, d, low_d, demand, max_capacity, distance_matrix, service = load_data_solomon(name)
+    p, d, low_d, demand, max_capacity, distance_matrix, service = read_data_solomon(name)
     for i in 1:vehicle["num_vehicle"]
         new_vehicle[i] = vehicle[i]["sch"]
     end
