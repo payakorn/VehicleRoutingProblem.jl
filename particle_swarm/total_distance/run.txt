@@ -2776,3 +2776,4 @@ name: r201-11, Alg: 16, number particle: 15
 02-25 at 14:17:30, name: rc103-31, Alg: 16, #particle: 15, seed: 1
 02-25 at 15:07:47, name: rc104-31, Alg: 16, #particle: 15, seed: 1
 02-25 at 15:53:23, name: rc105-31, Alg: 16, #particle: 15, seed: 1
+05-18 at 19:01:37, name: RC2_2_5-5, Alg: 16, #particle: 15, seed: 1
