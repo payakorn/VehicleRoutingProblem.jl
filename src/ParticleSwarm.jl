@@ -3686,7 +3686,8 @@ function sent_email(subject::String, massage::String)
     opt = SendOptions(
     isSSL = true,
     username = "payakorn.sak@gmail.com",
-    passwd = "daxdEw-kyrgap-2bejge")
+    passwd = "cdtcdmxydxihuroo")
+    # passwd = "daxdEw-kyrgap-2bejge")
     #Provide the message body as RFC5322 within an IO
     body = IOBuffer(
     # "Date: Fri, 18 Oct 2013 21:44:29 +0100\r\n" *
