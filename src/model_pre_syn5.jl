@@ -19,24 +19,40 @@ IJ = Iterators.filter(x -> x[1] != x[2], Iterators.product(N, N))
 SS = Iterators.filter(x -> x[1] != x[2], Iterators.product(S, S))
 KK = Iterators.filter(x -> x[1] != x[2], Iterators.product(K, K))
 
+# for test
+# r[9, 5] = 0
+r[9, 3] = 1
+# r[9, 6] = 1
+a[1, 6] = 1
+
 r_syn = deepcopy(r)
 Q = []
+Q_num = Dict()
 SYN = []
+SYN_node = []
 SYN_num = ones(num_node, num_serv)
+SYN_set = Dict()
 for i in N_c
-    pos = findall(x -> x == 1.0, r[i, :])
+    pos = findall(x -> x >= 1.0, r[i, :])
+    pos_morethanone = findall(x -> x > 1.0, r[i, :])
     if mind[i] == 0 && maxd[i] == 0
-        push!(Q, (i, length(pos)-1))
-        push!(SYN, (i, pos[1]))
-        r_syn[i, pos[1]] = 2.0
-        r_syn[i, pos[2]] = 0.0
-        r[i, pos[2]] = 0.0
-        SYN_num[i, pos[1]] = 2.0
+        push!(Q, (i, length(pos)-1+length(pos_morethanone)))
+        Q_num[i] = length(pos)-1+length(pos_morethanone)
+        # push!(SYN, (i, pos[1]))
+        push!(SYN_node, i)
+        # r_syn[i, pos[1]] = 2.0
+        # r_syn[i, pos[2]] = 0.0
+        # r[i, pos[2]] = 0.0
+        # SYN_num[i, pos[1]] = 2.0
+        # SYN_set[i] = findall(x->x==1,r[i,:])
     else
+        Q_num[i] = length(pos)
         push!(Q, (i, length(pos)))
     end
 end
 
+SYN = [(9,3,5)]
+SYN_set[9] = [3, 5]
 
 # create PRE set
 PRE = []
@@ -66,7 +82,7 @@ set_optimizer_attribute(model, "TimeLimit", 12000)
 @variable(model, ts[i=N, k=K, s=S] >= 0)
 @variable(model, y[i=N_c, k=K, s=S], Bin)
 # @variable(model, z[j=N_c, s1=S, s2=S]<=r[j, s2], Bin) # s1 is position of job, s2 is service
-@variable(model, z[j=N_c, s1=S, s2=S], Bin) # s1 is position of job, s2 is service
+@variable(model, z[j=N_c, q=1:Q_num[j], s=S], Bin) # s1 is position of job, s2 is service
 @variable(model, zz[i=N_c, k=K, s=S] >= 0)
 @variable(model, Tmax >= 0)
 # constraints
@@ -82,8 +98,15 @@ end
 
 for k in K
     for j in N_c
+        # @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
         @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
     end
+end
+
+# add 
+for j in N_c
+    # @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
+    @constraint(model, sum(y[j, k, s] for s in S, k in K) <= sum(x[i, j, k] for i in N, k in K if i != j))
 end
 
 # 2, 3
@@ -191,10 +214,10 @@ end
 # end
 # @constraint(model, ts[11, 1, 3] == ts[11, 2, 3])
 
-for (i, s) in SYN
+for (i, s1, s2) in SYN
     for (k1, k2) in KK
-        @constraint(model, -M*(2-y[i, k1, s]-y[i, k2, s]) <= ts[i, k1, s] - ts[i, k2, s])
-        @constraint(model, ts[i, k1, s] - ts[i, k2, s] <= M*(2-y[i, k1, s]-y[i, k2, s]))
+        @constraint(model, -M*(2-y[i, k1, s1]-y[i, k2, s2]) <= ts[i, k1, s1] - ts[i, k2, s2])
+        @constraint(model, ts[i, k1, s1] - ts[i, k2, s2] <= M*(2-y[i, k1, s1]-y[i, k2, s2]))
     end
 end
 # new constraints z positions ()
@@ -215,19 +238,37 @@ end
     
 # end
 
+for j in N_c
+    if j in SYN_node
+        for q in 1:Q_num[j]
+            for s2 in SYN_set[j]
+                for s1 in setdiff(findall(x->x>=1, r[j, :]), SYN_set[j])
+                    @constraint(model, z[j,q,s1]  == 1-z[j,q,s2])
+                end
+            end
+        end
+    end
+end
+
 for (j, num_q) in Q
     for i in 1:num_q
-        @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
+        if j in SYN_node
+            synset = Iterators.filter(x -> x[1] < x[2], Iterators.product(SYN_set[j], SYN_set[j]))
+            for (s1,s2) in synset
+                @constraint(model, z[j,i,s1]  == z[j,i,s2])
+            end
+        end
+        # if 
+        # @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
     end
     for s in S
-        @constraint(model, sum(z[j, i, s] for i in 1:num_q) == r[j, s])
+        @constraint(model, sum(z[j, i, s] for i in 1:num_q) == ceil(r[j, s]/(r[j, s]+1)))
     end
 end
 
 for (s1, s2) in SS
-    for s in setdiff(S, 1) # position from 2 to S
-        # for j in setdiff(N_c, PRE_node)
-        for j in N_c
+    for j in N_c
+        for s in 2:Q_num[j] # position from 2 to S
             # @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
             @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K)/SYN_num[j, s2])
         end
