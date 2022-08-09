@@ -24,6 +24,9 @@ KK = Iterators.filter(x -> x[1] != x[2], Iterators.product(K, K))
 r[9, 3] = 1
 # r[9, 6] = 1
 a[1, 6] = 1
+a[2, 3] = 1
+a[3, 3] = 1
+a[1, 5] = 1
 
 r_syn = deepcopy(r)
 Q = []
@@ -59,7 +62,7 @@ PRE = []
 PRE_node = []
 for i in N_c
     xx = findall(x -> x == 1, r[i, :])
-    if length(xx) > 1
+    if length(xx) > 1 && mind[i] != 0 && maxd[i] != 0
         for j in 2:length(xx)
             push!(PRE, (i, xx[j-1], xx[j], mind[i], maxd[i]))
             push!(PRE_node, i)
@@ -88,26 +91,32 @@ set_optimizer_attribute(model, "TimeLimit", 12000)
 # constraints
 
 # 1
-for (i, j) in IJ
-    if j > 1
-        for k in K
-            @constraint(model, x[i, j, k] <= sum(y[j, k, s] for s in S))
-        end
+# for (i, j) in IJ
+#     if j > 1
+#         for k in K
+#             @constraint(model, x[i, j, k] <= sum(y[j, k, s] for s in S))
+#         end
+#     end
+# end
+
+for k in K
+    for j in N_c
+        @constraint(model, sum(x[i, j, k] for i in N if i != j) <= sum(y[j, k, s] for s in S))
     end
 end
 
 for k in K
     for j in N_c
         # @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
-        @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
+        @constraint(model, sum(y[j, k, s] for s in S) <= sum(x[i, j, k] for i in N if i != j))
     end
 end
 
-# add 
-for j in N_c
-    # @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
-    @constraint(model, sum(y[j, k, s] for s in S, k in K) <= sum(x[i, j, k] for i in N, k in K if i != j))
-end
+# # add 
+# for j in N_c
+#     @constraint(model, sum(y[j, k, s] for s in S) <= M*sum(x[i, j, k] for i in N if i != j))
+#     # @constraint(model, sum(y[j, k, s] for s in S, k in K) <= sum(x[i, j, k] for i in N, k in K if i != j))
+# end
 
 # 2, 3
 for k in K
@@ -238,39 +247,37 @@ end
     
 # end
 
-for j in N_c
-    if j in SYN_node
+# (19)
+for j in SYN_node
+    for (s1, s2) in Iterators.filter(x -> x[1] < x[2], Iterators.product(SYN_set[j], SYN_set[j]))
         for q in 1:Q_num[j]
-            for s2 in SYN_set[j]
-                for s1 in setdiff(findall(x->x>=1, r[j, :]), SYN_set[j])
-                    @constraint(model, z[j,q,s1]  == 1-z[j,q,s2])
-                end
-            end
+            @show @constraint(model, sum(z[j,q,s] for s in setdiff(findall(x->x>=1, r[j, :]), SYN_set[j])) <= 2-z[j,q,s1]-z[j,q,s2])
         end
     end
 end
 
+# (18)
 for (j, num_q) in Q
-    for i in 1:num_q
+    for q in 1:num_q
+        # @constraint(model, sum(z[j, q, s] for s in S) >= 1)
         if j in SYN_node
             synset = Iterators.filter(x -> x[1] < x[2], Iterators.product(SYN_set[j], SYN_set[j]))
             for (s1,s2) in synset
-                @constraint(model, z[j,i,s1]  == z[j,i,s2])
+                @show @constraint(model, z[j,q,s1]  == z[j,q,s2])
             end
         end
-        # if 
-        # @constraint(model, sum(z[j, i, s2] for s2 in S) == 1)
     end
     for s in S
         @constraint(model, sum(z[j, i, s] for i in 1:num_q) == ceil(r[j, s]/(r[j, s]+1)))
     end
 end
 
+# (21)
 for (s1, s2) in SS
     for j in N_c
-        for s in 2:Q_num[j] # position from 2 to S
+        for q in 2:Q_num[j] # position from 2 to S
             # @constraint(model, sum(ts[j, k, s1] for k in K) + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K))
-            @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, s-1, s1] - z[j, s, s2]) <= sum(ts[j, k, s2] for k in K)/SYN_num[j, s2])
+            @constraint(model, sum(ts[j, k, s1] for k in K)/SYN_num[j, s1] + p[2, s1, j] - M*(2 - z[j, q-1, s1] - z[j, q, s2]) <= sum(ts[j, k, s2] for k in K)/SYN_num[j, s2])
         end
     end
 end
